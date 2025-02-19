@@ -169,3 +169,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# ignore audio data (takes storage)
+*.wav
+*.mp3
+*.flac
