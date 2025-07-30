@@ -1,0 +1,11 @@
+\ProvidesFile{stupp.bbx}[2023/02/27]
+
+\RequireBibliographyStyle{authoryear-comp}
+% Permit linebreaks in urls at odd places if needed
+\setcounter{biburllcpenalty}{9500}
+\setcounter{biburlucpenalty}{9000}
+\setcounter{biburlnumpenalty}{5000}
+\ExecuteBibliographyOptions{uniquename=init,uniquelist=minyear,
+  mergedate=basic,autolang=hyphen,dashed=false,maxbibnames=99,urldate=iso,seconds=true}
+
+% seconds=true only because urldate=iso requires it, to avoid warning.

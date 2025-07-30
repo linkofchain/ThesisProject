@@ -1,0 +1,135 @@
+\documentclass[thesis]{cluu}
+\usepackage{tabularray}
+\usepackage{pythonhighlight}
+
+\usepackage[style=cluu]{biblatex}
+\addbibresource{pal.bib}
+
+\begin{document}
+\course{Introduction to wordplay, 7.5hp}
+\author{Ellen Kaka}
+\title{Palindromes}
+\supervisor{Linda Adnil, Ytisrevinu University}
+\subtitle{Having it both ways}
+
+\maketitle
+
+\begin{abstract}
+  The concept of \emph{palindromes} is introduced, and some English
+  palindromes are analyzed.
+\end{abstract}
+
+\tableofcontents
+
+\addchap{Preface}
+I want to thank Donald Knuth for making \TeX, without which
+I wouldn't have written this.
+
+% by using \addchap instead of \chapter this preface isn't numbered.
+
+\chapter{Introduction}
+
+My assignment was to find and analyze some palindromes.
+I will summarize my findings in Chapter~\ref{chap:results}.
+
+\chapter{Theory}
+
+\section{Definition}
+
+A \emph{palindrome} is a word or phrase which reads the same forwards and
+backwards. For a phrase interpunction is ignored.
+
+\section{Math}
+The palindromic density of an infinite word \( w \) over an alphabet
+\( A \) is defined to be zero if only finitely many prefixes are
+palindromes; otherwise, letting the palindromic prefixes be of lengths
+\( n_k \) for \( k=1,2,\dots \) we define the density to be  
+
+\begin{equation}
+  d_P(w) = \left( { \limsup_{k \rightarrow \infty} \frac{n_{k+1}}{n_k} } \right)^{-1}
+  \label{eq:density}
+\end{equation}
+which maybe makes sense.
+The \emph{Fibonacci word}\note{See
+  \url{https://en.wikipedia.org/wiki/Fibonacci_word}}
+  has the density \( 1/\phi \), as shown by
+  \textcite[443]{adamczewski10}.
+
+\chapter{The words and the people}
+
+\section{Some examples}
+\label{sec:examples}
+
+Some good ones are listed at
+\url{https://en.wikipedia.org/wiki/Palindrome}. Some of the words in
+English are \emph{civic, radar, kayak} and \emph{racecar}.
+
+Here are some phrases in English:
+\begin{itemize}
+\item A man, a plan, a canal -- Panama
+\item Mr. Owl ate my metal worm
+\item Do geese see God?
+\item Was it a car or a cat I saw?
+\item Rats live on no evil star
+% \item Live on time, emit no evil
+% \item Step on no pets
+\end{itemize}
+
+In Yreka, California there has been an establishment with a sign
+reading \q{Yreka Bakery} which was observed in a children's magazine
+in 1866 \parencite[30]{eckler01}.
+
+The longest palindromic \emph{word} in the \emph{Oxford English Dictionary}
+is the onomatopoeic \emph{tattarrattat}, coined by
+\textcite{joyce22} for a knock on the door.
+
+More words can be found with the code in Appendix~\ref{chap:code}.
+
+\section{Palindromists}
+
+For English John Taylor coined a palindromic phrase in 1614 which
+generally is considered the first English-language palindrome
+sentence. The pseudonym J.T.R. coined a famous palindrome in 1848,
+but it is unknown who that person is.
+
+Table~\ref{tab:notables} shows some notable palindromists, sorted by
+year of birth.
+\Textcite{eckler91} gives more information about Leigh Mercer.
+
+\begin{table}
+  \centering
+  \caption{Notable palindromists}
+  \label{tab:notables}
+  \begin{tblr}{
+      colspec = {lc},
+      hlines = {white},
+      row{odd} = {blue!8!white}, row{even} = {blue!12!white},
+    }
+    Velimir Khlebnikov & 1885--1922 \\
+    Leigh Mercer & 1893--1977 \\
+    J. A. Lindon & c. 1914--1979 \\
+    Howard W. Bergerson & 1922--2011 \\
+    Hugo Brandt Corstius & 1935--2014 \\
+    Georges Perec & 1936--1982 \\
+    Dmitry Avaliani & 1938--2003 \\
+  \end{tblr}
+\end{table}
+
+\chapter{Results}
+\label{chap:results}
+
+I examined a list of given names, and found a few there:
+\emph{Anna, Hannah} and \emph{Otto}.
+Also I found Equation~\ref{eq:density} at Wikipedia, but had no use for it.
+But don't miss the examples in Section~\ref{sec:examples}, or my
+program in Appendix~\ref{chap:code}!
+
+\appendix
+\chapter{The pal program}
+\label{chap:code}
+
+\inputpython{pal.py}{1}{500}
+
+\printbibliography
+
+\end{document}

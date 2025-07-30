@@ -1,0 +1,31 @@
+\ProvidesFile{stupp.cbx}[2019/08/15]
+
+\RequireCitationStyle{authoryear-comp}
+\ExecuteBibliographyOptions{uniquename=init,uniquelist=minyear,
+  autolang=hyphen,maxcitenames=2,mincitenames=1,useprefix}
+
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{%
+  \printtext{\bibstring{in}\intitlepunct}}}
+
+% Put "de Lhoneux, Miryam" in bibliography; not as "De Lhoneux, Miryam"
+\renewbibmacro{begentry}{\midsentence}
+
+\DeclareBibliographyOption{colonpage}[true]{%
+  \ifstrequal{#1}{true}
+     {\renewcommand{\postnotedelim}{%
+       \iffieldpages{postnote}{\addcolon}{\addcomma\space}}
+       \DeclareFieldFormat{postnote}{##1}}
+     {}
+}
+
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}
+
+% Then maybe revert:
+\DeclareBibliographyOption{nocomma}[true]{%
+  \ifstrequal{#1}{true}
+     {\renewcommand*{\nameyeardelim}{\addspace}}
+     {}
+}
+
+\endinput

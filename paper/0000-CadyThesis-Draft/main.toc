@@ -1,0 +1,28 @@
+\contentsline {chapter}{\nonumberline Preface}{4}{chapter*.2}%
+\contentsline {chapter}{\nonumberline Acknowledgements}{5}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Background \& Related works}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Irish \& The Predicament of Minority Languages}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Second Language Acquisition}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}\gls {call} \& \gls {capt}}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}MDD}{12}{subsection.2.3.1}%
+\contentsline {chapter}{\numberline {3}Related Work}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}ASR for MDD}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Ensembling}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}TTS data augmentation}{13}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Experimental set-up}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Wav2vec2}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Related Work}{14}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experiment 1: Model Ensembling}{14}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Data}{15}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Model \& Evaluation}{16}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Results}{16}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Experiment 2: Dataset generation}{16}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Data}{16}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Model \& Evaluation}{16}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Results}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Discussion}{18}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusions}{19}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ethical Considerations}{20}{chapter.8}%
+\contentsline {chapter}{\numberline {9}AI Tools}{21}{chapter.9}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
