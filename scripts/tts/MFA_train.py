@@ -1,0 +1,2 @@
+# for inference: https://montreal-forced-aligner.readthedocs.io/en/v3.1.0/user_guide/workflows/dictionary_generating.html
+# for training: https://montreal-forced-aligner.readthedocs.io/en/v3.1.0/user_guide/workflows/g2p_train.html 
