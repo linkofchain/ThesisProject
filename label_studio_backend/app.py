@@ -100,8 +100,8 @@ def handle_webhook():
             
             audio_data_bytes = generate_tts(modified_ipa, task_word)
             # GCS Upload and URI Retrieval
-            audio_url = upload_and_return_gs_uri(audio_data_bytes)
-            print(f"Uploaded to GCS. GS URI: {audio_url}")
+            audio_uri = upload_and_return_gs_uri(audio_data_bytes)
+            print(f"Uploaded to GCS. GS URI: {audio_uri}")
             
                         # --- Close the Loop ---
             if update_label_studio_task(task_id, audio_uri):
