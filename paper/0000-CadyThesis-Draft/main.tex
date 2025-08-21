@@ -3,9 +3,12 @@
 \usepackage[style=cluu]{biblatex}
 \usepackage{tabularx}
 \usepackage[acronym]{glossaries}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit}
 \usepackage{cleveref}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+\usepackage{adjustbox}
 
 \makeglossaries
 
@@ -33,7 +36,22 @@
 \newacronym{ipa}{IPA}{the International Phonetic Alphabet}
 \newacronym{g2p}{G2P}{Grapheme-to-Phoneme}
 \newacronym{wals}{WALS}{the World Atlas of Linguistic Structure}
+\newacronym{mfa}{MFA}{Montreal Forced Aligner}
 
+% Define tikz styles to reuse in figures
+\usepackage[edges]{forest}
+\usetikzlibrary{arrows.meta} % for Latex arrowheads
+
+\forestset{
+  box/.style={
+    draw, rounded corners=2mm, thick,
+    minimum height=9mm, align=center
+  },
+  internal/.style={box, fill=blue!10},
+  posleaf/.style={box, fill=green!15},
+  negleaf/.style={box, fill=red!15},
+  edgelabel/.style={midway, sloped, above},
+}
 
 % Define a new counter for paragraphs (delete when paper is done)
 \newcounter{paranum}
@@ -41,6 +59,10 @@
 \newcommand{\numberedparagraph}{\par\refstepcounter{paranum}\textbf{[\theparanum] }}
 
 \newcommand{\todo}[1]{\textcolor{red}{#1}}
+
+% use Doulos SIL for IPA transcriptions
+\newfontfamily\ipafont{Doulos SIL}[Scale=MatchLowercase]
+\newcommand{\ipa}[1]{{\ipafont #1}}
 
 %ThesisProject is auto updated by zotero
 \addbibresource{ThesisProject.bib}
@@ -128,24 +150,25 @@ Despite some advantages not afforded other minority languages, Irish still finds
 \todo{placeholder. find good open source gaeltacht image}
 \begin{figure}[h]
     \caption{Area of the Gaeltachtaí (Irish-speaking areas of Ireland) colored in green}
-    \includegraphics[width=8cm]{Plot}
+    \includegraphics[width=8cm]{Gaeltachtai_le_hainmneacha2.png}
     \centering
     \label{fig:gaeltacht}
+    \caption{The original uploader was Angr at English Wikipedia. - Transferred from en.wikipedia to Commons., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3532749}
 \end{figure} 
 
 \numberedparagraph problems to be solved for Irish speakers 
-Though the hurdles facing the Irish language in the digital sphere are a relatively recent concern, the issues facing it in the real world are anything but. It is currently classified by UNESCO as being \textit{definitely endangered} \parencite{moseleyAtlasWorldsLanguages2010}, following centuries of varying rates of contraction due to encroachment by English \todo{give some more explanation of the history, handle with care}. Irish survives as a community languages in the aforementioned Gaeltacht areas, though even there it is estimated that only 24\% of inhabitants speak Irish on a daily basis \parencite{nichasaideSPEECHTECHNOLOGYDOCUMENTATION}. Despite this worrying state of Irish as a \gls{l1}, it is comparatively strong as a \gls{l2} \todo{dig up ref from broin about second language stats}. A growing number of parents seek Irish-medium education for their children outside the Gaeltacht, and immersive summer courses remain popolar among adults looking to learn or reconnect with the language. This encouraging \gls{l2} engagement intersects with thorny issues of supply, however, as many of the teachers are not themselves native speakers with an accompanying native grasp of the structure and sound of the language \parencite{nichasaideSPEECHTECHNOLOGYDOCUMENTATION,nichasaideCanWeDefuse2019}. This limited native speaker model for \gls{l2} speakers is particularly problematic for teaching pronunciation, complicating the acquisition of some sound contrasts critical to disambiguating the Irish grammar. Perhaps chiefly among these, contrasts between the secondary articulation of consonants into \textit{palatalised} and \textit{velarised} variants play an instrumental role in a number of grammatical functions, such as in the formation of certain plurals and genitive marking \parencite{snesarevaPalatalizationDublinIrish2016,gabrieleEnglishInfluenceL2,broinNewUrbanIrish,stensonModernIrishComprehensive2020}. Since the Roman alphabet doesn't provide symbols for this distinction, Irish orthography marks it via adjacent letters as seen in \todo{give sub-table references} of \cref{tab:sound_contrasts}: so-called \textit{slender} vowels ('i' and 'e') flanking a consonant denote \textit{palatalisation}, while \textit{broad} vowels ('a', 'o', and 'u') mark \textit{velarisation} \parencite{stensonModernIrishComprehensive2020}. Mutation effects are another pervasive element of the Irish grammar relying on sound alterations, the most common of which are \textit{lenition} and \textit{eclipsis}. \textit{Lenition},traditionally termed \textit{séimhiú} (\texttt{[ˈʃeːvʲuː]}), is commonly marked with an 'h' following the lenited consonant as seen on \cref{tab:sound_contrasts}, and originally denoted a weakening in the manner of articulation, though the relationship between consonants and their lenited versions is less immediately apparent now for some consonants \parencite{stensonModernIrishComprehensive2020}. \textit{Eclipsis}, traditionally \textit{úru} (\texttt{[ˈʊɾˠuː]}), involves replacing the original consonant with a nasalized or voiced version, and is denoted by appending the new sound character before the consonant being eclipsed\ref{tab:sound_contrasts} \todo{add sub-table refs and double check if this description covers all the bases}. These and other structural underpinnings of the language can have far-reaching implications for intelligability if not adequately mastered by students. Indeed, a study undertaken by\textcite{broinNewUrbanIrish} reveals that realisations of phonological like those above are over 50\% on average for urban speakers, with some as high as 82\%---a stark departure from their gaeltacht counterparts which lie below 10\%. Providing wider access to better native models of pronunciation --- not to mention native models of morphology --- could do much to close this gap, making mutual intelligability more attainable between gaeltacht and urban speakers. 
+Though the hurdles facing the Irish language in the digital sphere are a relatively recent concern, the issues facing it in the real world are anything but. It is currently classified by UNESCO as being \textit{definitely endangered} \parencite{moseleyAtlasWorldsLanguages2010}, following centuries of varying rates of contraction due to encroachment by English \todo{give some more explanation of the history, handle with care}. Irish survives as a community languages in the aforementioned Gaeltacht areas, though even there it is estimated that only 24\% of inhabitants speak Irish on a daily basis \parencite{nichasaideSPEECHTECHNOLOGYDOCUMENTATION}. Despite this worrying state of Irish as a \gls{l1}, it is comparatively strong as a \gls{l2} \todo{dig up ref from broin about second language stats}. A growing number of parents seek Irish-medium education for their children outside the Gaeltacht, and immersive summer courses remain popolar among adults looking to learn or reconnect with the language. This encouraging \gls{l2} engagement intersects with thorny issues of supply, however, as many of the teachers are not themselves native speakers with an accompanying native grasp of the structure and sound of the language \parencite{nichasaideSPEECHTECHNOLOGYDOCUMENTATION,nichasaideCanWeDefuse2019}. This limited native speaker model for \gls{l2} speakers is particularly problematic for teaching pronunciation, complicating the acquisition of some sound contrasts critical to disambiguating the Irish grammar. Perhaps chiefly among these, contrasts between the secondary articulation of consonants into \textit{palatalised} and \textit{velarised} variants play an instrumental role in a number of grammatical functions, such as in the formation of certain plurals and genitive marking \parencite{snesarevaPalatalizationDublinIrish2016,gabrieleEnglishInfluenceL2,broinNewUrbanIrish,stensonModernIrishComprehensive2020}. Since the Roman alphabet doesn't provide symbols for this distinction, Irish orthography marks it via adjacent letters as seen in \todo{give sub-table references} of \cref{tab:sound_contrasts}: so-called \textit{slender} vowels ('i' and 'e') flanking a consonant denote \textit{palatalisation}, while \textit{broad} vowels ('a', 'o', and 'u') mark \textit{velarisation} \parencite{stensonModernIrishComprehensive2020}. Mutation effects are another pervasive element of the Irish grammar relying on sound alterations, the most common of which are \textit{lenition} and \textit{eclipsis}. \textit{Lenition},traditionally termed \textit{séimhiú} (/\ipa{ˈʃeːvʲuː}/), is commonly marked with an 'h' following the lenited consonant as seen on \cref{tab:sound_contrasts}, and originally denoted a weakening in the manner of articulation, though the relationship between consonants and their lenited versions is less immediately apparent now for some consonants \parencite{stensonModernIrishComprehensive2020}. \textit{Eclipsis}, traditionally \textit{úru} (/\ipa{ˈʊɾˠuː}/), involves replacing the original consonant with a nasalized or voiced version, and is denoted by appending the new sound character before the consonant being eclipsed\ref{tab:sound_contrasts} \todo{add sub-table refs and double check if this description covers all the bases}. These and other structural underpinnings of the language can have far-reaching implications for intelligability if not adequately mastered by students. Indeed, a study undertaken by\textcite{broinNewUrbanIrish} reveals that realisations of phonological like those above are over 50\% on average for urban speakers, with some as high as 82\%---a stark departure from their gaeltacht counterparts which lie below 10\%. Providing wider access to better native models of pronunciation --- not to mention native models of morphology --- could do much to close this gap, making mutual intelligability more attainable between gaeltacht and urban speakers. 
 
-\begin{table}{ | m{5em} | m{1cm}| m{1cm} | } 
+\begin{table}[ht]
+  \centering
+  \caption{Examples use of mutation effects (séimhiú \& úru) as well as consonant velarisation \& palatalisation}
+  \begin{tabular}{l r}
+    Phoneme & Count \\
     \hline
-    cell1 dummy text dummy text dummy text& cell2 & cell3 \\ 
-    \hline
-    cell1 dummy text dummy text dummy text & cell5 & cell6 \\ 
-    \hline
-    cell7 & cell8 & cell9 \\ 
-    \hline
-    \caption{Examples use of mutation effects (séimhiú &úru) as well as consonant velarisation \& palatalisation}
-    \label{tab:sound_contrasts}
+    /a/ & 42 \\
+    /i/ & 35 \\
+  \end{tabular}
+  \label{tab:sound_contrasts}
 \end{table}
 
 \textcite{gabrieleEnglishInfluenceL2} english influence on palatalization and velarization
@@ -259,16 +282,49 @@ Effective pronunciation training requires one-on-one interaction between student
 
 \chapter{Related Work}
 In the following section, we will dive into strategies commonly used to address the problem area outlined above: the place of \gls{asr} in \gls{mdd}, as well as some of the strategies adopted to overcoming the mismatch in objectives between ordinary phoneme recognition and \gls{md}
+
 \section{ASR for MDD}
 \textcite{poveyKaldiSpeechRecognition} classic toolkit for asr
 \numberedparagraph Outline the function of an asr system.
 \textcite{pisoniHandbookSpeechPerception} for perception of sound
+
 
 \numberedparagraph What types of ASR systems are there? which are we using?
 \textcite{hsuHuBERTSelfSupervisedSpeech2021} Hidden unit BERT. provides aligned target labels for model prediction loss
 
 \numberedparagraph Touch on phoneme extraction task and detail fine-tuning procedure
 \textcite{agrawalLearningWhenTrust2023} smart weighter mechanism that selects model based on input audio
+
+\numberedparagraph MDD scoring
+
+% forest package for more painless trees
+\begin{figure}[t]
+\centering
+\begin{adjustbox}{max width=\linewidth}
+\begin{forest}
+for tree={
+  edge={-{Latex[length=1.6mm]}},
+  l sep=5mm,        % level separation (vertical)
+  s sep=2mm          % sibling separation (minimum horizontal)
+}
+[Transcribed Phonemes, internal
+  [Correct Pronunciations, internal
+    [True Acceptance, posleaf]
+    [False Rejection, negleaf]
+  ]
+  [Mispronunciations, internal
+    [False Acceptance, negleaf]
+    [True Rejection, internal
+      [Correct Diagnosis, posleaf]
+      [Diagnosis Error,  negleaf]
+    ]
+  ]
+]
+\end{forest}
+\end{adjustbox}
+\label{fig:eval}
+\caption{Evaluation hierarchy of \gls{md}}
+\end{figure}
 
 \section{Ensembling}
 \numberedparagraph describe the general strategy of model ensembling

@@ -4141,6 +4141,48 @@
       \verb /home/pccady/Zotero/storage/G68B8EGJ/Měchura - Introduction to Gramadán and the Irish National Morphology Database.pdf
       \endverb
     \endentry
+    \entry{mihalicekLanguageFilesMaterials2012}{book}{}
+      \name{editor}{2}{}{%
+        {{un=0,uniquepart=base,hash=65dcd205cf2cb065b82397bb522026c2}{%
+           family={Mihalicek},
+           familyi={M\bibinitperiod},
+           given={Vedrana},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=317216f5bcf1299ee11f3547ce9dfc1b}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Christin},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Taipei}%
+      }
+      \list{publisher}{1}{%
+        {Bookman Books}%
+      }
+      \strng{namehash}{ce8213ff907458fe8bcf48efeca5ae2f}
+      \strng{fullhash}{ce8213ff907458fe8bcf48efeca5ae2f}
+      \strng{bibnamehash}{ce8213ff907458fe8bcf48efeca5ae2f}
+      \strng{editorbibnamehash}{ce8213ff907458fe8bcf48efeca5ae2f}
+      \strng{editornamehash}{ce8213ff907458fe8bcf48efeca5ae2f}
+      \strng{editorfullhash}{ce8213ff907458fe8bcf48efeca5ae2f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{OCLC: 897284575}
+      \field{edition}{11th edition}
+      \field{isbn}{978-957-445-461-7}
+      \field{langid}{english}
+      \field{shorttitle}{Language Files}
+      \field{title}{Language Files: Materials for an Introduction to Language and Linguistics}
+      \field{year}{2012}
+      \field{dateera}{ce}
+    \endentry
     \entry{mortensenPanPhonResourceMapping}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=cfcb6ba1595b0f5110004216d07213ef}{%

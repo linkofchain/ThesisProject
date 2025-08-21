@@ -59,7 +59,7 @@ def generate_tts(text_to_convert,word):
                 
     return audio_stream
 
-# This function updates the task in Label Studio with the new tts audio URI
+# updates the task in Label Studio with the new tts audio URI
 def update_label_studio_task(task_id, audio_uri):
     url = f"{LS_HOST_URL}/api/tasks/{task_id}/"
     headers = {
@@ -116,7 +116,7 @@ def handle_webhook():
         print(f"An error occurred: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
-# This runs the app locally.
+# Run the app locally, 127.0.0.1.
 # The 'host' parameter makes it accessible from the network, which is useful for webhooks.
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
