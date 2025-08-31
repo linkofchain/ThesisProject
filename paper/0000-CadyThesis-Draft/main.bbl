@@ -411,6 +411,71 @@
       \verb https://research-publishing.net/book?10.14705/rpnet.2022.61.9782383720157
       \endverb
     \endentry
+    \entry{arunkumarInvestigationEnsembleFeatures2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=89362ac59f641c2a216ab3a5ef950ab3}{%
+           family={Arunkumar},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d8bc4cc4256a87df9d283999830f43b}{%
+           family={Sukhadia},
+           familyi={S\bibinitperiod},
+           given={Vrunda\bibnamedelima N.},
+           giveni={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c484fdab01bf26d67f62489ad31885d}{%
+           family={Umesh},
+           familyi={U\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f4e565dcf7247c4b3b943ab8440c4ffc}
+      \strng{fullhash}{3a47b6427b847a1f36c5c1f4b92a42aa}
+      \strng{bibnamehash}{3a47b6427b847a1f36c5c1f4b92a42aa}
+      \strng{authorbibnamehash}{3a47b6427b847a1f36c5c1f4b92a42aa}
+      \strng{authornamehash}{f4e565dcf7247c4b3b943ab8440c4ffc}
+      \strng{authorfullhash}{3a47b6427b847a1f36c5c1f4b92a42aa}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Self-supervised learning (SSL) based models have been shown to generate powerful representations that can be used to improve the performance of downstream speech tasks. Several state-of-the-art SSL models are available, and each of these models optimizes a different loss which gives rise to the possibility of their features being complementary. This paper proposes using an ensemble of such SSL representations and models, which exploits the complementary nature of the features extracted by the various pretrained models. We hypothesize that this results in a richer feature representation and shows results for the ASR downstream task. To this end, we use three SSL models that have shown excellent results on ASR tasks, namely HuBERT, Wav2vec2.0, and WaveLM. We explore the ensemble of models fine-tuned for the ASR task and the ensemble of features using the embeddings obtained from the pre-trained models for a downstream ASR task. We get improved performance over individual models and pre-trained features using Librispeech(100h) and WSJ dataset for the downstream tasks.}
+      \field{booktitle}{Interspeech 2022}
+      \field{day}{18}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{title}{Investigation of {{Ensemble}} Features of {{Self-Supervised Pretrained Models}} for {{Automatic Speech Recognition}}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5145\bibrangedash 5149}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.21437/Interspeech.2022-11376
+      \endverb
+      \verb{eprint}
+      \verb 2206.05518
+      \endverb
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/5WIILZ6Q/Arunkumar et al. - 2022 - Investigation of Ensemble features of Self-Supervised Pretrained Models for Automatic Speech Recogni.pdf;/home/pccady/Zotero/storage/6H4JHM6G/2206.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2206.05518
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2206.05518
+      \endverb
+      \keyw{Computer Science - Computation and Language,Electrical Engineering and Systems Science - Audio and Speech Processing}
+    \endentry
     \entry{moseleyAtlasWorldsLanguages2010}{misc}{}
       \name{namea}{2}{}{%
         {{hash=1be4a49be999a9fdbf490c5b34f06e04}{%
@@ -977,76 +1042,6 @@
       \endverb
       \verb{url}
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0167639313000988
-      \endverb
-    \endentry
-    \entry{bodnarEvaluatingMotivationalImpact2016}{article}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=4fac394c8bf9842cb3c6f368eaac16b5}{%
-           family={Bodnar},
-           familyi={B\bibinitperiod},
-           given={Stephen},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6a712139715a50e15afa4f4800444e61}{%
-           family={Cucchiarini},
-           familyi={C\bibinitperiod},
-           given={Catia},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a872bcf73b844088551245ffed26cc56}{%
-           family={Strik},
-           familyi={S\bibinitperiod},
-           given={Helmer},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a86eaf68ee137e436e4fe2bfacd13790}{%
-           family={Van\bibnamedelima Hout},
-           familyi={V\bibinitperiod\bibinitdelim H\bibinitperiod},
-           given={Roeland},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{ab4cda25f51c1171c062efa04efdcaab}
-      \strng{fullhash}{fbe8b209dd38cb04be991b66aabfdb6c}
-      \strng{bibnamehash}{fbe8b209dd38cb04be991b66aabfdb6c}
-      \strng{authorbibnamehash}{fbe8b209dd38cb04be991b66aabfdb6c}
-      \strng{authornamehash}{ab4cda25f51c1171c062efa04efdcaab}
-      \strng{authorfullhash}{fbe8b209dd38cb04be991b66aabfdb6c}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{day}{2}
-      \field{issn}{0958-8221, 1744-3210}
-      \field{journaltitle}{Computer Assisted Language Learning}
-      \field{langid}{english}
-      \field{month}{1}
-      \field{number}{1}
-      \field{shortjournal}{Computer Assisted Language Learning}
-      \field{shorttitle}{Evaluating the Motivational Impact of {{CALL}} Systems}
-      \field{title}{Evaluating the Motivational Impact of {{CALL}} Systems: Current Practices and Future Directions}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{29}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{186\bibrangedash 212}
-      \range{pages}{27}
-      \verb{doi}
-      \verb 10.1080/09588221.2014.927365
-      \endverb
-      \verb{file}
-      \verb /home/pccady/Zotero/storage/W5NCUPMW/Bodnar et al. - 2016 - Evaluating the motivational impact of CALL systems current practices and future directions.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://www.tandfonline.com/doi/full/10.1080/09588221.2014.927365
-      \endverb
-      \verb{url}
-      \verb http://www.tandfonline.com/doi/full/10.1080/09588221.2014.927365
       \endverb
     \endentry
     \entry{bouliannePhonemeTranscriptionEndangered2022}{inproceedings}{}
@@ -1668,6 +1663,135 @@
       \verb http://arxiv.org/abs/2410.00253
       \endverb
       \keyw{Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Graphics,Computer Science - Human-Computer Interaction}
+    \endentry
+    \entry{dengEnsembleDeepLearning2014}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2f5fbdc5c3cf91f62a64663cd72397b3}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b18cccf0f11300769fc4b01f5fe5f13a}{%
+           family={Platt},
+           familyi={P\bibinitperiod},
+           given={John\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c65f94daad3fe52ea565c465903fca66}
+      \strng{fullhash}{c65f94daad3fe52ea565c465903fca66}
+      \strng{bibnamehash}{c65f94daad3fe52ea565c465903fca66}
+      \strng{authorbibnamehash}{c65f94daad3fe52ea565c465903fca66}
+      \strng{authornamehash}{c65f94daad3fe52ea565c465903fca66}
+      \strng{authorfullhash}{c65f94daad3fe52ea565c465903fca66}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ensemble Deep Learning for Speech Recognition Li Deng and John C. Platt Microsoft Research, One Microsoft Way, Redmond, WA, USA deng@microsoft.com; jplatt@microsoft.com Abstract Deep learning systems have dramatically improved the accuracy of speech recognition, and various deep architecture...}
+      \field{booktitle}{Proc. Interspeech}
+      \field{langid}{english}
+      \field{title}{Ensemble {{Deep Learning}} for {{Speech Recognition}}}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/2WU2PQKC/edit.html
+      \endverb
+    \endentry
+    \entry{devlinBERTPretrainingDeep2019}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=f974925c5c6cca1d67fd604cc9fc9c79}{%
+           family={Burstein},
+           familyi={B\bibinitperiod},
+           given={Jill},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3aec97177cb69c892f2c8a2d9bc31a10}{%
+           family={Doran},
+           familyi={D\bibinitperiod},
+           given={Christy},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b47889ad94571547c92970150485798b}{%
+           family={Solorio},
+           familyi={S\bibinitperiod},
+           given={Thamar},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Minneapolis, Minnesota}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{bibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorbibnamehash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{editorbibnamehash}{3ba8abc3fd60f22784bd617fd230d1c6}
+      \strng{editornamehash}{0f9989a68b9a4dd59d368e46c7ff0bda}
+      \strng{editorfullhash}{3ba8abc3fd60f22784bd617fd230d1c6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5 (7.7 point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).}
+      \field{booktitle}{Proceedings of the 2019 {{Conference}} of the {{North American Chapter}} of the {{Association}} for {{Computational Linguistics}}: {{Human Language Technologies}}, {{Volume}} 1 ({{Long}} and {{Short Papers}})}
+      \field{eventtitle}{{{NAACL-HLT}} 2019}
+      \field{month}{6}
+      \field{shorttitle}{{{BERT}}}
+      \field{title}{{{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for {{Language Understanding}}}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{4171\bibrangedash 4186}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.18653/v1/N19-1423
+      \endverb
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/QRBYYV99/Devlin et al. - 2019 - BERT Pre-training of Deep Bidirectional Transformers for Language Understanding.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/N19-1423/
+      \endverb
     \endentry
     \entry{matthewdryerWorldAtlasLanguage2024}{dataset}{}
       \name{author}{4}{}{%
@@ -3136,6 +3260,45 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0167639322000863
       \endverb
     \endentry
+    \entry{krashenPrinciplesPracticeSecond1984}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8c7d8e92e8726fb99a6b186ccc98cad1}{%
+           family={Krashen},
+           familyi={K\bibinitperiod},
+           given={Stephen\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Pergamon Press}%
+      }
+      \strng{namehash}{8c7d8e92e8726fb99a6b186ccc98cad1}
+      \strng{fullhash}{8c7d8e92e8726fb99a6b186ccc98cad1}
+      \strng{bibnamehash}{8c7d8e92e8726fb99a6b186ccc98cad1}
+      \strng{authorbibnamehash}{8c7d8e92e8726fb99a6b186ccc98cad1}
+      \strng{authornamehash}{8c7d8e92e8726fb99a6b186ccc98cad1}
+      \strng{authorfullhash}{8c7d8e92e8726fb99a6b186ccc98cad1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Reprinted}
+      \field{isbn}{978-0-08-028628-0}
+      \field{langid}{english}
+      \field{pagetotal}{202}
+      \field{series}{Language Teaching Methodology Series}
+      \field{title}{Principles and Practice in Second Language Acquisition}
+      \field{year}{1984}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/FSTYTSP2/Krashen - 1984 - Principles and practice in second language acquisition.pdf
+      \endverb
+    \endentry
     \entry{krishenbaumRepresentingIPAPhonetics}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f107db57a1c2a2c1c7eb35f51fa0bf81}{%
@@ -3887,102 +4050,6 @@
       \endverb
       \verb{url}
       \verb https://www.cambridge.org/core/product/identifier/S0261444812000365/type/journal_article
-      \endverb
-    \endentry
-    \entry{mac2023learning}{thesis}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d71f89f7068109d7758867e84ba1676c}{%
-           family={Mac\bibnamedelima Lochlainn},
-           familyi={M\bibinitperiod\bibinitdelim L\bibinitperiod},
-           given={Conchúr},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {Dublin City University}%
-      }
-      \strng{namehash}{d71f89f7068109d7758867e84ba1676c}
-      \strng{fullhash}{d71f89f7068109d7758867e84ba1676c}
-      \strng{bibnamehash}{d71f89f7068109d7758867e84ba1676c}
-      \strng{authorbibnamehash}{d71f89f7068109d7758867e84ba1676c}
-      \strng{authornamehash}{d71f89f7068109d7758867e84ba1676c}
-      \strng{authorfullhash}{d71f89f7068109d7758867e84ba1676c}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Learning to Express, Learning as Self-Expression: A Multimethod Investigation of the {{L2}} Selves of Distance Adult {{Irish L2}} Learners}
-      \field{type}{phdthesis}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \verb{file}
-      \verb /home/pccady/Zotero/storage/LMHK7Y9J/Mac Lochlainn - 2023 - Learning to express, learning as self-expression a multimethod investigation of the L2 selves of di.pdf
-      \endverb
-    \endentry
-    \entry{maclochlainnClickingConnectingL22021}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=d71f89f7068109d7758867e84ba1676c}{%
-           family={Mac\bibnamedelima Lochlainn},
-           familyi={M\bibinitperiod\bibinitdelim L\bibinitperiod},
-           given={Conchúr},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4b361f06daa0ed650bb6884de59d3d07}{%
-           family={Nic\bibnamedelimb Giolla\bibnamedelima Mhichíl},
-           familyi={N\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Mairéad},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=11762e2a52be3c8843ebfd60a2fa13f8}{%
-           family={Beirne},
-           familyi={B\bibinitperiod},
-           given={Elaine},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{9eabbe852a9859b5e17f8c16432120dc}
-      \strng{fullhash}{eed5c389dc4e8792218ab1f0e62ce2a1}
-      \strng{bibnamehash}{eed5c389dc4e8792218ab1f0e62ce2a1}
-      \strng{authorbibnamehash}{eed5c389dc4e8792218ab1f0e62ce2a1}
-      \strng{authornamehash}{9eabbe852a9859b5e17f8c16432120dc}
-      \strng{authorfullhash}{eed5c389dc4e8792218ab1f0e62ce2a1}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Language massive open online courses (LMOOCs) represent an exciting prospect for language teachers and instructors around the globe (Bárcena \& Martín-Monje, 2014). In this paper, we report on the dynamics of participation and learner behaviour in an ab initio Irish language course. The course, Irish 101, ran during March 2019, and we used a mixed-methods approach to analyse both typical patterns of behaviour among course participants and learner reflections upon their reasons for doing so. Findings suggest that most learners use the course resources in an assessing and exploratory manner and are far less likely to produce, or to examine, second language (L2) output, either written or spoken. Learners were found to be selective and to demonstrate significant metacognitive awareness (Wenden, 1998) in their interactions and learning methods, displaying agency and exploiting affordances beyond the design of the course itself. Implications for LMOOC design, including the need to question whether courses should emphasise L2 production or resource provision, are considered, in addition to a general need for more granular, dynamic research, so as to better understand the types of learners who engage in LMOOCs and to better cater to diverse learning needs.}
-      \field{issn}{0958-3440, 1474-0109}
-      \field{journaltitle}{ReCALL}
-      \field{langid}{english}
-      \field{month}{5}
-      \field{number}{2}
-      \field{shortjournal}{ReCALL}
-      \field{shorttitle}{Clicking, but Connecting?}
-      \field{title}{Clicking, but Connecting? {{L2}} Learning Engagement on an Ab Initio {{Irish}} Language {{LMOOC}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{33}
-      \field{year}{2021}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{111\bibrangedash 127}
-      \range{pages}{17}
-      \verb{doi}
-      \verb 10.1017/S0958344021000100
-      \endverb
-      \verb{file}
-      \verb /home/pccady/Zotero/storage/RL4XRZHD/Mac Lochlainn et al. - 2021 - Clicking, but connecting L2 learning engagement on an ab initio Irish language LMOOC.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.cambridge.org/core/product/identifier/S0958344021000100/type/journal_article
-      \endverb
-      \verb{url}
-      \verb https://www.cambridge.org/core/product/identifier/S0958344021000100/type/journal_article
       \endverb
     \endentry
     \entry{magueresseLowresourceLanguagesReview2020}{online}{}
@@ -5366,117 +5433,6 @@
       \endverb
       \keyw{Computer Science - Computation and Language,Electrical Engineering and Systems Science - Audio and Speech Processing,Statistics - Machine Learning}
     \endentry
-    \entry{pratapScalingSpeechTechnology}{article}{}
-      \name{author}{15}{}{%
-        {{un=0,uniquepart=base,hash=2f6e561c99309a827c3bdec1c0ae8a91}{%
-           family={Pratap},
-           familyi={P\bibinitperiod},
-           given={Vineel},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=66dd2c90abd0bf676a14e5c1df8927d9}{%
-           family={Tjandra},
-           familyi={T\bibinitperiod},
-           given={Andros},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=105be1020b1f6157f60ea46dab6be9f4}{%
-           family={Shi},
-           familyi={S\bibinitperiod},
-           given={Bowen},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d27435fede55c71e4e4c81b921d28609}{%
-           family={Babu},
-           familyi={B\bibinitperiod},
-           given={Paden\bibnamedelimb Tomasello\bibnamedelima Arun},
-           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f84fb4b923ba1f6382a9a29b91e620a1}{%
-           family={Kundu},
-           familyi={K\bibinitperiod},
-           given={Sayani},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=81e75b7bf72c04dc581587d8932bcd44}{%
-           family={Elkahky},
-           familyi={E\bibinitperiod},
-           given={Ali},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9eb9202410623e793ef53a09a198a9e5}{%
-           family={Ni},
-           familyi={N\bibinitperiod},
-           given={Zhaoheng},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=57928887b6801b20de490f4d2e4b90ad}{%
-           family={Vyas},
-           familyi={V\bibinitperiod},
-           given={Apoorv},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3574995111995617f1b94c9b2646d290}{%
-           family={Fazel-Zarandi},
-           familyi={F\bibinithyphendelim Z\bibinitperiod},
-           given={Maryam},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e478046d4abc39e9814f6e364a736511}{%
-           family={Baevski},
-           familyi={B\bibinitperiod},
-           given={Alexei},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b524686c039bdbe0e8cca661fca6b56c}{%
-           family={Adi},
-           familyi={A\bibinitperiod},
-           given={Yossi},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=76c4ac342426fb82f4a004c0cdbadd6d}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Xiaohui},
-           giveni={X\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=caee6b3fa31c9aa140f1d90048cd989f}{%
-           family={Hsu},
-           familyi={H\bibinitperiod},
-           given={Wei-Ning},
-           giveni={W\bibinithyphendelim N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7cf7ac6a9456559cc67ee138c7f21cec}{%
-           family={Conneau},
-           familyi={C\bibinitperiod},
-           given={Alexis},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d3ff0eff0a1d1258618c88f2ec57095f}{%
-           family={Auli},
-           familyi={A\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{3300c27a1df7d0239f8316a0e179c5e9}
-      \strng{fullhash}{e38f29d27d60f7ba7c2c50ef44642ad1}
-      \strng{bibnamehash}{e38f29d27d60f7ba7c2c50ef44642ad1}
-      \strng{authorbibnamehash}{e38f29d27d60f7ba7c2c50ef44642ad1}
-      \strng{authornamehash}{3300c27a1df7d0239f8316a0e179c5e9}
-      \strng{authorfullhash}{e38f29d27d60f7ba7c2c50ef44642ad1}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeldatesource}{nodate}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Expanding the language coverage of speech technology has the potential to improve access to information for many more people. However, current speech technology is restricted to about one hundred languages which is a small fraction of the over 7,000 languages spoken around the world. The Massively Multilingual Speech (MMS) project increases the number of supported languages by 10-40x, depending on the task. The main ingredients are a new dataset based on readings of publicly available religious texts and effectively leveraging self-supervised learning. We built pre-trained wav2vec 2.0 models covering 1,406 languages, a single multilingual automatic speech recognition model for 1,107 languages, speech synthesis models for the same number of languages, as well as a language identification model for 4,017 languages. Experiments show that our multilingual speech recognition model more than halves the word error rate of Whisper on 54 languages of the FLEURS benchmark while being trained on a small fraction of the labeled data. The MMS models are available at https://github.com/pytorch/fairseq/tree/master/examples/mms.}
-      \field{langid}{english}
-      \field{title}{Scaling {{Speech Technology}} to 1,000+ {{Languages}}}
-      \verb{file}
-      \verb /home/pccady/Zotero/storage/5Z9XSBY6/Pratap et al. - Scaling Speech Technology to 1,000+ Languages.pdf
-      \endverb
-    \endentry
     \entry{punjabiLanguageModelBootstrapping2019}{inproceedings}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=32d105a4eafe9206dbcf0ba9335e12d8}{%
@@ -6379,6 +6335,42 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S1877042816316421
       \endverb
     \endentry
+    \entry{spolskyHandbookEducationalLinguistics2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d70d72a072756f61ef838040ef14abb2}{%
+           family={Spolsky},
+           familyi={S\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27b73653771329d6d12cf36a5658de54}{%
+           family={Hult},
+           familyi={H\bibinitperiod},
+           given={Francis\bibnamedelima M},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{362163d1620fbbce8e905b68d2900a91}
+      \strng{fullhash}{362163d1620fbbce8e905b68d2900a91}
+      \strng{bibnamehash}{362163d1620fbbce8e905b68d2900a91}
+      \strng{authorbibnamehash}{362163d1620fbbce8e905b68d2900a91}
+      \strng{authornamehash}{362163d1620fbbce8e905b68d2900a91}
+      \strng{authorfullhash}{362163d1620fbbce8e905b68d2900a91}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wiley Online Library}
+      \field{langid}{english}
+      \field{title}{The {{Handbook}} of {{Educational Linguistics}}}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/U6S5NSSW/Spolsky and Hult - The Handbook of Educational Linguistics.pdf
+      \endverb
+    \endentry
     \entry{stanleyImprovingL1specificPhonological2012}{inproceedings}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b50b5bded680360b853d1d5b6d0116cb}{%
@@ -6611,6 +6603,85 @@
       \endverb
       \verb{url}
       \verb https://www.isca-archive.org/interspeech_2019/sudhakara19_interspeech.html
+      \endverb
+    \endentry
+    \entry{thaiSyntheticDataAugmentation2019}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b109323013ede613e47075cfb2e8b85b}{%
+           family={Thai},
+           familyi={T\bibinitperiod},
+           given={Bao},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6082999c11c14a1c478bf93c19c67e62}{%
+           family={Jimerson},
+           familyi={J\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5566e4205049b50ecd589d493c8c3e49}{%
+           family={Arcoraci},
+           familyi={A\bibinitperiod},
+           given={Dominic},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=241cd10f84de6866ffb234181249a0f1}{%
+           family={Prud'hommeaux},
+           familyi={P\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad2d235a5329e443c91d7996dc449d69}{%
+           family={Ptucha},
+           familyi={P\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{95b3f55b422f98170e0172f03158c919}
+      \strng{fullhash}{3fae0b1256bc879ddfd8e94c041200f8}
+      \strng{bibnamehash}{3fae0b1256bc879ddfd8e94c041200f8}
+      \strng{authorbibnamehash}{3fae0b1256bc879ddfd8e94c041200f8}
+      \strng{authornamehash}{95b3f55b422f98170e0172f03158c919}
+      \strng{authorfullhash}{3fae0b1256bc879ddfd8e94c041200f8}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Although the application of deep learning to automatic speech recognition (ASR) has resulted in dramatic reductions in word error rate for languages with abundant training data, ASR for languages with few resources has yet to benefit from deep learning to the same extent. In this paper, we investigate various methods of acoustic modeling and data augmentation with the goal of improving the accuracy of a deep learning ASR framework for a low-resource language with a high baseline word error rate. We compare several methods of generating synthetic acoustic training data via voice transformation and signal distortion, and we explore several strategies for integrating this data into the acoustic training pipeline. We evaluate our methods on an indigenous language of North America with minimal training resources. We show that training initially via transfer learning from an existing high-resource language acoustic model, refining weights using a heavily concentrated synthetic dataset, and finally fine-tuning to the target language using limited synthetic data reduces WER by 15\% over just transfer learning using deep recurrent methods. Further, we show improvements over traditional frameworks by 19\% using a similar multistage training with deep convolutional approaches.}
+      \field{booktitle}{2019 {{IEEE Western New York Image}} and {{Signal Processing Workshop}} ({{WNYISPW}})}
+      \field{eventtitle}{2019 {{IEEE Western New York Image}} and {{Signal Processing Workshop}} ({{WNYISPW}})}
+      \field{isbn}{978-1-7281-4352-1}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Synthetic {{Data Augmentation}} for {{Improving Low-Resource ASR}}}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/WNYIPW.2019.8923082
+      \endverb
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/SC7Q7HGB/Thai et al. - 2019 - Synthetic Data Augmentation for Improving Low-Resource ASR.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/8923082/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/8923082/
       \endverb
     \endentry
     \entry{thomsonEffectivenessL2Pronunciation2014}{article}{}
@@ -7606,13 +7677,11 @@
     \endentry
   \enddatalist
   \missing{Li2011ThePA}
-  \missing{ardila2019common}
   \missing{deichler2024mm}
   \missing{garofolo1993timit}
   \missing{graves2006connectionist}
-  \missing{hardison2005second}
-  \missing{inter alia}
   \missing{joshi2020state}
+  \missing{khareLowResourceASR2021}
   \missing{zhang2022l2gen}
 \endrefsection
 \endinput

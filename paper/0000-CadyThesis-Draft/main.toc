@@ -1,28 +1,28 @@
 \contentsline {chapter}{\nonumberline Preface}{4}{chapter*.2}%
 \contentsline {chapter}{\nonumberline Acknowledgements}{5}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Background \& Related works}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Irish \& The Predicament of Minority Languages}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Second Language Acquisition}{11}{section.2.2}%
-\contentsline {section}{\numberline {2.3}\gls {call} \& \gls {capt}}{11}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}MDD}{12}{subsection.2.3.1}%
-\contentsline {chapter}{\numberline {3}Related Work}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}ASR for MDD}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Ensembling}{14}{section.3.2}%
-\contentsline {section}{\numberline {3.3}TTS data augmentation}{14}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Experimental set-up}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Wav2vec2}{16}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Related Work}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experiment 1: Model Ensembling}{16}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Data}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Model \& Evaluation}{18}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Results}{18}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Experiment 2: Dataset generation}{18}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Data}{18}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Model \& Evaluation}{18}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Results}{19}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Discussion}{20}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusions}{21}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Ethical Considerations}{22}{chapter.8}%
-\contentsline {chapter}{\numberline {9}AI Tools}{23}{chapter.9}%
+\contentsline {chapter}{\numberline {2}Background}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Irish \& The Predicament of Minority Languages in Natural Language Processing (NLP)}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}From Text to Speech: Approaches to Low-Resource Scenarios}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Computer-Assisted Language Learning (CALL) \& Computer-Assisted Pronunciation Training (CAPT)}{13}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Automatic Speech Recognition}{14}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Pronunciation \& Mispronunciation Detection and Diagnosis (MDD)}{14}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Related Work}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}ASR for MDD}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Ensembling}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}TTS data augmentation}{16}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Methods \& Materials}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}General Experiment Setup}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experiment 1: Monolingual Ensembling}{18}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Data}{18}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Models}{19}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Experiment 2: Synthetic Mispronunciation Data}{19}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Data}{19}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Models}{19}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Evaluation}{19}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Results}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Discussion}{22}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusions}{23}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ethical Considerations}{24}{chapter.8}%
+\contentsline {chapter}{\numberline {9}AI Tools}{25}{chapter.9}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
