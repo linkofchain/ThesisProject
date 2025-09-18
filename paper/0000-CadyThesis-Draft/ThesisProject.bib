@@ -51,6 +51,21 @@
   file = {/home/pccady/Zotero/storage/NS4AH864/Amrate and Tsai - 2025 - Computer-assisted pronunciation training A systematic review.pdf}
 }
 
+@inproceedings{ananthakrishnanUsingEnsembleClassifiers2011,
+  title = {Using an Ensemble of Classifiers for Mispronunciation Feedback},
+  booktitle = {Speech and {{Language Technology}} in {{Education}} ({{SLaTE}} 2011)},
+  author = {Ananthakrishnan, Gopal and Wik, Preben and Engwall, Olov and Abdou, Sherif},
+  date = {2011-08-24},
+  pages = {49--52},
+  publisher = {ISCA},
+  doi = {10.21437/SLaTE.2011-13},
+  url = {https://www.isca-archive.org/slate_2011/ananthakrishnan11_slate.html},
+  urldate = {2025-09-17},
+  eventtitle = {Speech and {{Language Technology}} in {{Education}} ({{SLaTE}} 2011)},
+  langid = {english},
+  file = {/home/pccady/Zotero/storage/2NR39XB8/ananthakrishnan11_slate.pdf}
+}
+
 @online{ardilaCommonVoiceMassivelyMultilingual2020,
   title = {Common {{Voice}}: {{A Massively-Multilingual Speech Corpus}}},
   shorttitle = {Common {{Voice}}},
@@ -102,6 +117,23 @@
   file = {/home/pccady/Zotero/storage/5WIILZ6Q/Arunkumar et al. - 2022 - Investigation of Ensemble features of Self-Supervised Pretrained Models for Automatic Speech Recogni.pdf;/home/pccady/Zotero/storage/6H4JHM6G/2206.html}
 }
 
+@online{babuXLSRSelfsupervisedCrosslingual2021,
+  title = {{{XLS-R}}: {{Self-supervised Cross-lingual Speech Representation Learning}} at {{Scale}}},
+  shorttitle = {{{XLS-R}}},
+  author = {Babu, Arun and Wang, Changhan and Tjandra, Andros and Lakhotia, Kushal and Xu, Qiantong and Goyal, Naman and Singh, Kritika and family=Platen, given=Patrick, prefix=von, useprefix=false and Saraf, Yatharth and Pino, Juan and Baevski, Alexei and Conneau, Alexis and Auli, Michael},
+  date = {2021-12-16},
+  eprint = {2111.09296},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2111.09296},
+  url = {http://arxiv.org/abs/2111.09296},
+  urldate = {2025-09-07},
+  abstract = {This paper presents XLS-R, a large-scale model for cross-lingual speech representation learning based on wav2vec 2.0. We train models with up to 2B parameters on nearly half a million hours of publicly available speech audio in 128 languages, an order of magnitude more public data than the largest known prior work. Our evaluation covers a wide range of tasks, domains, data regimes and languages, both high and low-resource. On the CoVoST-2 speech translation benchmark, we improve the previous state of the art by an average of 7.4 BLEU over 21 translation directions into English. For speech recognition, XLS-R improves over the best known prior work on BABEL, MLS, CommonVoice as well as VoxPopuli, lowering error rates by 14-34\% relative on average. XLS-R also sets a new state of the art on VoxLingua107 language identification. Moreover, we show that with sufficient model size, cross-lingual pretraining can outperform English-only pretraining when translating English speech into other languages, a setting which favors monolingual pretraining. We hope XLS-R can help to improve speech processing tasks for many more languages of the world.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {/home/pccady/Zotero/storage/YEX5SNF2/Babu et al. - 2021 - XLS-R Self-supervised Cross-lingual Speech Representation Learning at Scale.pdf;/home/pccady/Zotero/storage/T8QG289D/2111.html}
+}
+
 @online{baevskiEffectivenessSelfsupervisedPretraining2020,
   title = {Effectiveness of Self-Supervised Pre-Training for Speech Recognition},
   author = {Baevski, Alexei and Auli, Michael and Mohamed, Abdelrahman},
@@ -137,22 +169,19 @@
   file = {/home/pccady/Zotero/storage/VXRQVZIT/Baevski et al. - 2020 - vq-wav2vec Self-Supervised Learning of Discrete Speech Representations.pdf}
 }
 
-@online{baevskiWav2vec20Framework2020,
+@inproceedings{baevskiWav2vec20Framework2020a,
   title = {Wav2vec 2.0: {{A Framework}} for {{Self-Supervised Learning}} of {{Speech Representations}}},
   shorttitle = {Wav2vec 2.0},
-  author = {Baevski, Alexei and Zhou, Henry and Mohamed, Abdelrahman and Auli, Michael},
-  date = {2020-10-22},
-  eprint = {2006.11477},
-  eprinttype = {arXiv},
-  eprintclass = {cs},
-  doi = {10.48550/arXiv.2006.11477},
-  url = {http://arxiv.org/abs/2006.11477},
-  urldate = {2025-04-04},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Baevski, Alexei and Zhou, Yuhao and Mohamed, Abdelrahman and Auli, Michael},
+  date = {2020},
+  volume = {33},
+  pages = {12449--12460},
+  publisher = {Curran Associates, Inc.},
+  url = {https://proceedings.neurips.cc/paper/2020/hash/92d1e1eb1cd6f9fba3227870bb6d7f07-Abstract.html},
+  urldate = {2025-09-09},
   abstract = {We show for the first time that learning powerful representations from speech audio alone followed by fine-tuning on transcribed speech can outperform the best semi-supervised methods while being conceptually simpler. wav2vec 2.0 masks the speech input in the latent space and solves a contrastive task defined over a quantization of the latent representations which are jointly learned. Experiments using all labeled data of Librispeech achieve 1.8/3.3 WER on the clean/other test sets. When lowering the amount of labeled data to one hour, wav2vec 2.0 outperforms the previous state of the art on the 100 hour subset while using 100 times less labeled data. Using just ten minutes of labeled data and pre-training on 53k hours of unlabeled data still achieves 4.8/8.2 WER. This demonstrates the feasibility of speech recognition with limited amounts of labeled data.},
-  langid = {english},
-  pubstate = {prepublished},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
-  file = {/home/pccady/Zotero/storage/FYBUF8ZV/Baevski et al. - 2020 - wav2vec 2.0 A Framework for Self-Supervised Learning of Speech Representations.pdf}
+  file = {/home/pccady/Zotero/storage/IYTHPXY4/Baevski et al. - 2020 - wav2vec 2.0 A Framework for Self-Supervised Learning of Speech Representations.pdf}
 }
 
 @article{bajorek2017l2,
@@ -242,6 +271,23 @@
   file = {/home/pccady/Zotero/storage/AKFY7UJQ/Besacier et al. - 2014 - Automatic speech recognition for under-resourced languages A survey.pdf}
 }
 
+@inproceedings{birdNLTKNaturalLanguage2006,
+  title = {{{NLTK}}: {{The Natural Language Toolkit}}},
+  shorttitle = {{{NLTK}}},
+  booktitle = {Proceedings of the {{COLING}}/{{ACL}} 2006 {{Interactive Presentation Sessions}}},
+  author = {Bird, Steven},
+  editor = {Curran, James},
+  date = {2006-07},
+  pages = {69--72},
+  publisher = {Association for Computational Linguistics},
+  location = {Sydney, Australia},
+  doi = {10.3115/1225403.1225421},
+  url = {https://aclanthology.org/P06-4018/},
+  urldate = {2025-09-12},
+  eventtitle = {{{COLING-ACL}} 2006},
+  file = {/home/pccady/Zotero/storage/XVX9CWIQ/Bird - 2006 - NLTK The Natural Language Toolkit.pdf}
+}
+
 @article{bodnarEvaluatingMotivationalImpact2016,
   title = {Evaluating the Motivational Impact of {{CALL}} Systems: Current Practices and Future Directions},
   shorttitle = {Evaluating the Motivational Impact of {{CALL}} Systems},
@@ -278,12 +324,29 @@
   file = {/home/pccady/Zotero/storage/JQZFFRPM/Boulianne - 2022 - Phoneme transcription of endangered languages an evaluation of recent ASR architectures in the sing.pdf}
 }
 
-@article{broinNewUrbanIrish,
+@article{broinNewUrbanIrish2014,
   title = {New {{Urban Irish}}: {{Pidgin}}, {{Creole}}, or {{Bona Fide Dialect}}? {{The Phonetics}} and {{Morphology}} of {{City}} and {{Gaeltacht Speakers Systematically Compared}}},
   author = {Broin, Brian Ó},
+  date = {2014},
   abstract = {This article compares the phonetics and morphology of Irish spoken in the Gaeltacht with that spoken in Irish cities. Informants were identified by randomly selecting newsreaders and chat show hosts on Gaeltacht and urban Irishlanguage radio stations. Recordings of the speakers were transcribed and then analysed for morphological and phonetic accuracy. City speakers demonstrated a move towards simplified morphology and phonology, making fewer than 50\% of expected changes, while Gaeltacht speakers retained the language’s traditional forms, making more than 90\% of expected changes. It was discovered that the city speakers, while apparently speaking stable idiolects, each returned very different rates, suggesting that the cities do not yet have stable Irish dialects. The Gaeltacht speakers all returned very similar rates.},
   langid = {english},
   file = {/home/pccady/Zotero/storage/ULMAZYR4/Broin - New Urban Irish Pidgin, Creole, or Bona Fide Dialect The Phonetics and Morphology of City and Gael.pdf}
+}
+
+@article{calikEnsemblebasedFrameworkMispronunciation2023a,
+  title = {An Ensemble-Based Framework for Mispronunciation Detection of {{Arabic}} Phonemes},
+  author = {Calık, Sükrü Selim and Kucukmanisa, Ayhan and Kilimci, Zeynep Hilal},
+  date = {2023-09},
+  journaltitle = {Applied Acoustics},
+  shortjournal = {Applied Acoustics},
+  volume = {212},
+  pages = {109593},
+  issn = {0003682X},
+  doi = {10.1016/j.apacoust.2023.109593},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S0003682X23003912},
+  urldate = {2025-09-17},
+  langid = {english},
+  file = {/home/pccady/Zotero/storage/MH9668SX/main.pdf}
 }
 
 @book{chasaideABAIRInitiativeBringing2017,
@@ -416,7 +479,18 @@
   date = {2014},
   abstract = {Ensemble Deep Learning for Speech Recognition Li Deng and John C. Platt    Microsoft Research, One Microsoft Way, Redmond, WA, USA deng@microsoft.com; jplatt@microsoft.com  Abstract Deep learning systems have dramatically improved the accuracy of speech recognition, and various deep architecture...},
   langid = {english},
-  file = {/home/pccady/Zotero/storage/2WU2PQKC/edit.html}
+  file = {/home/pccady/Zotero/storage/44E9M6S7/Deng and Platt - 2014 - Ensemble Deep Learning for Speech Recognition.pdf}
+}
+
+@article{dengScalableStackingLearning2012,
+  title = {Scalable Stacking and Learning for Building Deep Architectures},
+  author = {Deng, li and Yu, Dong and Platt, John},
+  date = {2012-03-01},
+  journaltitle = {Acoustics, Speech, and Signal Processing, 1988. ICASSP-88., 1988 International Conference on},
+  shortjournal = {Acoustics, Speech, and Signal Processing, 1988. ICASSP-88., 1988 International Conference on},
+  doi = {10.1109/ICASSP.2012.6288333},
+  abstract = {Deep Neural Networks (DNNs) have shown remarkable success in pattern recognition tasks. However, parallelizing DNN training across computers has been dif?cult. We present the Deep Stack- ing Network (DSN), which overcomes the problem of paralleliz- ing learning algorithms for deep architectures. The DSN provides a method of stacking simple processing modules in buiding deep architectures, with a convex learning problem in each module. Ad- ditional ?ne tuning further improves the DSN, while introducing mi- nor non-convexity. Full learning in the DSN is batch-mode, making it amenable to parallel training over many machines and thus be scal- able over the potentially huge size of the training data. Experimental results on both the MNIST (image) and TIMIT (speech) classi?ca- tion tasks demonstrate that the DSN learning algorithm developed in this work is not only parallelizable in implementation but it also attains higher classi?cation accuracy than the DNN.},
+  file = {/home/pccady/Zotero/storage/WN97TG6Y/Deng et al. - 2012 - Scalable stacking and learning for building deep architectures.pdf}
 }
 
 @inproceedings{devlinBERTPretrainingDeep2019,
@@ -442,6 +516,18 @@
   author = {Dickerson, Claire},
   langid = {english},
   file = {/home/pccady/Zotero/storage/5FIIE56P/Dickerson - Miljöpartiet and the never-ending nuclear energy debate.pdf}
+}
+
+@inproceedings{dietterichEnsembleMethodsMachine2000,
+  title = {Ensemble Methods in Machine Learning},
+  author = {Dietterich, Thomas G},
+  date = {2000},
+  pages = {1--15},
+  publisher = {Springer},
+  url = {https://www2.cs.uh.edu/~ceick/7362/T5-3.pdf},
+  urldate = {2025-09-06},
+  eventtitle = {International Workshop on Multiple Classifier Systems},
+  file = {/home/pccady/Zotero/storage/TGEEURGX/T5-3.pdf}
 }
 
 @article{duibhirResearchReportNovember,
@@ -477,6 +563,23 @@
   abstract = {This paper reviews research in spoken language technology for education and more specifically for language learning. It traces the history of the domain and then groups main issues in the interaction with the student. It addresses the modalities of interaction and their implementation issues and algorithms. Then it discusses one user population – children – and an application for them. Finally it has a discussion of overall systems. It can be used as an introduction to the field and a source of reference materials.},
   langid = {english},
   file = {/home/pccady/Zotero/storage/MEGHYA3U/Eskenazi - 2009 - An overview of spoken language technology for education.pdf}
+}
+
+@online{fazelSynthASRUnlockingSynthetic2021,
+  title = {{{SynthASR}}: {{Unlocking Synthetic Data}} for {{Speech Recognition}}},
+  shorttitle = {{{SynthASR}}},
+  author = {Fazel, Amin and Yang, Wei and Liu, Yulan and Barra-Chicote, Roberto and Meng, Yixiong and Maas, Roland and Droppo, Jasha},
+  date = {2021-06-14},
+  eprint = {2106.07803},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2106.07803},
+  url = {http://arxiv.org/abs/2106.07803},
+  urldate = {2025-09-13},
+  abstract = {End-to-end (E2E) automatic speech recognition (ASR) models have recently demonstrated superior performance over the traditional hybrid ASR models. Training an E2E ASR model requires a large amount of data which is not only expensive but may also raise dependency on production data. At the same time, synthetic speech generated by the state-of-the-art text-to-speech (TTS) engines has advanced to near-human naturalness. In this work, we propose to utilize synthetic speech for ASR training (SynthASR) in applications where data is sparse or hard to get for ASR model training. In addition, we apply continual learning with a novel multi-stage training strategy to address catastrophic forgetting, achieved by a mix of weighted multi-style training, data augmentation, encoder freezing, and parameter regularization. In our experiments conducted on in-house datasets for a new application of recognizing medication names, training ASR RNN-T models with synthetic audio via the proposed multi-stage training improved the recognition performance on new application by more than 65\% relative, without degradation on existing general applications. Our observations show that SynthASR holds great promise in training the state-of-the-art large-scale E2E ASR models for new applications while reducing the costs and dependency on production data.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {/home/pccady/Zotero/storage/5SBEK7VU/Fazel et al. - 2021 - SynthASR Unlocking Synthetic Data for Speech Recognition.pdf;/home/pccady/Zotero/storage/P8XNTKVX/2106.html}
 }
 
 @inproceedings{fiscus1997post,
@@ -523,6 +626,22 @@
   langid = {english},
   annotation = {Page Version ID: 1297621758},
   file = {/home/pccady/Zotero/storage/7IVVP94K/index.html}
+}
+
+@inproceedings{gaurMixtureInformedExperts2021,
+  title = {Mixture of {{Informed Experts}} for {{Multilingual Speech Recognition}}},
+  booktitle = {{{ICASSP}} 2021 - 2021 {{IEEE International Conference}} on {{Acoustics}}, {{Speech}} and {{Signal Processing}} ({{ICASSP}})},
+  author = {Gaur, Neeraj and Farris, Brian and Haghani, Parisa and Leal, Isabel and Moreno, Pedro J. and Prasad, Manasa and Ramabhadran, Bhuvana and Zhu, Yun},
+  date = {2021-06},
+  pages = {6234--6238},
+  issn = {2379-190X},
+  doi = {10.1109/ICASSP39728.2021.9414379},
+  url = {https://ieeexplore.ieee.org/document/9414379/},
+  urldate = {2025-09-15},
+  abstract = {When trained on related or low-resource languages, multilingual speech recognition models often outperform their monolingual counterparts. However, these models can suffer from loss in performance for high resource or unrelated languages. We investigate the use of a mixture-of-experts approach to assign per-language parameters in the model to increase network capacity in a structured fashion. We introduce a novel variant of this approach, ‘informed experts’, which attempts to tackle inter-task conflicts by eliminating gradients from other tasks in these task-specific parameters. We conduct experiments on a real-world task with English, French and four dialects of Arabic to show the effectiveness of our approach. Our model matches or outperforms the monolingual models for almost all languages, with gains of as much as 31\% relative. Our model also outperforms the baseline multilingual model for all languages by up to 9\% relative.},
+  eventtitle = {{{ICASSP}} 2021 - 2021 {{IEEE International Conference}} on {{Acoustics}}, {{Speech}} and {{Signal Processing}} ({{ICASSP}})},
+  keywords = {Acoustics,Conferences,end-to-end speech recognition,language id,mixture of experts,multilingual,RNN-T,Signal processing,Speech processing,Speech recognition,Task analysis,Training},
+  file = {/home/pccady/Zotero/storage/3M92YV3S/Gaur et al. - 2021 - Mixture of Informed Experts for Multilingual Speech Recognition.pdf}
 }
 
 @inproceedings{gitmanConfidencebasedEnsemblesEndtoEnd2023,
@@ -599,6 +718,24 @@
   langid = {english},
   pagetotal = {1},
   file = {/home/pccady/Zotero/storage/3N96SQE6/Hansen Edwards and Zampini - 2008 - Phonology and Second Language Acquisition.pdf}
+}
+
+@article{hansenNeuralNetworkEnsembles1990,
+  title = {Neural Network Ensembles},
+  author = {Hansen, L.K. and Salamon, P.},
+  date = {1990-10},
+  journaltitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  shortjournal = {IEEE Trans. Pattern Anal. Machine Intell.},
+  volume = {12},
+  number = {10},
+  pages = {993--1001},
+  issn = {01628828},
+  doi = {10.1109/34.58871},
+  url = {http://ieeexplore.ieee.org/document/58871/},
+  urldate = {2025-09-14},
+  abstract = {We propose several means for improving the performance and training of neural networks for classification. We use crossvalidation as a tool for optimizing network parameters and architecture. We show further that the remaining residual “generalization” error can be reduced by invoking ensembles of similar networks.},
+  langid = {english},
+  file = {/home/pccady/Zotero/storage/ETCU9XEC/Hansen and Salamon - 1990 - Neural network ensembles.pdf}
 }
 
 @article{hardisonSecondlanguageSpokenWord2005,
@@ -802,6 +939,23 @@
   file = {/home/pccady/Zotero/storage/U3H5C8P2/ed3book_aug25.pdf}
 }
 
+@inproceedings{khareLowResourceASR2021a,
+  title = {Low {{Resource ASR}}: {{The Surprising Effectiveness}} of {{High Resource Transliteration}}},
+  shorttitle = {Low {{Resource ASR}}},
+  booktitle = {Interspeech 2021},
+  author = {Khare, Shreya and Mittal, Ashish and Diwan, Anuj and Sarawagi, Sunita and Jyothi, Preethi and Bharadwaj, Samarth},
+  date = {2021-08-30},
+  pages = {1529--1533},
+  publisher = {ISCA},
+  doi = {10.21437/Interspeech.2021-2062},
+  url = {https://www.isca-archive.org/interspeech_2021/khare21_interspeech.html},
+  urldate = {2025-09-17},
+  abstract = {Cross-lingual transfer of knowledge from high-resource languages to low-resource languages is an important research problem in automatic speech recognition (ASR). We propose a new strategy of transfer learning by pretraining using large amounts of speech in the high-resource language but with its text transliterated to the target low-resource language. This simple mapping of scripts explicitly encourages increased sharing between the output spaces of both languages and is surprisingly effective even when the high-resource and low-resource languages are from unrelated language families. The utility of our proposed technique is more evident in very low-resource scenarios, where better initializations are more beneficial. We evaluate our technique on a transformer ASR architecture and the state-ofthe-art wav2vec2.0 ASR architecture, with English as the highresource language and six languages as low-resource targets. With access to 1 hour of target speech, we obtain relative WER reductions of up to 8.2\% compared to existing transfer-learning approaches.},
+  eventtitle = {Interspeech 2021},
+  langid = {english},
+  file = {/home/pccady/Zotero/storage/8PB5RI2F/Khare et al. - 2021 - Low Resource ASR The Surprising Effectiveness of High Resource Transliteration.pdf}
+}
+
 @online{kheirAutomaticPronunciationAssessment2023,
   title = {Automatic {{Pronunciation Assessment}} -- {{A Review}}},
   author = {Kheir, Yassine El and Ali, Ahmed and Chowdhury, Shammur Absar},
@@ -947,12 +1101,47 @@
   file = {/home/pccady/Zotero/storage/8835LD4X/Kyriakopoulos et al. - 2018 - A Deep Learning Approach to Assessing Non-native Pronunciation of English Using Phone Distances.pdf}
 }
 
+@inproceedings{laptevFastEntropyBasedMethods2023,
+  title = {Fast {{Entropy-Based Methods}} of {{Word-Level Confidence Estimation}} for {{End-To-End Automatic Speech Recognition}}},
+  booktitle = {2022 {{IEEE Spoken Language Technology Workshop}} ({{SLT}})},
+  author = {Laptev, Aleksandr and Ginsburg, Boris},
+  date = {2023-01-09},
+  eprint = {2212.08703},
+  eprinttype = {arXiv},
+  eprintclass = {eess},
+  pages = {152--159},
+  doi = {10.1109/SLT54892.2023.10022960},
+  url = {http://arxiv.org/abs/2212.08703},
+  urldate = {2025-09-14},
+  abstract = {This paper presents a class of new fast non-trainable entropy-based confidence estimation methods for automatic speech recognition. We show how per-frame entropy values can be normalized and aggregated to obtain a confidence measure per unit and per word for Connectionist Temporal Classification (CTC) and Recurrent Neural Network Transducer (RNN-T) models. Proposed methods have similar computational complexity to the traditional method based on the maximum per-frame probability, but they are more adjustable, have a wider effective threshold range, and better push apart the confidence distributions of correct and incorrect words. We evaluate the proposed confidence measures on LibriSpeech test sets, and show that they are up to 2 and 4 times better than confidence estimation based on the maximum per-frame probability at detecting incorrect words for Conformer-CTC and Conformer-RNN-T models, respectively.},
+  keywords = {Computer Science - Computation and Language,Computer Science - Information Theory,Computer Science - Machine Learning,Electrical Engineering and Systems Science - Audio and Speech Processing,Mathematics - Information Theory},
+  file = {/home/pccady/Zotero/storage/ZZLL4CDB/Laptev and Ginsburg - 2023 - Fast Entropy-Based Methods of Word-Level Confidence Estimation for End-To-End Automatic Speech Recog.pdf;/home/pccady/Zotero/storage/PQNVQW7J/2212.html}
+}
+
 @article{leeMassivelyMultilingualPronunciation,
   title = {Massively {{Multilingual Pronunciation Mining}} with {{WikiPron}}},
   author = {Lee, Jackson L and Ashby, Lucas F E and Garza, M Elizabeth and Lee-Sikka, Yeonju and Miller, Sean and Wong, Alan and McCarthy, Arya D and Gorman, Kyle},
   abstract = {We introduce WikiPron, an open-source command-line tool for extracting pronunciation data from Wiktionary, a collaborative multilingual online dictionary. We first describe the design and use of WikiPron. We then discuss the challenges faced scaling this tool to create an automatically-generated database of 1.7 million pronunciations from 165 languages. Finally, we validate the pronunciation database by using it to train and evaluating a collection of generic grapheme-to-phoneme models. The software, pronunciation data, and models are all made available under permissive open-source licenses.},
   langid = {english},
   file = {/home/pccady/Zotero/storage/H79IA2SE/Lee et al. - Massively Multilingual Pronunciation Mining with WikiPron.pdf}
+}
+
+@inproceedings{leungCNNRNNCTCBasedEndtoend2019,
+  title = {{{CNN-RNN-CTC Based End-to-end Mispronunciation Detection}} and {{Diagnosis}}},
+  booktitle = {{{ICASSP}} 2019 - 2019 {{IEEE International Conference}} on {{Acoustics}}, {{Speech}} and {{Signal Processing}} ({{ICASSP}})},
+  author = {Leung, Wai-Kim and Liu, Xunying and Meng, Helen},
+  date = {2019-05},
+  pages = {8132--8136},
+  publisher = {IEEE},
+  location = {Brighton, United Kingdom},
+  doi = {10.1109/ICASSP.2019.8682654},
+  url = {https://ieeexplore.ieee.org/document/8682654/},
+  urldate = {2025-09-12},
+  abstract = {This paper focuses on using Convolutional Neural Network (CNN), Recurrent Neural Network (RNN) and Connectionist Temporal Classification (CTC) to build an end-to-end speech recognition for Mispronunciation Detection and Diagnosis (MDD) task. Our approach is end-to-end models, while phonemic or graphemic information, or forced alignment between different linguistic units, are not required. We conduct experiments that compare the proposed CNN-RNNCTC approach with alternative mispronunciation detection and diagnoses (MDD) approaches. The F-measure of our approach is 74.65\%, which significantly outperforms the Extended Recognition Network (ERN) (S-AM) by 44.75\% and State-level Acoustic Model (S-AM) by 32.28\% relatively. The relative improvement in F-measure when over Acoustic-Phonemic Model (APM), Acoustic-Graphemic Model (AGM) and Acoustic-Phonemic-Graphemic Model (APGM) are 9.57\%, 5.04\% and 2.77\% respectively.},
+  eventtitle = {{{ICASSP}} 2019 - 2019 {{IEEE International Conference}} on {{Acoustics}}, {{Speech}} and {{Signal Processing}} ({{ICASSP}})},
+  isbn = {978-1-4799-8131-1},
+  langid = {english},
+  file = {/home/pccady/Zotero/storage/8TPKZ7SE/Leung et al. - 2019 - CNN-RNN-CTC Based End-to-end Mispronunciation Detection and Diagnosis.pdf}
 }
 
 @article{levisCOMPUTERTECHNOLOGYTEACHING2007,
@@ -1110,6 +1299,18 @@
   file = {/home/pccady/Zotero/storage/LMHK7Y9J/Mac Lochlainn - 2023 - Learning to express, learning as self-expression a multimethod investigation of the L2 selves of di.pdf}
 }
 
+@article{maclinEmpiricalEvaluationBagging1997,
+  title = {An Empirical Evaluation of Bagging and Boosting},
+  author = {Maclin, Richard and Opitz, David},
+  date = {1997},
+  journaltitle = {AAAI/IAAI},
+  volume = {1997},
+  pages = {546--551},
+  url = {https://d1wqtxts1xzle7.cloudfront.net/78173773/An_Empirical_Evaluation_of_Bagging_and_B20220105-9764-16y0t8b.pdf?1738464338=&response-content-disposition=inline%3B+filename%3DAn_empirical_evaluation_of_bagging_and_b.pdf&Expires=1758100511&Signature=ULr42EX~oPCHa6soKPN0avlV0aJeaV5Pq96lNHezXzPN3CaB2CYdPJi1atYw3dXBQF04naJPYSQicHHyAQrqLNgXwSF8xAx6EFU4g~CBnmOa5vnYQeQJTrcJlOvLUwbAHW0iZf8T8lNgeP-c~aImdq1OYrzWsEe2HQ6e-q77emb2VM9p~xsFxMKAn~5RU2w6d~x3iQ4n-YVaAeUbPdAtWFlysMTlSow56C4xK4KupsOSUA3qlXeq9PTBaWskjFVCcSAlfJpm06hDOLrZtwO3O821qdsrh1HsXxoTTWa2Qbh1~Ra-ZHwXQt-o2~XKDva8-HeQxOX7x~6FrBsf7HBo6A__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA},
+  urldate = {2025-09-17},
+  file = {/home/pccady/Zotero/storage/8ZXEJKA6/An_Empirical_Evaluation_of_Bagging_and_B20220105-9764-16y0t8b.pdf}
+}
+
 @article{maclochlainnClickingConnectingL22021,
   title = {Clicking, but Connecting? {{L2}} Learning Engagement on an Ab Initio {{Irish}} Language {{LMOOC}}},
   shorttitle = {Clicking, but Connecting?},
@@ -1180,6 +1381,23 @@
   keywords = {cldf:StructureDataset,linguistics}
 }
 
+@inproceedings{mcauliffeMontrealForcedAligner2017,
+  title = {Montreal {{Forced Aligner}}: {{Trainable Text-Speech Alignment Using Kaldi}}},
+  shorttitle = {Montreal {{Forced Aligner}}},
+  booktitle = {Interspeech 2017},
+  author = {McAuliffe, Michael and Socolof, Michaela and Mihuc, Sarah and Wagner, Michael and Sonderegger, Morgan},
+  date = {2017-08-20},
+  pages = {498--502},
+  publisher = {ISCA},
+  doi = {10.21437/Interspeech.2017-1386},
+  url = {https://www.isca-archive.org/interspeech_2017/mcauliffe17_interspeech.html},
+  urldate = {2025-09-08},
+  abstract = {We present the Montreal Forced Aligner (MFA), a new opensource system for speech-text alignment. MFA is an update to the Prosodylab-Aligner, and maintains its key functionality of trainability on new data, as well as incorporating improved architecture (triphone acoustic models and speaker adaptation), and other features. MFA uses Kaldi instead of HTK, allowing MFA to be distributed as a stand-alone package, and to exploit parallel processing for computationally-intensive training and scaling to larger datasets. We evaluate MFA’s performance on aligning word and phone boundaries in English conversational and laboratory speech, relative to human-annotated boundaries, focusing on the effects of aligner architecture and training on the data to be aligned. MFA performs well relative to two existing open-source aligners with simpler architecture (Prosodylab-Aligner and FAVE), and both its improved architecture and training on data to be aligned generally result in more accurate boundaries.},
+  eventtitle = {Interspeech 2017},
+  langid = {english},
+  file = {/home/pccady/Zotero/storage/TZ5ZLLHY/McAuliffe et al. - 2017 - Montreal Forced Aligner Trainable Text-Speech Alignment Using Kaldi.pdf}
+}
+
 @article{mechuraIntroductionGramadanIrish,
   title = {Introduction to {{Gramadán}} and the {{Irish National Morphology Database}}},
   author = {Měchura, Michal Boleslav},
@@ -1234,6 +1452,17 @@
   pagetotal = {62}
 }
 
+@article{needlemanGeneralMethodApplicable1970,
+  title = {A General Method Applicable to the Search for Similarities in the Amino Acid Sequence of Two Proteins},
+  author = {Needleman, Saul B and Wunsch, Christian D},
+  date = {1970},
+  journaltitle = {Journal of molecular biology},
+  volume = {48},
+  number = {3},
+  pages = {443--453},
+  file = {/home/pccady/Zotero/storage/DXM3Z5PA/needleman-wunsch-orig-dyn-prog-paper.pdf}
+}
+
 @article{neriEffectivenessComputerAssisted2008,
   title = {The Effectiveness of Computer Assisted Pronunciation Training for Foreign Language Learning by Children},
   author = {Neri, Ambra and Mich, Ornella and Gerosa, Matteo and Giuliani, Diego},
@@ -1267,9 +1496,10 @@
   file = {/home/pccady/Zotero/storage/HEZYJ5BN/O'Reilly and Ní Chasaide - 2016 - Modelling the timing and scaling of nuclear pitch accents of Connaught and Ulster Irish with the Fuj.pdf}
 }
 
-@article{nichasaideSPEECHTECHNOLOGYDOCUMENTATION,
+@article{nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015,
   title = {{{SPEECH TECHNOLOGY AS DOCUMENTATION FOR ENDANGERED LANGUAGE PRESERVATION}}: {{THE CASE OF IRISH}}},
   author = {Ní Chasaide, Ailbhe and Ní Chiaráin, Neasa and Berthelsen, Harald and Wendler, Christoph and Murphy, Andrew},
+  date = {2015},
   abstract = {Developing speech technology such as text-tospeech (TTS), requiring as it does a raft of phonetic and linguistic resources, can provide a powerful way to document endangered languages. Drawing on the experience of the ABAIR initiative, developing such resources for Irish [1], we illustrate how both the technology and the underpinning resources can be exploited in a variety of ways that can contribute to the preservation and revitalisation of these languages. By enabling new avenues of application, they can further help address the particular challenges that face the language users and learners. To maximise the immediate and downstream impact, resource development should ideally involve linguistically transparent, rule-based approaches, rather than the machine learning approaches typical of the commercially driven TTS systems for major world languages.},
   langid = {english},
   file = {/home/pccady/Zotero/storage/FUC4REGR/Chasaide et al. - SPEECH TECHNOLOGY AS DOCUMENTATION FOR ENDANGERED LANGUAGE PRESERVATION THE CASE OF IRISH.pdf}
@@ -1415,6 +1645,20 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
   file = {/home/pccady/Zotero/storage/ETG9BVAH/Parikh et al. - 2025 - Evaluating Logit-Based GOP Scores for Mispronunciation Detection.pdf;/home/pccady/Zotero/storage/AYCNULJN/2506.html}
+}
+
+@inproceedings{paszkePyTorchImperativeStyle2019,
+  title = {{{PyTorch}}: {{An Imperative Style}}, {{High-Performance Deep Learning Library}}},
+  shorttitle = {{{PyTorch}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+  date = {2019},
+  volume = {32},
+  publisher = {Curran Associates, Inc.},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html},
+  urldate = {2025-09-08},
+  abstract = {Deep learning frameworks have often focused on either usability or speed, but not both. PyTorch is a machine learning library that shows that these two goals are in fact compatible: it was designed from first principles to support an imperative and Pythonic programming style that supports code as a model, makes debugging easy and is consistent with other popular scientific computing libraries, while remaining efficient and supporting hardware accelerators such as GPUs. In this paper, we detail the principles that drove the implementation of PyTorch and how they are reflected in its architecture. We emphasize that every aspect of PyTorch is a regular Python program under the full control of its user. We also explain how the careful and pragmatic implementation of the key components of its runtime enables them to work together to achieve compelling performance. We demonstrate the efficiency of individual subsystems, as well as the overall speed of PyTorch on several commonly used benchmarks.},
+  file = {/home/pccady/Zotero/storage/IVX7WQNM/Paszke et al. - 2019 - PyTorch An Imperative Style, High-Performance Deep Learning Library.pdf}
 }
 
 @article{pengEndtoEndMispronunciationDetection2023,
@@ -1925,6 +2169,23 @@
   file = {/home/pccady/Zotero/storage/AUJHWQR8/Wang et al. - 2022 - Exploring Non-Autoregressive End-to-End Neural Modeling for English Mispronunciation Detection and D.pdf}
 }
 
+@online{watanabeESPnetEndtoEndSpeech2018,
+  title = {{{ESPnet}}: {{End-to-End Speech Processing Toolkit}}},
+  shorttitle = {{{ESPnet}}},
+  author = {Watanabe, Shinji and Hori, Takaaki and Karita, Shigeki and Hayashi, Tomoki and Nishitoba, Jiro and Unno, Yuya and Soplin, Nelson Enrique Yalta and Heymann, Jahn and Wiesner, Matthew and Chen, Nanxin and Renduchintala, Adithya and Ochiai, Tsubasa},
+  date = {2018-03-30},
+  eprint = {1804.00015},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1804.00015},
+  url = {http://arxiv.org/abs/1804.00015},
+  urldate = {2025-09-03},
+  abstract = {This paper introduces a new open source platform for end-to-end speech processing named ESPnet. ESPnet mainly focuses on end-to-end automatic speech recognition (ASR), and adopts widely-used dynamic neural network toolkits, Chainer and PyTorch, as a main deep learning engine. ESPnet also follows the Kaldi ASR toolkit style for data processing, feature extraction/format, and recipes to provide a complete setup for speech recognition and other speech processing experiments. This paper explains a major architecture of this software platform, several important functionalities, which differentiate ESPnet from other open source ASR toolkits, and experimental results with major ASR benchmarks.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/pccady/Zotero/storage/RHIAGLHI/Watanabe et al. - 2018 - ESPnet End-to-End Speech Processing Toolkit.pdf;/home/pccady/Zotero/storage/7YHGCAJ2/1804.html}
+}
+
 @online{weiMitigatingNeuralNetwork2022,
   title = {Mitigating {{Neural Network Overconfidence}} with {{Logit Normalization}}},
   author = {Wei, Hongxin and Xie, Renchunzi and Cheng, Hao and Feng, Lei and An, Bo and Li, Yixuan},
@@ -1984,6 +2245,23 @@
   abstract = {This paper investigates a method of automatic pronunciation scoring for use in computer-assisted language learning (CALL) systems. The method utilises a likelihood-based `Goodness of Pronunciation' (GOP) measure which is extended to include individual thresholds for each phone based on both averaged native conÆdence scores and on rejection statistics provided by human judges. Further improvements are obtained by incorporating models of the subject’s native language and by augmenting the recognition networks to include expected pronunciation errors. The various GOP measures are assessed using a specially recorded database of non-native speakers which has been annotated to mark phone-level pronunciation errors. Since pronunciation assessment is highly subjective, a set of four performance measures has been designed, each of them measuring di erent aspects of how well computer-derived phone-level scores agree with human scores. These performance measures are used to cross-validate the reference annotations and to assess the basic GOP algorithm and its reÆnements. The experimental results suggest that a likelihood-based pronunciation scoring metric can achieve usable performance, especially after applying the various enhancements. ” 2000 Elsevier Science B.V. All rights reserved.},
   langid = {english},
   file = {/home/pccady/Zotero/storage/KF2BIY5D/Witt and Young - 2000 - Phone-level pronunciation scoring and assessment for interactive language learning.pdf}
+}
+
+@inproceedings{wolfTransformersStateoftheArtNatural2020,
+  title = {Transformers: {{State-of-the-Art Natural Language Processing}}},
+  shorttitle = {Transformers},
+  booktitle = {Proceedings of the 2020 {{Conference}} on {{Empirical Methods}} in {{Natural Language Processing}}: {{System Demonstrations}}},
+  author = {Wolf, Thomas and Debut, Lysandre and Sanh, Victor and Chaumond, Julien and Delangue, Clement and Moi, Anthony and Cistac, Pierric and Rault, Tim and Louf, Remi and Funtowicz, Morgan and Davison, Joe and Shleifer, Sam and family=Platen, given=Patrick, prefix=von, useprefix=true and Ma, Clara and Jernite, Yacine and Plu, Julien and Xu, Canwen and Le Scao, Teven and Gugger, Sylvain and Drame, Mariama and Lhoest, Quentin and Rush, Alexander},
+  editor = {Liu, Qun and Schlangen, David},
+  date = {2020-10},
+  pages = {38--45},
+  publisher = {Association for Computational Linguistics},
+  location = {Online},
+  doi = {10.18653/v1/2020.emnlp-demos.6},
+  url = {https://aclanthology.org/2020.emnlp-demos.6/},
+  urldate = {2025-09-08},
+  abstract = {Recent progress in natural language processing has been driven by advances in both model architecture and model pretraining. Transformer architectures have facilitated building higher-capacity models and pretraining has made it possible to effectively utilize this capacity for a wide variety of tasks. Transformers is an open-source library with the goal of opening up these advances to the wider machine learning community. The library consists of carefully engineered state-of-the art Transformer architectures under a unified API. Backing this library is a curated collection of pretrained models made by and available for the community. Transformers is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments. The library is available at https://github.com/huggingface/transformers.},
+  file = {/home/pccady/Zotero/storage/2Q3Y87JC/Wolf et al. - 2020 - Transformers State-of-the-Art Natural Language Processing.pdf}
 }
 
 @inproceedings{wuTransformerBasedEndtoEnd2021,
