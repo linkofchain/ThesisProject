@@ -271,14 +271,14 @@ The ability to pre-train on freely available unlabeled data makes Wav2Vec 2.0 a 
 \textcite{baevskiEffectivenessSelfsupervisedPretraining2020} self supervision enabling ASR at low cost
 
 \chapter{Related Work}
-In the following section, we will dive into some strategies used to address the problem areas outlined above: recent applications of \gls{asr} in \gls{md}, as well as some of the strategies adopted to overcoming the mismatch in objectives between ordinary phoneme recognition and \gls{md} which motivate the approaches taken in the current work:
+In the following section, we will dive into some existing strategies for overcoming the data scarcity problem in \gls{md}, which can be broadly split into two groups: attempts to eliminated dependency on the scarce \gls{l2} data entirely, or through generating the desired \gls{l2} data through various synthesis or augmenting techniques \todo{see l2gen for some of the papers supporting this split}. We will start with recent applications of \gls{e2e} \gls{asr} in \gls{md} before exploring the specific ways the current work pursues overcoming data scarcity in relation to these two overarching strategies, specifically through: 
 \begin{enumerate}
   \item \gls{asr} model ensembles,
   --and--
   \item \gls{tts}-generated data augmentation
 \end{enumerate}
 
-\section{\gls{e2e} \gls{asr} for \gls{mdd}}
+\section{\gls{e2e} \gls{asr} for \gls{md}}
 Following the general trend in \gls{asr} and \gls{ml} more broadly, 
 
 \numberedparagraph{Touch on phoneme extraction task and detail fine-tuning procedure}
@@ -333,15 +333,16 @@ Although model ensembling has a long history in \gls{ml} and \gls{asr}, confiden
 
 \section{Data Augmentation with Synthetic speech}
 \todo{is augmenting my dataset with synthetic speech augmentation or data synthesis? both?}
-One long-standing method of overcoming data scarcity for various \gls{ml} tasks is \textit{data synthesis}. As end-to-end \gls{asr} models become increasingly capable, so to do their \gls{tts} counterparts, advancing to the point where the speech produced is nearly human in quality and naturalness. Combinations of models during training have also been pursued to ameliorate need for labeled training data through pseudo-labeling of unlabeled data \parencite{yangImprovingMispronunciationDetection2022}, which connects to the motivation of our second experimenttts gen? error-conditioned synthesis?
+As discussed above, phone-level \gls{md} is a very data scarce task; even where \gls{l2} speech recordings do exist, granular phonetic annotations of such speech is often absent \parencite{zhangL2GENNeuralPhoneme2022}. As end-to-end \gls{asr} models become increasingly capable, so to do their \gls{tts} counterparts, advancing to the point where the speech they produce is natural-sounding to the point of being nearly indistinguishable from human speech. This has led a number of researchers to pursue synthetic data generation and data augmentation as ways to fill the gap for \gls{md}. 
 
-\numberedparagraph{motivation and taxonomy of data synthesis for }
+\numberedparagraph{motivation and taxonomy of data synthesis for low resource ASR}
+Combinations of models during training have also been pursued to ameliorate need for labeled training data through pseudo-labeling of unlabeled data \parencite{yangImprovingMispronunciationDetection2022}, which connects to the motivation of our second experiment
 \textcite{shenNaturalTTSSynthesis2018} TTS Tacotron (maybe find google tts paper)
 \parencite{fazelSynthASRUnlockingSynthetic2021}
 
 \numberedparagraph{representative works in research, strengths and limits}
 
-Similar to \textcite{zhangL2GENNeuralPhoneme2022} we see the potential for synthetic data as a possible answer to \gls{md} data scarcity through phone-to-phone translation to create controllable errors mirroring what one would expect from language learners with the same \gls{l1} the \gls{tts} is tailored to. Mapping phonetic transcriptions of canonical Ulster pronunciations to inputs acceptable to an English \gls{tts} gives highly English-sounding approximations of Irish speech, exactly the kinds of errors one expects from English \gls{l1} learners of Irish. 
+
 \textcite{punjabiLanguageModelBootstrapping2019} bootstrapping data with MT (important)
 \textcite{xuIterativePseudoLabelingSpeech2020} multiple iteration of pseudo-labeling on unlabeled data to overcome data scarcity
 \textcite{yangImprovingMispronunciationDetection2022} pseudo-labeling to overcome scarcity (self-superviced learning)
@@ -351,6 +352,7 @@ Similar to \textcite{zhangL2GENNeuralPhoneme2022} we see the potential for synth
 \textcite{barteldsMakingMoreLittle2023} TTS + ASR boosts ASR performance
 \textcite{zhangL2GENNeuralPhoneme2022} phoneme paragraphing to generate mispronounced speech (important)
 \numberedparagraph{experiment 2, gaps and contributions}
+Similar to \textcite{zhangL2GENNeuralPhoneme2022} we see the potential for synthetic data as a possible answer to \gls{md} data scarcity through phone-to-phone translation to create controllable errors mirroring what one would expect from language learners with the same \gls{l1} the \gls{tts} is tailored to. Mapping phonetic transcriptions of canonical Ulster pronunciations to inputs acceptable to an English \gls{tts} gives highly English-sounding approximations of Irish speech with exactly the kinds of segmental errors one expects from English \gls{l1} learners of Irish\footnote{Another noteworthy property of the recordings is the English-like prosody and stress patterns, which could be pursued in an investigation into suprasegmental deviation from Ulster speech, but lies outside the scope of the current work.}. Instead of using a \gls{nn}-based architecture for our phone-to-phone paraphrasing, our key alteration is to utilize \gls{mfa} \gls{g2p} for this task, as we don't have an expertly annotated seed corpus to draw from. L2-gen provides greater diversity through their DPAD augmentation system, but in the interest of time, we do not attempt here to introduce additional variance to the \gls{tts} voices, though we recognize this as an important innovation.
 
 \chapter{Methods \& Materials}
 In the following chapter, we will elaborate the core experiments explored for the current work: one which explores model ensembling as described above as a solution to \gls{md} in the face of data scarcity; the other, which explores data augmentation via bootstrapping \gls{tts} input with \gls{g2p} model to create the data required to train an \gls{asr} model directly for \gls{md}. We will begin with detailing the features in common between these experiments, and end with the evaluation details shared between experiments.\todo{maybe setup links to refer to research questions or sections}

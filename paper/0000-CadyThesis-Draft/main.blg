@@ -1,25 +1,25 @@
 [1] Config.pm:306> INFO - This is Biber 2.18
-[2] Config.pm:309> INFO - Logfile is 'main.blg'
-[218] biber:340> INFO - === Wed Sep 17, 2025, 14:44:45
-[261] Biber.pm:418> INFO - Reading 'main.bcf'
-[516] Biber.pm:978> INFO - Found 104 citekeys in bib section 0
-[547] Biber.pm:4401> INFO - Processing section 0
-[573] Biber.pm:4592> INFO - Looking for bibtex file 'ThesisProject.bib' for section 0
-[634] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1194] bibtex.pm:1518> INFO - Found BibTeX data source 'ThesisProject.bib'
-[4053] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[4053] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[4053] Biber.pm:4221> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[4053] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[4433] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[4687] bbl.pm:757> INFO - Output to main.bbl
-[4688] Biber.pm:130> WARN - ISBN '978-92-3-104096-2 978-92-3-104095-5' in entry 'moseleyAtlasWorldsLanguages2010' is invalid - run biber with '--validate_datamodel' for details.
-[4688] Biber.pm:130> WARN - ISBN '978-1-138-23652-3 978-1-138-23651-6' in entry 'stensonModernIrishComprehensive2020' is invalid - run biber with '--validate_datamodel' for details.
-[4688] Biber.pm:130> WARN - ISBN '978-1-4471-5778-6 978-1-4471-5779-3' in entry 'yuAutomaticSpeechRecognition2015' is invalid - run biber with '--validate_datamodel' for details.
-[4688] Biber.pm:130> WARN - ISBN '979-8-3503-9690-4' in entry 'liuEndtoEndUnsupervisedSpeech2023' is invalid - run biber with '--validate_datamodel' for details.
-[4688] Biber.pm:130> WARN - I didn't find a database entry for 'graves2006connectionist' (section 0)
-[4689] Biber.pm:130> WARN - I didn't find a database entry for 'garofolo1993timit' (section 0)
-[4689] Biber.pm:130> WARN - I didn't find a database entry for 'garofoloDARPATIMITAcousticphonetic1993' (section 0)
-[4689] Biber.pm:130> WARN - I didn't find a database entry for 'deichler2024mm' (section 0)
-[4689] Biber.pm:130> WARN - I didn't find a database entry for 'Li2011ThePA' (section 0)
-[4689] Biber.pm:132> INFO - WARNINGS: 9
+[1] Config.pm:309> INFO - Logfile is 'main.blg'
+[207] biber:340> INFO - === Thu Sep 18, 2025, 20:59:28
+[245] Biber.pm:418> INFO - Reading 'main.bcf'
+[487] Biber.pm:978> INFO - Found 103 citekeys in bib section 0
+[517] Biber.pm:4401> INFO - Processing section 0
+[540] Biber.pm:4592> INFO - Looking for bibtex file 'ThesisProject.bib' for section 0
+[591] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1132] bibtex.pm:1518> INFO - Found BibTeX data source 'ThesisProject.bib'
+[3591] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3591] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3591] Biber.pm:4221> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[3591] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[3932] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[4166] bbl.pm:757> INFO - Output to main.bbl
+[4167] Biber.pm:130> WARN - ISBN '978-92-3-104096-2 978-92-3-104095-5' in entry 'moseleyAtlasWorldsLanguages2010' is invalid - run biber with '--validate_datamodel' for details.
+[4167] Biber.pm:130> WARN - ISBN '978-1-138-23652-3 978-1-138-23651-6' in entry 'stensonModernIrishComprehensive2020' is invalid - run biber with '--validate_datamodel' for details.
+[4167] Biber.pm:130> WARN - ISBN '978-1-4471-5778-6 978-1-4471-5779-3' in entry 'yuAutomaticSpeechRecognition2015' is invalid - run biber with '--validate_datamodel' for details.
+[4167] Biber.pm:130> WARN - ISBN '979-8-3503-9690-4' in entry 'liuEndtoEndUnsupervisedSpeech2023' is invalid - run biber with '--validate_datamodel' for details.
+[4168] Biber.pm:130> WARN - I didn't find a database entry for 'graves2006connectionist' (section 0)
+[4168] Biber.pm:130> WARN - I didn't find a database entry for 'garofolo1993timit' (section 0)
+[4168] Biber.pm:130> WARN - I didn't find a database entry for 'garofoloDARPATIMITAcousticphonetic1993' (section 0)
+[4168] Biber.pm:130> WARN - I didn't find a database entry for 'deichler2024mm' (section 0)
+[4168] Biber.pm:130> WARN - I didn't find a database entry for 'Li2011ThePA' (section 0)
+[4168] Biber.pm:132> INFO - WARNINGS: 9
