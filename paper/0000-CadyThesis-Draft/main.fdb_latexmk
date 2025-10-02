@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber main"] 1758631493 "main.bcf" "main.bbl" "main" 1758631495 2
-  "./ThesisProject.bib" 1758203536 239927 d33952bb4819c16d02de2722f0bfb592 ""
-  "main.bcf" 0 -1 0 "xelatex"
+["biber main"] 1759326981 "main.bcf" "main.bbl" "main" 1759327231 0
+  "./ThesisProject.bib" 1759325853 252969 5e61f3b08a536ab8e97e6eb490848edc ""
+  "main.bcf" 1759327228 132031 ab9747960bc3eaed6231e31a40bc214c "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1758113132 "main.xdv" "main.pdf" "main" 1758113134 0
-  "main.xdv" 0 -1 0 "xelatex"
+["xdvipdfmx"] 1759327230 "main.xdv" "main.pdf" "main" 1759327231 0
+  "main.xdv" 1759327228 1226348 943bf8290dc238677b8dc182f8117e8f "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1758631478 "/home/pccady/Studies/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" "main.xdv" "main" 1758631495 2
+["xelatex"] 1759327209 "/home/pccady/Studies/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" "main.xdv" "main" 1759327231 0
   "/etc/texmf/web2c/texmf.cnf" 1743752573 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/pccady/Studies/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" 1758631472 76348 37fdbe5025fcdfe039b3a4203689ab75 ""
+  "/home/pccady/Studies/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" 1759327165 80491 9364e21e21e891226d56947ba35d3a24 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -238,6 +238,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def" 1656017716 13127 7cbb21e44f22a87e17ab86536b03d0b7 ""
   "/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg" 1656017716 26842 ebf85e9b6a3e20f9fb2638bd26a568c1 ""
   "/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty" 1656017716 93090 81aca77406cb7fe6004d4af8e22e7534 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg" 1645649607 10002 405e38cc6dbd8f5a8c3a050efcf5ed6c ""
   "/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg" 1645649607 22906 391012403cdd24e0eff9edb7797213df ""
   "/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd" 1634244313 1140 ee5963b0c88b5c4f92fed61a27034b79 ""
   "/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd" 1471383769 549 70a2497c311fc8b19acb02f7607eb4e9 ""
@@ -263,6 +264,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty" 1137110565 4087 636308456f60d2b31cbf97867db5708d ""
   "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657483315 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/silence/silence.sty" 1342202217 17540 5aad5dddd881dee43ad1a83adb336af9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty" 1258848659 5724 d3505925e87b345f11a5f17d58550dea ""
   "/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty" 1580769125 15405 31e477e611bb77761a134e5593e8119d ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty" 1667332637 12691 5b542990fe866f3d772f71346cf85b95 ""
@@ -283,15 +285,16 @@
   "cluu.bbx" 1743757665 463 df2e6d7c46f672770c34b30909ca9e2b ""
   "cluu.cbx" 1743757665 841 699f6c0ab705ab69e6b9acba6a9e140e ""
   "cluu.cls" 1743757665 18426 469075be2a7f0eb3efb82056a1a67e9a ""
-  "images//Gaeltachtai_with_europe_highlight_centered.png" 1757074687 168054 5ff6a45202f24dc3d6f0bea327c797d5 ""
+  "images//Gaeltachtai_with_europe_highlight_centered.png" 1759325315 171724 7a8be648c07e4bfd166bd6c8316f3eb1 ""
+  "images//wav2vec2.png" 1759326493 130911 3c0401456ddff83f67dc98505a7cc16c ""
   "main.acr" 0 -1 0 ""
-  "main.aux" 0 -1 0 "xelatex"
-  "main.bbl" 1758631495 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
+  "main.aux" 1759327228 54793 7fb39897920ce78c8a4faea8e81b9513 "xelatex"
+  "main.bbl" 1759326989 337948 807dc2aa16426c4973091302f85bbf97 "biber main"
   "main.gls" 0 -1 0 ""
-  "main.out" 0 -1 0 "xelatex"
-  "main.run.xml" 1758631492 2449 f57b76c78459cf9746c4225e15a2b531 "xelatex"
-  "main.tex" 1758631472 76348 37fdbe5025fcdfe039b3a4203689ab75 ""
-  "main.toc" 0 -1 0 "xelatex"
+  "main.out" 1759327217 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "main.run.xml" 1759327228 2449 2dd1fbd65cdddf330275c2c15a84093d "xelatex"
+  "main.tex" 1759327165 80491 9364e21e21e891226d56947ba35d3a24 ""
+  "main.toc" 1759327228 2794 2639198304230415b932cd0b1fe1f564 "xelatex"
   (generated)
   "main.acn"
   "main.aux"
