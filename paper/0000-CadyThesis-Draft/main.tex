@@ -165,12 +165,12 @@ To this end, in this work we explore two potential avenues to overcoming the dat
 In this thesis we explore the feasibility of two primary methods of overcoming the scarcity of phonetically annotated \gls{l2} Irish learner data for \gls{md} applications. One approaches the problem with ensembles of monolingual \gls{asr} models for which data scarcity less acute, and another using a schema of data generation by leveraging established \gls{tts} systems to approximate learner speech: a potential low-cost alternative to large-scale phonetic annotation. By exploring these approaches, we aim to illuminate possible ways forward for low-resource language communities interested in developing automated technologies for language learning and pronunciation training.
 
 
-\chapter{Background}
+\chapter{Background}\label{background}
 \numberedparagraph{Short overview of background section}
 
 In the following section we will outline the context motivating our current work with relation to \gls{nlp} and \gls{asr} research for minority languages. We begin by summarizing the state of minority languages in current research, highlighting some promising trends as well as some thusfar recalcitrant problems hindering more equal access to the benefits of our time's rapid advances in language technology. We then proceed to outline the more general research space of the current work: \gls{call} and \gls{capt} before digging into the core task of \gls{capt} systems: \gls{md} and \gls{mdd}. We conclude with a technical overview of modern \gls{asr} systems used for such tasks, leaving the specific efforts of researchers to overcome data limitation inherent to low-resource languages in the next section, \todo{get chapter and section references working}%\nameref{chap:Related Work}.
 
-\section{Irish \& The Predicament of Minority Languages in \acrfull{nlp}}\label{back:lr-lang}
+\section{Irish \& The Predicament of Minority Languages in \acrfull{nlp}}\label{background:lr-lang}
 
 \numberedparagraph{introduce need for general-use systems.}
 
@@ -486,12 +486,14 @@ To train our skyline models, we confined ourself to one speaker \gls{l1} group, 
 \textcite{neriEffectivenessComputerAssisted2008} pronunciation training for children, lead to improvements comparable to traditional training
 \textcite{prabhavalkarMinimumWordError2017} alternatives to ctc
 \chapter{Future work}
-\numberedparagraph{Possibilities for future work}
+\numberedparagraph{Suprasegmental eval}
+As mentioned in the \ref{}, suprasegmental 
+\numberedparagraph{ensemble across model types}
+\numberedparagraph{iterative improvement of neural translation model}
 start expanding on this to set an upper bound on my experiment instead of letting it scope creep, then make a time machine and give it to yourself 6 months ago
 \textcite{gongTransformerBasedMultiAspectMultiGranularity2022} assessment targeting more than one aspect of speech (prosody, word-level stress)
-\textcite{mortensenPanPhonResourceMapping} PanPhon mapping from ipa to articulatory features
+
 \textcite{rouditchenkoComparisonMultilingualSelfSupervised2023} language family in pretraining predictive of how models compare. need for resources for smaller families
-\textcite{sjons2022articulation} focus on child directed speech, since it is well-suited for word segmentation?
 
 \chapter{Ethical Considerations}
 \numberedparagraph{General Ethical considerations for current work and possible extensions}
