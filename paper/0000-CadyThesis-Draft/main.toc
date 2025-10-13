@@ -6,7 +6,8 @@
 \contentsline {section}{\numberline {2.2}From Text to Speech: Approaches to Low-Resource Scenarios}{12}{section.2.2}%
 \contentsline {section}{\numberline {2.3}\acrfull {call} \& \acrfull {capt}}{13}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Pronunciation \& \acrfull {mdd}}{14}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Speech and \acrfull {asr}}{15}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Speech and \Gls {asr}}{15}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Wav2Vec 2.0}{16}{subsection.2.5.1}%
 \contentsline {chapter}{\numberline {3}Related Work}{18}{chapter.3}%
 \contentsline {section}{\numberline {3.1}\gls {e2e} \gls {asr} for \gls {md}}{18}{section.3.1}%
 \contentsline {section}{\numberline {3.2}\gls {asr} Ensembling Strategies}{18}{section.3.2}%
@@ -26,9 +27,10 @@
 \contentsline {subsection}{\numberline {4.4.1}Metrics}{25}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Data}{25}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Skyline Comparison}{26}{subsection.4.4.3}%
-\contentsline {chapter}{\numberline {5}Results}{27}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Discussion}{28}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusions}{29}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Ethical Considerations}{30}{chapter.8}%
-\contentsline {chapter}{\numberline {9}AI Tools}{31}{chapter.9}%
+\contentsline {chapter}{\numberline {5}Results}{28}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Discussion}{29}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusions}{30}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Future work}{31}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Ethical Considerations}{32}{chapter.9}%
+\contentsline {chapter}{\numberline {10}AI Tools}{33}{chapter.10}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

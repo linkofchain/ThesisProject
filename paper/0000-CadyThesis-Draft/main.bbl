@@ -499,8 +499,72 @@
       \endverb
       \keyw{Computer Science - Computation and Language,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
     \endentry
+    \entry{baevskiEffectivenessSelfsupervisedPretraining2020}{online}{}
+      \name{author}{3}{ul=2}{%
+        {{un=0,uniquepart=base,hash=e478046d4abc39e9814f6e364a736511}{%
+           family={Baevski},
+           familyi={B\bibinitperiod},
+           given={Alexei},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3ff0eff0a1d1258618c88f2ec57095f}{%
+           family={Auli},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=838ae213145f7410d963d9727504b2df}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={Abdelrahman},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b81d7ae6e69bcb58f969bb3a50905801}
+      \strng{fullhash}{57131208bf99f1e9bf17505834567dcf}
+      \strng{bibnamehash}{57131208bf99f1e9bf17505834567dcf}
+      \strng{authorbibnamehash}{57131208bf99f1e9bf17505834567dcf}
+      \strng{authornamehash}{b81d7ae6e69bcb58f969bb3a50905801}
+      \strng{authorfullhash}{57131208bf99f1e9bf17505834567dcf}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We compare self-supervised representation learning algorithms which either explicitly quantize the audio data or learn representations without quantization. We find the former to be more accurate since it builds a good vocabulary of the data through vq-wav2vec [1] to enable learning of effective representations in subsequent BERT training. Different to previous work, we directly fine-tune the pre-trained BERT models on transcribed speech using a Connectionist Temporal Classification (CTC) loss instead of feeding the representations into a task-specific model. We also propose a BERT-style model learning directly from the continuous audio data and compare pre-training on raw audio to spectral features. Fine-tuning a BERT model on 10 hour of labeled Librispeech data with a vq-wav2vec vocabulary is almost as good as the best known reported system trained on 100 hours of labeled data on testclean, while achieving a 25\% WER reduction on test-other. When using only 10 minutes of labeled data, WER is 25.2 on test-other and 16.3 on test-clean. This demonstrates that self-supervision can enable speech recognition systems trained on a near-zero amount of transcribed data.}
+      \field{day}{18}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{pubstate}{prepublished}
+      \field{title}{Effectiveness of Self-Supervised Pre-Training for Speech Recognition}
+      \field{urlday}{4}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1911.03912
+      \endverb
+      \verb{eprint}
+      \verb 1911.03912
+      \endverb
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/M9V7A8QV/Baevski et al. - 2020 - Effectiveness of self-supervised pre-training for speech recognition.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1911.03912
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1911.03912
+      \endverb
+      \keyw{Computer Science - Computation and Language,Computer Science - Machine Learning}
+    \endentry
     \entry{baevskiWav2vec20Framework2020a}{inproceedings}{}
-      \name{author}{4}{}{%
+      \name{author}{4}{ul=2}{%
         {{un=0,uniquepart=base,hash=e478046d4abc39e9814f6e364a736511}{%
            family={Baevski},
            familyi={B\bibinitperiod},
@@ -529,11 +593,11 @@
       \list{publisher}{1}{%
         {Curran Associates, Inc.}%
       }
-      \strng{namehash}{3e54e4e0c7457352871cb1cf97b9ed92}
+      \strng{namehash}{d314a5100c1b68f38a138b5bd5bb60d1}
       \strng{fullhash}{f96a13c5747d71a5f892a49a4c2ea941}
       \strng{bibnamehash}{f96a13c5747d71a5f892a49a4c2ea941}
       \strng{authorbibnamehash}{f96a13c5747d71a5f892a49a4c2ea941}
-      \strng{authornamehash}{3e54e4e0c7457352871cb1cf97b9ed92}
+      \strng{authornamehash}{d314a5100c1b68f38a138b5bd5bb60d1}
       \strng{authorfullhash}{f96a13c5747d71a5f892a49a4c2ea941}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
@@ -821,67 +885,6 @@
       \field{dateera}{ce}
       \verb{file}
       \verb /home/pccady/Zotero/storage/ULMAZYR4/Broin - New Urban Irish Pidgin, Creole, or Bona Fide Dialect The Phonetics and Morphology of City and Gael.pdf
-      \endverb
-    \endentry
-    \entry{calikEnsemblebasedFrameworkMispronunciation2023a}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=6fa895921e72ba4bd0471510d5314d7d}{%
-           family={Calık},
-           familyi={C\bibinitperiod},
-           given={Sükrü\bibnamedelima Selim},
-           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a847af30fc6d8a393a27cda47588d3c2}{%
-           family={Kucukmanisa},
-           familyi={K\bibinitperiod},
-           given={Ayhan},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=20c52ef30f3fc3881af8cdb39d9d665e}{%
-           family={Kilimci},
-           familyi={K\bibinitperiod},
-           given={Zeynep\bibnamedelima Hilal},
-           giveni={Z\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{983dc1cc4875b0a83160627d1f4f3562}
-      \strng{fullhash}{7a5d41c1b88775ac4a15b557a625a564}
-      \strng{bibnamehash}{7a5d41c1b88775ac4a15b557a625a564}
-      \strng{authorbibnamehash}{7a5d41c1b88775ac4a15b557a625a564}
-      \strng{authornamehash}{983dc1cc4875b0a83160627d1f4f3562}
-      \strng{authorfullhash}{7a5d41c1b88775ac4a15b557a625a564}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0003682X}
-      \field{journaltitle}{Applied Acoustics}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{shortjournal}{Applied Acoustics}
-      \field{title}{An Ensemble-Based Framework for Mispronunciation Detection of {{Arabic}} Phonemes}
-      \field{urlday}{17}
-      \field{urlmonth}{9}
-      \field{urlyear}{2025}
-      \field{volume}{212}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{109593}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.apacoust.2023.109593
-      \endverb
-      \verb{file}
-      \verb /home/pccady/Zotero/storage/MH9668SX/main.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0003682X23003912
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0003682X23003912
       \endverb
     \endentry
     \entry{caoSegmentationfreeGoodnessPronunciation2025}{online}{}
@@ -2620,6 +2623,105 @@
       \verb http://arxiv.org/abs/2310.13974
       \endverb
       \keyw{Computer Science - Computation and Language,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
+    \endentry
+    \entry{khoslaSupervisedContrastiveLearning2021}{online}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=c2967f14fec3dc6bce4bedc760572f10}{%
+           family={Khosla},
+           familyi={K\bibinitperiod},
+           given={Prannay},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b267fa16926a3b75c0f9af715749d548}{%
+           family={Teterwak},
+           familyi={T\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=147b8560865739e558b0631402b38ee6}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=587a236ad49e1dae23ab208779b1923b}{%
+           family={Sarna},
+           familyi={S\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=212a623a4a045452d0eac0274782613e}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Yonglong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cae9f806bc99a5f19fadea538fc2db04}{%
+           family={Isola},
+           familyi={I\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c60c4ef0f0d37726133ef09f4a040fb}{%
+           family={Maschinot},
+           familyi={M\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17bf470b120f24c48675bbcb261cab37}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ce},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e4c62612fa904e2c1c6c00006ccc142}{%
+           family={Krishnan},
+           familyi={K\bibinitperiod},
+           given={Dilip},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{498eb192a18dd4884e99bb504e6850d5}
+      \strng{fullhash}{9afe0d70a673167c3817b6471dd4cd73}
+      \strng{bibnamehash}{9afe0d70a673167c3817b6471dd4cd73}
+      \strng{authorbibnamehash}{9afe0d70a673167c3817b6471dd4cd73}
+      \strng{authornamehash}{498eb192a18dd4884e99bb504e6850d5}
+      \strng{authorfullhash}{9afe0d70a673167c3817b6471dd4cd73}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Contrastive learning applied to self-supervised representation learning has seen a resurgence in recent years, leading to state of the art performance in the unsupervised training of deep image models. Modern batch contrastive approaches subsume or significantly outperform traditional contrastive losses such as triplet, max-margin and the N-pairs loss. In this work, we extend the self-supervised batch contrastive approach to the fully-supervised setting, allowing us to effectively leverage label information. Clusters of points belonging to the same class are pulled together in embedding space, while simultaneously pushing apart clusters of samples from different classes. We analyze two possible versions of the supervised contrastive (SupCon) loss, identifying the best-performing formulation of the loss. On ResNet-200, we achieve top-1 accuracy of 81.4\% on the ImageNet dataset, which is 0.8\% above the best number reported for this architecture. We show consistent outperformance over cross-entropy on other datasets and two ResNet variants. The loss shows benefits for robustness to natural corruptions and is more stable to hyperparameter settings such as optimizers and data augmentations. Our loss function is simple to implement, and reference TensorFlow code is released at https://t.ly/supcon.}
+      \field{day}{10}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{pubstate}{prepublished}
+      \field{title}{Supervised {{Contrastive Learning}}}
+      \field{urlday}{2}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2004.11362
+      \endverb
+      \verb{eprint}
+      \verb 2004.11362
+      \endverb
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/V9PYN5KF/Khosla et al. - 2021 - Supervised Contrastive Learning.pdf;/home/pccady/Zotero/storage/VRQLE8VH/2004.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2004.11362
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2004.11362
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{korzekwaWeaklysupervisedWordlevelPronunciation2021}{online}{}
       \name{author}{5}{}{%
@@ -6785,6 +6887,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{calikEnsemblebasedFrameworkMispronunciation2023a}
 \endrefsection
 \endinput
 

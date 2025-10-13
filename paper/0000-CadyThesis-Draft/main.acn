@@ -46,7 +46,7 @@
 \glossaryentry{TL?\glossentry{tl}|setentrycounter[]{page}"\glsnumberformat}{12}
 \glossaryentry{NLP?\glossentry{nlp}|setentrycounter[]{page}"\glsnumberformat}{12}
 \glossaryentry{TL?\glossentry{tl}|setentrycounter[]{page}"\glsnumberformat}{12}
-\glossaryentry{ASR?\glossentry{asr}|setentrycounter[]{page}"\glsnumberformat}{12}
+\glossaryentry{ASR?\glossentry{asr}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{TL?\glossentry{tl}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{ASR?\glossentry{asr}|setentrycounter[]{page}"\glsnumberformat}{13}
 \glossaryentry{TTS?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{13}
@@ -105,6 +105,7 @@
 \glossaryentry{E2E?\glossentry{e2e}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{BERT?\glossentry{bert}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{CTC?\glossentry{ctc}|setentrycounter[]{page}"\glsnumberformat}{17}
 \glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}"\glsnumberformat}{18}
 \glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{18}
@@ -139,9 +140,9 @@
 \glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}"\glsnumberformat}{19}
 \glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}"\glsnumberformat}{19}
 \glossaryentry{ASR?\glossentry{asr}|setentrycounter[]{page}"\glsnumberformat}{19}
-\glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}"\glsnumberformat}{19}
-\glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}"\glsnumberformat}{19}
-\glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{19}
+\glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{L1?\glossentry{l1}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{20}
@@ -168,10 +169,10 @@
 \glossaryentry{P2P?\glossentry{p2p}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{TTS?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{20}
 \glossaryentry{Seq2Seq?\glossentry{s2s}|setentrycounter[]{page}"\glsnumberformat}{20}
-\glossaryentry{P2P?\glossentry{p2p}|setentrycounter[]{page}"\glsnumberformat}{20}
-\glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{20}
-\glossaryentry{Seq2Seq?\glossentry{s2s}|setentrycounter[]{page}"\glsnumberformat}{20}
-\glossaryentry{MT?\glossentry{mt}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{P2P?\glossentry{p2p}|setentrycounter[]{page}"\glsnumberformat}{21}
+\glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{21}
+\glossaryentry{Seq2Seq?\glossentry{s2s}|setentrycounter[]{page}"\glsnumberformat}{21}
+\glossaryentry{MT?\glossentry{mt}|setentrycounter[]{page}"\glsnumberformat}{21}
 \glossaryentry{DPAD?\glossentry{dpad}|setentrycounter[]{page}"\glsnumberformat}{21}
 \glossaryentry{TTS?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{21}
 \glossaryentry{L1?\glossentry{l1}|setentrycounter[]{page}"\glsnumberformat}{21}
@@ -232,8 +233,8 @@
 \glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{25}
 \glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{25}
 \glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{25}
-\glossaryentry{ASR?\glossentry{asr}|setentrycounter[]{page}"\glsnumberformat}{25}
-\glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{25}
+\glossaryentry{L2?\glossentry{l2}|setentrycounter[]{page}"\glsnumberformat}{26}
+\glossaryentry{ASR?\glossentry{asr}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{IPA?\glossentry{ipa}|setentrycounter[]{page}"\glsnumberformat}{26}
 \glossaryentry{IPA?\glossentry{ipa}|setentrycounter[]{page}"\glsnumberformat}{26}
