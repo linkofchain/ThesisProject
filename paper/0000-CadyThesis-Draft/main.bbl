@@ -1020,6 +1020,68 @@
       \verb /home/pccady/Zotero/storage/2JKBUKKG/Chasaide et al. - 2017 - The ABAIR initiative Bringing Spoken Irish into the Digital Space.pdf
       \endverb
     \endentry
+    \entry{chenComputerassistedPronunciationTraining2016}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=268decadec6e9ab3b767d7da9875e4cc}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Nancy\bibnamedelima F.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f397ee85433a25b75738faa0b764e496}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Haizhou},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Jeju, South Korea}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{85af320bcfeef49c09d817ec5ce05fc0}
+      \strng{fullhash}{85af320bcfeef49c09d817ec5ce05fc0}
+      \strng{bibnamehash}{85af320bcfeef49c09d817ec5ce05fc0}
+      \strng{authorbibnamehash}{85af320bcfeef49c09d817ec5ce05fc0}
+      \strng{authornamehash}{85af320bcfeef49c09d817ec5ce05fc0}
+      \strng{authorfullhash}{85af320bcfeef49c09d817ec5ce05fc0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper reviews the research approaches used in computer-assisted pronunciation training (CAPT), addresses the existing challenges, and discusses emerging trends and opportunities. To complement existing work, our analysis places more emphasis on pronunciation teaching and learning (as opposed to pronunciation assessment), prosodic error detection (as opposed to phonetic error detection), and research work from the past five years given the recent rapid development in spoken language technology.}
+      \field{booktitle}{2016 {{Asia-Pacific Signal}} and {{Information Processing Association Annual Summit}} and {{Conference}} ({{APSIPA}})}
+      \field{eventtitle}{2016 {{Asia-Pacific Signal}} and {{Information Processing Association Annual Summit}} and {{Conference}} ({{APSIPA}})}
+      \field{isbn}{978-988-14768-2-1}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{shorttitle}{Computer-Assisted Pronunciation Training}
+      \field{title}{Computer-Assisted Pronunciation Training: {{From}} Pronunciation Scoring towards Spoken Language Learning}
+      \field{urlday}{4}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/APSIPA.2016.7820782
+      \endverb
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/G5Y3MTKU/Chen and Li - 2016 - Computer-assisted pronunciation training From pronunciation scoring towards spoken language learnin.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/7820782/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/7820782/
+      \endverb
+    \endentry
     \entry{conneauUnsupervisedCrosslingualRepresentation2020}{online}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=7cf7ac6a9456559cc67ee138c7f21cec}{%
@@ -3711,63 +3773,6 @@
       \verb /home/pccady/Zotero/storage/G68B8EGJ/Měchura - Introduction to Gramadán and the Irish National Morphology Database.pdf
       \endverb
     \endentry
-    \entry{mortensenPanPhonResourceMapping}{article}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=cfcb6ba1595b0f5110004216d07213ef}{%
-           family={Mortensen},
-           familyi={M\bibinitperiod},
-           given={David\bibnamedelima R},
-           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d8b3ccfeee2656a6a880b39b2e82da8d}{%
-           family={Littell},
-           familyi={L\bibinitperiod},
-           given={Patrick},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bcce6929cc46f034e5d0081f0cf3a4e9}{%
-           family={Bharadwaj},
-           familyi={B\bibinitperiod},
-           given={Akash},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1a7a3857a2c57825329a92a115a0c7c9}{%
-           family={Goyal},
-           familyi={G\bibinitperiod},
-           given={Kartik},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dc0d6b065a6566cde5d6b93214be1b55}{%
-           family={Dyer},
-           familyi={D\bibinitperiod},
-           given={Chris},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8c7cf93c3f39a697d31a692e7b289399}{%
-           family={Levin},
-           familyi={L\bibinitperiod},
-           given={Lori},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{297c54b4ae4eadf3bde5b95429c73043}
-      \strng{fullhash}{854aa5eb043b3b7787dedb3334efbe3d}
-      \strng{bibnamehash}{854aa5eb043b3b7787dedb3334efbe3d}
-      \strng{authorbibnamehash}{854aa5eb043b3b7787dedb3334efbe3d}
-      \strng{authornamehash}{297c54b4ae4eadf3bde5b95429c73043}
-      \strng{authorfullhash}{854aa5eb043b3b7787dedb3334efbe3d}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labeldatesource}{nodate}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This paper contributes to a growing body of evidence that—when coupled with appropriate machine-learning techniques—linguistically motivated, information-rich representations can outperform one-hot encodings of linguistic data. In particular, we show that phonological features outperform character-based models using the PanPhon resource. PanPhon is a database relating over 5,000 IPA segments to 21 subsegmental articulatory features. We show that this database boosts performance in various NER-related tasks. Phonologically aware, neural CRF models built on PanPhon features are able to perform comparably to character-based models on monolingual Spanish and Turkish NER tasks. On transfer models (as between Uzbek and Turkish) they have been shown to perform better. Furthermore, PanPhon features also contribute measurably to Orthography-to-IPA conversion tasks.}
-      \field{langid}{english}
-      \field{title}{{{PanPhon}}: {{A Resource}} for {{Mapping IPA Segments}} to {{Articulatory Feature Vectors}}}
-      \verb{file}
-      \verb /home/pccady/Zotero/storage/CZLCJ9BG/Mortensen et al. - PanPhon A Resource for Mapping IPA Segments to Articulatory Feature Vectors.pdf
-      \endverb
-    \endentry
     \entry{needlemanGeneralMethodApplicable1970}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=51aa8aae5dbbb5be7b45030d1d1f4c55}{%
@@ -5307,38 +5312,6 @@
       \verb https://www.isca-archive.org/interspeech_2024/shahin24_interspeech.html
       \endverb
     \endentry
-    \entry{sjons2022articulation}{thesis}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=9de2927425255c2e8eb8cfe32cdb5204}{%
-           family={Sjons},
-           familyi={S\bibinitperiod},
-           given={Johan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {Stockholm University}%
-      }
-      \strng{namehash}{9de2927425255c2e8eb8cfe32cdb5204}
-      \strng{fullhash}{9de2927425255c2e8eb8cfe32cdb5204}
-      \strng{bibnamehash}{9de2927425255c2e8eb8cfe32cdb5204}
-      \strng{authorbibnamehash}{9de2927425255c2e8eb8cfe32cdb5204}
-      \strng{authornamehash}{9de2927425255c2e8eb8cfe32cdb5204}
-      \strng{authorfullhash}{9de2927425255c2e8eb8cfe32cdb5204}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Articulation Rate and Surprisal in Swedish Child-Directed Speech}
-      \field{type}{phdthesis}
-      \field{year}{2022}
-      \field{dateera}{ce}
-      \verb{file}
-      \verb /home/pccady/Zotero/storage/ANDVW38Q/Sjons - 2022 - Articulation rate and surprisal in swedish child-directed speech.pdf
-      \endverb
-    \endentry
     \entry{snesarevaPalatalizationDublinIrish2016}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=eed11c3c57e1ab35beb1d22b87f1cfc1}{%
@@ -5705,6 +5678,52 @@
       \endverb
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/8923082/
+      \endverb
+    \endentry
+    \entry{thomsonEffectivenessL2Pronunciation2014}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d2b8c613a1d43b06f88e81effebff62d}{%
+           family={Thomson},
+           familyi={T\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=155f46df0a0e1e520536d4a9bbd38b10}{%
+           family={Derwing},
+           familyi={D\bibinitperiod},
+           given={Tracey},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5cfdea3ec7e834a8fffb766b8a109450}
+      \strng{fullhash}{5cfdea3ec7e834a8fffb766b8a109450}
+      \strng{bibnamehash}{5cfdea3ec7e834a8fffb766b8a109450}
+      \strng{authorbibnamehash}{5cfdea3ec7e834a8fffb766b8a109450}
+      \strng{authornamehash}{5cfdea3ec7e834a8fffb766b8a109450}
+      \strng{authorfullhash}{5cfdea3ec7e834a8fffb766b8a109450}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Research on the efficacy of second language (L2) pronunciation instruction has produced mixed results, despite reports of significant improvement in many studies. Possible explanations for divergent outcomes include learner individual differences, goals and foci of instruction, type and duration of instructional input, and assessment procedures. After identifying key concepts, we survey 75 L2 pronunciation studies, particularly their methods and results. Despite a move towards emphasizing speech intelligibility and comprehensibility, most research surveyed promoted native-like pronunciation as the target. Although most studies entailed classroom instruction, many featured Computer Assisted Pronunciation Teaching (CAPT). Segmentals were studied more often than suprasegmentals. The amount of instruction required to effect change was related to researchers’ goals; interventions focusing on a single feature were generally shorter than those addressing more issues. Reading-aloud tasks were the most common form of assessment; very few studies measured spontaneous speech. The attribution of improvement as a result of instruction was compromised in some instances by lack of a control group. We summarize our findings, highlight limitations of current research, and offer suggestions for future directions.}
+      \field{day}{8}
+      \field{journaltitle}{Applied Linguistics}
+      \field{month}{12}
+      \field{shortjournal}{Applied Linguistics}
+      \field{shorttitle}{The {{Effectiveness}} of {{L2 Pronunciation Instruction}}}
+      \field{title}{The {{Effectiveness}} of {{L2 Pronunciation Instruction}}: {{A Narrative Review}}}
+      \field{volume}{2014}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1093/applin/amu076
+      \endverb
+      \verb{file}
+      \verb /home/pccady/Zotero/storage/WY9M4BSP/Thomson and Derwing - 2014 - The Effectiveness of L2 Pronunciation Instruction A Narrative Review.pdf
       \endverb
     \endentry
     \entry{watanabeESPnetEndtoEndSpeech2018}{online}{}

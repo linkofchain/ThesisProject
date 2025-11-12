@@ -2617,14 +2617,13 @@
     <bcf:citekey order="237" intorder="1">neriEffectivenessComputerAssisted2008</bcf:citekey>
     <bcf:citekey order="238" intorder="1">prabhavalkarMinimumWordError2017</bcf:citekey>
     <bcf:citekey order="239" intorder="1">prabhavalkarMinimumWordError2017</bcf:citekey>
-    <bcf:citekey order="240" intorder="1">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
+    <bcf:citekey order="240" intorder="1">thomsonEffectivenessL2Pronunciation2014</bcf:citekey>
     <bcf:citekey order="241" intorder="1">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
-    <bcf:citekey order="242" intorder="1">mortensenPanPhonResourceMapping</bcf:citekey>
-    <bcf:citekey order="243" intorder="1">mortensenPanPhonResourceMapping</bcf:citekey>
-    <bcf:citekey order="244" intorder="1">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
+    <bcf:citekey order="242" intorder="1">chenComputerassistedPronunciationTraining2016</bcf:citekey>
+    <bcf:citekey order="243" intorder="1">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
+    <bcf:citekey order="244" intorder="1">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
     <bcf:citekey order="245" intorder="1">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
-    <bcf:citekey order="246" intorder="1">sjons2022articulation</bcf:citekey>
-    <bcf:citekey order="247" intorder="1">sjons2022articulation</bcf:citekey>
+    <bcf:citekey order="246" intorder="1">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
