@@ -1,3 +1,5 @@
+# for label studio bootstrapping, which is not currently used.
+
 import os
 import io
 import uuid

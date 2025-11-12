@@ -1,8 +1,8 @@
 import os
 import io
 import uuid
-from flask import Flask, request, jsonify
-from label_studio_ml.model import LabelStudioMLBase
+#from google.cloud import texttospeech
+
 from google.cloud import texttospeech_v1beta1 as texttospeech
 from google.cloud import storage
 from datasets import load_from_disk
@@ -33,7 +33,7 @@ from google.cloud import texttospeech
 
 PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT")
 
-def synthesize(prompt: str, text: str, output_filepath: str = "output.mp3"):
+def synthesize(ssml, output_filepath: str = "output.mp3"):
     """Synthesizes speech from the input text and saves it to an MP3 file.
 
     Args:
@@ -45,7 +45,7 @@ def synthesize(prompt: str, text: str, output_filepath: str = "output.mp3"):
     """
     client = texttospeech.TextToSpeechClient()
 
-    synthesis_input = texttospeech.SynthesisInput(text=text, prompt=prompt)
+    synthesis_input = texttospeech.SynthesisInput(ssml=ssml)
 
     # Select the voice you want to use.
     voice = texttospeech.VoiceSelectionParams(
@@ -70,7 +70,8 @@ def synthesize(prompt: str, text: str, output_filepath: str = "output.mp3"):
         print(f"Audio content written to file: {output_filepath}")
 
 def main():
-    synthesize*()
+    phoneme_text = ""
+    synthesize(f'<speak><phoneme alphabet="ipa" ph="{phoneme_text}">{phoneme_text}</phoneme></speak>')
 
 def fetch_mispronounced_list():
     # Load splits with datasets
