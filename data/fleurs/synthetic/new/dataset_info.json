@@ -1,0 +1,24 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "audio": {
+      "sampling_rate": 16000,
+      "_type": "Audio"
+    },
+    "phonetic": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "English ASR transcriptions": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "synthetic_audio_path": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
