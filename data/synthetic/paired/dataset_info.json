@@ -15,8 +15,8 @@
       "_type": "Value"
     },
     "synthetic_audio_path": {
-      "dtype": "string",
-      "_type": "Value"
+      "sampling_rate": 16000,
+      "_type": "Audio"
     }
   },
   "homepage": "",
