@@ -13,6 +13,10 @@
     "English ASR transcriptions": {
       "dtype": "string",
       "_type": "Value"
+    },
+    "synthetic_audio_path": {
+      "sampling_rate": 16000,
+      "_type": "Audio"
     }
   },
   "homepage": "",

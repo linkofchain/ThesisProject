@@ -7,11 +7,12 @@
       "filename": "data-00001-of-00002.arrow"
     }
   ],
-  "_fingerprint": "8a3ce659900dbfd5",
+  "_fingerprint": "f12ae05b567ea848",
   "_format_columns": [
     "English ASR transcriptions",
     "audio",
-    "phonetic"
+    "phonetic",
+    "synthetic_audio_path"
   ],
   "_format_kwargs": {},
   "_format_type": null,
