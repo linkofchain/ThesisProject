@@ -178,9 +178,6 @@ cython_debug/
 # ignore large datasets
 *.arrow
 
-# ignore annotations cache
-data/eval/annotations_cache.json
-
 # mfa g2p training files
 *.fst
 *.like
