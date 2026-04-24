@@ -45,9 +45,11 @@ def collapse_phones(phones: list[str], mapping: dict[str, str] = PHONEME_MAP) ->
 
 STRIP_DIACRITICS = {
     'ˠ',  # velarization
-    '̪',   # dental
+    '̪',   # dental (U+0324)
     '̻',   # laminal
-    '̥',   # devoiced
+    '̥',   # devoiced ring below (U+0325)
+    '̊',   # devoiced ring above (U+030A)
+    '̠',   # retraction (U+0320)
     '̃',   # nasalized
     '̩',   # syllabic
     '̍',   # syllabic (for characters with hangy bits)
