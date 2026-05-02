@@ -140,21 +140,37 @@ def span_confidence(emission, blank_id, start, end, conf_func):
     return conf_func(frames).max().item()
 
 
-def span_mean_probs(emission, blank_id, start, end):
+def span_peak_probs(emission, blank_id, start, end):
     """
-    Mean probability distribution over non-blank frames in [start, end).
-    Shape: (V,). Useful for inspecting distribution smoothness and overconfidence.
+    Peak probability distribution over non-blank frames in [start, end).
+    Shape: (V,). Element i is the max probability token i achieved across any
+    non-blank frame — consistent with the max-based phone selection in
+    best_phone_in_span.
     """
     frames = _non_blank_frames(emission, blank_id, start, end)
-    return frames.exp().mean(dim=0)
+    return frames.exp().max(dim=0).values
+
+
+_SPECIAL_TOKENS = {'[PAD]', '[UNK]', '|', '<s>', '</s>'}
 
 
 def best_phone_in_span(emission, idx2phone, blank_id, start, end):
     """
-    Predicted phoneme for a span: argmax of mean log-probs over non-blank frames.
+    Predicted phoneme for a span: token with the highest peak log-prob across
+    any non-blank frame, with special tokens masked out.
+
+    Max over frames rather than mean: wav2vec2 CTC emissions are peaky —
+    the correct token spikes briefly; averaging across the span dilutes that
+    signal. Max captures whichever token had the strongest single-frame peak.
     """
-    frames = _non_blank_frames(emission, blank_id, start, end)
-    best_idx = frames.mean(dim=0).argmax().item()
+    frames  = _non_blank_frames(emission, blank_id, start, end)
+    peak_lp = frames.max(dim=0).values.clone()
+
+    for idx, token in idx2phone.items():
+        if token in _SPECIAL_TOKENS:
+            peak_lp[idx] = float('-inf')
+
+    best_idx = peak_lp.argmax().item()
     return idx2phone.get(best_idx, f'<unk:{best_idx}>')
 
 
@@ -351,7 +367,7 @@ def spanwise_ensemble(waveform, transcript,
                 name: {
                     'confidence': round(conf, 4),
                     'predicted': best_phone_in_span(em, idx2phone, blank, s, e),
-                    'mean_probs': span_mean_probs(em, blank, s, e),
+                    'peak_probs': span_peak_probs(em, blank, s, e),
                 }
                 for conf, name, em, idx2phone, blank in candidates
             }
