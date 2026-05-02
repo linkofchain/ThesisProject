@@ -1,6 +1,10 @@
 """
 Fetch completed Label Studio annotations from GCS and pair them with
-canonical phoneme sequences from the FLEURS test CSV.
+canonical phoneme sequences.
+
+Canonical phones come from the task's `data.phonetic` field — the g2p
+preannotations embedded in each task when it was uploaded to Label Studio.
+Gold phones come from the manual `result[].value.text` annotation.
 
 Returns a list of records ready for evaluate_mispronunciation_detection:
     [
@@ -18,8 +22,6 @@ automatically. Pass refresh=True to re-fetch from GCS and overwrite the cache.
 Requires: pip install google-cloud-storage
 """
 
-import csv
-import io
 import json
 import os
 import pathlib
@@ -36,8 +38,6 @@ def _require_env(var: str) -> str:
     return val
 
 ANNOTATIONS_BUCKET = _require_env("GCS_ANNOTATIONS_BUCKET")
-EVAL_BUCKET        = _require_env("GCS_EVAL_BUCKET")
-CANONICAL_CSV_PATH = "test.csv"
 
 # Label Studio textarea field names used across annotation tasks
 _IPA_FIELD_NAMES = {"transcription", "ipa"}
@@ -69,34 +69,8 @@ def _audio_id_from_path(audio_path: str) -> str:
     return stem or filename
 
 
-def _load_canonical_index(client: storage.Client) -> dict[str, list[str]]:
-    """
-    Download test.csv from the eval bucket and build a dict:
-        audio_id -> canonical phone list
-
-    Canonical phones are stored as a space-separated string in the
-    'phonetic' column; [UNK] tokens are dropped.
-    """
-    bucket = client.bucket(EVAL_BUCKET)
-    blob   = bucket.blob(CANONICAL_CSV_PATH)
-    content = blob.download_as_text(encoding="utf-8")
-
-    index: dict[str, list[str]] = {}
-    reader = csv.DictReader(io.StringIO(content))
-    for row in reader:
-        gcs_url  = row.get("gcs_url", "")
-        audio_id = _audio_id_from_path(gcs_url) if gcs_url else None
-        phonetic = row.get("phonetic", "")
-        if audio_id and phonetic:
-            phones = [p for p in phonetic.split() if p != "[UNK]"]
-            index[audio_id] = phones
-
-    return index
-
-
 def _fetch_from_gcs(annotations_bucket: str) -> list[dict]:
     client = storage.Client()
-    canonical_index = _load_canonical_index(client)
 
     records = []
     for blob in client.list_blobs(annotations_bucket):
@@ -111,12 +85,14 @@ def _fetch_from_gcs(annotations_bucket: str) -> list[dict]:
         if not ipa_string:
             continue
 
-        audio_path = annotation.get("task", {}).get("data", {}).get("audio", "")
+        task_data  = annotation.get("task", {}).get("data", {})
+        audio_path = task_data.get("audio", "")
         audio_id   = _audio_id_from_path(audio_path)
 
-        canonical = canonical_index.get(audio_id)
-        if canonical is None:
+        phonetic = task_data.get("phonetic", "")
+        if not phonetic:
             continue
+        canonical = [p for p in phonetic.split() if p != "[UNK]"]
 
         records.append({
             "audio_id":  audio_id,
