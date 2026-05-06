@@ -1,0 +1,2743 @@
+[
+  {
+    "audio_id": "10045899353945045473_AwQBn",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_AwQBn.wav",
+    "canonical": [
+      "i",
+      "s",
+      "eː"
+    ],
+    "gold": [
+      "i",
+      "s",
+      "eː"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_-v9iz",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_-v9iz.wav",
+    "canonical": [
+      "pʲ",
+      "ɾʲ",
+      "iː",
+      "v",
+      "x",
+      "a",
+      "h",
+      "ə",
+      "ɾʲ"
+    ],
+    "gold": [
+      "p",
+      "ɾʲ",
+      "iː",
+      "v",
+      "k",
+      "aʊ",
+      "n",
+      "t",
+      "ə",
+      "ɻ"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_PrArs",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_PrArs.wav",
+    "canonical": [
+      "ɣ",
+      "a",
+      "l",
+      "a",
+      "n",
+      "t",
+      "ə"
+    ],
+    "gold": [
+      "g",
+      "lʲ",
+      "a",
+      "n",
+      "ə",
+      "h",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_9-yTf",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_9-yTf.wav",
+    "canonical": [
+      "ɣ",
+      "aː",
+      "h",
+      "a",
+      "ŋ",
+      "ɡ",
+      "a",
+      "h"
+    ],
+    "gold": [
+      "d",
+      "aː",
+      "h",
+      "ə",
+      "ŋ",
+      "g",
+      "a",
+      "x",
+      "t"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_xB7Dj",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_xB7Dj.wav",
+    "canonical": [
+      "ç",
+      "a",
+      "n",
+      "ə",
+      "d",
+      "ə"
+    ],
+    "gold": [
+      "c",
+      "a",
+      "n",
+      "ə",
+      "d",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_vnTdl",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_vnTdl.wav",
+    "canonical": [
+      "ə",
+      "ɡ",
+      "ə",
+      "s"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ə",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_upZjS",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_upZjS.wav",
+    "canonical": [
+      "ɡ",
+      "o",
+      "f",
+      "ə",
+      "ɾ"
+    ],
+    "gold": [
+      "ɟ",
+      "oː",
+      "f",
+      "ə",
+      "ɻ"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_xt15h",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_xt15h.wav",
+    "canonical": [
+      "ə",
+      "n"
+    ],
+    "gold": [
+      "aʊ",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_yIopJ",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_yIopJ.wav",
+    "canonical": [
+      "d",
+      "aː",
+      "n",
+      "l",
+      "ə",
+      "n",
+      "ə"
+    ],
+    "gold": [
+      "d",
+      "aː",
+      "n",
+      "l",
+      "ɑ",
+      "n",
+      "t",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_ZUt2-",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_ZUt2-.wav",
+    "canonical": [
+      "ə",
+      "ɡ",
+      "ə",
+      "s"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ə",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_P7MXf",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_P7MXf.wav",
+    "canonical": [
+      "a",
+      "l",
+      "iː",
+      "nʲ",
+      "ə"
+    ],
+    "gold": [
+      "a",
+      "lʲ",
+      "iː",
+      "nʲ",
+      "e"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_0ZrxD",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_0ZrxD.wav",
+    "canonical": [
+      "ə",
+      "n"
+    ],
+    "gold": [
+      "aʊ",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_PAtKB",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_PAtKB.wav",
+    "canonical": [
+      "ə",
+      "h",
+      "ə",
+      "ʃ",
+      "pʲ",
+      "aː",
+      "n"
+    ],
+    "gold": [
+      "æ",
+      "t",
+      "e",
+      "s",
+      "p",
+      "aː",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_IWX4m",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_IWX4m.wav",
+    "canonical": [
+      "c",
+      "a",
+      "n",
+      "ə",
+      "d",
+      "ə"
+    ],
+    "gold": [
+      "c",
+      "a",
+      "n",
+      "ə",
+      "d",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_VxBIo",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_VxBIo.wav",
+    "canonical": [
+      "s",
+      "ə",
+      "n"
+    ],
+    "gold": [
+      "s",
+      "ʊ",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_lGjpw",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_lGjpw.wav",
+    "canonical": [
+      "a",
+      "m"
+    ],
+    "gold": [
+      "aʊ",
+      "m"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473__40C3",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473__40C3.wav",
+    "canonical": [
+      "x",
+      "ua",
+      "j"
+    ],
+    "gold": [
+      "x",
+      "ui",
+      "j"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_3XoOj",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_3XoOj.wav",
+    "canonical": [
+      "h",
+      "a",
+      "ɾ",
+      "t"
+    ],
+    "gold": [
+      "x",
+      "a",
+      "ɾ",
+      "t"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_qA6Ag",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_qA6Ag.wav",
+    "canonical": [
+      "s",
+      "ə",
+      "n",
+      "a",
+      "m"
+    ],
+    "gold": [
+      "s",
+      "ʊ",
+      "n",
+      "aʊ",
+      "m"
+    ]
+  },
+  {
+    "audio_id": "10045899353945045473_EhkAR",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10045899353945045473_EhkAR.wav",
+    "canonical": [
+      "i",
+      "l",
+      "aː",
+      "h",
+      "i",
+      "ɾʲ"
+    ],
+    "gold": [
+      "i",
+      "l",
+      "aː",
+      "h",
+      "ə",
+      "ɻ"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_HZHjy",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_HZHjy.wav",
+    "canonical": [
+      "i",
+      "s",
+      "ia",
+      "d"
+    ],
+    "gold": [
+      "ɪ",
+      "s",
+      "i",
+      "d"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_xlyMR",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_xlyMR.wav",
+    "canonical": [
+      "lʲ",
+      "oː",
+      "nʲ"
+    ],
+    "gold": [
+      "lʲ",
+      "oi",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_BPgpc",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_BPgpc.wav",
+    "canonical": [
+      "n",
+      "ə",
+      "k",
+      "a",
+      "tʲ"
+    ],
+    "gold": [
+      "n",
+      "ə",
+      "x",
+      "a",
+      "tʲ"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_I1qHG",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_I1qHG.wav",
+    "canonical": [
+      "i",
+      "s",
+      "s",
+      "oː",
+      "ʃ",
+      "ia",
+      "l",
+      "t",
+      "ə"
+    ],
+    "gold": [
+      "i",
+      "s",
+      "o",
+      "l",
+      "ai",
+      "nʲ",
+      "tʲ",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_Sy9Eg",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_Sy9Eg.wav",
+    "canonical": [
+      "m",
+      "a",
+      "ɾʲ",
+      "ə",
+      "n",
+      "ʃ",
+      "iː",
+      "d"
+    ],
+    "gold": [
+      "m",
+      "ɑ",
+      "ɻ",
+      "ə",
+      "n",
+      "iː",
+      "d"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_zEKNj",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_zEKNj.wav",
+    "canonical": [
+      "ŋ",
+      "ɡ",
+      "ɾ",
+      "uː",
+      "p",
+      "iː"
+    ],
+    "gold": [
+      "n",
+      "a",
+      "ɹ",
+      "uː",
+      "p",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_fVLli",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_fVLli.wav",
+    "canonical": [
+      "m",
+      "oː",
+      "ɾ",
+      "ə"
+    ],
+    "gold": [
+      "m",
+      "oː",
+      "ɹ",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10090378450980723387_O_AjK",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10090378450980723387_O_AjK.wav",
+    "canonical": [
+      "a",
+      "l",
+      "t",
+      "iː"
+    ],
+    "gold": [
+      "e",
+      "a",
+      "l",
+      "t",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_bn-iZ",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_bn-iZ.wav",
+    "canonical": [
+      "h",
+      "ua",
+      "ɾʲ",
+      "ə",
+      "ʃ",
+      "c",
+      "iː"
+    ],
+    "gold": [
+      "h",
+      "ua",
+      "ɾʲ",
+      "s",
+      "iː",
+      "g"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_e8Btt",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_e8Btt.wav",
+    "canonical": [
+      "t",
+      "ai",
+      "dʲ",
+      "o",
+      "ɾʲ",
+      "iː"
+    ],
+    "gold": [
+      "t",
+      "ai",
+      "dʲ",
+      "oː",
+      "ɾʲ",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_aREfg",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_aREfg.wav",
+    "canonical": [
+      "oː",
+      "o",
+      "l",
+      "s",
+      "k",
+      "o",
+      "lʲ"
+    ],
+    "gold": [
+      "oː",
+      "l",
+      "ə",
+      "h",
+      "o",
+      "l",
+      "s",
+      "k",
+      "o",
+      "lʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_h4YsS",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_h4YsS.wav",
+    "canonical": [
+      "s",
+      "n",
+      "ə",
+      "s",
+      "t",
+      "aː",
+      "tʲ"
+    ],
+    "gold": [
+      "n",
+      "ə",
+      "s",
+      "n",
+      "aː",
+      "tʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_1sqvn",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_1sqvn.wav",
+    "canonical": [
+      "ə",
+      "ɡ",
+      "ə",
+      "s"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ə",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_TA5uZ",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_TA5uZ.wav",
+    "canonical": [
+      "o",
+      "l",
+      "s",
+      "k",
+      "o",
+      "lʲ"
+    ],
+    "gold": [
+      "o",
+      "l",
+      "s",
+      "k",
+      "o",
+      "lʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_ngCoI",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_ngCoI.wav",
+    "canonical": [
+      "u",
+      "p",
+      "s",
+      "ə",
+      "l",
+      "ə"
+    ],
+    "gold": [
+      "ɤ",
+      "p",
+      "s",
+      "a",
+      "l",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_UcPkk",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_UcPkk.wav",
+    "canonical": [
+      "s",
+      "ə",
+      "tʲ",
+      "uˑə",
+      "l",
+      "ə",
+      "nʲ"
+    ],
+    "gold": [
+      "s",
+      "aː",
+      "s",
+      "uː",
+      "l",
+      "ɪ",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_YltCY",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_YltCY.wav",
+    "canonical": [
+      "ɡ",
+      "ə",
+      "ɾ",
+      "h",
+      "aː",
+      "nʲ",
+      "ə",
+      "ɟ"
+    ],
+    "gold": [
+      "ɣ",
+      "ʌ",
+      "ɾ",
+      "h",
+      "aː",
+      "nʲ",
+      "ə",
+      "ɟ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_ba-wt",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_ba-wt.wav",
+    "canonical": [
+      "s",
+      "pʲ",
+      "e",
+      "c",
+      "ə",
+      "s"
+    ],
+    "gold": [
+      "s",
+      "pʲ",
+      "iː",
+      "s",
+      "iː",
+      "z"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_uP3Yw",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_uP3Yw.wav",
+    "canonical": [
+      "n",
+      "ua",
+      "x",
+      "u",
+      "n"
+    ],
+    "gold": [
+      "n",
+      "ua",
+      "ɾ",
+      "x",
+      "u",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_nRn5g",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_nRn5g.wav",
+    "canonical": [
+      "c",
+      "i",
+      "nʲ"
+    ],
+    "gold": [
+      "h",
+      "i",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_Bv-Hy",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_Bv-Hy.wav",
+    "canonical": [
+      "l",
+      "a",
+      "ʃ",
+      "tʲ",
+      "iː"
+    ],
+    "gold": [
+      "ə",
+      "l",
+      "a",
+      "s",
+      "tʲ",
+      "ɾ",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387__kXij",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387__kXij.wav",
+    "canonical": [
+      "d",
+      "e",
+      "ɣ",
+      "aː",
+      "ɣ",
+      "l",
+      "uː",
+      "nʲ"
+    ],
+    "gold": [
+      "d",
+      "e",
+      "ɣ",
+      "aː",
+      "ɣ",
+      "l",
+      "u",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_PIjKS",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_PIjKS.wav",
+    "canonical": [
+      "c",
+      "eː",
+      "ɡ",
+      "ə",
+      "ɾ"
+    ],
+    "gold": [
+      "c",
+      "eɪ",
+      "ɡ",
+      "ə",
+      "ɾ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_AvM3T",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_AvM3T.wav",
+    "canonical": [
+      "mʲ",
+      "a",
+      "s",
+      "uː",
+      "ɡ",
+      "ə",
+      "ɾ"
+    ],
+    "gold": [
+      "mʲ",
+      "a",
+      "s",
+      "i",
+      "ɡ",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_3tQNJ",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_3tQNJ.wav",
+    "canonical": [
+      "h",
+      "o",
+      "ɡ",
+      "ə",
+      "n",
+      "p",
+      "ɾ",
+      "oː",
+      "ʃ",
+      "ə",
+      "s"
+    ],
+    "gold": [
+      "h",
+      "oː",
+      "f",
+      "ɾ",
+      "oː",
+      "n",
+      "s",
+      "ia",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_NjK9p",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_NjK9p.wav",
+    "canonical": [
+      "ʃ",
+      "o"
+    ],
+    "gold": [
+      "ʃ",
+      "o"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_du4iV",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_du4iV.wav",
+    "canonical": [
+      "vʲ",
+      "ə",
+      "d"
+    ],
+    "gold": [
+      "vʲ",
+      "aː",
+      "d"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_Zw3zT",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_Zw3zT.wav",
+    "canonical": [
+      "nʲ",
+      "iː",
+      "s",
+      "f",
+      "ə",
+      "dʲ",
+      "ə"
+    ],
+    "gold": [
+      "nʲ",
+      "iː",
+      "s",
+      "f",
+      "ɑ",
+      "dʲ",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_xXeIs",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_xXeIs.wav",
+    "canonical": [
+      "m",
+      "a",
+      "ɾ",
+      "ə",
+      "l",
+      "e",
+      "ɾʲ"
+    ],
+    "gold": [
+      "m",
+      "a",
+      "ɻ",
+      "j",
+      "a",
+      "l",
+      "e",
+      "ɻ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_aujNo",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_aujNo.wav",
+    "canonical": [
+      "f",
+      "oː",
+      "ɾ",
+      "uː"
+    ],
+    "gold": [
+      "f",
+      "oː",
+      "ɻ",
+      "ʉː"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_X2uXK",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_X2uXK.wav",
+    "canonical": [
+      "i",
+      "dʲ",
+      "ə",
+      "ɾʲ"
+    ],
+    "gold": [
+      "i",
+      "dʲ",
+      "ə",
+      "ɻ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_qQL7t",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_qQL7t.wav",
+    "canonical": [
+      "ɡ",
+      "l",
+      "a",
+      "s",
+      "a",
+      "n"
+    ],
+    "gold": [
+      "g",
+      "l",
+      "a",
+      "s",
+      "a",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_TYoMd",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_TYoMd.wav",
+    "canonical": [
+      "d",
+      "uː",
+      "x",
+      "a",
+      "s",
+      "a",
+      "h"
+    ],
+    "gold": [
+      "d",
+      "uː",
+      "h",
+      "a",
+      "s",
+      "a",
+      "x"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_CIT7M",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_CIT7M.wav",
+    "canonical": [
+      "f",
+      "o",
+      "ɾ",
+      "tʲ",
+      "ə",
+      "s"
+    ],
+    "gold": [
+      "f",
+      "ʌ",
+      "ɻ",
+      "t",
+      "ɪ",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_RBfVf",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_RBfVf.wav",
+    "canonical": [
+      "ə",
+      "ɡ",
+      "ə",
+      "s"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ə",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_G5hlr",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_G5hlr.wav",
+    "canonical": [
+      "ə",
+      "n",
+      "ɡ",
+      "l",
+      "a",
+      "s",
+      "a",
+      "n"
+    ],
+    "gold": [
+      "a",
+      "n",
+      "ɡ",
+      "l",
+      "a",
+      "s",
+      "aː",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387__QLx8",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387__QLx8.wav",
+    "canonical": [
+      "k",
+      "a",
+      "ɾ",
+      "t",
+      "ə",
+      "ʃ"
+    ],
+    "gold": [
+      "x",
+      "a",
+      "k",
+      "t",
+      "ə",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_upW4r",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_upW4r.wav",
+    "canonical": [
+      "i",
+      "nʲ",
+      "i",
+      "mʲ",
+      "ə",
+      "ɾʲ",
+      "c",
+      "a",
+      "h"
+    ],
+    "gold": [
+      "i",
+      "nʲ",
+      "i",
+      "mʲ",
+      "ə",
+      "ɾʲ",
+      "h",
+      "a",
+      "x"
+    ]
+  },
+  {
+    "audio_id": "10113135482749057387_pI5mX",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10113135482749057387_pI5mX.wav",
+    "canonical": [
+      "k",
+      "o",
+      "ɾ",
+      "o",
+      "ʃ",
+      "tʲ",
+      "ɾʲ",
+      "ə",
+      "ʃ"
+    ],
+    "gold": [
+      "k",
+      "ʌ",
+      "n",
+      "ə",
+      "ɾ",
+      "i",
+      "s",
+      "t",
+      "ɾʲ",
+      "ɪ",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_IBhVr",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_IBhVr.wav",
+    "canonical": [
+      "ɡ",
+      "ə",
+      "ɟ",
+      "i",
+      "nʲ",
+      "ə",
+      "ɾ",
+      "a",
+      "l",
+      "t",
+      "ə",
+      "i",
+      "s"
+    ],
+    "gold": [
+      "ɣ",
+      "ɑ",
+      "ɣ",
+      "e",
+      "nʲ",
+      "ə",
+      "ɾ",
+      "a",
+      "l",
+      "t",
+      "ə",
+      "i",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_sJ_dI",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_sJ_dI.wav",
+    "canonical": [
+      "fʲ",
+      "eː",
+      "dʲ",
+      "ə",
+      "ɾʲ"
+    ],
+    "gold": [
+      "fʲ",
+      "eː",
+      "d",
+      "ə",
+      "ɾʲ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_q78kj",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_q78kj.wav",
+    "canonical": [
+      "ɡ",
+      "ə",
+      "t",
+      "u",
+      "k",
+      "iː"
+    ],
+    "gold": [
+      "ɡ",
+      "ʌ",
+      "tʲ",
+      "o",
+      "ɣ",
+      "ui",
+      "ɟ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_ilHnY",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_ilHnY.wav",
+    "canonical": [
+      "ɣ",
+      "aː",
+      "ç",
+      "i",
+      "nʲ",
+      "a",
+      "l"
+    ],
+    "gold": [
+      "g",
+      "aː",
+      "x",
+      "i",
+      "nʲ",
+      "e",
+      "lʲ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_GZvqk",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_GZvqk.wav",
+    "canonical": [
+      "i",
+      "m",
+      "p",
+      "ɾ",
+      "iˑə",
+      "ɾ",
+      "t",
+      "ə"
+    ],
+    "gold": [
+      "i",
+      "m",
+      "p",
+      "ɾ",
+      "iˑə",
+      "x",
+      "t",
+      "ə",
+      "x"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_jkbH7",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_jkbH7.wav",
+    "canonical": [
+      "x",
+      "u",
+      "n",
+      "c",
+      "i",
+      "nʲ"
+    ],
+    "gold": [
+      "x",
+      "u",
+      "n",
+      "x",
+      "i",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_IB14c",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_IB14c.wav",
+    "canonical": [
+      "d",
+      "e",
+      "ɾ",
+      "eː",
+      "ɾʲ",
+      "m",
+      "a",
+      "ɾ"
+    ],
+    "gold": [
+      "d",
+      "ɑ",
+      "ɻ",
+      "eː",
+      "ɻ",
+      "m",
+      "a",
+      "ɻ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_aB1hc",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_aB1hc.wav",
+    "canonical": [
+      "h",
+      "a",
+      "s",
+      "iː",
+      "ə",
+      "n"
+    ],
+    "gold": [
+      "h",
+      "a",
+      "s",
+      "iː",
+      "ə",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_OVw5P",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_OVw5P.wav",
+    "canonical": [
+      "b",
+      "a",
+      "nʲ",
+      "ə",
+      "ʃ",
+      "tʲ",
+      "o",
+      "ɾʲ",
+      "iː"
+    ],
+    "gold": [
+      "b",
+      "a",
+      "nʲ",
+      "ə",
+      "ʃ",
+      "t",
+      "oː",
+      "ɻ",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_xwwAB",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_xwwAB.wav",
+    "canonical": [
+      "ç",
+      "ə",
+      "n",
+      "ə",
+      "ɾʲ",
+      "a",
+      "ɾ",
+      "t"
+    ],
+    "gold": [
+      "x",
+      "e",
+      "n",
+      "ə",
+      "ɾʲ",
+      "a",
+      "k",
+      "t"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_a4BCR",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_a4BCR.wav",
+    "canonical": [
+      "ə",
+      "h",
+      "oː",
+      "ɾʲ",
+      "tʲ"
+    ],
+    "gold": [
+      "ə",
+      "h",
+      "oː",
+      "ɾʲ",
+      "tʲ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_Q0t2V",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_Q0t2V.wav",
+    "canonical": [
+      "bʲ",
+      "iˑə",
+      "ɾ",
+      "iː",
+      "ɾ",
+      "i",
+      "vʲ",
+      "ə",
+      "ʃ",
+      "i",
+      "nʲ"
+    ],
+    "gold": [
+      "bʲ",
+      "iˑə",
+      "ɻ",
+      "iː",
+      "ɻ",
+      "iː",
+      "vʲ",
+      "ə",
+      "ʃ",
+      "ɪ",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_tzUXk",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_tzUXk.wav",
+    "canonical": [
+      "e",
+      "ɾʲ",
+      "h",
+      "iː",
+      "v",
+      "ə",
+      "v",
+      "aː",
+      "nʲ"
+    ],
+    "gold": [
+      "e",
+      "ɾʲ",
+      "h",
+      "eː",
+      "vʲ",
+      "ə",
+      "w",
+      "aː",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_ZA3nN",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_ZA3nN.wav",
+    "canonical": [
+      "dʲ",
+      "e",
+      "n",
+      "ʃ",
+      "c",
+      "eː",
+      "l"
+    ],
+    "gold": [
+      "d",
+      "e",
+      "n",
+      "ʃ",
+      "c",
+      "eː",
+      "l"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_YFzAd",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_YFzAd.wav",
+    "canonical": [
+      "bʲ",
+      "iː",
+      "ə",
+      "n"
+    ],
+    "gold": [
+      "bʲ",
+      "iː",
+      "ə",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_wGMpB",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_wGMpB.wav",
+    "canonical": [
+      "ə",
+      "n",
+      "b",
+      "a",
+      "nʲ",
+      "ə",
+      "ʃ",
+      "tʲ",
+      "o",
+      "ɾʲ"
+    ],
+    "gold": [
+      "ə",
+      "n",
+      "b",
+      "a",
+      "nʲ",
+      "ə",
+      "ʃ",
+      "tʲ",
+      "o",
+      "ɻ"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_y_stb",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_y_stb.wav",
+    "canonical": [
+      "e",
+      "ɟ",
+      "ia",
+      "ɾ",
+      "iː",
+      "f",
+      "a",
+      "n",
+      "a",
+      "x",
+      "t"
+    ],
+    "gold": [
+      "e",
+      "ɟ",
+      "ia",
+      "ɾ",
+      "iː",
+      "f",
+      "a",
+      "n",
+      "a",
+      "x",
+      "t"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_5lG2e",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_5lG2e.wav",
+    "canonical": [
+      "m",
+      "a",
+      "ɾ",
+      "ɣ",
+      "i",
+      "nʲ",
+      "ə"
+    ],
+    "gold": [
+      "m",
+      "a",
+      "ɾ",
+      "d",
+      "i",
+      "n",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_aWW1v",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_aWW1v.wav",
+    "canonical": [
+      "n",
+      "ə",
+      "lʲ",
+      "a",
+      "dʲ",
+      "ə",
+      "n",
+      "ə"
+    ],
+    "gold": [
+      "n",
+      "ɑː",
+      "l",
+      "a",
+      "dʲ",
+      "ə",
+      "n",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10118867771707376132_t9xF9",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10118867771707376132_t9xF9.wav",
+    "canonical": [
+      "n",
+      "oː",
+      "k",
+      "a",
+      "lʲ",
+      "i",
+      "nʲ",
+      "iː"
+    ],
+    "gold": [
+      "n",
+      "oː",
+      "x",
+      "a",
+      "l",
+      "i",
+      "nʲ",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_L6jSP",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_L6jSP.wav",
+    "canonical": [
+      "x",
+      "o",
+      "mʲ",
+      "a",
+      "d"
+    ],
+    "gold": [
+      "k",
+      "ə",
+      "vʲ",
+      "a",
+      "d"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_KhX8-",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_KhX8-.wav",
+    "canonical": [
+      "p",
+      "aː",
+      "ɾ",
+      "tʲ",
+      "iː",
+      "ɾ",
+      "iˑə",
+      "l",
+      "ə",
+      "h",
+      "ə"
+    ],
+    "gold": [
+      "p",
+      "aː",
+      "ɾ",
+      "tʲ",
+      "iː",
+      "n",
+      "a",
+      "ɾ",
+      "i",
+      "l",
+      "i",
+      "h",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_5MDGX",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_5MDGX.wav",
+    "canonical": [
+      "a",
+      "ɡ",
+      "ɾ",
+      "iː",
+      "a",
+      "x",
+      "t"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ɾ",
+      "i",
+      "a",
+      "k",
+      "t"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_OQLpv",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_OQLpv.wav",
+    "canonical": [
+      "f",
+      "o",
+      "b",
+      "ə",
+      "lʲ"
+    ],
+    "gold": [
+      "f",
+      "o",
+      "b",
+      "ə",
+      "l"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_qYYdC",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_qYYdC.wav",
+    "canonical": [
+      "ia",
+      "ɾ",
+      "j",
+      "e",
+      "ʃ",
+      "c",
+      "ə",
+      "ɾ",
+      "t"
+    ],
+    "gold": [
+      "ia",
+      "ɾ",
+      "dʲ",
+      "e",
+      "s",
+      "c",
+      "ə",
+      "ɾ",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_2fQa_",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_2fQa_.wav",
+    "canonical": [
+      "n",
+      "ə",
+      "h",
+      "a",
+      "f",
+      "ɾ",
+      "ə",
+      "c",
+      "ə"
+    ],
+    "gold": [
+      "n",
+      "ə",
+      "h",
+      "a",
+      "f",
+      "ɾ",
+      "ɪ",
+      "c",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_ydgW8",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_ydgW8.wav",
+    "canonical": [
+      "t",
+      "ɾ",
+      "o",
+      "m",
+      "l",
+      "a",
+      "h",
+      "s",
+      "n",
+      "ə"
+    ],
+    "gold": [
+      "t",
+      "ɾ",
+      "o",
+      "m",
+      "l",
+      "ə",
+      "s",
+      "n",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_U5ch7",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_U5ch7.wav",
+    "canonical": [
+      "t",
+      "au",
+      "h",
+      "a",
+      "nʲ"
+    ],
+    "gold": [
+      "t",
+      "aː",
+      "h",
+      "i",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_Fh_yH",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_Fh_yH.wav",
+    "canonical": [
+      "fʲ",
+      "ɾ",
+      "l",
+      "ə",
+      "mʲ",
+      "ə",
+      "nʲ",
+      "tʲ",
+      "ə",
+      "h",
+      "ə"
+    ],
+    "gold": [
+      "f",
+      "a",
+      "ɾ",
+      "ə",
+      "l",
+      "ə",
+      "mʲ",
+      "ɪ",
+      "lʲ",
+      "tʲ",
+      "a",
+      "k",
+      "t"
+    ]
+  },
+  {
+    "audio_id": "10200386800286571225_UOGcj",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10200386800286571225_UOGcj.wav",
+    "canonical": [
+      "lʲ",
+      "i",
+      "ʃ"
+    ],
+    "gold": [
+      "lʲ",
+      "ɛ",
+      "ʃ"
+    ]
+  },
+  {
+    "audio_id": "10206677242691936838_3lM3K",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10206677242691936838_3lM3K.wav",
+    "canonical": [
+      "i",
+      "s",
+      "a",
+      "s"
+    ],
+    "gold": [
+      "i",
+      "s",
+      "a",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "10206677242691936838_0Cg-8",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10206677242691936838_0Cg-8.wav",
+    "canonical": [
+      "ʃ",
+      "i",
+      "nʲ",
+      "ə",
+      "h",
+      "aː",
+      "nʲ",
+      "ə",
+      "ɟ"
+    ],
+    "gold": [
+      "ʃ",
+      "i",
+      "nʲ",
+      "ə",
+      "h",
+      "aː",
+      "nʲ",
+      "ə",
+      "ɟ"
+    ]
+  },
+  {
+    "audio_id": "10206677242691936838_kw72E",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10206677242691936838_kw72E.wav",
+    "canonical": [
+      "ə",
+      "n",
+      "t",
+      "ɾ",
+      "eː",
+      "nʲ"
+    ],
+    "gold": [
+      "e",
+      "n",
+      "t",
+      "ɾ",
+      "eː",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10206677242691936838_DZeOX",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10206677242691936838_DZeOX.wav",
+    "canonical": [
+      "ə",
+      "n",
+      "k",
+      "aː",
+      "ɾ"
+    ],
+    "gold": [
+      "a",
+      "n",
+      "k",
+      "aː",
+      "ɾ"
+    ]
+  },
+  {
+    "audio_id": "10206677242691936838_bk4fD",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10206677242691936838_bk4fD.wav",
+    "canonical": [
+      "ə",
+      "ɡ",
+      "ə",
+      "s",
+      "nʲ",
+      "a",
+      "ɾ",
+      "t"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ə",
+      "s",
+      "nʲ",
+      "a",
+      "ɾ",
+      "t"
+    ]
+  },
+  {
+    "audio_id": "10206677242691936838_Atnya",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10206677242691936838_Atnya.wav",
+    "canonical": [
+      "k",
+      "oː",
+      "ɾ",
+      "ə",
+      "h",
+      "ə"
+    ],
+    "gold": [
+      "k",
+      "a",
+      "ɹ",
+      "a",
+      "h",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10206677242691936838_Brqc3",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10206677242691936838_Brqc3.wav",
+    "canonical": [
+      "i",
+      "m",
+      "p",
+      "ə",
+      "ɾʲ",
+      "e",
+      "lʲ",
+      "ə"
+    ],
+    "gold": [
+      "ʌ",
+      "m",
+      "p",
+      "ə",
+      "ɹ",
+      "e",
+      "lʲ",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_gwYLu",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_gwYLu.wav",
+    "canonical": [
+      "e",
+      "ɾʲ",
+      "ə",
+      "n",
+      "l",
+      "aː",
+      "vʲ",
+      "e",
+      "lʲ",
+      "ə",
+      "i",
+      "s"
+    ],
+    "gold": [
+      "e",
+      "ɹ",
+      "ə",
+      "n",
+      "l",
+      "aː",
+      "vʲ",
+      "e",
+      "lʲ",
+      "e",
+      "i",
+      "s"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_4axD3",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_4axD3.wav",
+    "canonical": [
+      "ɡ",
+      "n",
+      "aː",
+      "h",
+      "ɾ",
+      "ə",
+      "d"
+    ],
+    "gold": [
+      "k",
+      "n",
+      "aː",
+      "ɾ",
+      "ʌ",
+      "d"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_42mQ8",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_42mQ8.wav",
+    "canonical": [
+      "i",
+      "m",
+      "oː",
+      "ɾ",
+      "x",
+      "i",
+      "dʲ"
+    ],
+    "gold": [
+      "i",
+      "ə",
+      "n",
+      "m",
+      "ʊː",
+      "ɾ",
+      "ɧ",
+      "i",
+      "dʲ"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_yA92H",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_yA92H.wav",
+    "canonical": [
+      "tʲ",
+      "iː",
+      "ɾ",
+      "h",
+      "ə"
+    ],
+    "gold": [
+      "t",
+      "iː",
+      "ɹ",
+      "h",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_-NuLp",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_-NuLp.wav",
+    "canonical": [
+      "ia",
+      "d",
+      "d",
+      "aː",
+      "l",
+      "iː",
+      "ai"
+    ],
+    "gold": [
+      "ia",
+      "d",
+      "aː",
+      "l",
+      "t",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_crZEr",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_crZEr.wav",
+    "canonical": [
+      "ai",
+      "ɾʲ",
+      "ə",
+      "t",
+      "ə"
+    ],
+    "gold": [
+      "oi",
+      "g",
+      "ɹ",
+      "iː",
+      "k",
+      "t",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_E0ps_",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_E0ps_.wav",
+    "canonical": [
+      "ə",
+      "ɡ",
+      "ə",
+      "s",
+      "ʃ",
+      "nʲ",
+      "a",
+      "x",
+      "t",
+      "ə"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ə",
+      "s",
+      "ʃ",
+      "n",
+      "a",
+      "k",
+      "t",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_xwRzN",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_xwRzN.wav",
+    "canonical": [
+      "ə",
+      "ɡ",
+      "ə",
+      "s",
+      "nʲ",
+      "iː",
+      "x",
+      "i",
+      "ɾ",
+      "tʲ",
+      "ə",
+      "ɾ"
+    ],
+    "gold": [
+      "a",
+      "ɡ",
+      "ə",
+      "s",
+      "n",
+      "aː",
+      "x",
+      "r",
+      "iː",
+      "t",
+      "ə",
+      "ɹ"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_dMz-V",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_dMz-V.wav",
+    "canonical": [
+      "nʲ",
+      "iː",
+      "x",
+      "i",
+      "ɾ",
+      "tʲ",
+      "ə",
+      "ɾ",
+      "i",
+      "ʃ",
+      "tʲ",
+      "a",
+      "h"
+    ],
+    "gold": [
+      "n",
+      "iː",
+      "x",
+      "w",
+      "i",
+      "t",
+      "ə",
+      "ɹ",
+      "ɪ",
+      "ʃ",
+      "tʲ",
+      "a",
+      "x"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_747Ry",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_747Ry.wav",
+    "canonical": [
+      "m",
+      "oː",
+      "ɾ",
+      "a",
+      "n"
+    ],
+    "gold": [
+      "m",
+      "oː",
+      "ɹ",
+      "ɑː",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_TFnO0",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_TFnO0.wav",
+    "canonical": [
+      "e",
+      "ɾʲ",
+      "ə",
+      "n",
+      "t",
+      "ɾ",
+      "aː",
+      "x",
+      "t",
+      "oː"
+    ],
+    "gold": [
+      "e",
+      "ɹ",
+      "a",
+      "n",
+      "t",
+      "ɹ",
+      "aː",
+      "x",
+      "t",
+      "oː"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_n-27b",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_n-27b.wav",
+    "canonical": [
+      "ç",
+      "a",
+      "n"
+    ],
+    "gold": [
+      "h",
+      "eɪ",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_1omwY",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_1omwY.wav",
+    "canonical": [
+      "c",
+      "ə",
+      "n"
+    ],
+    "gold": [
+      "c",
+      "aʊ",
+      "n"
+    ]
+  },
+  {
+    "audio_id": "1023087891474057557_oJlXr",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/1023087891474057557_oJlXr.wav",
+    "canonical": [
+      "n",
+      "ə",
+      "bʲ",
+      "lʲ",
+      "ia",
+      "n",
+      "ə"
+    ],
+    "gold": [
+      "n",
+      "a",
+      "bʲ",
+      "lʲ",
+      "iː",
+      "n",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10233874176421692304_t4v5h",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10233874176421692304_t4v5h.wav",
+    "canonical": [
+      "i",
+      "nʲ",
+      "eː",
+      "ɾ",
+      "a",
+      "dʲ",
+      "tʲ",
+      "e"
+    ],
+    "gold": [
+      "i",
+      "n",
+      "ɑː",
+      "ɹ",
+      "ɐ",
+      "d",
+      "ə",
+      "n",
+      "t",
+      "eɪ"
+    ]
+  },
+  {
+    "audio_id": "10233874176421692304_ggFkp",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10233874176421692304_ggFkp.wav",
+    "canonical": [
+      "ə",
+      "n",
+      "vʲ",
+      "aː",
+      "n",
+      "o",
+      "ɾʲ",
+      "h",
+      "ə",
+      "ɾʲ"
+    ],
+    "gold": [
+      "a",
+      "n",
+      "m",
+      "æː",
+      "n",
+      "ɔ",
+      "h",
+      "ə",
+      "ɹ"
+    ]
+  },
+  {
+    "audio_id": "10233874176421692304_Aj_3i",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10233874176421692304_Aj_3i.wav",
+    "canonical": [
+      "nʲ",
+      "iː",
+      "ɾ",
+      "ɛ",
+      "vʲ"
+    ],
+    "gold": [
+      "nʲ",
+      "iː",
+      "ɹ",
+      "ɛ",
+      "vʲ"
+    ]
+  },
+  {
+    "audio_id": "10233874176421692304_5mK7a",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10233874176421692304_5mK7a.wav",
+    "canonical": [
+      "ə",
+      "n",
+      "tʲ",
+      "a",
+      "h",
+      "x",
+      "oː"
+    ],
+    "gold": [
+      "a",
+      "n",
+      "tʲ",
+      "a",
+      "x",
+      "oː",
+      "v"
+    ]
+  },
+  {
+    "audio_id": "10233874176421692304_-Zw-h",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10233874176421692304_-Zw-h.wav",
+    "canonical": [
+      "t",
+      "aː",
+      "v",
+      "a",
+      "x",
+      "t",
+      "a",
+      "h"
+    ],
+    "gold": [
+      "t",
+      "a",
+      "v",
+      "a",
+      "t",
+      "a",
+      "x"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_RntUs",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_RntUs.wav",
+    "canonical": [
+      "t",
+      "aː",
+      "k",
+      "oː",
+      "j",
+      "eː",
+      "n",
+      "uː"
+    ],
+    "gold": [
+      "t",
+      "aː",
+      "x",
+      "oː",
+      "j",
+      "eː",
+      "n",
+      "uː"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_x1bNI",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_x1bNI.wav",
+    "canonical": [
+      "n",
+      "ə",
+      "ɡ",
+      "c",
+      "ɾʲ",
+      "i",
+      "s",
+      "t",
+      "ə",
+      "l",
+      "ʃ",
+      "o"
+    ],
+    "gold": [
+      "n",
+      "a",
+      "g",
+      "ɾ",
+      "aː",
+      "k",
+      "e",
+      "l",
+      "ʃ",
+      "o"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_A0Ed3",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_A0Ed3.wav",
+    "canonical": [
+      "e",
+      "ɾʲ",
+      "eː",
+      "n"
+    ],
+    "gold": [
+      "ɤ",
+      "ɹ",
+      "eː",
+      "nʲ"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_BQir5",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_BQir5.wav",
+    "canonical": [
+      "d",
+      "u",
+      "l",
+      "lʲ",
+      "oː"
+    ],
+    "gold": [
+      "d",
+      "u",
+      "l",
+      "lʲ",
+      "ɔː"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_xdUu-",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_xdUu-.wav",
+    "canonical": [
+      "ʃ",
+      "uː",
+      "d"
+    ],
+    "gold": [
+      "ʃ",
+      "ʊː",
+      "d"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_NuU-M",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_NuU-M.wav",
+    "canonical": [
+      "ə",
+      "a",
+      "tʲ",
+      "ə",
+      "ɾ"
+    ],
+    "gold": [
+      "ə",
+      "f",
+      "a",
+      "tʲ",
+      "ə",
+      "ɹ"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_xmXi1",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_xmXi1.wav",
+    "canonical": [
+      "i",
+      "vʲ",
+      "ua",
+      "l"
+    ],
+    "gold": [
+      "i",
+      "w",
+      "ʊ",
+      "l"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_1P7-K",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_1P7-K.wav",
+    "canonical": [
+      "pʲ",
+      "a",
+      "t",
+      "iː"
+    ],
+    "gold": [
+      "pʲ",
+      "a",
+      "t",
+      "iː"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_tZ8e8",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_tZ8e8.wav",
+    "canonical": [
+      "a",
+      "t",
+      "aː"
+    ],
+    "gold": [
+      "a",
+      "t",
+      "aː"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_Tz6tG",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_Tz6tG.wav",
+    "canonical": [
+      "b",
+      "ua",
+      "lʲ",
+      "tʲ",
+      "ə",
+      "n",
+      "uː",
+      "ɾʲ",
+      "ə"
+    ],
+    "gold": [
+      "b",
+      "ue",
+      "lʲ",
+      "tʲ",
+      "ə",
+      "n",
+      "uː",
+      "ɾʲ",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_wJzTf",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_wJzTf.wav",
+    "canonical": [
+      "ə",
+      "x",
+      "i",
+      "ɾ",
+      "tʲ",
+      "ə",
+      "ɾ",
+      "i"
+    ],
+    "gold": [
+      "x",
+      "ə",
+      "ɾ",
+      "tʲ",
+      "ə",
+      "ɾ",
+      "ɪ",
+      "ɟ"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_2BQAP",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_2BQAP.wav",
+    "canonical": [
+      "k",
+      "o",
+      "m",
+      "p",
+      "ə",
+      "ɾ",
+      "a",
+      "dʲ",
+      "ia",
+      "d"
+    ],
+    "gold": [
+      "k",
+      "o",
+      "m",
+      "p",
+      "ɾ",
+      "e",
+      "dʲ",
+      "ia",
+      "d"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_MAkuV",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_MAkuV.wav",
+    "canonical": [
+      "s",
+      "pʲ",
+      "e",
+      "c",
+      "tʲ",
+      "ɾʲ",
+      "ə",
+      "s",
+      "k",
+      "o",
+      "p",
+      "ə",
+      "x"
+    ],
+    "gold": [
+      "s",
+      "bʲ",
+      "e",
+      "c",
+      "tʲ",
+      "ɾʲ",
+      "ə",
+      "s",
+      "k",
+      "o",
+      "p",
+      "ə"
+    ]
+  },
+  {
+    "audio_id": "10239398288528692924_QXajT",
+    "audio_path": "/home/peter/Desktop/thesis/ThesisProject/data/eval/segments/audio/10239398288528692924_QXajT.wav",
+    "canonical": [
+      "i",
+      "nʲ",
+      "fʲ",
+      "ɾʲ",
+      "iː",
+      "j",
+      "a",
+      "ɾ",
+      "ə",
+      "ɡ"
+    ],
+    "gold": [
+      "i",
+      "nʲ",
+      "fʲ",
+      "ɾʲ",
+      "dʲ",
+      "a",
+      "ɾ",
+      "ə",
+      "ɡ"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "train_selector",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/asr_system/ensemble/train_selector.py",
+            "args": [
+                "--ga_model", "duck-hug-567/xls-r-300m-gaphon-full-collapsed",
+                "--en_model", "duck-hug-567/xls-r-300m-engphon-collapsed",
+                "--audio_dir", "data/eval/segments/audio",
+                "--segments_dir", "data/eval/segments",
+                "--n_train", "5"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "python": "/home/peter/miniconda3/envs/thesis/bin/python"
+        }
+    ]
+}

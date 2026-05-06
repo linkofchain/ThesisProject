@@ -15,6 +15,7 @@ from functools import partial
 import torch
 import torchaudio.functional as F
 
+_russian_used = 0
 
 # ---------------------------------------------------------------------------
 # Russian vocab mapping
@@ -60,20 +61,35 @@ def build_ru_ipa_dict(ru_processor):
         ru_ipa_dict[ipa_key] = value
     return ru_ipa_dict
 
+# some phonemes for Russian have equivalents in Irish written differently.
+_RU_TO_GA_PAL = {
+    'kʲ': 'c',
+    'gʲ': 'ɟ',
+    'sʲ': 'ʃ',
+    'xʲ': 'ç',
+    'ɣʲ': 'j',
+}
+
 
 def build_pal_set(ga_processor, ru_ipa_dict):
     """
-    Build the set of palatalized phones present in both Irish and Russian vocabs.
-    Used to gate Russian model participation to relevant spans.
-    """
-    ru_pal = {x for x in ru_ipa_dict if 'ʲ' in x}
-    ga_dict = ga_processor.tokenizer.get_vocab()
-    ga_pal = {x for x in ga_dict if 'ʲ' in x}
-    # add palatalized phones w/o diacritics
-    unmarked_slender = {'ʃ','c','ɟ','ç','j','ɲ'}
-    ga_pal = ga_pal | unmarked_slender
+    Build the set of Russian phones that gate Russian model participation.
 
-    return ga_pal & ru_pal
+    Includes Russian phones whose IPA matches an Irish palatalized phone
+    (direct intersection), plus cross-system equivalences where the two
+    systems use different IPA symbols for the same phonological contrast
+    (e.g. Russian kʲ / Irish c, Russian sʲ / Irish ʃ).
+    """
+    ru_pal  = {x for x in ru_ipa_dict if 'ʲ' in x}
+    ga_dict = ga_processor.tokenizer.get_vocab()
+    ga_pal  = {x for x in ga_dict if 'ʲ' in x} | {'ʃ', 'c', 'ɟ', 'ç', 'j', 'ɲ'}
+
+    cross_system = {ru for ru, ga in _RU_TO_GA_PAL.items()
+                    if ru in ru_ipa_dict and ga in ga_dict}
+
+    pal_set = (ga_pal & ru_pal) | cross_system
+    print("pal_set:", pal_set)
+    return pal_set
 
 
 def is_palatalized(phone, pal_set):
@@ -265,9 +281,9 @@ def spanwise_ensemble(waveform, transcript,
                       ga_processor, ga_model,
                       en_processor, en_model,
                       ru_processor=None, ru_model=None,
-                      ru_ipa_dict=None, pal_set=None,
                       conf_func=frame_gibbs_confidence,
                       pool_ga=False,
+                      selector=None,
                       device='cpu',
                       verbose=False):
     """
@@ -278,8 +294,9 @@ def spanwise_ensemble(waveform, transcript,
     highest confidence (over non-blank frames) wins, and its predicted phoneme
     is taken from its own vocab.
 
-    The Russian model is optional and participates only when it detects a
-    palatalized phoneme in a span (requires ru_ipa_dict and pal_set).
+    The Russian model is optional (pass ru_processor and ru_model to enable).
+    It participates only on spans where it detects a palatalized phoneme.
+    ru_ipa_dict and pal_set are derived automatically from the processors.
 
     conf_func options:
         frame_gibbs_confidence                          — default
@@ -293,14 +310,19 @@ def spanwise_ensemble(waveform, transcript,
         probability across /l/ and /lʲ/ and loses to a more peaked English
         distribution. Phone selection after winning is unchanged.
 
-    verbose=False: returns list of dicts {canonical, predicted, winner, confidence}
+    selector: optional sklearn-compatible classifier with a .predict() method
+        trained to arbitrate between ga and en. Accepts [[ga_conf, en_conf]]
+        and returns ['ga'] or ['en']. When None, falls back to argmax.
+        Russian always wins when it fires the palatalization gate, regardless
+        of selector.
+
+    verbose=False: returns list of dicts {canonical, predicted, winner,
+                   confidence, frames}
     verbose=True:  each dict also contains 'models' — per-model breakdown with
-                   confidence scalar, predicted phone, and mean_probs (V,) over
-                   non-blank frames. mean_probs shows distribution shape directly,
-                   useful for diagnosing smoothness and overconfidence.
+                   confidence scalar and predicted phone per non-blank span.
     """
-    use_russian = (ru_processor is not None and ru_model is not None
-                   and ru_ipa_dict is not None and pal_set is not None)
+    global _russian_used
+    use_russian = ru_processor is not None and ru_model is not None
 
     def get_emission(processor, model, waveform):
         inputs = processor(waveform, sampling_rate=16000,
@@ -313,6 +335,8 @@ def spanwise_ensemble(waveform, transcript,
     ga_em = get_emission(ga_processor, ga_model, waveform)
     en_em = get_emission(en_processor, en_model, waveform)
     if use_russian:
+        ru_ipa_dict = build_ru_ipa_dict(ru_processor)
+        pal_set     = build_pal_set(ga_processor, ru_ipa_dict)
         ru_em = get_emission(ru_processor, ru_model, waveform)
         ru_blank = ru_processor.tokenizer.pad_token_id
         ru_idx2phone = {v: k for k, v in ru_ipa_dict.items()}
@@ -347,13 +371,28 @@ def spanwise_ensemble(waveform, transcript,
         if use_russian:
             ru_pred = best_phone_in_span(ru_em, ru_idx2phone, ru_blank, s, e)
             if is_palatalized(ru_pred, pal_set):
+                _russian_used += 1
                 ru_conf = span_confidence(ru_em, ru_blank, s, e, conf_func)
                 candidates.append((ru_conf, 'ru', ru_em, ru_idx2phone, ru_blank))
 
-        best_conf, winner, win_em, win_idx2phone, win_blank = max(
-            candidates, key=lambda x: x[0]
-        )
+        ru_fired = any(c[1] == 'ru' for c in candidates)
+        if ru_fired:
+            best_conf, winner, win_em, win_idx2phone, win_blank = next(
+                c for c in candidates if c[1] == 'ru'
+            )
+        elif selector is not None:
+            winner = selector.predict([[ga_conf, en_conf]])[0]
+            best_conf, _, win_em, win_idx2phone, win_blank = next(
+                c for c in candidates if c[1] == winner
+            )
+        else:
+            best_conf, winner, win_em, win_idx2phone, win_blank = max(
+                candidates, key=lambda x: x[0]
+            )
+
         predicted_phone = best_phone_in_span(win_em, win_idx2phone, win_blank, s, e)
+        if winner == 'ru':
+            predicted_phone = _RU_TO_GA_PAL.get(predicted_phone, predicted_phone)
 
         entry = {
             'canonical': canonical_phone,
@@ -363,6 +402,7 @@ def spanwise_ensemble(waveform, transcript,
         }
 
         if verbose:
+            entry['frames'] = (s, e)
             entry['models'] = {
                 name: {
                     'confidence': round(conf, 4),
@@ -373,5 +413,6 @@ def spanwise_ensemble(waveform, transcript,
             }
 
         results.append(entry)
-
+        
+    print(_russian_used)    
     return results
