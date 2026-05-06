@@ -20,8 +20,6 @@ import torch
 import torchaudio.functional as _ta_func
 
 from scripts.asr_system.ensemble.ensemble import (
-    build_ru_ipa_dict,
-    build_pal_set,
     frame_gibbs_confidence,
     spanwise_ensemble,
 )
@@ -74,7 +72,6 @@ def _load_waveform(audio_id: str, audio_dir=None, gcs_client=None) -> np.ndarray
     data, sr = _sf_load(io.BytesIO(blob.download_as_bytes()))
     return _to_mono_16k(data, sr)
 
-
 def run_ensemble_inference(
     records: list[dict],
     ga_processor,
@@ -85,6 +82,8 @@ def run_ensemble_inference(
     ru_model=None,
     conf_func=frame_gibbs_confidence,
     pool_ga: bool = False,
+    selector=None,
+    verbose: bool = False,
     audio_dir: str | pathlib.Path | None = None,
     device: str = 'cpu',
 ) -> list[dict]:
@@ -103,16 +102,17 @@ def run_ensemble_inference(
     ru_processor, ru_model : Russian phoneme ASR (optional)
     conf_func   : frame-level confidence function (default: Gibbs entropy)
     pool_ga     : if True, use broad/slender family pooling for Irish confidence
+    selector    : optional trained LR selector (sklearn Pipeline or equivalent).
+                  When provided, arbitrates ga vs en instead of argmax.
+                  Pass joblib.load('models/ensemble/lr_selector.pkl') result here.
+    verbose     : if True, span_details include per-model confidence and peak_probs
     audio_dir   : local directory of {audio_id}.wav files; falls back to GCS
     device      : 'cpu' or 'cuda'
 
     Returns
     -------
     New list of records with 'asr' and 'span_details' added.
-    Does not mutate the input records.
     """
-    ru_ipa_dict = build_ru_ipa_dict(ru_processor) if ru_processor else None
-    pal_set     = build_pal_set(ga_processor, ru_ipa_dict) if ru_ipa_dict else None
     ga_dict     = ga_processor.tokenizer.get_vocab()
 
     # Create GCS client once, only if we might need it
@@ -145,9 +145,10 @@ def run_ensemble_inference(
             ga_processor, ga_model,
             en_processor, en_model,
             ru_processor=ru_processor, ru_model=ru_model,
-            ru_ipa_dict=ru_ipa_dict, pal_set=pal_set,
             conf_func=conf_func,
             pool_ga=pool_ga,
+            selector=selector,
+            verbose=verbose,
             device=device,
         )
 
