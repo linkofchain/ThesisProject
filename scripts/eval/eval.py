@@ -26,6 +26,42 @@ def greedy_ctc_phones(processor, model, audio_array, device='cpu'):
     return phones
 
 
+def forced_ctc_phones(processor, model, audio_array, canonical, device='cpu'):
+    """
+    Forced-alignment CTC decode: one predicted phone per canonical slot.
+
+    Constrains the model's emissions to the canonical transcript via torchaudio
+    forced alignment, then selects the peak token per span (same logic as the
+    ensemble's best_phone_in_span). Output length always equals len(canonical),
+    so evaluation is directly position-comparable without a secondary difflib
+    alignment step.
+
+    canonical must already be in the model's vocab (apply collapse_phones first).
+    """
+    import torch
+    import torchaudio.functional as _F
+    from scripts.asr_system.ensemble.ensemble import best_phone_in_span
+
+    inputs = processor(audio_array, sampling_rate=16000,
+                       return_tensors='pt', padding=True)
+    with torch.inference_mode():
+        logits = model(inputs.input_values.to(device),
+                       attention_mask=inputs.attention_mask.to(device)).logits
+
+    log_probs = torch.nn.functional.log_softmax(logits[0], dim=-1)
+
+    vocab     = processor.tokenizer.get_vocab()
+    blank_id  = processor.tokenizer.pad_token_id
+    idx2phone = {v: k for k, v in vocab.items()}
+
+    tokens = torch.tensor([[vocab[p] for p in canonical]], dtype=torch.int32, device=device)
+    alignments, scores = _F.forced_align(log_probs.unsqueeze(0), tokens, blank=blank_id)
+    spans = _F.merge_tokens(alignments[0], scores[0].exp())
+
+    return [best_phone_in_span(log_probs, idx2phone, blank_id, span.start, span.end)
+            for span in spans]
+
+
 def show_alignment(record, key='asr', col_sep=' '):
     """
     Print a two-row grid of canonical vs predicted phones.

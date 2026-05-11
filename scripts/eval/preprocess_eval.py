@@ -113,10 +113,18 @@ def _slice_audio(audio_bytes: bytes, start: float, end: float) -> bytes:
     return out.getvalue()
 
 
+def _load_id_set(path: str | pathlib.Path | None) -> set[str] | None:
+    if path is None:
+        return None
+    return {line.strip() for line in pathlib.Path(path).read_text().splitlines() if line.strip()}
+
+
 def build_eval_dataset(
     annotations_bucket: str = ANNOTATIONS_BUCKET,
     output_dir: pathlib.Path | str = DEFAULT_OUTPUT_DIR,
     refresh: bool = False,
+    include_ids: set[str] | None = None,
+    exclude_ids: set[str] | None = None,
 ) -> list[dict]:
     """
     Fetch annotation JSONs from GCS, slice the corresponding audio files, and
@@ -161,6 +169,10 @@ def build_eval_dataset(
             continue
 
         base_audio_id = _audio_id_from_path(audio_uri)
+        if include_ids is not None and base_audio_id not in include_ids:
+            continue
+        if exclude_ids is not None and base_audio_id in exclude_ids:
+            continue
         print(f"Processing {base_audio_id}: {len(segments)} segments")
 
         if audio_uri not in audio_cache:
@@ -206,7 +218,25 @@ if __name__ == "__main__":
         "--refresh", action="store_true",
         help="Re-fetch and reslice even if manifest already exists"
     )
+    parser.add_argument(
+        "--include-ids", default=None, metavar="FILE",
+        help="Text file of base_audio_ids (one per line) to include. "
+             "All others are skipped. Mutually exclusive with --exclude-ids."
+    )
+    parser.add_argument(
+        "--exclude-ids", default=None, metavar="FILE",
+        help="Text file of base_audio_ids (one per line) to exclude. "
+             "All others are included. Mutually exclusive with --include-ids."
+    )
     args = parser.parse_args()
 
-    records = build_eval_dataset(output_dir=args.output_dir, refresh=args.refresh)
+    if args.include_ids and args.exclude_ids:
+        parser.error("--include-ids and --exclude-ids are mutually exclusive.")
+
+    records = build_eval_dataset(
+        output_dir=args.output_dir,
+        refresh=args.refresh,
+        include_ids=_load_id_set(args.include_ids),
+        exclude_ids=_load_id_set(args.exclude_ids),
+    )
     print(f"\nDone: {len(records)} segments ready for evaluation")

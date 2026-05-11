@@ -9,13 +9,12 @@ acting as a specialist for a feature absent from English phonology.
 """
 
 import math
-from collections import defaultdict
+from dataclasses import dataclass
 from functools import partial
 
 import torch
 import torchaudio.functional as F
 
-_russian_used = 0
 
 # ---------------------------------------------------------------------------
 # Russian vocab mapping
@@ -104,10 +103,11 @@ def is_palatalized(phone, pal_set):
 def frame_gibbs_entropy(emissions):
     """Gibbs (Shannon) entropy over log-prob distribution."""
     p = emissions.exp()
-    return -(p * emissions).sum(dim=-1)
+    # 0 * log(0) is defined as 0; nan_to_num converts the 0*(-inf)=NaN case
+    return -(torch.nan_to_num(p * emissions, nan=0.0)).sum(dim=-1)
 
 
-def frame_tsallis_entropy(emissions, alpha=1.0):
+def frame_tsallis_entropy(emissions, alpha=.3):
     """Tsallis entropy. Reduces to Gibbs as alpha -> 1."""
     if alpha >= 1.0:
         return frame_gibbs_entropy(emissions)
@@ -122,7 +122,7 @@ def frame_gibbs_confidence(emissions):
     return 1.0 - (H / math.log(V))
 
 
-def frame_tsallis_confidence(emissions, alpha=2.0):
+def frame_tsallis_confidence(emissions, alpha=.3):
     """Tsallis entropy-based confidence, normalised to [0, 1]."""
     H = frame_tsallis_entropy(emissions, alpha=alpha)
     V = emissions.size(-1)
@@ -139,53 +139,60 @@ def frame_prob_confidence(emissions):
 # Span-level helpers
 # ---------------------------------------------------------------------------
 
-def _non_blank_frames(emission, blank_id, start, end):
-    """Return non-blank frames in [start, end), falling back to full span."""
-    span = emission[start:end]
-    mask = span.argmax(dim=-1) != blank_id
+def _non_blank_frames(emission, filler_ids, start, end):
+    """Return phonemic frames in [start, end), falling back to full span.
+
+    Filters out any frame whose argmax token is in filler_ids (blank, [PAD],
+    |, and other special tokens), so downstream helpers are not misled by
+    frames dominated by non-phonemic tokens.
+    """
+    span   = emission[start:end]
+    argmax = span.argmax(dim=-1)
+    mask   = ~torch.isin(argmax, torch.tensor(sorted(filler_ids), device=argmax.device))
     non_blank = span[mask]
     return non_blank if non_blank.shape[0] > 0 else span
 
 
-def span_confidence(emission, blank_id, start, end, conf_func):
+def span_confidence(emission, filler_ids, start, end, conf_func):
     """
     Scalar confidence for a phoneme span.
-    Aggregates frame-level confidence as max over non-blank frames.
+
+    Selects phonemic frames in [start, end) (falling back to full span), then
+    renormalizes the log-prob distribution over phonemic tokens (all filler
+    slots set to -inf) before applying conf_func. This ensures all confidence
+    functions measure peakiness of the phone distribution rather than filler
+    dominance: a blank-dominated span correctly yields low confidence.
     """
-    frames = _non_blank_frames(emission, blank_id, start, end)
-    return conf_func(frames).max().item()
+    frames      = _non_blank_frames(emission, filler_ids, start, end)
+    no_filler   = frames.clone()
+    filler_t    = torch.tensor(sorted(filler_ids), dtype=torch.long)
+    no_filler[:, filler_t] = float('-inf')
+    no_filler   = no_filler - torch.logsumexp(no_filler, dim=-1, keepdim=True)
+    return conf_func(no_filler).max().item()
 
 
-def span_peak_probs(emission, blank_id, start, end):
+def span_peak_probs(emission, filler_ids, start, end):
     """
-    Peak probability distribution over non-blank frames in [start, end).
+    Peak probability distribution over phonemic frames in [start, end).
     Shape: (V,). Element i is the max probability token i achieved across any
-    non-blank frame — consistent with the max-based phone selection in
-    best_phone_in_span.
+    phonemic frame.
     """
-    frames = _non_blank_frames(emission, blank_id, start, end)
+    frames = _non_blank_frames(emission, filler_ids, start, end)
     return frames.exp().max(dim=0).values
 
 
 _SPECIAL_TOKENS = {'[PAD]', '[UNK]', '|', '<s>', '</s>'}
 
 
-def best_phone_in_span(emission, idx2phone, blank_id, start, end):
+def best_phone_in_span(emission, idx2phone, filler_ids, start, end):
     """
     Predicted phoneme for a span: token with the highest peak log-prob across
-    any non-blank frame, with special tokens masked out.
-
-    Max over frames rather than mean: wav2vec2 CTC emissions are peaky —
-    the correct token spikes briefly; averaging across the span dilutes that
-    signal. Max captures whichever token had the strongest single-frame peak.
+    phonemic frames, with all filler tokens masked out.
     """
-    frames  = _non_blank_frames(emission, blank_id, start, end)
-    peak_lp = frames.max(dim=0).values.clone()
-
-    for idx, token in idx2phone.items():
-        if token in _SPECIAL_TOKENS:
-            peak_lp[idx] = float('-inf')
-
+    frames   = _non_blank_frames(emission, filler_ids, start, end)
+    peak_lp  = frames.max(dim=0).values.clone()
+    filler_t = torch.tensor(sorted(filler_ids), dtype=torch.long)
+    peak_lp[filler_t] = float('-inf')
     best_idx = peak_lp.argmax().item()
     return idx2phone.get(best_idx, f'<unk:{best_idx}>')
 
@@ -236,20 +243,20 @@ def build_phoneme_families(ga_dict: dict) -> dict[str, frozenset]:
     return families
 
 
-def span_pooled_confidence(emission, blank_id, start, end,
+def span_pooled_confidence(emission, filler_ids, start, end,
                            canonical_phone, phone2idx, families):
     """
     Confidence for a span based on pooled family probability mass.
 
     Sums exp(log_prob) across all phones in the canonical phone's family
-    (broad + slender variants) per non-blank frame, then returns the max
+    (broad + slender variants) per phonemic frame, then returns the max
     over frames. This prevents entropy-based measures from penalising the
     Irish model when probability is legitimately split across the
     broad/slender axis (e.g. /lʲ/ and /l/).
 
     Falls back to max-prob confidence if no family indices are found.
     """
-    frames = _non_blank_frames(emission, blank_id, start, end)
+    frames = _non_blank_frames(emission, filler_ids, start, end)
     probs  = frames.exp()  # (T, V)
 
     family     = families.get(canonical_phone, frozenset({canonical_phone}))
@@ -273,9 +280,135 @@ def align(emission, tokens, device='cpu'):
     return alignments, scores.exp()
 
 
+def _compute_spans(ga_ctx, transcript, device='cpu', expand=0):
+    """
+    CTC forced alignment → per-phone frame spans.
+
+    Returns list of (token_id, start, end) with end exclusive.
+
+    When expand > 0, each span is widened symmetrically by up to `expand`
+    frames on each side. Expansion is capped at the midpoint between adjacent
+    spans so they never overlap. This gives each model more non-blank frames
+    to draw confidence from when the raw forced alignment lands on a single
+    blank-dominated frame.
+    """
+    tokenized = [ga_ctx.vocab[p] for p in transcript]
+    aligned, scores = align(ga_ctx.emission.unsqueeze(0), tokenized, device)
+    raw = F.merge_tokens(aligned, scores)
+
+    if expand == 0:
+        return [(sp.token, sp.start, sp.end) for sp in raw]
+
+    T = ga_ctx.emission.shape[0]
+    n = len(raw)
+    result = []
+    for i, sp in enumerate(raw):
+        lo = (raw[i - 1].end + sp.start) // 2 if i > 0     else 0
+        hi = (sp.end + raw[i + 1].start) // 2 if i < n - 1 else T
+        result.append((sp.token, max(sp.start - expand, lo), min(sp.end + expand, hi)))
+    return result
+
+
+def _score_candidates(s, e, ga_ctx, en_ctx, ru_ctx, pal_set,
+                      canonical_phone, conf_func, pool_ga, ga_families):
+    """
+    Score each model over frames [s, e) and return a candidates list.
+
+    Irish confidence optionally uses broad/slender family pooling (pool_ga).
+    Russian is included only when ru_ctx is provided and its top prediction
+    in the span passes the palatalization gate.
+
+    Returns list of (confidence, model_name, ModelCtx).
+    """
+    if pool_ga:
+        ga_conf = span_pooled_confidence(
+            ga_ctx.emission, ga_ctx.filler_ids, s, e,
+            canonical_phone, ga_ctx.vocab, ga_families,
+        )
+    else:
+        ga_conf = span_confidence(ga_ctx.emission, ga_ctx.filler_ids, s, e, conf_func)
+
+    en_conf = span_confidence(en_ctx.emission, en_ctx.filler_ids, s, e, conf_func)
+    candidates = [(ga_conf, 'ga', ga_ctx), (en_conf, 'en', en_ctx)]
+
+    if ru_ctx is not None:
+        ru_pred = best_phone_in_span(ru_ctx.emission, ru_ctx.idx2phone, ru_ctx.filler_ids, s, e)
+        if is_palatalized(ru_pred, pal_set):
+            ru_conf = span_confidence(ru_ctx.emission, ru_ctx.filler_ids, s, e, conf_func)
+            candidates.append((ru_conf, 'ru', ru_ctx))
+
+    return candidates
+
+
+def _select_winner(candidates, selector):
+    """
+    Choose the winning model from a list of (conf, name, ctx) candidates.
+
+    Priority order:
+      1. Russian — when it fires the palatalization gate it always wins.
+      2. LR selector — when a trained selector is provided it arbitrates ga/en.
+      3. Argmax — fall back to whichever model has highest raw confidence.
+
+    Returns the winning (conf, name, ctx) triple.
+    """
+    if any(name == 'ru' for _, name, _ in candidates):
+        return next(c for c in candidates if c[1] == 'ru')
+    if selector is not None:
+        ga_conf = next(c[0] for c in candidates if c[1] == 'ga')
+        en_conf = next(c[0] for c in candidates if c[1] == 'en')
+        winner = selector.predict([[ga_conf, en_conf]])[0]
+        return next(c for c in candidates if c[1] == winner)
+    return max(candidates, key=lambda c: c[0])
+
+
 # ---------------------------------------------------------------------------
 # Span-wise ensemble
 # ---------------------------------------------------------------------------
+
+def get_emission(processor, model, waveform, device='cpu'):
+    """Run a CTC model forward pass; returns log-softmax emissions (T, V)."""
+    inputs = processor(waveform, sampling_rate=16000,
+                       return_tensors='pt', padding=True)
+    with torch.inference_mode():
+        out = model(inputs.input_values.to(device),
+                    attention_mask=inputs.attention_mask.to(device))
+    return torch.nn.functional.log_softmax(out.logits[0], dim=-1)
+
+
+@dataclass
+class ModelCtx:
+    """All per-model data needed for span-level inference."""
+    emission:   torch.Tensor   # (T, V) log-softmax
+    blank_id:   int            # CTC blank index — used only for forced alignment
+    filler_ids: frozenset      # all non-phonemic token indices (blank + special tokens)
+    idx2phone:  dict           # int -> str
+    vocab:      dict           # str -> int
+
+
+def _build_model_ctx(processor, model, waveform, device='cpu') -> ModelCtx:
+    vocab = processor.tokenizer.get_vocab()
+    return ModelCtx(
+        emission=get_emission(processor, model, waveform, device),
+        blank_id=processor.tokenizer.pad_token_id,
+        filler_ids=frozenset(idx for token, idx in vocab.items() if token in _SPECIAL_TOKENS),
+        idx2phone={v: k for k, v in vocab.items()},
+        vocab=vocab,
+    )
+
+
+def _build_ru_ctx(ru_processor, ru_model, ga_processor, waveform, device='cpu'):
+    """Build ModelCtx for the Russian model plus the palatalization gate set."""
+    ru_ipa_dict = build_ru_ipa_dict(ru_processor)
+    ru_vocab    = ru_processor.tokenizer.get_vocab()
+    ctx = ModelCtx(
+        emission=get_emission(ru_processor, ru_model, waveform, device),
+        blank_id=ru_processor.tokenizer.pad_token_id,
+        filler_ids=frozenset(idx for token, idx in ru_vocab.items() if token in _SPECIAL_TOKENS),
+        idx2phone={v: k for k, v in ru_ipa_dict.items()},
+        vocab=ru_ipa_dict,
+    )
+    return ctx, build_pal_set(ga_processor, ru_ipa_dict)
+
 
 def spanwise_ensemble(waveform, transcript,
                       ga_processor, ga_model,
@@ -284,8 +417,9 @@ def spanwise_ensemble(waveform, transcript,
                       conf_func=frame_gibbs_confidence,
                       pool_ga=False,
                       selector=None,
+                      expand=10,
                       device='cpu',
-                      verbose=False):
+                      verbose=True):
     """
     Span-wise confidence ensemble over monolingual phoneme ASR models.
 
@@ -316,82 +450,42 @@ def spanwise_ensemble(waveform, transcript,
         Russian always wins when it fires the palatalization gate, regardless
         of selector.
 
+    expand: frames to grow each aligned span symmetrically on both sides
+        (default 0 = raw forced alignment, typically 1-frame spans).
+        Expansion is capped at the midpoint between adjacent spans so they
+        never overlap. Useful when forced alignment lands on a blank-dominated
+        frame and the confidence estimate needs more context.
+
     verbose=False: returns list of dicts {canonical, predicted, winner,
                    confidence, frames}
     verbose=True:  each dict also contains 'models' — per-model breakdown with
                    confidence scalar and predicted phone per non-blank span.
     """
-    global _russian_used
     use_russian = ru_processor is not None and ru_model is not None
 
-    def get_emission(processor, model, waveform):
-        inputs = processor(waveform, sampling_rate=16000,
-                           return_tensors='pt', padding=True)
-        with torch.inference_mode():
-            out = model(inputs.input_values.to(device),
-                        attention_mask=inputs.attention_mask.to(device))
-        return torch.nn.functional.log_softmax(out.logits[0], dim=-1)
+    ga_ctx = _build_model_ctx(ga_processor, ga_model, waveform, device)
+    en_ctx = _build_model_ctx(en_processor, en_model, waveform, device)
+    ru_ctx, pal_set = (
+        _build_ru_ctx(ru_processor, ru_model, ga_processor, waveform, device)
+        if use_russian else (None, frozenset())
+    )
 
-    ga_em = get_emission(ga_processor, ga_model, waveform)
-    en_em = get_emission(en_processor, en_model, waveform)
-    if use_russian:
-        ru_ipa_dict = build_ru_ipa_dict(ru_processor)
-        pal_set     = build_pal_set(ga_processor, ru_ipa_dict)
-        ru_em = get_emission(ru_processor, ru_model, waveform)
-        ru_blank = ru_processor.tokenizer.pad_token_id
-        ru_idx2phone = {v: k for k, v in ru_ipa_dict.items()}
-
-    ga_blank = ga_processor.tokenizer.pad_token_id
-    en_blank = en_processor.tokenizer.pad_token_id
-    ga_dict = ga_processor.tokenizer.get_vocab()
-    ga_idx2phone = {v: k for k, v in ga_dict.items()}
-    en_idx2phone = {v: k for k, v in en_processor.tokenizer.get_vocab().items()}
-
-    tokenized = [ga_dict[p] for p in transcript]
-    aligned_tokens, alignment_scores = align(ga_em.unsqueeze(0), tokenized, device)
-    token_spans = F.merge_tokens(aligned_tokens, alignment_scores)
-
-    ga_families = build_phoneme_families(ga_dict) if pool_ga else None
+    ga_families = build_phoneme_families(ga_ctx.vocab) if pool_ga else None
 
     results = []
-    for span in token_spans:
-        canonical_phone = ga_idx2phone[span.token]
-        s, e = span.start, span.end
+    for token, s, e in _compute_spans(ga_ctx, transcript, device, expand):
+        canonical_phone = ga_ctx.idx2phone[token]
 
-        if pool_ga:
-            ga_conf = span_pooled_confidence(
-                ga_em, ga_blank, s, e, canonical_phone, ga_dict, ga_families
-            )
-        else:
-            ga_conf = span_confidence(ga_em, ga_blank, s, e, conf_func)
-        en_conf = span_confidence(en_em, en_blank, s, e, conf_func)
-        candidates = [(ga_conf, 'ga', ga_em, ga_idx2phone, ga_blank),
-                      (en_conf, 'en', en_em, en_idx2phone, en_blank)]
+        candidates = _score_candidates(
+            s, e, ga_ctx, en_ctx, ru_ctx, pal_set,
+            canonical_phone, conf_func, pool_ga, ga_families,
+        )
+        best_conf, winner, win_ctx = _select_winner(candidates, selector)
 
-        if use_russian:
-            ru_pred = best_phone_in_span(ru_em, ru_idx2phone, ru_blank, s, e)
-            if is_palatalized(ru_pred, pal_set):
-                _russian_used += 1
-                ru_conf = span_confidence(ru_em, ru_blank, s, e, conf_func)
-                candidates.append((ru_conf, 'ru', ru_em, ru_idx2phone, ru_blank))
-
-        ru_fired = any(c[1] == 'ru' for c in candidates)
-        if ru_fired:
-            best_conf, winner, win_em, win_idx2phone, win_blank = next(
-                c for c in candidates if c[1] == 'ru'
-            )
-        elif selector is not None:
-            winner = selector.predict([[ga_conf, en_conf]])[0]
-            best_conf, _, win_em, win_idx2phone, win_blank = next(
-                c for c in candidates if c[1] == winner
-            )
-        else:
-            best_conf, winner, win_em, win_idx2phone, win_blank = max(
-                candidates, key=lambda x: x[0]
-            )
-
-        predicted_phone = best_phone_in_span(win_em, win_idx2phone, win_blank, s, e)
-        if winner == 'ru':
+        predicted_phone = best_phone_in_span(
+            win_ctx.emission, win_ctx.idx2phone, win_ctx.filler_ids, s, e
+        )
+        if winner == 'ru': # if ru phone not valid, map to Irish, else return valid phone
             predicted_phone = _RU_TO_GA_PAL.get(predicted_phone, predicted_phone)
 
         entry = {
@@ -406,13 +500,12 @@ def spanwise_ensemble(waveform, transcript,
             entry['models'] = {
                 name: {
                     'confidence': round(conf, 4),
-                    'predicted': best_phone_in_span(em, idx2phone, blank, s, e),
-                    'peak_probs': span_peak_probs(em, blank, s, e),
+                    'predicted': best_phone_in_span(ctx.emission, ctx.idx2phone, ctx.filler_ids, s, e),
+                    'peak_probs': span_peak_probs(ctx.emission, ctx.filler_ids, s, e),
                 }
-                for conf, name, em, idx2phone, blank in candidates
+                for conf, name, ctx in candidates
             }
 
         results.append(entry)
-        
-    print(_russian_used)    
+
     return results
