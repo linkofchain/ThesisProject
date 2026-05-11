@@ -34,6 +34,7 @@ import sys
 import joblib
 import numpy as np
 from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 
@@ -158,11 +159,13 @@ def train(args):
     class_counts = {c: y.count(c) for c in set(y)}
     print(f"\n  Class distribution: {class_counts}")
 
-    scaler   = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
-    lr       = LogisticRegression(class_weight='balanced', max_iter=1000)
-    lr.fit(X_scaled, y)
+    selector = Pipeline([
+        ('scaler', StandardScaler()),
+        ('lr',     LogisticRegression(class_weight='balanced', max_iter=1000)),
+    ])
+    selector.fit(X, y)
 
+    lr     = selector.named_steps['lr']
     ga_idx = list(lr.classes_).index('ga')
     en_idx = list(lr.classes_).index('en')
     print(f"  LR coef  — ga_conf: {lr.coef_[0][ga_idx]:+.4f}, "
@@ -171,7 +174,7 @@ def train(args):
 
     out_path = pathlib.Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump({'scaler': scaler, 'lr': lr}, out_path)
+    joblib.dump(selector, out_path)
     print(f"\nSaved selector to {out_path}")
 
 

@@ -15,7 +15,23 @@
             ],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
-            "python": "/home/peter/miniconda3/envs/thesis/bin/python"
+            "python": "/home/peter/miniconda3/envs/thesis/bin/python",
+            "env": {
+                "LD_LIBRARY_PATH": "/home/peter/miniconda3/envs/thesis/lib"
+            }
+        },
+        {
+            "name": "debug_spans",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/asr_system/ensemble/debug_spans.py",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "python": "/home/peter/miniconda3/envs/thesis/bin/python",
+            "env": {
+                "LD_LIBRARY_PATH": "/home/peter/miniconda3/envs/thesis/lib"
+            }
         }
     ]
 }
