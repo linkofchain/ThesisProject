@@ -1,5 +1,28 @@
 from difflib import SequenceMatcher
 from scipy.stats import binom as _binom
+import panphon.distance as _pd
+
+# Phones panphon can't parse natively; mapped to the nearest parseable IPA phone
+# for feature-vector lookup only — originals are preserved in alignment output.
+_PHONE_NORM = {
+    'g':  'ɡ',    # ASCII g → IPA ɡ (U+0261)
+    'ʤ':  'd͡ʒ',  # dʒ ligature → tie-bar form
+    'ʧ':  't͡ʃ',  # tʃ ligature → tie-bar form
+    'ɚ':  'ə',    # r-colored schwa → plain schwa
+}
+_dst = _pd.Distance()
+_pair_score_cache: dict[tuple[str, str], float] = {}
+
+
+def _pair_score(p1: str, p2: str) -> float:
+    """Phonetic similarity score in [0, 1]: 1.0 = identical, 0.0 = maximally different."""
+    key = (p1, p2)
+    if key not in _pair_score_cache:
+        n1 = _PHONE_NORM.get(p1, p1)
+        n2 = _PHONE_NORM.get(p2, p2)
+        _pair_score_cache[key] = 1.0 if n1 == n2 else 1.0 - _dst.feature_edit_distance(n1, n2)
+    return _pair_score_cache[key]
+
 
 def greedy_ctc_phones(processor, model, audio_array, device='cpu'):
     """CTC greedy decode returning individual phones, not word-level strings."""
@@ -26,7 +49,7 @@ def greedy_ctc_phones(processor, model, audio_array, device='cpu'):
     return phones
 
 
-def forced_ctc_phones(processor, model, audio_array, canonical, device='cpu'):
+def forced_ctc_phones(processor, model, audio_array, canonical, device='cpu', expand=10):
     """
     Forced-alignment CTC decode: one predicted phone per canonical slot.
 
@@ -38,28 +61,15 @@ def forced_ctc_phones(processor, model, audio_array, canonical, device='cpu'):
 
     canonical must already be in the model's vocab (apply collapse_phones first).
     """
-    import torch
-    import torchaudio.functional as _F
-    from scripts.asr_system.ensemble.ensemble import best_phone_in_span
+    from scripts.asr_system.ensemble.ensemble import (
+        _build_model_ctx, _compute_spans, best_phone_in_span,
+    )
 
-    inputs = processor(audio_array, sampling_rate=16000,
-                       return_tensors='pt', padding=True)
-    with torch.inference_mode():
-        logits = model(inputs.input_values.to(device),
-                       attention_mask=inputs.attention_mask.to(device)).logits
+    ctx   = _build_model_ctx(processor, model, audio_array, device)
+    spans = _compute_spans(ctx, canonical, device, expand=expand)
 
-    log_probs = torch.nn.functional.log_softmax(logits[0], dim=-1)
-
-    vocab     = processor.tokenizer.get_vocab()
-    blank_id  = processor.tokenizer.pad_token_id
-    idx2phone = {v: k for k, v in vocab.items()}
-
-    tokens = torch.tensor([[vocab[p] for p in canonical]], dtype=torch.int32, device=device)
-    alignments, scores = _F.forced_align(log_probs.unsqueeze(0), tokens, blank=blank_id)
-    spans = _F.merge_tokens(alignments[0], scores[0].exp())
-
-    return [best_phone_in_span(log_probs, idx2phone, blank_id, span.start, span.end)
-            for span in spans]
+    return [best_phone_in_span(ctx.emission, ctx.idx2phone, ctx.filler_ids, s, e)
+            for _, s, e in spans]
 
 
 def show_alignment(record, key='asr', col_sep=' '):
@@ -149,45 +159,94 @@ def show_alignment_html(record, key='asr'):
 # True = mispronounced, False = correct, None = insertion (no canonical slot)
 OP_LABEL = {'match': False, 'substitution': True, 'deletion': True, 'insertion': None}
 
+# Direction constants for the NW traceback pointer matrix
+_DIAGONAL, _FROM_ABOVE, _FROM_LEFT = 0, 1, 2
+
+
+def _nw_traceback(seq1, seq2, direction_matrix):
+    """
+    Walk direction_matrix from the bottom-right corner back to (0, 0),
+    converting each step into a labelled alignment event.
+    Returns events in forward (left-to-right) order.
+    """
+    events = []
+    i, j = len(seq1), len(seq2)
+    while i > 0 or j > 0:
+        if i > 0 and j > 0 and direction_matrix[i][j] == _DIAGONAL:
+            norm1 = _PHONE_NORM.get(seq1[i-1], seq1[i-1])
+            norm2 = _PHONE_NORM.get(seq2[j-1], seq2[j-1])
+            op = 'match' if norm1 == norm2 else 'substitution'
+            events.append({'canonical': seq1[i-1], 'hypothesis': seq2[j-1], 'op': op})
+            i -= 1; j -= 1
+        elif i > 0 and (j == 0 or direction_matrix[i][j] == _FROM_ABOVE):
+            events.append({'canonical': seq1[i-1], 'hypothesis': None, 'op': 'deletion'})
+            i -= 1
+        else:
+            events.append({'canonical': None, 'hypothesis': seq2[j-1], 'op': 'insertion'})
+            j -= 1
+    return list(reversed(events))
+
+
+def _nw_align(seq1: list[str], seq2: list[str], gap: float = 1.0) -> list[dict]:
+    """
+    see https://github.com/ATalhaTimur/Needleman-Wunsch-Algorithm
+    see https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm
+    see https://medium.com/@nandiniumbarkar/needleman-wunsch-algorithm-7bba68b510db
+
+    Needleman-Wunsch global alignment using panphon feature-weighted pair scores.
+    Pair score = 1 - feature_edit_distance, in [0, 1] (1.0 = identical phones).
+    Gap penalty = -gap (default -1.0), subtracted for each insertion or deletion.
+    Traceback pointers are stored explicitly to avoid floating-point equality issues.
+    """
+    n_canonical, n_hypothesis = len(seq1), len(seq2)
+
+    # step 1: instantiate the score and direction_matrix matrices from string lengths =1
+    # score_matrix[i][j] = minimum total cost to align seq1[:i] with seq2[:j]
+    score_matrix  = [[0.0]  * (n_hypothesis + 1) for _ in range(n_canonical + 1)]
+    # direction_matrix[i][j] = which of the three moves produced score_matrix[i][j]
+    direction_matrix = [[None] * (n_hypothesis + 1) for _ in range(n_canonical + 1)]
+
+    # step 2: border cells — aligning i phones against nothing costs i gaps, and vice versa
+    for i in range(1, n_canonical + 1):
+        score_matrix[i][0]     = -i * gap
+        direction_matrix[i][0] = _FROM_ABOVE
+    for j in range(1, n_hypothesis + 1):
+        score_matrix[0][j]     = -j * gap
+        direction_matrix[0][j] = _FROM_LEFT
+
+    # step 3: fill via the standard NW recurrence (score maximization):
+    # score[i,j] = max( score[i-1,j-1] + pair_score(seq1[i], seq2[j]),  # pair (diagonal)
+    #                   score[i-1,j]   - gap,                             # delete seq1[i]
+    #                   score[i,j-1]   - gap )                            # insert seq2[j]
+    for i in range(1, n_canonical + 1):
+        for j in range(1, n_hypothesis + 1):
+            pair_phones   = score_matrix[i-1][j-1] + _pair_score(seq1[i-1], seq2[j-1])
+            delete_seq1_i = score_matrix[i-1][j]   - gap
+            insert_seq2_j = score_matrix[i][j-1]   - gap
+            best = max(pair_phones, delete_seq1_i, insert_seq2_j)
+            score_matrix[i][j] = best
+            if best == pair_phones:
+                direction_matrix[i][j] = _DIAGONAL
+            elif best == delete_seq1_i:
+                direction_matrix[i][j] = _FROM_ABOVE
+            else:
+                direction_matrix[i][j] = _FROM_LEFT
+
+    return _nw_traceback(seq1, seq2, direction_matrix)
+
 
 def align_phones(canonical: list[str], hypothesis: list[str]) -> list[dict]:
     """
-    Align a hypothesis phone sequence to canonical using difflib.
+    Align a hypothesis phone sequence to canonical using Needleman-Wunsch with
+    panphon feature-weighted substitution costs. Phonetically similar phones
+    (e.g. t/tʲ) get lower substitution cost than dissimilar ones, producing
+    more plausible alignments than equal-weight string edit distance.
+
     Returns one dict per alignment event with keys: canonical, hypothesis, op.
-    hypothesis may be a human annotation, an ASR output, or any phone sequence.
-
-    Note: autojunk=False is required — difflib's junk-detection heuristic would
-    silently skip common phones (e.g. 'a') in longer sequences otherwise.
+    Phones not natively parseable by panphon are normalized via _PHONE_NORM
+    for cost computation only; originals are preserved in the output dicts.
     """
-    aligned = []
-    sm = SequenceMatcher(None, canonical, hypothesis, autojunk=False)
-    for op, i1, i2, j1, j2 in sm.get_opcodes():
-        can_chunk = canonical[i1:i2]
-        hyp_chunk = hypothesis[j1:j2]
-
-        if op == 'equal':
-            for c, h in zip(can_chunk, hyp_chunk):
-                aligned.append({'canonical': c, 'hypothesis': h, 'op': 'match'})
-
-        elif op == 'replace':
-            # Pair up as substitutions, then spill remainder as del/ins
-            for c, h in zip(can_chunk, hyp_chunk):
-                aligned.append({'canonical': c, 'hypothesis': h, 'op': 'substitution'})
-            n, m = len(can_chunk), len(hyp_chunk)
-            for c in can_chunk[min(n, m):]:
-                aligned.append({'canonical': c, 'hypothesis': None, 'op': 'deletion'})
-            for h in hyp_chunk[min(n, m):]:
-                aligned.append({'canonical': None, 'hypothesis': h, 'op': 'insertion'})
-
-        elif op == 'delete':
-            for c in can_chunk:
-                aligned.append({'canonical': c, 'hypothesis': None, 'op': 'deletion'})
-
-        elif op == 'insert':
-            for h in hyp_chunk:
-                aligned.append({'canonical': None, 'hypothesis': h, 'op': 'insertion'})
-
-    return aligned
+    return _nw_align(canonical, hypothesis)
 
 
 def phone_error_rate(canonical: list[str], hypothesis: list[str]) -> float:
@@ -228,15 +287,15 @@ def evaluate_mispronunciation_detection(
     """
     Compare ASR mispronunciation predictions against gold-standard ground truth.
 
-    Both gold and asr are independently aligned to canonical.
+    asr must be forced-aligned to canonical (1:1 correspondence, same length).
+    gold is aligned to canonical via NW feature-weighted alignment.
+
     For each canonical phone position:
       - gt_label:   True if gold differs from canonical (actual mispronunciation)
-      - pred_label: True if ASR output differs from canonical (predicted mispronunciation)
+      - pred_label: True if asr[i] != canonical[i] (predicted mispronunciation)
 
-    Insertions have no canonical slot and cannot participate in TR/FA/FR/TA.
-    They are counted separately as supplementary fields:
-      gold_insertions — extra phones in the human annotation (epenthesis etc.)
-      asr_insertions  — extra phones predicted by the ASR system
+    Gold insertions (epenthetic phones with no canonical slot) are counted
+    separately. asr_insertions is always 0 by forced-alignment guarantee.
 
     Returns:
       TR, FA, FR, TA and derived metrics:
@@ -244,48 +303,57 @@ def evaluate_mispronunciation_detection(
         false_acceptance_rate (FAR = FA / (TR+FA)),
         false_rejection_rate  (FRR = FR / (FR+TA)),
         per (Phoneme Error Rate of ASR output vs canonical),
-        gold_insertions, asr_insertions
+        gold_insertions, asr_insertions,
+        TR_diag — TRs where ASR phone matches gold phone (correct diagnosis),
+        diagnostic_accuracy (TR_diag / TR)
     """
-    gt_alignment   = align_phones(canonical, gold)
-    pred_alignment = align_phones(canonical, asr)
-
-    gold_insertions = sum(1 for ev in gt_alignment   if ev['op'] == 'insertion')
-    asr_insertions  = sum(1 for ev in pred_alignment if ev['op'] == 'insertion')
-
-    gt_labels   = [OP_LABEL[ev['op']] for ev in gt_alignment   if ev['op'] != 'insertion']
-    pred_labels = [OP_LABEL[ev['op']] for ev in pred_alignment if ev['op'] != 'insertion']
-
-    if len(gt_labels) != len(pred_labels):
+    if len(asr) != len(canonical):
         raise ValueError(
-            f"Label length mismatch after alignment: gt={len(gt_labels)}, "
-            f"pred={len(pred_labels)}. Both must reduce to len(canonical)={len(canonical)}."
+            f"asr length {len(asr)} != canonical length {len(canonical)}. "
+            "asr must come from forced alignment."
         )
 
-    TR = FA = FR = TA = 0
-    for gt, pred in zip(gt_labels, pred_labels):
-        if     gt and     pred: TR += 1
+    gt_alignment = align_phones(canonical, gold)
+    gold_insertions = sum(1 for ev in gt_alignment if ev['op'] == 'insertion')
+
+    gt_labels   = [OP_LABEL[ev['op']] for ev in gt_alignment if ev['op'] != 'insertion']
+    gt_phones   = [ev['hypothesis']   for ev in gt_alignment if ev['op'] != 'insertion']
+    pred_labels = [c != a for c, a in zip(canonical, asr)]
+    pred_phones = list(asr)
+
+    TR = FA = FR = TA = TR_diag = 0
+    for gt, pred, gt_ph, pred_ph in zip(gt_labels, pred_labels, gt_phones, pred_phones):
+        if     gt and     pred:
+            TR += 1
+            if gt_ph == pred_ph:
+                TR_diag += 1
         elif   gt and not pred: FA += 1
         elif not gt and   pred: FR += 1
         else:                   TA += 1
 
-    precision = TR / (TR + FR) if (TR + FR) > 0 else float('nan')
-    recall    = TR / (TR + FA) if (TR + FA) > 0 else float('nan')
-    f1        = (2 * precision * recall / (precision + recall)
-                 if (precision + recall) > 0 else float('nan'))
-    far       = FA / (TR + FA) if (TR + FA) > 0 else float('nan')
-    frr       = FR / (FR + TA) if (FR + TA) > 0 else float('nan')
-    per       = phone_error_rate(canonical, asr)
+    precision    = TR / (TR + FR) if (TR + FR) > 0 else float('nan')
+    recall       = TR / (TR + FA) if (TR + FA) > 0 else float('nan')
+    f1           = (2 * precision * recall / (precision + recall)
+                    if (precision + recall) > 0 else float('nan'))
+    far          = FA / (TR + FA) if (TR + FA) > 0 else float('nan')
+    frr          = FR / (FR + TA) if (FR + TA) > 0 else float('nan')
+    per          = phone_error_rate(canonical, asr)
+    diag_acc     = TR_diag / TR  if TR > 0 else float('nan')
+    diag_err     = 1 - diag_acc if TR > 0 else float('nan')
 
     return {
         'TR': TR, 'FA': FA, 'FR': FR, 'TA': TA,
-        'precision':             precision,
-        'recall':                recall,
-        'f1':                    f1,
-        'false_acceptance_rate': far,
-        'false_rejection_rate':  frr,
-        'per':                   per,
-        'gold_insertions':       gold_insertions,
-        'asr_insertions':        asr_insertions,
+        'precision':               precision,
+        'recall':                  recall,
+        'f1':                      f1,
+        'false_acceptance_rate':   far,
+        'false_rejection_rate':    frr,
+        'per':                     per,
+        'gold_insertions':         gold_insertions,
+        'asr_insertions':          0,
+        'TR_diag':                 TR_diag,
+        'diagnostic_accuracy':     diag_acc,
+        'diagnostic_error_rate':   diag_err,
     }
 
 
@@ -323,8 +391,8 @@ def mcnemar_mdd(records_a, records_b):
                 "Both record lists must cover the same utterances in the same order."
             )
         gt   = get_canonical_labels(ra['canonical'], ra['gold'])
-        pa   = get_canonical_labels(ra['canonical'], ra['asr'])
-        pb   = get_canonical_labels(rb['canonical'], rb['asr'])
+        pa   = [c != a for c, a in zip(ra['canonical'], ra['asr'])]
+        pb   = [c != a for c, a in zip(rb['canonical'], rb['asr'])]
         for g, a, bb in zip(gt, pa, pb):
             a_correct = (g == a)
             b_correct = (g == bb)
