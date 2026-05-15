@@ -199,9 +199,9 @@ def main():
     parser.add_argument('--conf_func',    default='gibbs',
                         choices=['gibbs', 'prob', 'tsallis'],
                         help="Confidence function to use (default: gibbs).")
-    parser.add_argument('--tsallis_alpha', type=float, default=2.0,
+    parser.add_argument('--tsallis_alpha', type=float, default=0.3,
                         help="Alpha for Tsallis entropy, only used when "
-                             "--conf_func tsallis (default: 2.0).")
+                             "--conf_func tsallis (default: 0.3).")
     parser.add_argument('--output',    type=pathlib.Path, default=DEFAULT_OUTPUT,
                         help=f"Output path for the trained selector "
                              f"(default: {DEFAULT_OUTPUT}).")
