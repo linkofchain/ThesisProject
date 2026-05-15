@@ -4,8 +4,12 @@
       "filename": "data-00000-of-00001.arrow"
     }
   ],
-  "_fingerprint": "16cce56161a95171",
-  "_format_columns": null,
+  "_fingerprint": "2088c267a14a69fb",
+  "_format_columns": [
+    "audio",
+    "ipa",
+    "order"
+  ],
   "_format_kwargs": {},
   "_format_type": null,
   "_output_all_columns": false,

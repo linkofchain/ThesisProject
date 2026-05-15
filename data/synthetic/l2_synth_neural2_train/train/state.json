@@ -7,8 +7,12 @@
       "filename": "data-00001-of-00002.arrow"
     }
   ],
-  "_fingerprint": "8ee9b1cfb7a62481",
-  "_format_columns": null,
+  "_fingerprint": "eb15c49022938202",
+  "_format_columns": [
+    "audio",
+    "ipa",
+    "order"
+  ],
   "_format_kwargs": {},
   "_format_type": null,
   "_output_all_columns": false,
