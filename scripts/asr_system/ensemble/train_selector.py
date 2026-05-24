@@ -48,7 +48,7 @@ from scripts.asr_system.ensemble.ensemble import (
     frame_prob_confidence,
     frame_tsallis_confidence,
 )
-from scripts.asr_system.ensemble.run_inference import run_ensemble_inference
+from scripts.asr_system.ensemble.ensemble_inference import run_ensemble_inference
 from scripts.data_handling.collapse_phonemes import collapse_phones
 from scripts.eval.eval import align_phones
 
