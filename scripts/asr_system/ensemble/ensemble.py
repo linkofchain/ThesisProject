@@ -10,7 +10,6 @@ acting as a specialist for a feature absent from English phonology.
 
 import math
 from dataclasses import dataclass
-from functools import partial
 
 import torch
 import torchaudio.functional as F
@@ -153,6 +152,18 @@ def _non_blank_frames(emission, filler_ids, start, end):
     return non_blank if non_blank.shape[0] > 0 else span
 
 
+def has_phoneme_frame(emission, filler_ids, start, end):
+    """True if any frame in [start, end) has a non-filler argmax.
+
+    When False, the model predicts only blank/special tokens across the entire
+    span — a deletion signal. Used to gate phone prediction vs. '<del>'.
+    """
+    span     = emission[start:end]
+    argmax   = span.argmax(dim=-1)
+    filler_t = torch.tensor(sorted(filler_ids), device=argmax.device)
+    return not torch.isin(argmax, filler_t).all().item()
+
+
 def span_confidence(emission, filler_ids, start, end, conf_func):
     """
     Scalar confidence for a phoneme span.
@@ -195,6 +206,18 @@ def best_phone_in_span(emission, idx2phone, filler_ids, start, end):
     peak_lp[filler_t] = float('-inf')
     best_idx = peak_lp.argmax().item()
     return idx2phone.get(best_idx, f'<unk:{best_idx}>')
+
+
+def decode_span(emission, idx2phone, filler_ids, start, end):
+    """
+    Canonical span decoder: returns '∅' if the model predicts no phonemic
+    frame in [start, end), otherwise returns the best phone from
+    best_phone_in_span. Use this wherever a span should be able to signal
+    a deletion rather than being forced to produce a phone.
+    """
+    if not has_phoneme_frame(emission, filler_ids, start, end):
+        return '∅'
+    return best_phone_in_span(emission, idx2phone, filler_ids, start, end)
 
 
 # ---------------------------------------------------------------------------
@@ -332,7 +355,7 @@ def _score_candidates(s, e, ga_ctx, en_ctx, ru_ctx, pal_set,
     candidates = [(ga_conf, 'ga', ga_ctx), (en_conf, 'en', en_ctx)]
 
     if ru_ctx is not None:
-        ru_pred = best_phone_in_span(ru_ctx.emission, ru_ctx.idx2phone, ru_ctx.filler_ids, s, e)
+        ru_pred = decode_span(ru_ctx.emission, ru_ctx.idx2phone, ru_ctx.filler_ids, s, e)
         if is_palatalized(ru_pred, pal_set):
             ru_conf = span_confidence(ru_ctx.emission, ru_ctx.filler_ids, s, e, conf_func)
             candidates.append((ru_conf, 'ru', ru_ctx))
@@ -482,10 +505,8 @@ def spanwise_ensemble(waveform, transcript,
         )
         best_conf, winner, win_ctx = _select_winner(candidates, selector)
 
-        predicted_phone = best_phone_in_span(
-            win_ctx.emission, win_ctx.idx2phone, win_ctx.filler_ids, s, e
-        )
-        if winner == 'ru': # if ru phone not valid, map to Irish, else return valid phone
+        predicted_phone = decode_span(win_ctx.emission, win_ctx.idx2phone, win_ctx.filler_ids, s, e)
+        if winner == 'ru' and predicted_phone != '∅':
             predicted_phone = _RU_TO_GA_PAL.get(predicted_phone, predicted_phone)
 
         entry = {
@@ -500,7 +521,7 @@ def spanwise_ensemble(waveform, transcript,
             entry['models'] = {
                 name: {
                     'confidence': round(conf, 4),
-                    'predicted': best_phone_in_span(ctx.emission, ctx.idx2phone, ctx.filler_ids, s, e),
+                    'predicted': decode_span(ctx.emission, ctx.idx2phone, ctx.filler_ids, s, e),
                     'peak_probs': span_peak_probs(ctx.emission, ctx.filler_ids, s, e),
                 }
                 for conf, name, ctx in candidates

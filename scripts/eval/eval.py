@@ -1,5 +1,6 @@
 from difflib import SequenceMatcher
-from scipy.stats import binom as _binom
+import numpy as _np
+from mlxtend.evaluate import mcnemar_table as _mcnemar_table, mcnemar as _mcnemar
 import panphon.distance as _pd
 
 # Phones panphon can't parse natively; mapped to the nearest parseable IPA phone
@@ -62,13 +63,13 @@ def forced_ctc_phones(processor, model, audio_array, canonical, device='cpu', ex
     canonical must already be in the model's vocab (apply collapse_phones first).
     """
     from scripts.asr_system.ensemble.ensemble import (
-        _build_model_ctx, _compute_spans, best_phone_in_span,
+        _build_model_ctx, _compute_spans, decode_span,
     )
 
     ctx   = _build_model_ctx(processor, model, audio_array, device)
     spans = _compute_spans(ctx, canonical, device, expand=expand)
 
-    return [best_phone_in_span(ctx.emission, ctx.idx2phone, ctx.filler_ids, s, e)
+    return [decode_span(ctx.emission, ctx.idx2phone, ctx.filler_ids, s, e)
             for _, s, e in spans]
 
 
@@ -112,45 +113,114 @@ def show_alignment(record, key='asr', col_sep=' '):
     print(f"asr : {sep.join(asr_row)}")
 
 
-def show_alignment_html(record, key='asr'):
+_HTML_COLORS = {
+    'TR':  '#ffb347',  # orange  — correctly detected mispronunciation
+    'FA':  '#ff8080',  # red     — missed mispronunciation
+    'FR':  '#fff176',  # yellow  — false alarm
+    'TA':  None,
+    'INS': '#d9b3ff',  # purple  — gold insertion, not scored
+}
+_TD_BASE  = 'padding:3px 8px; font-family:monospace; border:1px solid #ddd;'
+_TD_LABEL = _TD_BASE + ' font-weight:bold; background:#f5f5f5;'
+
+
+def _td(text, color=None):
+    bg = f' background:{color};' if color else ''
+    return f'<td style="{_TD_BASE}{bg}">{text}</td>'
+
+
+def _outcome(gt: bool, pred: bool) -> str:
+    if     gt and     pred: return 'TR'
+    elif   gt and not pred: return 'FA'
+    elif not gt and   pred: return 'FR'
+    else:                   return 'TA'
+
+
+def _build_alignment_columns(canonical, asr, gold):
+    """Return (can_cells, gold_cells, asr_cells) including label header cells."""
+    can_cells  = [f'<td style="{_TD_LABEL}">can</td>']
+    gold_cells = [f'<td style="{_TD_LABEL}">gold</td>']
+    asr_cells  = [f'<td style="{_TD_LABEL}">asr</td>']
+
+    if gold is None:
+        for c, a in zip(canonical, asr):
+            can_cells.append(_td(c))
+            gold_cells.append(_td('?'))
+            asr_cells.append(_td(a))
+        return can_cells, gold_cells, asr_cells
+
+    asr_idx = 0
+    for ev in align_phones(canonical, gold):
+        if ev['op'] == 'insertion':
+            color = _HTML_COLORS['INS']
+            can_cells.append(_td('—',               color))
+            gold_cells.append(_td(ev['hypothesis'], color))
+            asr_cells.append(_td('—',               color))
+        else:
+            c     = ev['canonical']
+            g     = ev['hypothesis'] or '—'
+            a     = asr[asr_idx] if asr_idx < len(asr) else '?'
+            color = _HTML_COLORS[_outcome(OP_LABEL[ev['op']], c != a)]
+            can_cells.append(_td(c, color))
+            gold_cells.append(_td(g, color))
+            # '∅' is the internal deletion marker emitted by decode_span when
+            # the model predicts no phonemic frame in a span. Rendered as '—'
+            # here to match the display convention used for gold deletions and
+            # gold-insertion placeholders elsewhere in this table.
+            asr_cells.append(_td('—' if a == '∅' else a, color))
+            asr_idx += 1
+
+    return can_cells, gold_cells, asr_cells
+
+
+def show_alignment_html(record, key='asr', gold_key='gold'):
     """
-    Render a two-row alignment table as inline HTML in a Jupyter notebook.
-    Columns where canonical != predicted are highlighted with an orange background.
-    Deletions show — in the asr row; insertions show — in the can row.
+    Render a three-row alignment table (canonical / gold / asr) as inline HTML.
+
+    Columns are colour-coded by evaluation outcome at each canonical position:
+      TR (True Rejection)  — orange : actually mispronounced, model detected it
+      FA (False Acceptance)— red    : actually mispronounced, model missed it
+      FR (False Rejection) — yellow : correctly pronounced, model false-alarmed
+      TA (True Acceptance) — none   : correctly pronounced, model accepted it
+      INS (gold insertion) — purple : epenthetic phone; excluded from scoring
+
+    ASR must be forced-aligned to canonical (1:1). Gold is aligned via NW;
+    gold insertions are shown inline at the position they occur in the gold
+    sequence with '—' in the canonical and ASR rows.
+
+    If no gold is present in the record, the gold row shows '?' and all columns
+    are treated as TA (no colour).
     """
     from IPython.display import display, HTML
 
     audio_id = record.get('audio_id', '?')
+    asr      = ([s['predicted'] for s in record['span_details']]
+                if 'span_details' in record else record.get(key, []))
 
-    if 'span_details' in record:
-        pairs = [(s['canonical'], s['predicted']) for s in record['span_details']]
-    else:
-        hyp = record.get(key, [])
-        can = record['canonical']
-        alignment = align_phones(can, hyp)
-        pairs = [
-            (ev['canonical'] or '—', ev['hypothesis'] or '—')
-            for ev in alignment
+    can_cells, gold_cells, asr_cells = _build_alignment_columns(
+        record['canonical'], asr, record.get(gold_key)
+    )
+
+    legend = ''.join(
+        f'<span style="background:{c}; padding:2px 6px; margin-right:6px;'
+        f' font-family:monospace; border:1px solid #ccc;">{lbl}</span>{desc}&nbsp;&nbsp;'
+        for lbl, c, desc in [
+            ('TR',  _HTML_COLORS['TR'],  'True Rejection'),
+            ('FA',  _HTML_COLORS['FA'],  'False Acceptance'),
+            ('FR',  _HTML_COLORS['FR'],  'False Rejection'),
+            ('INS', _HTML_COLORS['INS'], 'Gold insertion (not scored)'),
         ]
-
-    MATCH_STYLE    = 'padding:3px 8px; font-family:monospace; border:1px solid #ddd;'
-    MISMATCH_STYLE = 'padding:3px 8px; font-family:monospace; border:1px solid #ddd; background:#ffe0cc;'
-    LABEL_STYLE    = 'padding:3px 8px; font-family:monospace; font-weight:bold; background:#f5f5f5; border:1px solid #ddd;'
-
-    can_cells = [f'<td style="{LABEL_STYLE}">can</td>']
-    asr_cells = [f'<td style="{LABEL_STYLE}">asr</td>']
-    for c, p in pairs:
-        style = MISMATCH_STYLE if c != p else MATCH_STYLE
-        can_cells.append(f'<td style="{style}">{c}</td>')
-        asr_cells.append(f'<td style="{style}">{p}</td>')
+    )
 
     html = (
-        f'<div style="font-family:monospace; margin-bottom:8px;">'
+        f'<div style="font-family:monospace; margin-bottom:4px;">'
         f'<strong>audio_id:</strong> {audio_id}</div>'
-        f'<table style="border-collapse:collapse; margin-bottom:16px;">'
+        f'<table style="border-collapse:collapse; margin-bottom:8px;">'
         f'<tr>{"".join(can_cells)}</tr>'
+        f'<tr>{"".join(gold_cells)}</tr>'
         f'<tr>{"".join(asr_cells)}</tr>'
         f'</table>'
+        f'<div style="font-size:0.9em; margin-bottom:16px;">{legend}</div>'
     )
     display(HTML(html))
 
@@ -304,8 +374,10 @@ def evaluate_mispronunciation_detection(
         false_rejection_rate  (FRR = FR / (FR+TA)),
         per (Phoneme Error Rate of ASR output vs canonical),
         gold_insertions, asr_insertions,
-        TR_diag — TRs where ASR phone matches gold phone (correct diagnosis),
-        diagnostic_accuracy (TR_diag / TR)
+        CD  — Correct Diagnoses: TRs where ASR phone matches the gold phone,
+        DE  — Diagnostic Errors: TRs where ASR phone differs from the gold phone,
+        diagnostic_accuracy (CD / TR),
+        diagnostic_error_rate DER = DE / (CD + DE)
     """
     if len(asr) != len(canonical):
         raise ValueError(
@@ -321,25 +393,26 @@ def evaluate_mispronunciation_detection(
     pred_labels = [c != a for c, a in zip(canonical, asr)]
     pred_phones = list(asr)
 
-    TR = FA = FR = TA = TR_diag = 0
+    TR = FA = FR = TA = CD = 0
     for gt, pred, gt_ph, pred_ph in zip(gt_labels, pred_labels, gt_phones, pred_phones):
-        if     gt and     pred:
+        if     gt and     pred:             # if ground truth and model pred detect mispronunciation, true rejection
             TR += 1
-            if gt_ph == pred_ph:
-                TR_diag += 1
-        elif   gt and not pred: FA += 1
-        elif not gt and   pred: FR += 1
-        else:                   TA += 1
+            if gt_ph == pred_ph:            # if gt phone and pred phone are same, correct diagnosis
+                CD += 1
+        elif   gt and not pred: FA += 1     # if ground truth detects actual mispronunciation, but model does not, false acceptance
+        elif not gt and   pred: FR += 1     # if ground truth does not flag mispronunciation but model pred does, false rejection
+        else:                   TA += 1     # if neither ground truth nor model flag mispronunciation, true acceptance
 
-    precision    = TR / (TR + FR) if (TR + FR) > 0 else float('nan')
-    recall       = TR / (TR + FA) if (TR + FA) > 0 else float('nan')
+    DE           = TR - CD
+    precision    = TR / (TR + FR)           if (TR + FR) > 0 else float('nan')
+    recall       = TR / (TR + FA)           if (TR + FA) > 0 else float('nan')
     f1           = (2 * precision * recall / (precision + recall)
                     if (precision + recall) > 0 else float('nan'))
-    far          = FA / (TR + FA) if (TR + FA) > 0 else float('nan')
-    frr          = FR / (FR + TA) if (FR + TA) > 0 else float('nan')
+    far          = FA / (TR + FA)           if (TR + FA) > 0 else float('nan')
+    frr          = FR / (FR + TA)           if (FR + TA) > 0 else float('nan')
     per          = phone_error_rate(canonical, asr)
-    diag_acc     = TR_diag / TR  if TR > 0 else float('nan')
-    diag_err     = 1 - diag_acc if TR > 0 else float('nan')
+    diag_acc     = CD / TR                  if TR > 0 else float('nan')
+    der          = DE / (CD + DE)           if (CD + DE) > 0 else float('nan')
 
     return {
         'TR': TR, 'FA': FA, 'FR': FR, 'TA': TA,
@@ -351,9 +424,10 @@ def evaluate_mispronunciation_detection(
         'per':                     per,
         'gold_insertions':         gold_insertions,
         'asr_insertions':          0,
-        'TR_diag':                 TR_diag,
+        'CD':                      CD,
+        'DE':                      DE,
         'diagnostic_accuracy':     diag_acc,
-        'diagnostic_error_rate':   diag_err,
+        'diagnostic_error_rate':   der,
     }
 
 
@@ -383,26 +457,27 @@ def mcnemar_mdd(records_a, records_b):
         c      — positions where A wrong, B correct
         pvalue — two-sided exact binomial p-value
     """
-    b = c = 0
+    y_target, y_a, y_b = [], [], []
     for ra, rb in zip(records_a, records_b):
         if ra['audio_id'] != rb['audio_id']:
             raise ValueError(
                 f"Record mismatch: {ra['audio_id']} vs {rb['audio_id']}. "
                 "Both record lists must cover the same utterances in the same order."
             )
-        gt   = get_canonical_labels(ra['canonical'], ra['gold'])
-        pa   = [c != a for c, a in zip(ra['canonical'], ra['asr'])]
-        pb   = [c != a for c, a in zip(rb['canonical'], rb['asr'])]
-        for g, a, bb in zip(gt, pa, pb):
-            a_correct = (g == a)
-            b_correct = (g == bb)
-            if     a_correct and not b_correct: b += 1
-            elif not a_correct and b_correct:   c += 1
+        gt = get_canonical_labels(ra['canonical'], ra['gold'])
+        pa = [c != a for c, a in zip(ra['canonical'], ra['asr'])]
+        pb = [c != a for c, a in zip(rb['canonical'], rb['asr'])]
+        y_target.extend(gt)
+        y_a.extend(pa)
+        y_b.extend(pb)
 
-    # Keep in mind that the independence assumption of the statistics here does not necessarily hold, but this will serve as an approximation.
-    n = b + c # b and c here being 
-    if n == 0:
-        return {'b': 0, 'c': 0, 'pvalue': float('nan')}
-    # Exact binomial: two-sided p-value, capped at 1 for the symmetric case
-    pvalue = min(2 * _binom.cdf(min(b, c), n, 0.5), 1.0)
-    return {'b': b, 'c': c, 'pvalue': pvalue}
+    y_target = _np.array(y_target)
+    y_a      = _np.array(y_a)
+    y_b      = _np.array(y_b)
+
+    tb = _mcnemar_table(y_target, y_a, y_b)
+    b, c = int(tb[1, 0]), int(tb[0, 1])
+    if b + c == 0:
+        return {'b': 0, 'c': 0, 'pvalue': float('nan'), 'table': tb}
+    _, pvalue = _mcnemar(tb, exact=True, corrected=False)
+    return {'b': b, 'c': c, 'pvalue': pvalue, 'table': tb}
