@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.9" bltxversion="3.18b" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.8" bltxversion="3.17" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -135,10 +135,6 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>nosortothers</bcf:key>
-      <bcf:value>0</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
-      <bcf:key>pluralothers</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -376,11 +372,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -603,7 +599,6 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
-    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -1051,7 +1046,7 @@
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global" visibility="sort">
+  <bcf:sortingnamekeytemplate name="global">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -2352,278 +2347,342 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">ThesisProject.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">benderAchievingEvaluatingLanguageIndependence2011</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="1" intorder="3">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">benderAchievingEvaluatingLanguageIndependence2011</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">matthewdryerWorldAtlasLanguage2024</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">benderAchievingEvaluatingLanguageIndependence2011</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">magueresseLowresourceLanguagesReview2020</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">nichasaideCanWeDefuse2019</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">chasaideABAIRInitiativeBringing2017</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">nichasaideCanWeDefuse2019</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="20" intorder="2">ranathungaNeuralMachineTranslation2021</bcf:citekey>
-    <bcf:citekey order="20" intorder="3">joshiStateFateLinguistic2021</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">moseleyAtlasWorldsLanguages2010</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">broinNewUrbanIrish2014</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="24" intorder="2">nichasaideCanWeDefuse2019</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">snesarevaPalatalizationDublinIrish2016</bcf:citekey>
-    <bcf:citekey order="25" intorder="2">gabrieleEnglishInfluenceL2</bcf:citekey>
-    <bcf:citekey order="25" intorder="3">broinNewUrbanIrish2014</bcf:citekey>
-    <bcf:citekey order="25" intorder="4">stensonModernIrishComprehensive2020</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">stensonModernIrishComprehensive2020</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">stensonModernIrishComprehensive2020</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">broinNewUrbanIrish2014</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">broinNewUrbanIrish2014</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">gabrieleEnglishInfluenceL2</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">gabrieleEnglishInfluenceL2</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">snesarevaPalatalizationDublinIrish2016</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">snesarevaPalatalizationDublinIrish2016</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">broinNewUrbanIrish2014</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">broinNewUrbanIrish2014</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">magueresseLowresourceLanguagesReview2020</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">magueresseLowresourceLanguagesReview2020</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">wuTransformerBasedEndtoEnd2021</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">wuTransformerBasedEndtoEnd2021</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">ranathungaNeuralMachineTranslation2021</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">devlinBERTPretrainingDeep2019</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">baevskiWav2vec20Framework2020a</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">baevskiWav2vec20Framework2020a</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">arunkumarInvestigationEnsembleFeatures2022</bcf:citekey>
-    <bcf:citekey order="57" intorder="2">dengEnsembleDeepLearning2014</bcf:citekey>
-    <bcf:citekey order="57" intorder="3">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
-    <bcf:citekey order="57" intorder="4">fiscus1997post</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="58" intorder="2">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">magueresseLowresourceLanguagesReview2020</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">magueresseLowresourceLanguagesReview2020</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">spolskyHandbookEducationalLinguistics2008</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">rogerson-revellComputerAssistedPronunciationTraining2021</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">bajorek2017l2</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">krashenPrinciplesPracticeSecond1984</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">bajorek2017l2</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">engstrandFonetikensGrunder2004</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">engstrandFonetikensGrunder2004</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">jurafskySpeechLanguageProcessing2025</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">wittAutomaticErrorDetection</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">witt2000use</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">witt2000use</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">witt2014computer</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">parikhEvaluatingLogitBasedGOP2025</bcf:citekey>
-    <bcf:citekey order="77" intorder="2">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
-    <bcf:citekey order="78" intorder="1">loEffectiveEndtoEndModeling2020</bcf:citekey>
-    <bcf:citekey order="78" intorder="2">leungCNNRNNCTCBasedEndtoend2019</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">caoSegmentationfreeGoodnessPronunciation2025</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">parikhEvaluatingLogitBasedGOP2025</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">pengStudyFineTuningWav2vec202021</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">pengStudyFineTuningWav2vec202021</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">pengTextAwareEndtoendMispronunciation2022</bcf:citekey>
-    <bcf:citekey order="85" intorder="1">pengTextAwareEndtoendMispronunciation2022</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">shahinPhonologicalLevelMispronunciationDetection2024</bcf:citekey>
-    <bcf:citekey order="87" intorder="1">shahinPhonologicalLevelMispronunciationDetection2024</bcf:citekey>
-    <bcf:citekey order="88" intorder="1">stanleyImprovingL1specificPhonological2012</bcf:citekey>
-    <bcf:citekey order="89" intorder="1">stanleyImprovingL1specificPhonological2012</bcf:citekey>
-    <bcf:citekey order="90" intorder="1">xuExploreWav2vec202021</bcf:citekey>
-    <bcf:citekey order="91" intorder="1">xuExploreWav2vec202021</bcf:citekey>
-    <bcf:citekey order="92" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="93" intorder="1">besacierAutomaticSpeechRecognition2014</bcf:citekey>
-    <bcf:citekey order="94" intorder="1">yuAutomaticSpeechRecognition2015</bcf:citekey>
-    <bcf:citekey order="95" intorder="1">jurafskySpeechLanguageProcessing2025</bcf:citekey>
-    <bcf:citekey order="96" intorder="1">jurafskySpeechLanguageProcessing2025</bcf:citekey>
-    <bcf:citekey order="97" intorder="1">jurafskySpeechLanguageProcessing2025</bcf:citekey>
-    <bcf:citekey order="98" intorder="1">yuAutomaticSpeechRecognition2015</bcf:citekey>
-    <bcf:citekey order="99" intorder="1">witt2000use</bcf:citekey>
-    <bcf:citekey order="100" intorder="1">poveyKaldiSpeechRecognition</bcf:citekey>
-    <bcf:citekey order="101" intorder="1">watanabeESPnetEndtoEndSpeech2018</bcf:citekey>
-    <bcf:citekey order="102" intorder="1">paszkePyTorchImperativeStyle2019</bcf:citekey>
-    <bcf:citekey order="103" intorder="1">wolfTransformersStateoftheArtNatural2020</bcf:citekey>
-    <bcf:citekey order="104" intorder="1">somekiESPnetEZPythononlyESPnet2024</bcf:citekey>
-    <bcf:citekey order="105" intorder="1">baevskiEffectivenessSelfsupervisedPretraining2020</bcf:citekey>
-    <bcf:citekey order="106" intorder="1">devlinBERTPretrainingDeep2019</bcf:citekey>
-    <bcf:citekey order="107" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="108" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="109" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="110" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="111" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="112" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="113" intorder="1">conneauUnsupervisedCrosslingualRepresentation2020</bcf:citekey>
-    <bcf:citekey order="114" intorder="1">conneauUnsupervisedCrosslingualRepresentation2020</bcf:citekey>
-    <bcf:citekey order="115" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="116" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="117" intorder="1">gravesConnectionistTemporalClassification</bcf:citekey>
-    <bcf:citekey order="118" intorder="1">baevskiWav2vec20Framework2020a</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">baevskiWav2vec20Framework2020a</bcf:citekey>
-    <bcf:citekey order="120" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="121" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="122" intorder="1">korzekwaWeaklysupervisedWordlevelPronunciation2021</bcf:citekey>
-    <bcf:citekey order="123" intorder="1">agrawalLearningWhenTrust2023</bcf:citekey>
-    <bcf:citekey order="124" intorder="1">agrawalLearningWhenTrust2023</bcf:citekey>
-    <bcf:citekey order="125" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="125" intorder="2">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="125" intorder="3">kheirAutomaticPronunciationAssessment2023</bcf:citekey>
-    <bcf:citekey order="125" intorder="4">thaiSyntheticDataAugmentation2019</bcf:citekey>
-    <bcf:citekey order="126" intorder="1">dietterichEnsembleMethodsMachine2000</bcf:citekey>
-    <bcf:citekey order="127" intorder="1">hansenNeuralNetworkEnsembles1990</bcf:citekey>
-    <bcf:citekey order="128" intorder="1">dietterichEnsembleMethodsMachine2000</bcf:citekey>
-    <bcf:citekey order="129" intorder="1">maclinEmpiricalEvaluationBagging1997</bcf:citekey>
-    <bcf:citekey order="129" intorder="2">dengScalableStackingLearning2012</bcf:citekey>
-    <bcf:citekey order="129" intorder="3">fiscus1997post</bcf:citekey>
-    <bcf:citekey order="129" intorder="4">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
-    <bcf:citekey order="130" intorder="1">arunkumarInvestigationEnsembleFeatures2022</bcf:citekey>
-    <bcf:citekey order="130" intorder="2">dengEnsembleDeepLearning2014</bcf:citekey>
-    <bcf:citekey order="131" intorder="1">agrawalLearningWhenTrust2023</bcf:citekey>
-    <bcf:citekey order="131" intorder="2">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
-    <bcf:citekey order="132" intorder="1">fiscus1997post</bcf:citekey>
-    <bcf:citekey order="133" intorder="1">agrawalLearningWhenTrust2023</bcf:citekey>
-    <bcf:citekey order="134" intorder="1">agrawalLearningWhenTrust2023</bcf:citekey>
-    <bcf:citekey order="135" intorder="1">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
-    <bcf:citekey order="136" intorder="1">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
-    <bcf:citekey order="137" intorder="1">weiMitigatingNeuralNetwork2022</bcf:citekey>
-    <bcf:citekey order="138" intorder="1">laptevFastEntropyBasedMethods2023</bcf:citekey>
-    <bcf:citekey order="139" intorder="1">ananthakrishnanUsingEnsembleClassifiers2011</bcf:citekey>
-    <bcf:citekey order="140" intorder="1">ananthakrishnanUsingEnsembleClassifiers2011</bcf:citekey>
-    <bcf:citekey order="141" intorder="1">calikEnsemblebasedFrameworkMispronunciation2023a</bcf:citekey>
-    <bcf:citekey order="142" intorder="1">xuIterativePseudoLabelingSpeech2020</bcf:citekey>
-    <bcf:citekey order="142" intorder="2">yangImprovingMispronunciationDetection2022</bcf:citekey>
-    <bcf:citekey order="142" intorder="3">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="143" intorder="1">kheirAutomaticPronunciationAssessment2023</bcf:citekey>
-    <bcf:citekey order="144" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="145" intorder="1">hayashiBackTranslationStyleDataAugmentation2018</bcf:citekey>
-    <bcf:citekey order="146" intorder="1">hayashiBackTranslationStyleDataAugmentation2018</bcf:citekey>
-    <bcf:citekey order="147" intorder="1">yangImprovingMispronunciationDetection2022</bcf:citekey>
-    <bcf:citekey order="148" intorder="1">yangImprovingMispronunciationDetection2022</bcf:citekey>
-    <bcf:citekey order="149" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="149" intorder="2">thaiSyntheticDataAugmentation2019</bcf:citekey>
-    <bcf:citekey order="149" intorder="3">fazelSynthASRUnlockingSynthetic2021</bcf:citekey>
-    <bcf:citekey order="150" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="151" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="152" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="153" intorder="1">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="154" intorder="1">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="155" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="156" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="157" intorder="1">punjabiLanguageModelBootstrapping2019</bcf:citekey>
-    <bcf:citekey order="158" intorder="1">punjabiLanguageModelBootstrapping2019</bcf:citekey>
-    <bcf:citekey order="159" intorder="1">xuIterativePseudoLabelingSpeech2020</bcf:citekey>
-    <bcf:citekey order="160" intorder="1">xuIterativePseudoLabelingSpeech2020</bcf:citekey>
-    <bcf:citekey order="161" intorder="1">yangImprovingMispronunciationDetection2022</bcf:citekey>
-    <bcf:citekey order="162" intorder="1">yangImprovingMispronunciationDetection2022</bcf:citekey>
-    <bcf:citekey order="163" intorder="1">khareLowResourceASR2021a</bcf:citekey>
-    <bcf:citekey order="164" intorder="1">khareLowResourceASR2021a</bcf:citekey>
-    <bcf:citekey order="165" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="166" intorder="1">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
-    <bcf:citekey order="167" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="168" intorder="1">barteldsMakingMoreLittle2023</bcf:citekey>
-    <bcf:citekey order="169" intorder="1">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="170" intorder="1">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="171" intorder="1">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="172" intorder="1">zhangL2GENNeuralPhoneme2022</bcf:citekey>
-    <bcf:citekey order="173" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="174" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="175" intorder="1">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
-    <bcf:citekey order="176" intorder="1">wolfTransformersStateoftheArtNatural2020</bcf:citekey>
-    <bcf:citekey order="177" intorder="1">dengEnsembleDeepLearning2014</bcf:citekey>
-    <bcf:citekey order="178" intorder="1">dengEnsembleDeepLearning2014</bcf:citekey>
-    <bcf:citekey order="179" intorder="1">guoCalibrationModernNeural2017</bcf:citekey>
-    <bcf:citekey order="180" intorder="1">guoCalibrationModernNeural2017</bcf:citekey>
-    <bcf:citekey order="181" intorder="1">niehuesModelingConfidenceSequencetoSequence2019</bcf:citekey>
-    <bcf:citekey order="182" intorder="1">niehuesModelingConfidenceSequencetoSequence2019</bcf:citekey>
-    <bcf:citekey order="183" intorder="1">papadopoulosConfidenceEstimationMethods2001</bcf:citekey>
-    <bcf:citekey order="184" intorder="1">papadopoulosConfidenceEstimationMethods2001</bcf:citekey>
-    <bcf:citekey order="185" intorder="1">weiMitigatingNeuralNetwork2022</bcf:citekey>
-    <bcf:citekey order="186" intorder="1">weiMitigatingNeuralNetwork2022</bcf:citekey>
-    <bcf:citekey order="187" intorder="1">garofoloDARPATIMITAcousticphonetic1993</bcf:citekey>
-    <bcf:citekey order="188" intorder="1">garofoloDARPATIMITAcousticphonetic1993</bcf:citekey>
-    <bcf:citekey order="189" intorder="1">krishenbaumRepresentingIPAPhonetics</bcf:citekey>
-    <bcf:citekey order="190" intorder="1">krishenbaumRepresentingIPAPhonetics</bcf:citekey>
-    <bcf:citekey order="191" intorder="1">mechuraIntroductionGramadanIrish</bcf:citekey>
-    <bcf:citekey order="192" intorder="1">mechuraIntroductionGramadanIrish</bcf:citekey>
-    <bcf:citekey order="193" intorder="1">garofoloDARPATIMITAcousticphonetic1993</bcf:citekey>
-    <bcf:citekey order="194" intorder="1">mcauliffeMontrealForcedAligner2017</bcf:citekey>
-    <bcf:citekey order="195" intorder="1">needlemanGeneralMethodApplicable1970</bcf:citekey>
-    <bcf:citekey order="196" intorder="1">leungCNNRNNCTCBasedEndtoend2019</bcf:citekey>
-    <bcf:citekey order="197" intorder="1">ardilaCommonVoiceMassivelyMultilingual2020</bcf:citekey>
-    <bcf:citekey order="198" intorder="1">ardilaCommonVoiceMassivelyMultilingual2020</bcf:citekey>
-    <bcf:citekey order="199" intorder="1">lonerganAutomaticSpeechRecognition</bcf:citekey>
-    <bcf:citekey order="200" intorder="1">lonerganAutomaticSpeechRecognition</bcf:citekey>
-    <bcf:citekey order="201" intorder="1">conneauFLEURSFewshotLearning2022</bcf:citekey>
-    <bcf:citekey order="202" intorder="1">conneauFLEURSFewshotLearning2022</bcf:citekey>
-    <bcf:citekey order="203" intorder="1">deichlerMMConvMultimodalConversational2024</bcf:citekey>
-    <bcf:citekey order="204" intorder="1">deichlerMMConvMultimodalConversational2024</bcf:citekey>
-    <bcf:citekey order="205" intorder="1">qianAutomaticSpeechRecognition2022</bcf:citekey>
-    <bcf:citekey order="206" intorder="1">qianAutomaticSpeechRecognition2022</bcf:citekey>
-    <bcf:citekey order="207" intorder="1">zhangSpeechocean762OpenSourceNonnative2021</bcf:citekey>
-    <bcf:citekey order="208" intorder="1">zhangSpeechocean762OpenSourceNonnative2021</bcf:citekey>
-    <bcf:citekey order="209" intorder="1">zhaoL2ARCTICNonnativeEnglish2018</bcf:citekey>
-    <bcf:citekey order="210" intorder="1">zhaoL2ARCTICNonnativeEnglish2018</bcf:citekey>
-    <bcf:citekey order="211" intorder="1">leeMassivelyMultilingualPronunciation</bcf:citekey>
-    <bcf:citekey order="212" intorder="1">leeMassivelyMultilingualPronunciation</bcf:citekey>
-    <bcf:citekey order="213" intorder="1">gravesConnectionistTemporalClassification</bcf:citekey>
-    <bcf:citekey order="214" intorder="1">gravesConnectionistTemporalClassification</bcf:citekey>
-    <bcf:citekey order="215" intorder="1">kurzingerCTCSegmentationLargeCorpora2020</bcf:citekey>
-    <bcf:citekey order="216" intorder="1">kurzingerCTCSegmentationLargeCorpora2020</bcf:citekey>
-    <bcf:citekey order="217" intorder="1">zhaoL2ARCTICNonnativeEnglish2018</bcf:citekey>
-    <bcf:citekey order="218" intorder="1">conneauUnsupervisedCrosslingualRepresentation2020</bcf:citekey>
-    <bcf:citekey order="219" intorder="1">laptevFastEntropyBasedMethods2023</bcf:citekey>
-    <bcf:citekey order="220" intorder="1">hardisonSecondlanguageSpokenWord2005</bcf:citekey>
-    <bcf:citekey order="221" intorder="1">hardisonSecondlanguageSpokenWord2005</bcf:citekey>
-    <bcf:citekey order="222" intorder="1">deichlerMMConvMultimodalConversational2024</bcf:citekey>
-    <bcf:citekey order="223" intorder="1">deichlerMMConvMultimodalConversational2024</bcf:citekey>
-    <bcf:citekey order="224" intorder="1">khoslaSupervisedContrastiveLearning2021</bcf:citekey>
-    <bcf:citekey order="225" intorder="1">khoslaSupervisedContrastiveLearning2021</bcf:citekey>
-    <bcf:citekey order="226" intorder="1">rosenblumSpeechPerceptionMultimodal2008</bcf:citekey>
-    <bcf:citekey order="227" intorder="1">rosenblumSpeechPerceptionMultimodal2008</bcf:citekey>
-    <bcf:citekey order="228" intorder="1">zeyerWhyDoesCTC2021</bcf:citekey>
-    <bcf:citekey order="229" intorder="1">zeyerWhyDoesCTC2021</bcf:citekey>
-    <bcf:citekey order="230" intorder="1">liuEndtoEndUnsupervisedSpeech2023</bcf:citekey>
-    <bcf:citekey order="231" intorder="1">liuEndtoEndUnsupervisedSpeech2023</bcf:citekey>
-    <bcf:citekey order="232" intorder="1">pengEndtoEndMispronunciationDetection2023</bcf:citekey>
-    <bcf:citekey order="233" intorder="1">pengEndtoEndMispronunciationDetection2023</bcf:citekey>
-    <bcf:citekey order="234" intorder="1">lonerganLowresourceSpeechRecognition2024</bcf:citekey>
-    <bcf:citekey order="235" intorder="1">lonerganLowresourceSpeechRecognition2024</bcf:citekey>
-    <bcf:citekey order="236" intorder="1">neriEffectivenessComputerAssisted2008</bcf:citekey>
-    <bcf:citekey order="237" intorder="1">neriEffectivenessComputerAssisted2008</bcf:citekey>
-    <bcf:citekey order="238" intorder="1">prabhavalkarMinimumWordError2017</bcf:citekey>
-    <bcf:citekey order="239" intorder="1">prabhavalkarMinimumWordError2017</bcf:citekey>
-    <bcf:citekey order="240" intorder="1">thomsonEffectivenessL2Pronunciation2014</bcf:citekey>
-    <bcf:citekey order="241" intorder="1">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
-    <bcf:citekey order="242" intorder="1">chenComputerassistedPronunciationTraining2016</bcf:citekey>
-    <bcf:citekey order="243" intorder="1">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
-    <bcf:citekey order="244" intorder="1">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
-    <bcf:citekey order="245" intorder="1">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
-    <bcf:citekey order="246" intorder="1">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
+    <bcf:citekey order="1">benderAchievingEvaluatingLanguageIndependence2011</bcf:citekey>
+    <bcf:citekey order="1">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="1">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="2">benderAchievingEvaluatingLanguageIndependence2011</bcf:citekey>
+    <bcf:citekey order="3">matthewdryerWorldAtlasLanguage2024</bcf:citekey>
+    <bcf:citekey order="4">benderAchievingEvaluatingLanguageIndependence2011</bcf:citekey>
+    <bcf:citekey order="5">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="6">magueresseLowresourceLanguagesReview2020</bcf:citekey>
+    <bcf:citekey order="7">nichasaideCanWeDefuse2019</bcf:citekey>
+    <bcf:citekey order="8">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="9">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="10">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="11">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="12">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="12">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="12">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="13">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="14">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="15">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="16">chasaideABAIRInitiativeBringing2017</bcf:citekey>
+    <bcf:citekey order="17">nichasaideCanWeDefuse2019</bcf:citekey>
+    <bcf:citekey order="18">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="18">ranathungaNeuralMachineTranslation2021</bcf:citekey>
+    <bcf:citekey order="18">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="19">moseleyAtlasWorldsLanguages2010</bcf:citekey>
+    <bcf:citekey order="20">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="21">broinNewUrbanIrish2014</bcf:citekey>
+    <bcf:citekey order="22">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="22">nichasaideCanWeDefuse2019</bcf:citekey>
+    <bcf:citekey order="23">snesarevaPalatalizationDublinIrish2016</bcf:citekey>
+    <bcf:citekey order="23">gabrieleEnglishInfluenceL2</bcf:citekey>
+    <bcf:citekey order="23">broinNewUrbanIrish2014</bcf:citekey>
+    <bcf:citekey order="23">stensonModernIrishComprehensive2020</bcf:citekey>
+    <bcf:citekey order="24">stensonModernIrishComprehensive2020</bcf:citekey>
+    <bcf:citekey order="25">stensonModernIrishComprehensive2020</bcf:citekey>
+    <bcf:citekey order="26">broinNewUrbanIrish2014</bcf:citekey>
+    <bcf:citekey order="27">broinNewUrbanIrish2014</bcf:citekey>
+    <bcf:citekey order="28">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="29">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="30">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="30">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="30">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="31">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="32">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="33">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="34">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="35">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="36">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="37">ranathungaNeuralMachineTranslation2021</bcf:citekey>
+    <bcf:citekey order="38">devlinBERTPretrainingDeep2019</bcf:citekey>
+    <bcf:citekey order="39">baevskiWav2vec20Framework2020</bcf:citekey>
+    <bcf:citekey order="40">baevskiWav2vec20Framework2020</bcf:citekey>
+    <bcf:citekey order="41">arunkumarInvestigationEnsembleFeatures2022</bcf:citekey>
+    <bcf:citekey order="41">dengEnsembleDeepLearning2014</bcf:citekey>
+    <bcf:citekey order="41">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="41">fiscus1997post</bcf:citekey>
+    <bcf:citekey order="42">barteldsMakingMoreLittle2023</bcf:citekey>
+    <bcf:citekey order="42">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="43">nichasaideCanWeDefuse2019</bcf:citekey>
+    <bcf:citekey order="43">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="44">spolskyHandbookEducationalLinguistics2008</bcf:citekey>
+    <bcf:citekey order="45">rogerson-revellComputerAssistedPronunciationTraining2021</bcf:citekey>
+    <bcf:citekey order="46">nichiarainCorpasClisteCreating2022</bcf:citekey>
+    <bcf:citekey order="46">nichiarainUsingSpeechNLP2022</bcf:citekey>
+    <bcf:citekey order="47">bajorek2017l2</bcf:citekey>
+    <bcf:citekey order="48">krashenPrinciplesPracticeSecond1984</bcf:citekey>
+    <bcf:citekey order="49">bajorek2017l2</bcf:citekey>
+    <bcf:citekey order="50">engstrandFonetikensGrunder2004</bcf:citekey>
+    <bcf:citekey order="51">engstrandFonetikensGrunder2004</bcf:citekey>
+    <bcf:citekey order="52">jurafskySpeechLanguageProcessing2025</bcf:citekey>
+    <bcf:citekey order="53">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
+    <bcf:citekey order="54">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
+    <bcf:citekey order="55">wittAutomaticErrorDetection</bcf:citekey>
+    <bcf:citekey order="56">witt2000use</bcf:citekey>
+    <bcf:citekey order="57">witt2000use</bcf:citekey>
+    <bcf:citekey order="58">witt2014computer</bcf:citekey>
+    <bcf:citekey order="59">witt2000use</bcf:citekey>
+    <bcf:citekey order="60">witt2000use</bcf:citekey>
+    <bcf:citekey order="61">parikhEvaluatingLogitBasedGOP2025</bcf:citekey>
+    <bcf:citekey order="61">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
+    <bcf:citekey order="62">wuTransformerBasedEndtoEnd2021</bcf:citekey>
+    <bcf:citekey order="63">loEffectiveEndtoEndModeling2020</bcf:citekey>
+    <bcf:citekey order="63">leungCNNRNNCTCBasedEndtoend2019</bcf:citekey>
+    <bcf:citekey order="64">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="65">yuAutomaticSpeechRecognition2015</bcf:citekey>
+    <bcf:citekey order="66">jurafskySpeechLanguageProcessing2025</bcf:citekey>
+    <bcf:citekey order="67">jurafskySpeechLanguageProcessing2025</bcf:citekey>
+    <bcf:citekey order="68">jurafskySpeechLanguageProcessing2025</bcf:citekey>
+    <bcf:citekey order="69">yuAutomaticSpeechRecognition2015</bcf:citekey>
+    <bcf:citekey order="70">witt2000use</bcf:citekey>
+    <bcf:citekey order="71">poveyKaldiSpeechRecognition</bcf:citekey>
+    <bcf:citekey order="72">watanabeESPnetEndtoEndSpeech2018</bcf:citekey>
+    <bcf:citekey order="73">paszkePyTorchImperativeStyle2019</bcf:citekey>
+    <bcf:citekey order="74">wolfTransformersStateoftheArtNatural2020</bcf:citekey>
+    <bcf:citekey order="75">somekiESPnetEZPythononlyESPnet2024</bcf:citekey>
+    <bcf:citekey order="76">baevskiEffectivenessSelfsupervisedPretraining2020</bcf:citekey>
+    <bcf:citekey order="77">devlinBERTPretrainingDeep2019</bcf:citekey>
+    <bcf:citekey order="78">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="79">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="80">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="80">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="80">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="81">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="82">conneauUnsupervisedCrosslingualRepresentation2020</bcf:citekey>
+    <bcf:citekey order="83">conneauUnsupervisedCrosslingualRepresentation2020</bcf:citekey>
+    <bcf:citekey order="84">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="85">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="86">gravesConnectionistTemporalClassification</bcf:citekey>
+    <bcf:citekey order="87">baevskiWav2vec20Framework2020</bcf:citekey>
+    <bcf:citekey order="88">baevskiWav2vec20Framework2020</bcf:citekey>
+    <bcf:citekey order="89">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="90">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="91">korzekwaWeaklysupervisedWordlevelPronunciation2021</bcf:citekey>
+    <bcf:citekey order="92">dietterichEnsembleMethodsMachine2000</bcf:citekey>
+    <bcf:citekey order="93">hansenNeuralNetworkEnsembles1990</bcf:citekey>
+    <bcf:citekey order="94">dietterichEnsembleMethodsMachine2000</bcf:citekey>
+    <bcf:citekey order="95">maclinEmpiricalEvaluationBagging1997</bcf:citekey>
+    <bcf:citekey order="95">dengScalableStackingLearning2012</bcf:citekey>
+    <bcf:citekey order="95">fiscus1997post</bcf:citekey>
+    <bcf:citekey order="95">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="96">arunkumarInvestigationEnsembleFeatures2022</bcf:citekey>
+    <bcf:citekey order="96">dengEnsembleDeepLearning2014</bcf:citekey>
+    <bcf:citekey order="97">agrawalLearningWhenTrust2023</bcf:citekey>
+    <bcf:citekey order="97">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="98">fiscus1997post</bcf:citekey>
+    <bcf:citekey order="99">agrawalLearningWhenTrust2023</bcf:citekey>
+    <bcf:citekey order="100">agrawalLearningWhenTrust2023</bcf:citekey>
+    <bcf:citekey order="101">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="102">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="103">weiMitigatingNeuralNetwork2022</bcf:citekey>
+    <bcf:citekey order="104">laptevFastEntropyBasedMethods2023</bcf:citekey>
+    <bcf:citekey order="105">ananthakrishnanUsingEnsembleClassifiers2011</bcf:citekey>
+    <bcf:citekey order="106">ananthakrishnanUsingEnsembleClassifiers2011</bcf:citekey>
+    <bcf:citekey order="107">calikEnsemblebasedFrameworkMispronunciation2023</bcf:citekey>
+    <bcf:citekey order="108">calikEnsemblebasedFrameworkMispronunciation2023</bcf:citekey>
+    <bcf:citekey order="109">xuIterativePseudoLabelingSpeech2020</bcf:citekey>
+    <bcf:citekey order="109">yangImprovingMispronunciationDetection2022</bcf:citekey>
+    <bcf:citekey order="109">barteldsMakingMoreLittle2023</bcf:citekey>
+    <bcf:citekey order="110">kheirAutomaticPronunciationAssessment2023</bcf:citekey>
+    <bcf:citekey order="111">barteldsMakingMoreLittle2023</bcf:citekey>
+    <bcf:citekey order="112">hayashiBackTranslationStyleDataAugmentation2018</bcf:citekey>
+    <bcf:citekey order="113">hayashiBackTranslationStyleDataAugmentation2018</bcf:citekey>
+    <bcf:citekey order="114">yangImprovingMispronunciationDetection2022</bcf:citekey>
+    <bcf:citekey order="115">yangImprovingMispronunciationDetection2022</bcf:citekey>
+    <bcf:citekey order="116">barteldsMakingMoreLittle2023</bcf:citekey>
+    <bcf:citekey order="116">thaiSyntheticDataAugmentation2019</bcf:citekey>
+    <bcf:citekey order="116">fazelSynthASRUnlockingSynthetic2021</bcf:citekey>
+    <bcf:citekey order="117">barteldsMakingMoreLittle2023</bcf:citekey>
+    <bcf:citekey order="118">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
+    <bcf:citekey order="119">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
+    <bcf:citekey order="120">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="121">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="122">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
+    <bcf:citekey order="123">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
+    <bcf:citekey order="124">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="125">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="126">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="127">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="128">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="129">wolfTransformersStateoftheArtNatural2020</bcf:citekey>
+    <bcf:citekey order="130">biewaldExperimentTrackingWeights2020</bcf:citekey>
+    <bcf:citekey order="131">garofoloDARPATIMITAcousticphonetic1993</bcf:citekey>
+    <bcf:citekey order="132">garofoloDARPATIMITAcousticphonetic1993</bcf:citekey>
+    <bcf:citekey order="133">garofoloDARPATIMITAcousticphonetic1993</bcf:citekey>
+    <bcf:citekey order="134">peoplescomputercompanyDrDobbsJournal1976</bcf:citekey>
+    <bcf:citekey order="135">laptevFastEntropyBasedMethods2023</bcf:citekey>
+    <bcf:citekey order="136">laptevFastEntropyBasedMethods2023</bcf:citekey>
+    <bcf:citekey order="137">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="138">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="139">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="140">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="141">googlecloudtts</bcf:citekey>
+    <bcf:citekey order="142">oordWaveNetGenerativeModel2016</bcf:citekey>
+    <bcf:citekey order="143">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="144">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="145">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="146">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="147">conneauFLEURSFewshotLearning2022</bcf:citekey>
+    <bcf:citekey order="148">ffmpeg</bcf:citekey>
+    <bcf:citekey order="149">needlemanGeneralMethodApplicable1970</bcf:citekey>
+    <bcf:citekey order="150">mortensenPanPhonResourceMapping</bcf:citekey>
+    <bcf:citekey order="151">qianDiscriminativeAcousticModel2010</bcf:citekey>
+    <bcf:citekey order="151">liMispronunciationDetectionDiagnosis2017</bcf:citekey>
+    <bcf:citekey order="151">leungCNNRNNCTCBasedEndtoend2019</bcf:citekey>
+    <bcf:citekey order="152">raschkaMLxtendProvidingMachine2018</bcf:citekey>
+    <bcf:citekey order="153">dietterich1998approximate</bcf:citekey>
+    <bcf:citekey order="154">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="155">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="156">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="157">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="158">zeyerWhyDoesCTC2021</bcf:citekey>
+    <bcf:citekey order="159">qianDiscriminativeAcousticModel2010</bcf:citekey>
+    <bcf:citekey order="160">deichlerMMConvMultimodalConversational2024</bcf:citekey>
+    <bcf:citekey order="161">deichlerMMConvMultimodalConversational2024</bcf:citekey>
+    <bcf:citekey order="162">zhangSpeechocean762OpenSourceNonnative2021</bcf:citekey>
+    <bcf:citekey order="163">zhangSpeechocean762OpenSourceNonnative2021</bcf:citekey>
+    <bcf:citekey order="164">zhaoL2ARCTICNonnativeEnglish2018</bcf:citekey>
+    <bcf:citekey order="165">zhaoL2ARCTICNonnativeEnglish2018</bcf:citekey>
+    <bcf:citekey order="166">conneauUnsupervisedCrosslingualRepresentation2020</bcf:citekey>
+    <bcf:citekey order="167">laptevFastEntropyBasedMethods2023</bcf:citekey>
+    <bcf:citekey order="168">hardisonSecondlanguageSpokenWord2005</bcf:citekey>
+    <bcf:citekey order="169">hardisonSecondlanguageSpokenWord2005</bcf:citekey>
+    <bcf:citekey order="170">deichlerMMConvMultimodalConversational2024</bcf:citekey>
+    <bcf:citekey order="171">deichlerMMConvMultimodalConversational2024</bcf:citekey>
+    <bcf:citekey order="172">khoslaSupervisedContrastiveLearning2021</bcf:citekey>
+    <bcf:citekey order="173">khoslaSupervisedContrastiveLearning2021</bcf:citekey>
+    <bcf:citekey order="174">rosenblumSpeechPerceptionMultimodal2008</bcf:citekey>
+    <bcf:citekey order="175">rosenblumSpeechPerceptionMultimodal2008</bcf:citekey>
+    <bcf:citekey order="176">zeyerWhyDoesCTC2021</bcf:citekey>
+    <bcf:citekey order="177">zeyerWhyDoesCTC2021</bcf:citekey>
+    <bcf:citekey order="178">liuEndtoEndUnsupervisedSpeech2023</bcf:citekey>
+    <bcf:citekey order="179">liuEndtoEndUnsupervisedSpeech2023</bcf:citekey>
+    <bcf:citekey order="180">pengEndtoEndMispronunciationDetection2023</bcf:citekey>
+    <bcf:citekey order="181">pengEndtoEndMispronunciationDetection2023</bcf:citekey>
+    <bcf:citekey order="182">lonerganLowresourceSpeechRecognition2024</bcf:citekey>
+    <bcf:citekey order="183">lonerganLowresourceSpeechRecognition2024</bcf:citekey>
+    <bcf:citekey order="184">neriEffectivenessComputerAssisted2008</bcf:citekey>
+    <bcf:citekey order="185">neriEffectivenessComputerAssisted2008</bcf:citekey>
+    <bcf:citekey order="186">prabhavalkarMinimumWordError2017</bcf:citekey>
+    <bcf:citekey order="187">prabhavalkarMinimumWordError2017</bcf:citekey>
+    <bcf:citekey order="188">kartushinaRoleL1Speech2013</bcf:citekey>
+    <bcf:citekey order="189">vijayakumarDiverseBeamSearch2018</bcf:citekey>
+    <bcf:citekey order="190">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="191">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="192">thomsonEffectivenessL2Pronunciation2014</bcf:citekey>
+    <bcf:citekey order="193">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
+    <bcf:citekey order="194">chenComputerassistedPronunciationTraining2016</bcf:citekey>
+    <bcf:citekey order="195">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="196">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="197">ananthakrishnanUsingEnsembleClassifiers2011</bcf:citekey>
+    <bcf:citekey order="198">ananthakrishnanUsingEnsembleClassifiers2011</bcf:citekey>
+    <bcf:citekey order="199">laptevFastEntropyBasedMethods2023</bcf:citekey>
+    <bcf:citekey order="200">laptevFastEntropyBasedMethods2023</bcf:citekey>
+    <bcf:citekey order="201">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="202">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="203">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="204">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="205">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
+    <bcf:citekey order="206">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
+    <bcf:citekey order="207">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
+    <bcf:citekey order="208">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
+    <bcf:citekey order="209">benderAchievingEvaluatingLanguageIndependence2011</bcf:citekey>
+    <bcf:citekey order="210">joshiStateFateLinguistic2021</bcf:citekey>
+    <bcf:citekey order="211">hedderichSurveyRecentApproaches2021</bcf:citekey>
+    <bcf:citekey order="212">matthewdryerWorldAtlasLanguage2024</bcf:citekey>
+    <bcf:citekey order="213">magueresseLowresourceLanguagesReview2020</bcf:citekey>
+    <bcf:citekey order="214">nichasaideCanWeDefuse2019</bcf:citekey>
+    <bcf:citekey order="215">chasaideABAIRInitiativeBringing2017</bcf:citekey>
+    <bcf:citekey order="216">ranathungaNeuralMachineTranslation2021</bcf:citekey>
+    <bcf:citekey order="217">moseleyAtlasWorldsLanguages2010</bcf:citekey>
+    <bcf:citekey order="218">nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015</bcf:citekey>
+    <bcf:citekey order="219">broinNewUrbanIrish2014</bcf:citekey>
+    <bcf:citekey order="220">snesarevaPalatalizationDublinIrish2016</bcf:citekey>
+    <bcf:citekey order="221">gabrieleEnglishInfluenceL2</bcf:citekey>
+    <bcf:citekey order="222">stensonModernIrishComprehensive2020</bcf:citekey>
+    <bcf:citekey order="223">devlinBERTPretrainingDeep2019</bcf:citekey>
+    <bcf:citekey order="224">baevskiWav2vec20Framework2020</bcf:citekey>
+    <bcf:citekey order="225">arunkumarInvestigationEnsembleFeatures2022</bcf:citekey>
+    <bcf:citekey order="226">dengEnsembleDeepLearning2014</bcf:citekey>
+    <bcf:citekey order="227">gitmanConfidencebasedEnsemblesEndtoEnd2023</bcf:citekey>
+    <bcf:citekey order="228">fiscus1997post</bcf:citekey>
+    <bcf:citekey order="229">barteldsMakingMoreLittle2023</bcf:citekey>
+    <bcf:citekey order="230">zhangL2GENNeuralPhoneme2022</bcf:citekey>
+    <bcf:citekey order="231">spolskyHandbookEducationalLinguistics2008</bcf:citekey>
+    <bcf:citekey order="232">rogerson-revellComputerAssistedPronunciationTraining2021</bcf:citekey>
+    <bcf:citekey order="233">nichiarainCorpasClisteCreating2022</bcf:citekey>
+    <bcf:citekey order="234">nichiarainUsingSpeechNLP2022</bcf:citekey>
+    <bcf:citekey order="235">bajorek2017l2</bcf:citekey>
+    <bcf:citekey order="236">krashenPrinciplesPracticeSecond1984</bcf:citekey>
+    <bcf:citekey order="237">engstrandFonetikensGrunder2004</bcf:citekey>
+    <bcf:citekey order="238">jurafskySpeechLanguageProcessing2025</bcf:citekey>
+    <bcf:citekey order="239">korzekwaComputerassistedPronunciationTraining2022</bcf:citekey>
+    <bcf:citekey order="240">wittAutomaticErrorDetection</bcf:citekey>
+    <bcf:citekey order="241">witt2000use</bcf:citekey>
+    <bcf:citekey order="242">witt2014computer</bcf:citekey>
+    <bcf:citekey order="243">parikhEvaluatingLogitBasedGOP2025</bcf:citekey>
+    <bcf:citekey order="244">gongTransformerBasedMultiAspectMultiGranularity2022</bcf:citekey>
+    <bcf:citekey order="245">wuTransformerBasedEndtoEnd2021</bcf:citekey>
+    <bcf:citekey order="246">loEffectiveEndtoEndModeling2020</bcf:citekey>
+    <bcf:citekey order="247">leungCNNRNNCTCBasedEndtoend2019</bcf:citekey>
+    <bcf:citekey order="248">yuAutomaticSpeechRecognition2015</bcf:citekey>
+    <bcf:citekey order="249">poveyKaldiSpeechRecognition</bcf:citekey>
+    <bcf:citekey order="250">watanabeESPnetEndtoEndSpeech2018</bcf:citekey>
+    <bcf:citekey order="251">paszkePyTorchImperativeStyle2019</bcf:citekey>
+    <bcf:citekey order="252">wolfTransformersStateoftheArtNatural2020</bcf:citekey>
+    <bcf:citekey order="253">somekiESPnetEZPythononlyESPnet2024</bcf:citekey>
+    <bcf:citekey order="254">baevskiEffectivenessSelfsupervisedPretraining2020</bcf:citekey>
+    <bcf:citekey order="255">babuXLSRSelfsupervisedCrosslingual2021</bcf:citekey>
+    <bcf:citekey order="256">conneauUnsupervisedCrosslingualRepresentation2020</bcf:citekey>
+    <bcf:citekey order="257">gravesConnectionistTemporalClassification</bcf:citekey>
+    <bcf:citekey order="258">korzekwaWeaklysupervisedWordlevelPronunciation2021</bcf:citekey>
+    <bcf:citekey order="259">dietterichEnsembleMethodsMachine2000</bcf:citekey>
+    <bcf:citekey order="260">hansenNeuralNetworkEnsembles1990</bcf:citekey>
+    <bcf:citekey order="261">maclinEmpiricalEvaluationBagging1997</bcf:citekey>
+    <bcf:citekey order="262">dengScalableStackingLearning2012</bcf:citekey>
+    <bcf:citekey order="263">agrawalLearningWhenTrust2023</bcf:citekey>
+    <bcf:citekey order="264">weiMitigatingNeuralNetwork2022</bcf:citekey>
+    <bcf:citekey order="265">laptevFastEntropyBasedMethods2023</bcf:citekey>
+    <bcf:citekey order="266">ananthakrishnanUsingEnsembleClassifiers2011</bcf:citekey>
+    <bcf:citekey order="267">calikEnsemblebasedFrameworkMispronunciation2023</bcf:citekey>
+    <bcf:citekey order="268">xuIterativePseudoLabelingSpeech2020</bcf:citekey>
+    <bcf:citekey order="269">yangImprovingMispronunciationDetection2022</bcf:citekey>
+    <bcf:citekey order="270">kheirAutomaticPronunciationAssessment2023</bcf:citekey>
+    <bcf:citekey order="271">hayashiBackTranslationStyleDataAugmentation2018</bcf:citekey>
+    <bcf:citekey order="272">thaiSyntheticDataAugmentation2019</bcf:citekey>
+    <bcf:citekey order="273">fazelSynthASRUnlockingSynthetic2021</bcf:citekey>
+    <bcf:citekey order="274">biewaldExperimentTrackingWeights2020</bcf:citekey>
+    <bcf:citekey order="275">garofoloDARPATIMITAcousticphonetic1993</bcf:citekey>
+    <bcf:citekey order="276">peoplescomputercompanyDrDobbsJournal1976</bcf:citekey>
+    <bcf:citekey order="277">googlecloudtts</bcf:citekey>
+    <bcf:citekey order="278">oordWaveNetGenerativeModel2016</bcf:citekey>
+    <bcf:citekey order="279">conneauFLEURSFewshotLearning2022</bcf:citekey>
+    <bcf:citekey order="280">ffmpeg</bcf:citekey>
+    <bcf:citekey order="281">needlemanGeneralMethodApplicable1970</bcf:citekey>
+    <bcf:citekey order="282">mortensenPanPhonResourceMapping</bcf:citekey>
+    <bcf:citekey order="283">qianDiscriminativeAcousticModel2010</bcf:citekey>
+    <bcf:citekey order="284">liMispronunciationDetectionDiagnosis2017</bcf:citekey>
+    <bcf:citekey order="285">raschkaMLxtendProvidingMachine2018</bcf:citekey>
+    <bcf:citekey order="286">dietterich1998approximate</bcf:citekey>
+    <bcf:citekey order="287">zeyerWhyDoesCTC2021</bcf:citekey>
+    <bcf:citekey order="288">deichlerMMConvMultimodalConversational2024</bcf:citekey>
+    <bcf:citekey order="289">zhangSpeechocean762OpenSourceNonnative2021</bcf:citekey>
+    <bcf:citekey order="290">zhaoL2ARCTICNonnativeEnglish2018</bcf:citekey>
+    <bcf:citekey order="291">hardisonSecondlanguageSpokenWord2005</bcf:citekey>
+    <bcf:citekey order="292">khoslaSupervisedContrastiveLearning2021</bcf:citekey>
+    <bcf:citekey order="293">rosenblumSpeechPerceptionMultimodal2008</bcf:citekey>
+    <bcf:citekey order="294">liuEndtoEndUnsupervisedSpeech2023</bcf:citekey>
+    <bcf:citekey order="295">pengEndtoEndMispronunciationDetection2023</bcf:citekey>
+    <bcf:citekey order="296">lonerganLowresourceSpeechRecognition2024</bcf:citekey>
+    <bcf:citekey order="297">neriEffectivenessComputerAssisted2008</bcf:citekey>
+    <bcf:citekey order="298">prabhavalkarMinimumWordError2017</bcf:citekey>
+    <bcf:citekey order="299">kartushinaRoleL1Speech2013</bcf:citekey>
+    <bcf:citekey order="300">vijayakumarDiverseBeamSearch2018</bcf:citekey>
+    <bcf:citekey order="301">thomsonEffectivenessL2Pronunciation2014</bcf:citekey>
+    <bcf:citekey order="302">chenComputerassistedPronunciationTraining2016</bcf:citekey>
+    <bcf:citekey order="303">rouditchenkoComparisonMultilingualSelfSupervised2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

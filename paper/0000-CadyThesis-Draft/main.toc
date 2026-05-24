@@ -1,36 +1,41 @@
-\contentsline {chapter}{\nonumberline Preface}{4}{chapter*.2}%
-\contentsline {chapter}{\nonumberline Acknowledgements}{5}{chapter*.3}%
-\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Background}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Irish \& The Predicament of Minority Languages in \acrfull {nlp}}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}From Text to Speech: Approaches to Low-Resource Scenarios}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}\acrfull {call} \& \acrfull {capt}}{13}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Pronunciation \& \acrfull {mdd}}{14}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Speech and \Gls {asr}}{15}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Wav2Vec 2.0}{16}{subsection.2.5.1}%
-\contentsline {chapter}{\numberline {3}Related Work}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}\gls {e2e} \gls {asr} for \gls {md}}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}\gls {asr} Ensembling Strategies}{18}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Data Generation with Synthetic Speech}{20}{section.3.3}%
+\contentsline {chapter}{\nonumberline Preface}{5}{chapter*.2}%
+\contentsline {chapter}{\nonumberline Acknowledgements}{6}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Background}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Irish \& The Predicament of Minority Languages in \acrfull {nlp}}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}From Text to Speech: Approaches to Low-Resource Scenarios}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}\acrfull {call} \& \acrfull {capt}}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Pronunciation \& \acrfull {mdd}}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Speech and \Gls {asr}}{17}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Wav2Vec 2.0}{18}{subsection.2.5.1}%
+\contentsline {chapter}{\numberline {3}Related Work}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}\gls {asr} Ensembling Strategies}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Data Generation with Synthetic Speech}{20}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Methods \& Materials}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}General Experiment Setup}{22}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Experiment 1: Monolingual Model Ensembling}{23}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Data}{23}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline timit}{23}{subsubsection*.5}%
-\contentsline {subsubsection}{\nonumberline teanglann}{23}{subsubsection*.7}%
-\contentsline {subsubsection}{\nonumberline Preprocessing}{24}{subsubsection*.9}%
+\contentsline {subsubsection}{\nonumberline TIMIT}{23}{subsubsection*.7}%
+\contentsline {subsubsection}{\nonumberline Teanglann}{24}{subsubsection*.9}%
+\contentsline {subsubsection}{\nonumberline Preprocessing}{24}{subsubsection*.11}%
 \contentsline {subsection}{\numberline {4.2.2}Experimental Setup}{24}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Experiment 2: Synthetic Mispronunciation Data}{24}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Data}{25}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Experimental Setup}{25}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Evaluation}{25}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Metrics}{25}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Data}{25}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Skyline Comparison}{26}{subsection.4.4.3}%
-\contentsline {chapter}{\numberline {5}Results}{28}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Discussion}{29}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusions}{30}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Future work}{31}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Ethical Considerations}{32}{chapter.9}%
-\contentsline {chapter}{\numberline {10}AI Tools}{33}{chapter.10}%
+\contentsline {section}{\numberline {4.3}Experiment 2: Synthetic Mispronunciation Data}{26}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Data}{26}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Evaluation}{26}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Data}{26}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Evaluation procedure}{27}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Metrics}{28}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Results}{30}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Discussion}{33}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Experiment 1: Model Ensembling}{33}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Experiment 2: Synthetic Mispronunciation Data}{34}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Implementational Confounds}{35}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Structural Limitations}{36}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Annotation Reliability}{36}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Cross-corpus comparability}{36}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Final Thoughts}{36}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Conclusions}{38}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Future work}{39}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Ethical Considerations}{41}{chapter.9}%
+\contentsline {chapter}{\numberline {10}AI Tools}{42}{chapter.10}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
