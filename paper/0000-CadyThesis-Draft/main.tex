@@ -10,6 +10,7 @@
 \usepackage{adjustbox}
 \usepackage{anyfontsize}
 \usepackage{multirow}
+\usepackage{enumitem}
 \usepackage{pgfplots}
 
 % Define tikz styles to reuse in figures
@@ -134,7 +135,7 @@
 \addbibresource{ThesisProject.bib}
 
 \begin{document}
-\title{Low-Resource CAPT: An Irish Application (WIP)} % crap title, workshop this
+\title{Low-Resource CAPT: Applications to Irish} % crap title, workshop this
 \author{Peter Cady}
 % \date{...}
 \supervisors{Johan Sjons, Uppsala University\\
@@ -144,39 +145,49 @@
 \maketitle
 
 \begin{abstract}
-    \numberedparagraph{summarize the motivation}
-    \numberedparagraph{problem overview}
-    \numberedparagraph{experiment}
-    \numberedparagraph{main findings and contributions.}
+    Minority languages are often left out of modern \gls{nlp} developments. Though these technologies can provide platforms to connect discontiguous communities of language speakers, the dominance of a select few languages in the digital realm reveals a wide disparity in resources available to smaller languages in data-intensive applications such as \gls{capt} and \gls{mdd}.
+    To work around the data limitations inherent in low-resource \gls{mdd} relevant for building \gls{capt} systems for minority languages such as Irish, we propose two possible strategies: 
+    \begin{enumerate}
+      \item ensembles of \gls{asr} models leveraging comparatively plentiful multilingual data
+    \end{enumerate}
+    and
+    \begin{enumerate}[resume]
+      \item synthesis of scarce, transcribed \gls{l2} speaker data
+    \end{enumerate}
+    Results showed however that no system beat the monolingual Irish baseline at detecting mispronunciations, but illuminate failure points with respect to cross-corpus comparability that could indicate promising ways forward.
 \end{abstract}
 
 \tableofcontents
 
-\addchap{Preface}
-% with \addchap instead of \chapter it isn't numbered.
 \addchap{Acknowledgements}
-I would like to thank my advisor Johan for his encouragement 
-I would especially like to thank Jim O' Regan for all his thought-provoking insights, encouragement, and advice, which were crucial for me getting my bearings in a project which pushed me to grow well beyond my limits. The process was deeply meaningful to me. Thank you.
-I would like to thank my Irish professor Gregory Darwin for his commitment and engagement in promoting Irish literature and the Irish language. 
-Thank examiner
+I would like to thank my advisor Johan for his seemingly endless capacity for encouragement and support. One couldn't ask for a better instructor to get their bearings in a challenging master's program. It was a pleasure working with you on my thesis, and over the years at Uppsala. Thank you.
+\bigskip
+
+I would like to thank my advisor Jim O' Regan for all his thought-provoking insights, encouragement, and advice, which were crucial for me getting my bearings in a project which pushed me to grow well beyond my limits. The process was deeply meaningful to me, and I cannot thank you enough for your advice and feedback. Thank you.
+\bigskip
+
+I would like to thank my Irish professor Gregory Darwin for his commitment and engagement in promoting the Irish culture and language. It was a privilege to have been introduced to the language by such a fine teacher. Thank you.
+\bigskip
+
+Finally, I would like to thank my friends and family that have helped me to become a better version of myself over the years, believed in me, and been there to help pick me back up when I fell. I wouldn't be here today without you. From the bottom of my heart, thank you.
 
 \printglossary[type=\acronymtype]
 
 \printglossary
 
 \chapter{Introduction}
-Language competency is crucial for securing work opportunities, accessing services, and exercising rights in society at large. As our surroundings become ever more digitally interconnected, these interactions are increasingly mediated by language technologies, for both good and ill. Such technologies are often identified as promising tools to promote language use and language learning, but are also implicated in the coalescence of online interaction around a few dominant languages such as English, complicating the glowing promises often offered by their proponents. Low-resource language communities open to language technologies are often left out of most recent technological advancements given the relative scarcity of resources they are faced with, necessitating approaches tailored to these limitations if the promise of cutting-edge language technologies is to be realized for these groups. The momentum of the pre-training/fine-tuning paradigm within \acrfull{asr} and \gls{ml} in recent years offers a glimmer of hope to those working toward making accessible tools for such communities, enabling the use of more plentiful data to support tools for languages facing various levels of resource scarcity.
+Language competency is crucial for forming identity, securing work opportunities, and navigating society at large. As our surroundings become ever more digitally interconnected, how we interact with it is increasingly mediated by language technology, for both good and ill. Such technologies are often identified as promising tools to promote language use and language learning, but are also implicated in the coalescence of online interaction around a few dominant languages such as English, complicating the glowing promises often offered by their proponents. Low-resource language communities open to language technologies are often left out of most recent technological advancements given the relative lack of resources at their disposal, necessitating approaches tailored to these limitations if the promise of cutting-edge language technologies is to be realized equitably. The momentum of the pre-training/fine-tuning paradigm within \acrfull{asr} and \gls{ml} in recent years offers a glimmer of hope to those working toward making accessible tools for such communities, enabling the use of more plentiful data to support tools for languages facing various levels of resource scarcity.
 
-Promoting speech technologies for language learning could be of particular benefit for languages such as Irish which endeavor to propagate native models of speech effectively to motivated learners outside of traditionally Irish-speaking areas. Through \gls{capt} applications built with careful use of existing data, we might find the scaleable, resource-conscious ways to support such communities and narrow the gap between tools built for digital behemoths such as English, and those built for languages without similar access to digital resources.
+Promoting speech technologies for language learning could be of particular benefit for languages such as Irish which endeavor to propagate native models of speech to motivated learners outside of traditionally Irish-speaking areas. Through \gls{capt} applications built with careful use of existing data, we might find the scaleable, resource-conscious ways to support such communities and narrow the gap between tools built for digital behemoths such as English, and those built for languages without similar access to digital resources.
 
-To this end we explore two potential avenues to overcoming the data limitations faced by Irish and other languages like it with respect to learner data: one, by using the data we \textit{do} have by harnessing readily available monolingual data in a model ensemble; and the other, by imitating the data we \textit{wish} we had with \gls{tts}-generated learner approximations to train a combined model with. These approaches are formulated as the following research questions:
+To this end we explore two potential avenues to overcoming the data limitations faced by Irish and other languages like it with respect to learner data: one, by using the data we \textit{do} have by harnessing readily available monolingual data in a model ensemble; and the other, by imitating the data we \textit{wish} we had with \gls{tts}-generated learner approximations for training a combined model. These approaches are formulated as the following research questions:
 \begin{enumerate}
   \item To what extent does a resource-conscious ensemble of monolingual ASR models (Irish and English) offer improved discrimination of learner errors compared to a monolingual Irish model?\label{rq:1}
   \item To what extent does a model trained on TTS-generated synthetic mispronunciation data offer improved discrimination of learner errors compared to a monolingual Irish model?\label{rq:2}
 \end{enumerate}
 
 % goal of the thesis
-The unifying goal between these approaches is exploring the feasibility of overcoming the scarcity of phonetically annotated \gls{l2} Irish learner data for \gls{md} and \gls{mdd} applications. One approaches the problem with ensembles of monolingual \gls{asr} models, leveraging more plentiful \gls{l1} speaker data, and another using a schema of data generation by leveraging established \gls{tts} systems to approximate learner speech: a potential low-cost alternative to large-scale phonetic annotation. By exploring these approaches, we aim to illuminate possible ways forward for low-resource language communities interested in developing automated technologies for language learning and pronunciation training.
+The unifying goal between these approaches is exploring the feasibility of overcoming the scarcity of phonetically annotated \gls{l2} Irish learner data for \gls{md} and \gls{mdd} applications. One approaches the problem with ensembles of monolingual \gls{asr} models, leveraging more plentiful \gls{l1} speaker data, and another using a schema of data generation by leveraging established \gls{tts} systems to approximate learner speech: a potential low-cost alternative to large-scale phonetic annotation. By exploring these approaches, we hope to illuminate possible ways forward for low-resource language communities interested in developing automated technologies for language learning and pronunciation training.
 
 \chapter{Background}\label{background}
 
@@ -187,7 +198,7 @@ In the following section we will outline the context motivating our current work
 Developing language technologies that can scale beyond the language they are designed for is no new goal for \gls{nlp} research. The value of such a property is apparent: transferring an existing system seamlessly to another language could potentially save significant resources for language communities without the ability to fund such development themselves. Actually achieving this goal in practice, however, is no simple endeavor, typically requiring some level of linguistic awareness which is all-to-often lamentably absent \parencite[see][inter alia]{benderAchievingEvaluatingLanguageIndependence2011,joshiStateFateLinguistic2021,hedderichSurveyRecentApproaches2021}. For example, success in applying word-based n-gram approaches to a language rests on the language's level of inflectional morphology: the lower the better. Higher morphological complexity together with variations in word order raise data sparsity problems which n-gram approaches rooted in English struggle to handle \parencite{benderAchievingEvaluatingLanguageIndependence2011}. This should come as no surprise, given the relatively fixed word order and low levels of inflectional morphology present in English, but it illustrates a need for caution: systems developed for a given language may make implicit assumptions about language structure which do not generalize well. Linguistic typology can provide important clues as to what features are shared between the original development language and possible languages of extension for a system. Information of this kind has, for many of the worlds languages, already been gathered by linguists. Perhaps the most renowned database of typological information is \gls{wals} \parencite{matthewdryerWorldAtlasLanguage2024}, a free, online resource currently boasting 152 chapters with detailed descriptions of 192 linguistic features spanning over 2,600 of the world's languages at the time of writing. By explicitly mobilizing linguistic knowledge already painstakingly gathered by linguistic typologists, we can identify where languages agree, where they differ, and hopefully identify some of the implicit, ungeneralizable assumptions that have hindered past efforts to create more accessible language technologies.
 
 %language disparity
-Despite claims of language-agnostic systems often touted by proponents of emerging \gls{ai} systems, these have often also fallen well short of such promise \parencite{benderAchievingEvaluatingLanguageIndependence2011}. The overwhelming majority of the world's languages still have no footprint in emerging language technologies \parencite{joshiStateFateLinguistic2021}. In the past, building \gls{nn}-based language technologies demanded immense quantities of labeled data: a high bar of entry to language communities with limited if any access to such resources, and an ongoing issue which continues to stimulate a body of research dedicated to overcoming it \parencite[see][for an overview]{magueresseLowresourceLanguagesReview2020}. For languages where data availability is no obstacle, research and development can proceed unfettered by the prohibitive cost of curating datasets from scratch. As our daily lives grow increasingly integrated with the digital realm, language communities without the same support are obliged to switch to more digitally dominant languages (often English) to gain access to these new resources, narrowing the opportunities to engage with resources and services through the medium of their community language \parencite{nichasaideCanWeDefuse2019}. A particularly sobering taxonomy illustrating the states of languages facing such disparities is formulated by \textcite{joshiStateFateLinguistic2021} and reproduced in \Cref{tab:data_availability}, which outlines the challenges faced by languages in resource terms in the digital space, and how dominant a small group of languages are within it. Those at the bottom of the data availability scale at level 0, 'The Left-Behinds' have virtually no data of any kind available to support language technology development. Those in the middle at level 2 or 3 have some resources, net presence, and/or research communities supporting them, but critically lack in substantial quantities of the labeled data typically required for cutting-edge \gls{nlp} tools. At the top, languages like English reap the lion's share of overall investment and development. Of particular note for the privileged few that find themselves at the top of the heap is their typological similarity, being drawn as they are from a few dominant language families (and even dominant branches within these larger families). This state of affairs constitutes a sort of typological echo-chamber for the cutting edge of \gls{nlp} developments, a point which we will return to shortly. \todo{check table fix}
+Despite claims of language-agnostic systems often touted by proponents of emerging \gls{ai} systems, these have often also fallen well short of such promise \parencite{benderAchievingEvaluatingLanguageIndependence2011}. The overwhelming majority of the world's languages still have no footprint in emerging language technologies \parencite{joshiStateFateLinguistic2021}. In the past, building \gls{nn}-based language technologies demanded immense quantities of labeled data: a high bar of entry to language communities with limited if any access to such resources, and an ongoing issue which continues to stimulate a body of research dedicated to overcoming it \parencite[see][for an overview]{magueresseLowresourceLanguagesReview2020}. For languages where data availability is no obstacle, research and development can proceed unfettered by the prohibitive cost of curating datasets from scratch. As our daily lives grow increasingly integrated with the digital realm, language communities without the same support are obliged to switch to more digitally dominant languages (often English) to gain access to these new resources, narrowing the opportunities to engage with resources and services through the medium of their community language \parencite{nichasaideCanWeDefuse2019}. A particularly sobering taxonomy illustrating the states of languages facing such disparities is formulated by \textcite{joshiStateFateLinguistic2021} and reproduced in \Cref{tab:data_availability}, which outlines the challenges faced by languages in resource terms in the digital space, and how dominant a small group of languages are within it. Those at the bottom of the data availability scale at level 0, 'The Left-Behinds' have virtually no data of any kind available to support language technology development. Those in the middle at level 2 or 3 have some resources, net presence, and/or research communities supporting them, but critically lack in substantial quantities of the labeled data typically required for cutting-edge \gls{nlp} tools. At the top, languages like English reap the lion's share of overall investment and development. Of particular note for the privileged few that find themselves at the top of the heap is their typological similarity, being drawn as they are from a few dominant language families (and even dominant branches within these larger families). This state of affairs constitutes a sort of typological echo-chamber for the cutting edge of \gls{nlp} developments, a point which we will return to shortly.
 
 \begin{table}[h]
     \centering
@@ -201,7 +212,7 @@ Despite claims of language-agnostic systems often touted by proponents of emergi
         \textbf{4} The Underdogs: Much unlabeled data, and less but still significant labeled data. Dedicated investment from NLP communities. & Russian, Dutch & 0.72\%\\ \hline
         \textbf{5} The Winners: Dominant online presence with massive investment and resources. & English, German & 0.28\%\\ \hline
     \end{tabularx}
-    \caption{Data availability \& status taxonomy of languages adapted from work by \textcite{joshiStateFateLinguistic2021}.\todo{review paper rights. check rules for alterations and mention alterations (emphasizing irish, dropping some examples to save space etc.)}}
+    \caption{Data availability \& status taxonomy of languages adapted from work by \textcite{joshiStateFateLinguistic2021}.}
     \label{tab:data_availability}
 \end{table}
 
@@ -221,7 +232,7 @@ This limited native speaker model for \gls{l2} speakers is problematic for teach
 
 \begin{table}[ht]
   \centering
-  \caption{Examples use of a. consonant velarisation \& b. palatalisation c. séimhiú \& d. úru. Adapted from \textcite{nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015} with determining orthography in bold.\todo{check paper rights, elaborate on alterations (dropping one line, changing examples triggering séimhiú \& d. úru slightly for some reason?)}}
+  \caption{Examples use of a. consonant velarisation \& b. palatalisation c. séimhiú \& d. úru. Adapted from \textcite{nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015} with determining orthography in bold.}
   \begin{tabular}{c|l|l|l}
      & Orthographic & \gls{ipa} & Translation \\
     \hline
@@ -426,7 +437,7 @@ Canonical recordings were obtained from the Teanglann pronunciation dictionary, 
 These mispronounced synthetic samples together with the canonical Irish recordings of each word composed the \textit{positive} and \textit{negative} utterance pairs of the training data, similar to the \textit{adversarial sampling} strategy used by \textcite{zhangL2GENNeuralPhoneme2022} but in our case, only with one adversarial utterance in the training sample. The transcriptions and recordings of each pair were concatenated with ordering of the language randomized. 
 
 \section{Evaluation}\label{sec:eval}
-In the following section we detail the evaluation data used for evaluating each experiment, as well as the process used to annotate it. Following this, we describe our evaluation procedure: the metrics and statistical test used. \todo{include table of models with evaluation set performance}
+In the following section we detail the evaluation data used for evaluating each experiment, as well as the process used to annotate it. Following this, we describe our evaluation procedure: the metrics and statistical test used.
 
 \subsection{Data}
 To  measure an \gls{mdd} system's sensitivity to plausible Irish \gls{l2} errors, we first needed a source Irish \gls{l2} speech. We began with the Irish portion of the \gls{fleurs} dataset\parencite{conneauFLEURSFewshotLearning2022}. The crowdsourced nature of the dataset allowed for speakers of various skill levels to contribute, an attribute that is perhaps not attractive for most \gls{asr} applications, but which perfectly suits our purpose, as there were some markedly non-native speakers in the evaluation set. Canonical transcriptions of the data was derived from the aforementioned \gls{g2p} dictionary, with a fallback lookup for \gls{oov} consisting of an \gls{mfa} \gls{g2p} model also trained on this dictionary. The minority of sentences left with unknown tokens were removed, which largely stemmed from proper nouns consisting of letters outside of what the \gls{g2p} fallback could handle. Audio volume was normalized with ffmpeg\parencite{ffmpeg}, specifically ffmpeg-normalize at default settings. White-noise handling was carried out with ffmpeg Adaptive Fast Fourier Transform Denoise with a noise floor of -50 dB, white noise for noise type, and otherwise default settings.
@@ -553,7 +564,7 @@ Full Synthetic model & 0.089  \\
 \end{tabular}
 \end{table}
 For the synthetic experiments, the most performant model by way of F1 score was the unpaired ablation, though the model trained with contrastive paired samples did better by way of \gls{far} and \gls{der}. Despite this, given our $\alpha=0.05$ significance cut-off, no model outperformed baseline to a statistically significant degree, which one can see in \Cref{tab:results_synthesis}. 
-\begin{table}[h] \todo{remember to bold highest values in column}
+\begin{table}[h] 
 \centering
 \caption{Mispronunciation detection results: synthesis experiment.}
 \label{tab:results_synthesis}
@@ -562,8 +573,8 @@ For the synthetic experiments, the most performant model by way of F1 score was 
 system & Prec. & Recall & F1 & FAR & FRR & DER & McNemar \\
 \midrule
 Irish only baseline & 0.444 & 0.756 & 0.559 & 0.244 & 0.342 & 0.687 & — \\
-L2 model unpaired & 0.469 & 0.760 & 0.580 & 0.240 & 0.310 & 0.734 & 0.053 \\
-L2 model paired & 0.431 & 0.809 & 0.562 & 0.191 & 0.386 & 0.660 & 0.282 \\
+L2 model unpaired & \textbf{0.469} & 0.760 & \textbf{0.580} & 0.240 & \textbf{0.310} & 0.734 & \textbf{0.053} \\
+L2 model paired & 0.431 &\textbf{ 0.809} & 0.562 & \textbf{0.191} & 0.386 & \textbf{0.660} & 0.282 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -578,16 +589,16 @@ For the Ensemble experiments, the most performant model by way of F1 score is ag
 \toprule
 system & Prec. & Recall & F1 & FAR & FRR & DER & McNemar \\
 \midrule
-Irish only baseline & 0.444 & 0.756 & 0.559 & 0.244 & 0.342 & 0.687 & — \\
-Irish+English & 0.423 & 0.794 & 0.552 & 0.206 & 0.392 & 0.678 & 0.101 \\
-2-way, gibbs & 0.362 & 0.859 & 0.510 & 0.141 & 0.546 & 0.662 & 0.000* \\
-2-way, gibbs+pool & 0.367 & 0.844 & 0.512 & 0.156 & 0.526 & 0.719 & 0.000* \\
-2-way, prob & 0.366 & 0.870 & 0.515 & 0.130 & 0.545 & 0.654 & 0.000* \\
-2-way, prob+pool & 0.366 & 0.847 & 0.511 & 0.153 & 0.531 & 0.712 & 0.000* \\
-3-way, gibbs & 0.362 & 0.859 & 0.509 & 0.141 & 0.548 & 0.662 & 0.000* \\
-3-way, gibbs+pool & 0.367 & 0.844 & 0.511 & 0.156 & 0.527 & 0.719 & 0.000* \\
-3-way, prob & 0.365 & 0.870 & 0.515 & 0.130 & 0.546 & 0.654 & 0.000* \\
-3-way, prob+pool & 0.365 & 0.847 & 0.510 & 0.153 & 0.532 & 0.712 & 0.000* \\
+Irish only baseline & \textbf{0.444} & 0.756 & \textbf{0.559} & 0.244 & \textbf{0.342} & 0.687 & — \\
+Irish+English       & 0.423 & 0.794 & 0.552 & 0.206 & 0.392 & 0.678 & \textbf{0.101*} \\
+2-way, gibbs        & 0.362 & 0.859 & 0.510 & 0.141 & 0.546 & 0.662 & 0.000* \\
+2-way, gibbs+pool   & 0.367 & 0.844 & 0.512 & 0.156 & 0.526 & 0.719 & 0.000* \\
+2-way, prob         & 0.366 & \textbf{0.870} & 0.515 & \textbf{0.130} & 0.545 & \textbf{0.654} & 0.000* \\
+2-way, prob+pool    & 0.366 & 0.847 & 0.511 & 0.153 & 0.531 & 0.712 & 0.000* \\
+3-way, gibbs        & 0.362 & 0.859 & 0.509 & 0.141 & 0.548 & 0.662 & 0.000* \\
+3-way, gibbs+pool   & 0.367 & 0.844 & 0.511 & 0.156 & 0.527 & 0.719 & 0.000* \\
+3-way, prob         & 0.365 & \textbf{0.870} & 0.515 & \textbf{0.130} & 0.546 & \textbf{0.654} & 0.000* \\
+3-way, prob+pool    & 0.365 & 0.847 & 0.510 & 0.153 & 0.532 & 0.712 & 0.000* \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -600,15 +611,15 @@ Irish+English & 0.423 & 0.794 & 0.552 & 0.206 & 0.392 & 0.678 & 0.101 \\
 \toprule
 system & Prec. & Recall & F1 & FAR & FRR & DER & McNemar \\
 \midrule
-Irish only baseline & 0.444 & 0.756 & 0.559 & 0.244 & 0.342 & 0.687 & — \\
-Irish+English & 0.423 & 0.794 & 0.552 & 0.206 & 0.392 & 0.678 & 0.101 \\
-2-way, sel/prob & 0.376 & 0.832 & 0.518 & 0.168 & 0.499 & 0.638 & 0.000* \\
+Irish only baseline & \textbf{0.444} & 0.756 & \textbf{0.559} & 0.244 & \textbf{0.342} & 0.687 & — \\
+Irish+English       & 0.423 & 0.794 & 0.552 & 0.206 & 0.392 & 0.678 & \textbf{0.101*} \\
+2-way, sel/prob     & 0.376 & \textbf{0.832} & 0.518 & \textbf{0.168} & 0.499 & \textbf{0.638} & 0.000* \\
 2-way, sel/prob+pool & 0.380 & 0.824 & 0.520 & 0.176 & 0.487 & 0.676 & 0.000* \\
-2-way, sel/gibbs & 0.377 & 0.828 & 0.519 & 0.172 & 0.494 & 0.641 & 0.000* \\
+2-way, sel/gibbs     & 0.377 & 0.828 & 0.519 & 0.172 & 0.494 & 0.641 & 0.000* \\
 2-way, sel/gibbs+pool & 0.386 & 0.821 & 0.525 & 0.179 & 0.472 & 0.693 & 0.000* \\
-3-way, sel/prob & 0.375 & 0.832 & 0.517 & 0.168 & 0.501 & 0.638 & 0.000* \\
+3-way, sel/prob     & 0.375 & \textbf{0.832} & 0.517 & \textbf{0.168} & 0.501 & \textbf{0.638} & 0.000* \\
 3-way, sel/prob+pool & 0.379 & 0.824 & 0.519 & 0.176 & 0.488 & 0.676 & 0.000* \\
-3-way, sel/gibbs & 0.377 & 0.828 & 0.518 & 0.172 & 0.495 & 0.641 & 0.000* \\
+3-way, sel/gibbs    & 0.377 & 0.828 & 0.518 & 0.172 & 0.495 & 0.641 & 0.000* \\
 3-way, sel/gibbs+pool & 0.385 & 0.821 & 0.524 & 0.179 & 0.473 & 0.693 & 0.000* \\
 \bottomrule
 \end{tabular}
@@ -625,10 +636,10 @@ For the main results, one can see how the baseline compared against both naive a
 system & Prec. & Recall & F1 & FAR & FRR & DER & McNemar \\
 \midrule
 Irish only baseline & 0.444 & 0.756 & 0.559 & 0.244 & 0.342 & 0.687 & — \\
-L2 model unpaired & 0.469 & 0.760 & 0.580 & 0.240 & 0.310 & 0.734 & 0.053 \\
+L2 model unpaired & \textbf{0.469} & 0.760 & \textbf{0.580} & 0.240 & \textbf{0.310} & 0.734 & \textbf{0.053} \\
 L2 model paired & 0.431 & 0.809 & 0.562 & 0.191 & 0.386 & 0.660 & 0.282 \\
-Irish+English & 0.423 & 0.794 & 0.552 & 0.206 & 0.392 & 0.678 & 0.101 \\
-2-way, prob & 0.366 & 0.870 & 0.515 & 0.130 & 0.545 & 0.654 & 0.000* \\
+Irish+English & 0.423 & 0.794 & 0.552 & 0.206 & 0.392 & 0.678 & 0.101* \\
+2-way, prob & 0.366 & \textbf{0.870} & 0.515 & \textbf{0.130} & 0.545 & \textbf{0.654} & 0.000* \\
 2-way, sel/gibbs+pool & 0.386 & 0.821 & 0.525 & 0.179 & 0.472 & 0.693 & 0.000* \\
 \bottomrule
 \end{tabular}
@@ -645,7 +656,7 @@ For relative ablation performance, we can see for the synthetic experiment that 
 system & F1 & Δ (\%) \\
 \midrule
 Full  (L2 model (paired)) & 0.562 & — \\
-− adversarial sampling & 0.580 & +3.17 \\
+− adversarial sampling & \textbf{0.580} & +3.17 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -660,7 +671,7 @@ system & F1 & Δ (\%) \\
 \midrule
 Full  (Ensemble (3-way, sel/gibbs+pooled)) & 0.524 & — \\
 − selector & 0.511 & -2.56 \\
-− Russian & 0.525 & +0.12 \\
+− Russian & \textbf{0.525} & +0.12 \\
 − pooling & 0.518 & -1.24 \\
 − gibbs & 0.519 & -0.98 \\
 \bottomrule
@@ -690,7 +701,7 @@ Removing the russian model improved performance slighly, but it is worth remembe
     \label{fig:russian_contribution}
 \end{figure} 
 
-Although ensemble components improved on the simplest version of the ensemble, the multilingual ablation and monolingual baseline still outperformed all ensemble versions. This suggests that a multilingual model might be a better starting point for combining monolingual data than an ensemble of monolingual models.
+Although ensemble components improved on the simplest version of the ensemble, the multilingual ablation and monolingual baseline still outperformed all ensemble versions. This suggests that a multilingual model might be a better starting point for combining monolingual data than an ensemble of monolingual models for future exploration.
 
 \section{Experiment 2: Synthetic Mispronunciation Data}
 %ablation discussion: compare relative performance gains removing one component each from the full combination
@@ -710,102 +721,61 @@ One way to solve this problem, and the one we chose here, is to define spans acr
     \label{fig:alignment}
 \end{figure} 
 % could eval have measured improvement? cite interannotater agreement lit, highlight non-native limitations.
-The limitations above point to a number of failure points worth addressing. If we are to stick with canonically-anchored Forced Alignment spans for our evaluation, determining spans heuristically from \gls{ctc} model peaks is likely not the best approach. It would likely be beneficial to use \gls{mfa} models to provide more reliable phoneme spans to be mapped onto the frames of the \gls{ctc} model from which we can then extract phonemes. Insertion blindness is not a necessary consequence of Forced Alignment methods, rather an implementational compromise that simplified aligning the \gls{asr} outputs to the canonical string. One way around this might be to do a version of free-phone decoding where we align the string outputs in a span to the canonical string, but at that point, we are most of the way to free-phone decoding and string alignment. Pursuing this might be worth considering if using feature distances from libraries like PanPhon in the place of uniform mismatch penalties for alignment, as this is a much conceptually simpler approach that handles granular distinctions like Irish palatal/velar contrasts with minimized mismatch penalties: precisely the problem that motivated Forced Alignment span anchoring in the first place. We already align the ground-truth string to the canonical in this way, and switching the ensemble alignment to this strategy would bring it conceptually closer to classic \gls{rover} configurations whereby one progressively aligns constituent models to eachother into a Word Transition Network. One final limitation worth reflecting on is how to handle tokenizer mismatch such as between Irish encoding velar offglides as one token vs English treating them as two. This could be solved with a simple mapping of velar or palatal offglides to the nearest Irish equivalent at evaluation, but ensuring annotation comparability is a problem worth considering carefully.
+The limitations above point to a number of failure points worth addressing. If we are to stick with canonically-anchored Forced Alignment spans for our evaluation, determining spans heuristically from \gls{ctc} model peaks is likely not the best approach. It would likely be beneficial to use \gls{mfa} models to provide more reliable phoneme spans to be mapped onto the frames of the \gls{ctc} model from which we can then extract phonemes. Insertion blindness is not a necessary consequence of Forced Alignment methods, rather an implementational compromise that simplified aligning the \gls{asr} outputs to the canonical string. One way around this might be to do a version of free-phone decoding where we align the string outputs in a span to the canonical string, but at that point, we are most of the way to free-phone decoding and string alignment. Pursuing this might be worth considering if using feature distances from libraries like PanPhon in the place of uniform mismatch penalties for alignment, as this is a much conceptually simpler approach that handles granular distinctions like Irish palatal/velar contrasts with minimized mismatch penalties: precisely the problem that motivated Forced Alignment span anchoring in the first place. We already align the ground-truth string to the canonical in this way, and switching the ensemble alignment to this strategy would bring it conceptually closer to classic \gls{rover} configurations whereby one progressively aligns constituent models to eachother into a Word Transition Network. One final limitation worth reflecting on is how to handle tokenizer mismatch such as between Irish encoding velar offglides as one token vs English treating them as two. This could be solved with a simple mapping of velar or palatal offglides to the nearest Irish equivalent at evaluation, but carefully considering annotation and corpus reliability could avoid the need for such post-hoc stopgaps alltogether.
 \section{Structural Limitations}
 \subsection{Annotation Reliability}
 % annotation limitations: make this caveat symmetric, in that limitations mean method cannot support strong conclusions in either direction.
-It is worth reflecting on what a lone annotator who is not a native speaker of the Irish can realistically hope to achieve in annotating the language for evaluation data. First
+Though efforts were made in constructing the annotation interface and set up to ensure consistent annotations, lack of phonetician training undercut the quality of the evaluation set and its comparability with the other sets in use. Firstly, annotations were done with canonical \gls{ipa} anchors visible during the annotation process. In retrospect there is clear risk of biasing annotations towards the canonical forms under such a system, which was immediately clear in border cases where realization was close to the canonical form. This was particularly challenging for the contrasts of greatest interest---palatalized/velarized consonants---due in part to the absence of canonical examples for such sound contrasts in the annotation set-up. Similarity between such items also made ambiguous instances harder to decide objectively. Segment boundaries were deliberately placed as close to word-level as possible rather than phoneme level to avoid assigning nonconfident phoneme spans, while also chunking the longer audio utterances into lengths more reflective of the Irish training data. This introduced some uncertainty about what characters are aligning to canonical spans, and necessitated string alignment of the annotations to the canonical forms of the words during evaluation. Although some guidelines were informally decided at the outset, as understanding of the task evolved, so did the annotations, which on a limited evaluation set of 146 utterances leaves room for inconsistency. 
+
+There were design flaws in the annotation protocol worth bearing in mind, though it is also worth reflecting on what a lone annotator who is not a native speaker of the Irish can realistically hope to achieve in annotating the language for evaluation data. Although the utterances were reviewed numerous times, lack of partners to compare with to get a sense of inter-annotator agreement is a considerable limitation. Reliability testing provides a way to identify and measure where annotations of specific distinctions is less reliable \parencite{artsteinInterannotatorAgreement2017}. It may make intuitive sense that cases of similar labels or difficult distinctions make annotations more unreliable, but it takes something to compare to in order to verify. A background as an Irish \gls{l2} speaker of modest ability makes such unreliability far more probable, particularly for more granular distinctions. \textcite{coleLabelerAgreementPhonetic1994} shows agreement between labelers who did not speak the language at a sobering 34.41\% for the full label set without stripping any diacritics, even with linguistic training. They do show an increase to 41.36\% when diacritics are stripped, but compared to the native speaker agreement at 73.79\% under the same conditions, this is still a sizable gap. Together with a notable increase in agreement for segment boundaries the longer the segment which holds whether the annotater speaks the language, choices in the current work to focus on longer segments and on broader phonetic categories stripped of non-phonemic diacritics do serve a purpose for annotation, however collapsing Irish phones into the same forms as English data which might not cover the same range of realization is not one free of complications. In total, the scale of limitations here calls for caution in interpretting results: low annotation reliability for data means any evaluation based on it cannot offer strong support for positive or negative conclusions. 
 \subsection{Cross-corpus comparability}
 % cross-corpus structure. how does schema mismatch impact performance and comparability? does literature differ when one corpus is used vs several?
+Efforts were made to make annotation of evaluation data consistent with regard to conventions used for the Irish dataset, but this illuminated inconsistencies with the TIMIT set, as exemplified by the aforementioned incompatability between English model outputs for palatal/velar offglides vs the convension used for the Irish data to represent them as a single character. This misalignment between character sets points to a more general issue of comparability between different corpora. Performance between \gls{mdd} papers varies widely, with some such as \textcite{wuTransformerBasedEndtoEnd2021} reporting far higher F scores at 80.98\% than \textcite{zhangL2GENNeuralPhoneme2022} at 55.3\% or \textcite{phanMispronunciationDetectionL22025} at 35.0\% at character level evaluation. The latter two papers seek to overcome the general lack of \gls{l2} speech required to train models like the former, necessitating a patchwork of different data sources to train on. 
+
+The quantity of data used for fine-tuning is one factor worth considering on its own; many performant experiments such as \textcite{wuTransformerBasedEndtoEnd2021} utilize corpora such as CU\_CHLOE \parencite{helenmengDerivingSalientLearnersx20192007}, containing 34.6 hours of richly annotated \gls{l2} data---more than enough to fine-tune, validate, and test on.\footnote{Though it should be noted that some monolingual English data from TIMIT is used for fine-tuning as well.} When one can evaluate with the same set the bulk of the training data comes from, you can be reasonably sure that the annotation schema is the same, the symbols mean roughly the same thing to all annotators, acoustic recording conditions are controlled, and that metrics using these datasets are more or less comparable. This cannot be taken for granted with a patchwork set up. This cross-corpus mismatch is noted in other domains such as Speech Emotion Recognition, as shown by \textcite{zongAdaptingMultipleDistributions2022}, which demonstrated improvements in employing transfer subspace learning.
+
+Within a language, annotation schemas between corpora differ. They can prioritize different annotation targets, use different inventories, or record in different conditions. Between languages, one cannot assume that the same symbols mean the same thing. Identical symbol sets between languages are highlighted in \textcite{farooqInvestigatingImpactCrosslingual2022} \textit{not} to be acoustically identical. They propose training mapping networks to make distributions from different \glspl{lm} comparable, demonstrating a resultant fusion of monolingual models with performance improvements compared to their component models in isolation. Another alternative to sidestep symbol mismatch might be to decompose the phonemes into features and train on those following \textcite{shahinPhonologicalLevelWav2vec2based2025}. This could make the mapping between phoneme symbols and their language-specific realizations explicit, reducing spurious overlap in shared symbol inventories for segment-level \gls{mdd}. Their work also notably increased contribution of monolingual data since it can train for features actually present in \gls{l2} speech with less direct exposure to it. Importantly, performance dropped when models were trained with dictionary form transcriptions over phonetic transcriptions, mirroring the performance difference between our TIMIT-trained English model and the Irish model trained on dictionary forms of words. For our case, collapsing the phoneme set did simplified annotation, but also increased the overlap between symbols that inarguably represented different things to different models, as exemplified by the velar offglide mismatch discussed above. A more systematic approach to ensuring phoneme set comparability like in the examples above might allow us to combine monolingual data in a more informed configuration.
+
 \section{Final Thoughts}
 %Convergence point
-Given the possibility that these attempts were implemented correctly as intended and evaluated properly under the data constraints we were obliged to contend with, we cannot fully distinguish the efficacy of the methods from the ability of the evaluation to measure them. We concede that there are implementation limitations that could be improved and perhaps lead to better performance, but also see reason for caution with respect to evaluation robustness. To reiterate, this is not to say that these methods would have succeeded under more charitable constraints, simply that the experiment as presented here cannot settle the question. 
+Given the possibility that these experiments were implemented as intended and evaluated properly under the data constraints we were obliged to contend with, we cannot fully distinguish the efficacy of the methods from the ability of our evaluation to measure them. We concede that there are implementation limitations that could be improved for better performance, but also see reason for caution with respect to evaluation robustness. To reiterate, this is not to say that these methods would have succeeded under more charitable constraints, simply that the experiment as presented here cannot verify either way. 
 
 % pivot to future work founding.
-Because the structural limitations on the evaluation impose limits on whether an improvement can be cleanly detected, the most pressing priority would be to establish a reliable evaluation infrastructure, taking into consideration reliability and comparability among datasets used. If that condition is fulfilled, we can consider technical extensions potentially worth pursuing.
-
-\numberedparagraph{limitations belong here too}
-\numberedparagraph{placeholder: discriminative training improve over standard procedure \parencite{qianDiscriminativeAcousticModel2010}} maybe use this for synthetic data to train using the synthetic as mispronounced?
-\numberedparagraph{placeholder: annotation limitations}
-\numberedparagraph{placeholder: check avg confidence distributions per model, is LR necessary?}
-\numberedparagraph{placeholder: highlight difference in LR function between my and gitman's implementation.} check phoneme confidence values between models: if they differ meaningfully, perhaps more advanced LR formulation is needed.
-\numberedparagraph{placeholder: constituent model confidence values}
-
-
-\textcite{deichlerMMConvMultimodalConversational2024} multimodal conversational dataset with cospeech gestures. move to discussion
-\textcite{zhangSpeechocean762OpenSourceNonnative2021} open source speech corpus speech ocean for pronunciation assessment
-\textcite{zhaoL2ARCTICNonnativeEnglish2018} L2 arctic dataset
-\numberedparagraph{Summarize the main findings from results and how it relates to the research questions}
-\parencite{conneauUnsupervisedCrosslingualRepresentation2020} low-resource languages benefit more from similar higher-resource languages.
-
-\numberedparagraph{why confidence might need adjusting?} \parencite{laptevFastEntropyBasedMethods2023}
-
-\numberedparagraph{Detail possible applications to Language learning, the role of results in augmenting self-directed language learning}
-\textcite{hardisonSecondlanguageSpokenWord2005} effect of multimodal input on speech identification
-
-\numberedparagraph{Detail possible (or actual if time allows) Furhat application} 
-\textcite{deichlerMMConvMultimodalConversational2024} multimedia data
-
-\numberedparagraph{touch on improved contrastive training as possible way forward}
-\textcite{khoslaSupervisedContrastiveLearning2021} contrastive learning with labeled data.
-
-\numberedparagraph{Argue for accurate articulator representation in digital agents as supportive pillar in pronunciation feedback.}
-%\textcite{Li2011ThePA} Animated articulators
-\textcite{rosenblumSpeechPerceptionMultimodal2008} speech perception as multimodal phenomenom
+Because the structural limitations on the evaluation impose limits on whether an improvement can be cleanly detected, the most pressing priority for future experiments would be to establish a reliable evaluation infrastructure, taking into consideration reliability and comparability among datasets used. If that condition is fulfilled, we can consider technical extensions potentially worth pursuing.
 
 \chapter{Conclusions}
 In this paper we explored two avenues of overcoming data-sparcity for \gls{capt} in the low-resource conditions faced by Irish. Neither the models trained on synthetically augmented data nor the multilingual ensembles provided a statistically significant improvement over baseline, with all versions of the ensemble significantly underperforming it.
 
-There are a number of limitations worth mentioning, however. Foremost among them perhaps being annotation reliability and cross-corpus comparability. \todo{continue here}
+Comparison of relative performance did reveal the utility of a light-weight trained selector block and entropy-based confidence measures for balancing ensembles, while specialist models and confidence pooling similarly helped, but overlapped in function. Data synthesis with English \gls{asr} transcriptions of Irish speech did better than adversarially paired versions of the same data, but fuller enrichment of synthetic data with possible mispronunciation variation was not explored here. 
 
-In light of these caveats, we do not believe it is possible to draw strong conclusions about the presented results, neither positive nor negative. Though the methods used draw upon works that have shown more encouraging performance when applied under less challenging data constraints, there is no guarantee these approaches are suitable for \gls{mdd}, but it may be worth testing them under more charitable constraints regardless. There are conceptually similar approaches used in other \gls{asr} domains which might be worth extending to address data constraints common to \gls{mdd}, but the results seen in the current work reiterate the need for a minimum of reliable evaluation data.
-\numberedparagraph{reiterate how results connect with research questions, set main conclusions in context of impact to research and society}
-\textcite{zeyerWhyDoesCTC2021} peaky ctc, ambiguous phone boundaries
+There are a number of limitations worth mentioning in this context. Foremost among them perhaps being annotation reliability and cross-corpus comparability. Annotation reliability was underdefined due to a lack of inter-annotator agreement and confounds due to annotator background. Corpora with different annotation schemas are not directly comparable even with overlapping phoneme sets. Experiments like ours seeking to leverage multiple data sources need to account for these cross-lingual differences.
 
-\numberedparagraph{Extensions from previous research (yang2022)}
-\textcite{liuEndtoEndUnsupervisedSpeech2023} wav2vec which does adversarial training to improve discrimination.
-\textcite{pengEndtoEndMispronunciationDetection2023} contrastive loss optimization
-\textcite{lonerganLowresourceSpeechRecognition2024} alternative architectures for low resource asr
-\textcite{neriEffectivenessComputerAssisted2008} pronunciation training for children, lead to improvements comparable to traditional training
-\textcite{prabhavalkarMinimumWordError2017} alternatives to ctc
+In light of these caveats, we do not believe it is possible to draw strong conclusions about the presented results---neither positive nor negative. Though the methods used draw upon works that have shown more encouraging performance when applied under less challenging data constraints, there is no guarantee these approaches are suitable for \gls{mdd}, but it may be worth testing them under more charitable constraints regardless. The results seen in the current work reiterate the need for a minimum of reliable evaluation data to adequately support \gls{mdd} for low-resource languages.
+
 \chapter{Future work}\label{ch:future}
 
-The absence of a \gls{dpad} equivalent in our work, as noted above, suggests a concrete extension. Diversified output for an \gls{asr} approach analogous to our own might be achieved by means of shallow fusion of a \gls{lm} together with Beam Search, whereby a scaling $\alpha$ value weighing the \gls{lm} contribution might distort English \gls{asr} transcriptions of Irish speech to better adhere to English phonotactics, mimicking the sort of phonetic assimilation humans do when exposed to unfamiliar speech \parencite[For an example of \gls{l1} interference on \gls{l2} perception, see ][]{kartushinaRoleL1Speech2013}. With the \gls{lm} potentially acting to steer outputs preferentially towards English phonotactics, we could diversify the outputs via a Diverse Beam Search \parencite{vijayakumarDiverseBeamSearch2018} similar to that used in \textcite{zhangL2GENNeuralPhoneme2022}. This expanded \gls{asr} approach might be preferable for low-resource languages like Irish where expertly annotated \gls{l1}-\gls{l2} word pairs and \gls{l2} knowledge databases detailing common phoneme confusions are unavailable. Whether the combination of Irish speech through an English \gls{asr} with an English \gls{lm} approximates realistic phoneme confusions is an empirical question, but a concrete one worth exploring. Even outside potential application in a data synthesis pipeline, the ability to approximate cross-lingual confusion pairs with only monolingual data could be useful for a number of applications. 
+The lack of readily-available data left us in the unenviable position of having no reliable data to evaluate with, and necessitated weaving together disjointed datasets with no clear way to compare them. Lack of evaluation data is a stubborn problem with no easy solutions, but overcoming the comparability problem can present several ways forward together with the methods explored here.
 
-\numberedparagraph{Suprasegmental eval}
-As mentioned in the background\ref{background}, suprasegmental features can play an intrumental role in intelligability and is well worth exploring as an object of evaluation. Much of previous work focuses on segmentals as we do here \todo{expand}. \parencite{thomsonEffectivenessL2Pronunciation2014} Previous work has approached aspects of suprasegmental pronunciation like prosody as both a \parencite{gongTransformerBasedMultiAspectMultiGranularity2022} \parencite{chenComputerassistedPronunciationTraining2016} 
-\numberedparagraph{placeholder: code switching multilingual asr models} https://developer.nvidia.com/blog/multilingual-and-code-switched-automatic-speech-recognition-with-nvidia-nemo/
-\numberedparagraph{ensemble across model types}
-Due to the relative size of modern models like Wav2Vec2, there is a practical limit to the effective size of a model ensemble where either memory demands or runtime scale linearly with respect to model numbers. \textcite{gitmanConfidencebasedEnsemblesEndtoEnd2023}\todo{double check wording} does however find that it is possible to extract useful confidence measures from intermediate layers, reducing the runtime cost of adding new models by 4.5 times in their case, which could seems to a promising strategy to make inference times of larger ensembles more managable. If some members of our ensemble are only used in constrained settings (i.e. to determine palatalization as for our Russian model), it might be advantageous to explore more lightweight alternatives focused on discriminating a more limited set of features following \textcite{ananthakrishnanUsingEnsembleClassifiers2011}. This could be combining Wav2Vec2 models of different parameter size, if we were to combine the 2 billion parameter version with the 300 million parameter version, or it could be of entirely different architectures, combining, for example, Support Vector Machines to discern some targeted features, while relying on a 2 billion parameter Wav2Vec2 model as the work-horse for easier-to-distinguish features or those of more marginal concern. 
-\numberedparagraph{calibrating the entropy balancing, training a more granular model selector block, full ensemble training}
+Cross-linguistic comparability was a particular thorn for our ensemble. A formal mapping for the disparate phoneme sets following \textcite{farooqInvestigatingImpactCrosslingual2022} would likely be the most direct solution for comparability between constituent models. Beyond this, overconfidence and imbalance between models was still an issue, and there are several refinements that could help. One comes directly from \textcite{laptevFastEntropyBasedMethods2023}, specifically \textit{tsallis entropy} as a basis for confidence calculation, which would give some control over the sensitivity of the entropy calculation with an \textit{alpha} parameter. This measure becomes Gibbs entropy when alpha is 1, and acts similarly to temperature scaling when between 0 and 1. Another realistic extension going beyond \textcite{gitmanConfidencebasedEnsemblesEndtoEnd2023} could be to train a more granular model selection block whereby phoneme outputs are weighed individually for a model, instead of taking a model-wide weight between models. This would necessitate more of the training data we try here to avoid, but could be worth consideration in the case where models show highly variable confidence values between different phonemes.
 
-To maximally avoid the need for expensive \gls{l2} training data, we opted for a simple heuristic confidence ensemble without using parametric entropy measures, but performance would likely be improved by implementing more complex variants suggested by \textcite{laptevFastEntropyBasedMethods2023}, specifically \textit{tsallis entropy} which would give some control over the sensitivity of the entropy calculation with an \textit{alpha} parameter. This measure becomes Gibbs entropy when alpha is 1, and acts similarly to temperature scaling when between 0 and 1. Another realistic extension to the current work could be to train a model selection block using the entropy-based confidence calculations explored following \textcite{gitmanConfidencebasedEnsemblesEndtoEnd2023}. The authors also explored a variety of entropy measures which could also be worth exploring for our application, though we confined ourselves here to Gibbs to highlight the proof of concept.
+Enriching the training data to approximate mispronunciations does partially bridge the gap between separate inventories such that they share phoneme space, but the absence of a \gls{dpad} equivalent in our work, suggests a concrete extension to expand this coverage. Diversified output for an \gls{asr} approach analogous to our own might be achieved by means of shallow fusion of a \gls{lm} together with Beam Search, whereby a scaling $\alpha$ value weighing the \gls{lm} contribution might distort English \gls{asr} transcriptions of Irish speech to better adhere to English phonotactics, mimicking the sort of phonetic assimilation humans do when exposed to unfamiliar speech \parencite[For an example of \gls{l1} interference on \gls{l2} perception, see ][]{kartushinaRoleL1Speech2013}. With the \gls{lm} potentially acting to steer outputs preferentially towards English phonotactics, we could diversify the outputs via a Diverse Beam Search \parencite{vijayakumarDiverseBeamSearch2018} similar to that used in \textcite{zhangL2GENNeuralPhoneme2022}. This expanded \gls{asr} approach might be preferable for low-resource languages like Irish where expertly annotated \gls{l1}-\gls{l2} word pairs and \gls{l2} knowledge databases detailing common phoneme confusions are unavailable. Whether the combination of Irish speech through an English \gls{asr} with an English \gls{lm} approximates realistic phoneme confusion pairs is an empirical question, but a concrete one worth exploring, and might be verified using higher resource languages for which such pairs are available.
 
-\numberedparagraph{forced alignment for CTC}
-Though we use the CTC forced alignment method in torch audio, this is marked as deprecated for 2.8 and beyond, though there exists alternative alignment methods. Due to the ambiguous calculation of spans by our method used \todo{elaborate on this}, it would be worth exploring alternatives that may work better for \gls{ctc} trained models, even perhaps turning to \gls{wfst}-based alternatives like \gls{mfa} to perform forced alignment, calculating the Wav2Vec2 frame spans from \gls{mfa} outputs.
+Diversified synthetic speech that the \gls{dpad} analog generates may also be of use in a phonological feature-level \gls{mdd} system following \textcite{shahinPhonologicalLevelWav2vec2based2025} as well. Since synthetic speech is highly determinative from input transcriptions, it might be more reliably broken down into precise phonological features to be used in such an \gls{mdd} system. This might be preferable to using dictionary form transcriptions of speech, which normalizes variation to one form, and could increase coverage of \gls{l2}-realistic mispronunciations more or less at will. 
 
-\numberedparagraph{iterative improvement of neural translation model}
-Though in the current work we pursue a one-shot paraphrasing of Irish \gls{l1} speech to Irish \gls{l2} approximations via a monolingual English \gls{asr} model, it could be worth using this initial paraphrasing as a seed corpus to a \gls{s2s} paraphraser analogous to \textcite{zhangL2GENNeuralPhoneme2022}. At the cost of some expert annotation, this initial corpus could be further used in a supervised bootstraping of a paraphraser to yield more precise mappings, and if so, the cost-benefit tradeoffs to this approach could be explored to illuminate the space for practical applications. 
+Another alternative might be to model the idea of \gls{l1} interference as phoneme-level code-switching, combining the multilingual nature of our ensemble idea, but sidestepping the relative confidence and alignment problems of training separate models by training a unified multilingual model. Code-switching multilingual models are trained with separate tokenizers for each language and perhaps synthetic examples to help define switching within a word. Feature-level decomposition could then be leveraged to ensure the different tokenizers adhere to their language specific realizations of each token.
 
-
-\numberedparagraph{more advanced contrastive training, tuning word embeddings to target particularly relevant features}
-As segmental \gls{mdd} is concerned with contrasts between well-pronounced and mispronounced phones common in \gls{l2} speech, it might be worth pursuing more advanced contrastive training strategies beyond the adversarial sampling strategy applied here. One interesting avenue might be to investigate possible gains in discriminating high-value contrasts such as palatalization/velarization in Irish. 
-
-\numberedparagraph{final eval considerations} 
-Finally, lack of readily-available evaluation data left us in the unenviable position of having no reliable data to evaluate the current experiments with. As \gls{mdd} is a low-resource domain for most languages, low-cost strategies for reliably evaluating such systems for lower-resource languages could make them much more accessible where they are needed most. More systematic investigation of synthetic speech deviations from authentic speech could illuminate how interchangable it is with authentic speech for training of course, but could also illuminate along which dimensions it is a reliable speech target to compare to. Similarly Crosslinguistic comparison of targeted features such as palatalization 
-
-start expanding on this to set an upper bound on my experiment instead of letting it scope creep, then make a time machine and give it to yourself 6 months ago
-\textcite{gongTransformerBasedMultiAspectMultiGranularity2022} assessment targeting more than one aspect of speech (prosody, word-level stress)
-
-\textcite{rouditchenkoComparisonMultilingualSelfSupervised2023} language family in pretraining predictive of how models compare. need for resources for smaller families
-
+\todo{finish train of thought to tie things together}
 \chapter{Ethical Considerations}
-\numberedparagraph{General Ethical considerations for current work and possible extensions}
+Data used for evaluation was drawn from \gls{fleurs}, and is governed by the Creative Commons License (CC-BY). The TIMIT dataset used for training is copyrighted by the Linguistic Data Consortium (LDC) and although the full version is available for \$125 for academic entities, limited versions are available for free online via unofficial repositories. The one used for the current work was available for free on Kaggle.\footnote{https://www.kaggle.com/datasets/mfekadu/darpa-timit-acousticphonetic-continuous-speech} The Irish data used for training was scraped from the online Dictionary and Language Library at teanglann.ie developed by Foras na Gaeilge in adherence with their scraping guidelines. I was unable to locate terms defining reuse, but reached out to Foras na Gaeilge to disclose this use and request clarification about their policies.
 
-\numberedparagraph{Ethical considerations for Minority languages}
+As stated earlier, speaking of Irish as one cohesive variant does not account for the distinctive variation between dialects. Here, we only considered Ulster Irish as the measure of "correct" Irish, but this is not a neutral choice. Within this dialect, we do not either consider a natural variation of realized pronunciation, focusing only on one form of pronunciation taken as canonical. Both of these assumptions do not reflect the linguistic reality of Irish, and were simplifications intended to fascillitate the systems explored here as research prototypes, \textit{not} prescriptive authorities of the language.
+
+Though it perhaps goes without saying given lackluster performance, the experiments explored here are in no way ready for deployment in any pedagogical context. Rates of false rejection indicate any system built on these experiments as-is would likely be highly inconsistent, demotivating, and misleading. Rates of false acceptance further indicate systems of potentially questionable pedagogical value. Further validation and experimentation are necessary before trust in these systems can be earned.
 
 \chapter{AI Tools}
-\numberedparagraph{Describe use of AI tools and how its use benefited me.}
+AI chatbots ChatGPT, Claude, and Gemini were used in discussing ideas, summarizing work from a range of sources, providing leads for promising threads of inquiry, as well as suggesting options for overcoming hurdles. When coding, I called upon them to link me to tutorials or provide example code I could follow along with to enhance my understanding of challenging technical concepts. Some valuable insights I might have otherwise missed were illuminated by discussions with humans and chatbots, and I think my work was better for their input. 
+
+The agentic coding system Claude Code was used in a number of productive ways. It helped threading experiments together and scaling them into to a coherent evaluation, debugging by providing code to test my systems were behaving as I expected them to, and in generating illuminating graphics I could use to check my intuitions and show my work. Learning to use Claude Code let me shift my focus from time-consuming implementational details to planning and testing, and I think that my work was made better by its assistance.
 
 \appendix
 \printbibliography

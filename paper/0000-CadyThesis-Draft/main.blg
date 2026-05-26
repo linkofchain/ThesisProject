@@ -1,20 +1,20 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[69] biber:340> INFO - === Sun May 24, 2026, 16:24:02
-[83] Biber.pm:418> INFO - Reading 'main.bcf'
-[190] Biber.pm:972> INFO - Found 95 citekeys in bib section 0
-[202] Biber.pm:4383> INFO - Processing section 0
-[210] Biber.pm:4574> INFO - Looking for bibtex file 'ThesisProject.bib' for section 0
-[231] bibtex.pm:1713> INFO - LaTeX decoding ...
-[537] bibtex.pm:1518> INFO - Found BibTeX data source 'ThesisProject.bib'
-[1505] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1505] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1505] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[1505] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[1615] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1721] bbl.pm:757> INFO - Output to main.bbl
-[1721] Biber.pm:130> WARN - ISBN '978-92-3-104096-2 978-92-3-104095-5' in entry 'moseleyAtlasWorldsLanguages2010' is invalid - run biber with '--validate_datamodel' for details.
-[1721] Biber.pm:130> WARN - ISBN '978-1-138-23652-3 978-1-138-23651-6' in entry 'stensonModernIrishComprehensive2020' is invalid - run biber with '--validate_datamodel' for details.
-[1721] Biber.pm:130> WARN - ISBN '978-1-4471-5778-6 978-1-4471-5779-3' in entry 'yuAutomaticSpeechRecognition2015' is invalid - run biber with '--validate_datamodel' for details.
-[1721] Biber.pm:130> WARN - ISBN '979-8-3503-9690-4' in entry 'liuEndtoEndUnsupervisedSpeech2023' is invalid - run biber with '--validate_datamodel' for details.
-[1721] Biber.pm:132> INFO - WARNINGS: 4
+[62] biber:340> INFO - === Mon May 25, 2026, 17:56:33
+[73] Biber.pm:418> INFO - Reading 'main.bcf'
+[166] Biber.pm:972> INFO - Found 88 citekeys in bib section 0
+[178] Biber.pm:4383> INFO - Processing section 0
+[187] Biber.pm:4574> INFO - Looking for bibtex file 'ThesisProject.bib' for section 0
+[211] bibtex.pm:1713> INFO - LaTeX decoding ...
+[541] bibtex.pm:1518> INFO - Found BibTeX data source 'ThesisProject.bib'
+[1429] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1430] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1430] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1430] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[1530] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1631] bbl.pm:757> INFO - Output to main.bbl
+[1631] Biber.pm:130> WARN - ISBN '978-92-3-104096-2 978-92-3-104095-5' in entry 'moseleyAtlasWorldsLanguages2010' is invalid - run biber with '--validate_datamodel' for details.
+[1631] Biber.pm:130> WARN - ISBN '978-1-138-23652-3 978-1-138-23651-6' in entry 'stensonModernIrishComprehensive2020' is invalid - run biber with '--validate_datamodel' for details.
+[1631] Biber.pm:130> WARN - ISBN '978-1-4471-5778-6 978-1-4471-5779-3' in entry 'yuAutomaticSpeechRecognition2015' is invalid - run biber with '--validate_datamodel' for details.
+[1631] Biber.pm:130> WARN - ISBN '978-94-024-0879-9 978-94-024-0881-2' in entry 'artsteinInterannotatorAgreement2017' is invalid - run biber with '--validate_datamodel' for details.
+[1631] Biber.pm:132> INFO - WARNINGS: 4

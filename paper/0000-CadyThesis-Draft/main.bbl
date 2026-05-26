@@ -172,6 +172,67 @@
       \field{title}{Experiment Tracking with Weights and Biases}
       \field{year}{2020}
     \endentry
+    \entry{artsteinInterannotatorAgreement2017}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fa1dff427d354932033a58782953eace}{%
+           family={Artstein},
+           familyi={A\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5c7027e7be6f355d5ab8e42a094c1008}{%
+           family={Ide},
+           familyi={I\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4a64620f485aa823ff73540b70faadef}{%
+           family={Pustejovsky},
+           familyi={P\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{fa1dff427d354932033a58782953eace}
+      \strng{fullhash}{fa1dff427d354932033a58782953eace}
+      \strng{bibnamehash}{fa1dff427d354932033a58782953eace}
+      \strng{authorbibnamehash}{fa1dff427d354932033a58782953eace}
+      \strng{authornamehash}{fa1dff427d354932033a58782953eace}
+      \strng{authorfullhash}{fa1dff427d354932033a58782953eace}
+      \strng{editorbibnamehash}{82fe979f5970f01aa53e0d7dd46f18f4}
+      \strng{editornamehash}{82fe979f5970f01aa53e0d7dd46f18f4}
+      \strng{editorfullhash}{82fe979f5970f01aa53e0d7dd46f18f4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This chapter touches upon several issues in the calculation and assessment of interannotator agreement. It gives an introduction to the theory behind agreement coefficients and examples of their application to linguistic annotation tasks. Specific examples explore variation in annotator performance due to heterogeneous data, complex labels, item difficulty, and annotator differences, showing how global agreement coefficients may mask these sources of variation, and how detailed agreement studies can give insight into both the annotation process and the nature of the underlying data. The chapter also reviews recent work on using machine learning to exploit the variation among annotators and learn detailed models from which accurate labels can be inferred. I therefore advocate an approach where agreement studies are not used merely as a means to accept or reject a particular annotation scheme, but as a tool for exploring patterns in the data that are being annotated.}
+      \field{booktitle}{Handbook of {{Linguistic Annotation}}}
+      \field{isbn}{978-94-024-0879-9 978-94-024-0881-2}
+      \field{langid}{english}
+      \field{title}{Inter-Annotator {{Agreement}}}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{297\bibrangedash 313}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/978-94-024-0881-2_11
+      \endverb
+      \verb{file}
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/Y4EY5UWB/Artstein - 2017 - Inter-annotator Agreement.pdf
+      \endverb
+    \endentry
     \entry{arunkumarInvestigationEnsembleFeatures2022}{inproceedings}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=89362ac59f641c2a216ab3a5ef950ab3}{%
@@ -807,58 +868,70 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/2JKBUKKG/Chasaide et al. - 2017 - The ABAIR initiative Bringing Spoken Irish into the Digital Space.pdf
       \endverb
     \endentry
-    \entry{chenComputerassistedPronunciationTraining2016}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=268decadec6e9ab3b767d7da9875e4cc}{%
-           family={Chen},
+    \entry{coleLabelerAgreementPhonetic1994}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=991686ca3a19e580c15353bc41452730}{%
+           family={Cole},
            familyi={C\bibinitperiod},
-           given={Nancy\bibnamedelima F.},
-           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod},
            givenun=0}}%
-        {{un=1,uniquepart=given,hash=f397ee85433a25b75738faa0b764e496}{%
-           family={Li},
+        {{un=0,uniquepart=base,hash=5d767763bedbd5f76709c875c0c8f7bc}{%
+           family={Oshika},
+           familyi={O\bibinitperiod},
+           given={Beatrice\bibnamedelima T.},
+           giveni={B\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5372bcd43008718933bf8ed49f308350}{%
+           family={Noel},
+           familyi={N\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6fcfcf866436a67212edb19ee6ea1d4f}{%
+           family={Lander},
            familyi={L\bibinitperiod},
-           given={Haizhou},
-           giveni={H\bibinitperiod},
-           givenun=1}}%
-      }
-      \list{location}{1}{%
-        {Jeju, South Korea}%
+           given={Terri},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=355884e5c95897a9fa4ef0cf73a135b8}{%
+           family={Fanty},
+           familyi={F\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
-        {IEEE}%
+        {ISCA}%
       }
-      \strng{namehash}{85af320bcfeef49c09d817ec5ce05fc0}
-      \strng{fullhash}{85af320bcfeef49c09d817ec5ce05fc0}
-      \strng{bibnamehash}{85af320bcfeef49c09d817ec5ce05fc0}
-      \strng{authorbibnamehash}{85af320bcfeef49c09d817ec5ce05fc0}
-      \strng{authornamehash}{85af320bcfeef49c09d817ec5ce05fc0}
-      \strng{authorfullhash}{85af320bcfeef49c09d817ec5ce05fc0}
+      \strng{namehash}{49973cbd050002a270e3f0022cbb9fe0}
+      \strng{fullhash}{4f6427227ea968286b233fb292dc5497}
+      \strng{bibnamehash}{4f6427227ea968286b233fb292dc5497}
+      \strng{authorbibnamehash}{4f6427227ea968286b233fb292dc5497}
+      \strng{authornamehash}{49973cbd050002a270e3f0022cbb9fe0}
+      \strng{authorfullhash}{4f6427227ea968286b233fb292dc5497}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{This paper reviews the research approaches used in computer-assisted pronunciation training (CAPT), addresses the existing challenges, and discusses emerging trends and opportunities. To complement existing work, our analysis places more emphasis on pronunciation teaching and learning (as opposed to pronunciation assessment), prosodic error detection (as opposed to phonetic error detection), and research work from the past five years given the recent rapid development in spoken language technology.}
-      \field{booktitle}{2016 {{Asia-Pacific Signal}} and {{Information Processing Association Annual Summit}} and {{Conference}} ({{APSIPA}})}
-      \field{isbn}{978-988-14768-2-1}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{3rd {{International Conference}} on {{Spoken Language Processing}} ({{ICSLP}} 1994)}
       \field{langid}{english}
-      \field{month}{12}
-      \field{shorttitle}{Computer-Assisted Pronunciation Training}
-      \field{title}{Computer-Assisted Pronunciation Training: {{From}} Pronunciation Scoring towards Spoken Language Learning}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2016}
+      \field{month}{9}
+      \field{title}{Labeler Agreement in Phonetic Labeling of Continuous Speech}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{1994}
       \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 7}
-      \range{pages}{7}
+      \field{pages}{2131\bibrangedash 2134}
+      \range{pages}{4}
       \verb{doi}
-      \verb 10.1109/APSIPA.2016.7820782
+      \verb 10.21437/ICSLP.1994-535
       \endverb
       \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/G5Y3MTKU/Chen and Li - 2016 - Computer-assisted pronunciation training From pronunciation scoring towards spoken language learnin.pdf
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/TLJF75SA/Cole et al. - 1994 - Labeler agreement in phonetic labeling of continuous speech.pdf
       \endverb
     \endentry
     \entry{conneauUnsupervisedCrosslingualRepresentation2020}{misc}{}
@@ -1029,66 +1102,6 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/ETIS2DLG/Conneau et al. - 2022 - FLEURS Few-shot Learning Evaluation of Universal Representations of Speech.pdf
       \endverb
       \keyw{Computer Science - Computation and Language,Computer Science - Machine Learning,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
-    \endentry
-    \entry{deichlerMMConvMultimodalConversational2024}{misc}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=cf5e90fa1ca4f9f3962088f5b009c40e}{%
-           family={Deichler},
-           familyi={D\bibinitperiod},
-           given={Anna},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7fdaca3c38da7961e6ce30f62d5fce54}{%
-           family={O'Regan},
-           familyi={O\bibinitperiod},
-           given={Jim},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=360375b5fce1d04c3e8e15b273de2833}{%
-           family={Beskow},
-           familyi={B\bibinitperiod},
-           given={Jonas},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
-      \strng{namehash}{73fa768409b15075f4120d59e36f4986}
-      \strng{fullhash}{0e3f3768bfcb8f4bdef967b87b1a0dfe}
-      \strng{bibnamehash}{0e3f3768bfcb8f4bdef967b87b1a0dfe}
-      \strng{authorbibnamehash}{0e3f3768bfcb8f4bdef967b87b1a0dfe}
-      \strng{authornamehash}{73fa768409b15075f4120d59e36f4986}
-      \strng{authorfullhash}{0e3f3768bfcb8f4bdef967b87b1a0dfe}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{In this paper, we present a novel dataset captured using a VR headset to record conversations between participants within a physics simulator (AI2-THOR). Our primary objective is to extend the field of co-speech gesture generation by incorporating rich contextual information within referential settings. Participants engaged in various conversational scenarios, all based on referential communication tasks. The dataset provides a rich set of multimodal recordings such as motion capture, speech, gaze, and scene graphs. This comprehensive dataset aims to enhance the understanding and development of gesture generation models in 3D scenes by providing diverse and contextually rich data.}
-      \field{eprintclass}{cs}
-      \field{eprinttype}{arXiv}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{number}{arXiv:2410.00253}
-      \field{shorttitle}{{{MM-Conv}}}
-      \field{title}{{{MM-Conv}}: {{A Multi-modal Conversational Dataset}} for {{Virtual Humans}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2410.00253
-      \endverb
-      \verb{eprint}
-      \verb 2410.00253
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/M5EG8TE2/Deichler et al. - 2024 - MM-Conv A Multi-modal Conversational Dataset for Virtual Humans.pdf
-      \endverb
-      \keyw{Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Graphics,Computer Science - Human-Computer Interaction}
     \endentry
     \entry{dengEnsembleDeepLearning2014}{inproceedings}{}
       \name{author}{2}{}{%
@@ -1420,6 +1433,55 @@
       \field{isbn}{978-91-44-04238-1}
       \field{title}{Fonetikens Grunder}
       \field{year}{2004}
+    \endentry
+    \entry{farooqInvestigatingImpactCrosslingual2022}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2e2ec842d480e90b460c710f0248b2f0}{%
+           family={Farooq},
+           familyi={F\bibinitperiod},
+           given={Muhammad\bibnamedelima Umar},
+           giveni={M\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d2c122385cc21071982b3bbc486387f}{%
+           family={Hain},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ISCA}%
+      }
+      \strng{namehash}{7420ec690f4642fdf66cb26c20b5eafa}
+      \strng{fullhash}{7420ec690f4642fdf66cb26c20b5eafa}
+      \strng{bibnamehash}{7420ec690f4642fdf66cb26c20b5eafa}
+      \strng{authorbibnamehash}{7420ec690f4642fdf66cb26c20b5eafa}
+      \strng{authornamehash}{7420ec690f4642fdf66cb26c20b5eafa}
+      \strng{authorfullhash}{7420ec690f4642fdf66cb26c20b5eafa}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Multilingual automatic speech recognition (ASR) systems mostly benefit low resource languages but suffer degradation in performance across several languages relative to their monolingual counterparts. Limited studies have focused on understanding the languages behaviour in the multilingual speech recognition setups. In this paper, a novel data-driven approach is proposed to investigate the cross-lingual acoustic-phonetic similarities. This technique measures the similarities between posterior distributions from various monolingual acoustic models against a target speech signal. Deep neural networks are trained as mapping networks to transform the distributions from different acoustic models into a directly comparable form. The analysis observes that the languages `closeness' can not be truly estimated by the volume of overlapping phonemes set. Entropy analysis of the proposed mapping networks exhibits that a language with lesser overlap can be more amenable to crosslingual transfer, and hence more beneficial in the multilingual setup. Finally, the proposed posterior transformation approach is leveraged to fuse monolingual models for a target language. A relative improvement of {$\sim$}8\% over monolingual counterpart is achieved.}
+      \field{booktitle}{Interspeech 2022}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{Investigating the {{Impact}} of {{Crosslingual Acoustic-Phonetic Similarities}} on {{Multilingual Speech Recognition}}}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{3849\bibrangedash 3853}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.21437/Interspeech.2022-10916
+      \endverb
+      \verb{file}
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/P5IXBZQY/Farooq and Hain - 2022 - Investigating the Impact of Crosslingual Acoustic-Phonetic Similarities on Multilingual Speech Recog.pdf
+      \endverb
     \endentry
     \entry{fazelSynthASRUnlockingSynthetic2021}{misc}{}
       \name{author}{7}{}{%
@@ -1853,14 +1915,16 @@
       \strng{authorfullhash}{f5e5158a9b0b82b5f8db6483b94f8d53}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Many real-world sequence learning tasks require the prediction of sequences of labels from noisy, unsegmented input data. In speech recognition, for example, an acoustic signal is transcribed into words or sub-word units. Recurrent neural networks (RNNs) are powerful sequence learners that would seem well suited to such tasks. However, because they require pre-segmented training data, and post-processing to transform their outputs into label sequences, their applicability has so far been limited. This paper presents a novel method for training RNNs to label unsegmented sequences directly, thereby solving both problems. An experiment on the TIMIT speech corpus demonstrates its advantages over both a baseline HMM and a hybrid HMM-RNN.}
       \field{langid}{english}
       \field{title}{Connectionist {{Temporal Classification}}: {{Labelling Unsegmented Sequence Data}} with {{Recurrent Neural Networks}}}
+      \field{year}{2012}
       \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/KY7HCUCD/Graves et al. - Connectionist Temporal Classiﬁcation Labelling Unsegmented Sequence Data with Recurrent Neural Netw.pdf
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/KY7HCUCD/Graves et al. - 2012 - Connectionist Temporal Classiﬁcation Labelling Unsegmented Sequence Data with Recurrent Neural Netw.pdf
       \endverb
     \endentry
     \entry{hansenNeuralNetworkEnsembles1990}{article}{}
@@ -1910,50 +1974,6 @@
       \endverb
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/ETCU9XEC/Hansen and Salamon - 1990 - Neural network ensembles.pdf
-      \endverb
-    \endentry
-    \entry{hardisonSecondlanguageSpokenWord2005}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1237a296978ca780cea8d988f1c2e8bc}{%
-           family={Hardison},
-           familyi={H\bibinitperiod},
-           given={Debra\bibnamedelima M.},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{1237a296978ca780cea8d988f1c2e8bc}
-      \strng{fullhash}{1237a296978ca780cea8d988f1c2e8bc}
-      \strng{bibnamehash}{1237a296978ca780cea8d988f1c2e8bc}
-      \strng{authorbibnamehash}{1237a296978ca780cea8d988f1c2e8bc}
-      \strng{authornamehash}{1237a296978ca780cea8d988f1c2e8bc}
-      \strng{authorfullhash}{1237a296978ca780cea8d988f1c2e8bc}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Experiments using the gating paradigm investigated the effects of auditory--visual (AV) and auditoryonly perceptual training on second-language spoken-word identification by Japanese and Korean learners of English. Stimuli were familiar bisyllabic words beginning with /p/, /f/, /ô/, /l/, and /s, t, k/ combined with high, low, and rounded vowels. Results support the priming role of visual cues in AV speech processing. Identification was earlier with visual cues and following training, especially for words beginning with /ô/ and /l/, which also showed significant effects of adjacent vowel. For the Japanese, the AV advantage in identifying /ô/- and /l/-initial words was accentuated following training. Findings are discussed within a multimodal episodic model of learning.}
-      \field{issn}{0142-7164, 1469-1817}
-      \field{journaltitle}{Applied Psycholinguistics}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{number}{4}
-      \field{shorttitle}{Second-Language Spoken Word Identification}
-      \field{title}{Second-Language Spoken Word Identification: {{Effects}} of Perceptual Training, Visual Cues, and Phonetic Environment}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{26}
-      \field{year}{2005}
-      \field{urldateera}{ce}
-      \field{pages}{579\bibrangedash 596}
-      \range{pages}{18}
-      \verb{doi}
-      \verb 10.1017/S0142716405050319
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/294NNY9V/Hardison - 2005 - Second-language spoken word identification Effects of perceptual training, visual cues, and phoneti.pdf
       \endverb
     \endentry
     \entry{hayashiBackTranslationStyleDataAugmentation2018}{misc}{}
@@ -2108,6 +2128,58 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/Q5GCKUZY/Hedderich et al. - 2021 - A Survey on Recent Approaches for Natural Language Processing in Low-Resource Scenarios.pdf
       \endverb
       \keyw{Computer Science - Computation and Language,Computer Science - Machine Learning}
+    \endentry
+    \entry{helenmengDerivingSalientLearnersx20192007}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=65f022c14ca150341224958fa81685b8}{%
+           family={{Helen Meng}},
+           familyi={H\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=5952817f5a452a0f1a54a407c3c9a7cc}{%
+           family={{Yuen Yee Lo}},
+           familyi={Y\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=203edeb3b84c82fba91dcf5f3c45a411}{%
+           family={{Lan Wang}},
+           familyi={L\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=972fbbf15f0a59978ce2f0db436c2251}{%
+           family={{Wing Yiu Lau}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {The Westin Miyako Kyoto}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1a109eef5455bbd5bddcea4d97bdfd06}
+      \strng{fullhash}{f928f0ac2357e6107ac731164daa1097}
+      \strng{bibnamehash}{f928f0ac2357e6107ac731164daa1097}
+      \strng{authorbibnamehash}{f928f0ac2357e6107ac731164daa1097}
+      \strng{authornamehash}{1a109eef5455bbd5bddcea4d97bdfd06}
+      \strng{authorfullhash}{f928f0ac2357e6107ac731164daa1097}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work aims to derive salient mispronunciations made by Chinese (L1 being Cantonese) learners of English (L2 being American English) in order to support the design of pedagogical and remedial instructions. Our approach is grounded on the theory of language transfer and involves systematic phonological comparison between two languages to predict possible phonetic confusions that may lead to mispronunciations. We collect a corpus of speech recordings from some 21 Cantonese learners of English. We develop an automatic speech recognizer by training cross-word triphone models based on the TIMIT corpus. We also develop an ``extended'' pronunciation lexicon that incorporates the predicted phonetic confusions to generate additional, erroneous pronunciation variants for each word. The extended pronunciation lexicon is used to produce a confusion network in recognition of the English speech recordings of Cantonese learners. We refer to the statistics of the erroneous recognition outputs to derive salient mispronunciations that stipulates the predictions based on phonological comparison.}
+      \field{booktitle}{2007 {{IEEE Workshop}} on {{Automatic Speech Recognition}} \& {{Understanding}} ({{ASRU}})}
+      \field{isbn}{978-1-4244-1745-2}
+      \field{langid}{english}
+      \field{title}{Deriving Salient Learners' Mispronunciations from Cross-Language Phonological Comparisons}
+      \field{urlday}{18}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \field{pages}{437\bibrangedash 442}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ASRU.2007.4430152
+      \endverb
+      \verb{file}
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/ZRZ7PBZ5/Helen Meng et al. - 2007 - Deriving salient learners' mispronunciations from cross-language phonological comparisons.pdf
+      \endverb
     \endentry
     \entry{joshiStateFateLinguistic2021}{misc}{}
       \name{author}{5}{}{%
@@ -2322,100 +2394,6 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/8VY2N9BF/Kheir et al. - 2023 - Automatic Pronunciation Assessment -- A Review.pdf
       \endverb
       \keyw{Computer Science - Computation and Language,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
-    \endentry
-    \entry{khoslaSupervisedContrastiveLearning2021}{misc}{}
-      \name{author}{9}{}{%
-        {{un=0,uniquepart=base,hash=c2967f14fec3dc6bce4bedc760572f10}{%
-           family={Khosla},
-           familyi={K\bibinitperiod},
-           given={Prannay},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b267fa16926a3b75c0f9af715749d548}{%
-           family={Teterwak},
-           familyi={T\bibinitperiod},
-           given={Piotr},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=147b8560865739e558b0631402b38ee6}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Chen},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=587a236ad49e1dae23ab208779b1923b}{%
-           family={Sarna},
-           familyi={S\bibinitperiod},
-           given={Aaron},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=212a623a4a045452d0eac0274782613e}{%
-           family={Tian},
-           familyi={T\bibinitperiod},
-           given={Yonglong},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cae9f806bc99a5f19fadea538fc2db04}{%
-           family={Isola},
-           familyi={I\bibinitperiod},
-           given={Phillip},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1c60c4ef0f0d37726133ef09f4a040fb}{%
-           family={Maschinot},
-           familyi={M\bibinitperiod},
-           given={Aaron},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=17bf470b120f24c48675bbcb261cab37}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Ce},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6e4c62612fa904e2c1c6c00006ccc142}{%
-           family={Krishnan},
-           familyi={K\bibinitperiod},
-           given={Dilip},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
-      \strng{namehash}{498eb192a18dd4884e99bb504e6850d5}
-      \strng{fullhash}{9afe0d70a673167c3817b6471dd4cd73}
-      \strng{bibnamehash}{9afe0d70a673167c3817b6471dd4cd73}
-      \strng{authorbibnamehash}{9afe0d70a673167c3817b6471dd4cd73}
-      \strng{authornamehash}{498eb192a18dd4884e99bb504e6850d5}
-      \strng{authorfullhash}{9afe0d70a673167c3817b6471dd4cd73}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Contrastive learning applied to self-supervised representation learning has seen a resurgence in recent years, leading to state of the art performance in the unsupervised training of deep image models. Modern batch contrastive approaches subsume or significantly outperform traditional contrastive losses such as triplet, max-margin and the N-pairs loss. In this work, we extend the self-supervised batch contrastive approach to the fully-supervised setting, allowing us to effectively leverage label information. Clusters of points belonging to the same class are pulled together in embedding space, while simultaneously pushing apart clusters of samples from different classes. We analyze two possible versions of the supervised contrastive (SupCon) loss, identifying the best-performing formulation of the loss. On ResNet-200, we achieve top-1 accuracy of 81.4\% on the ImageNet dataset, which is 0.8\% above the best number reported for this architecture. We show consistent outperformance over cross-entropy on other datasets and two ResNet variants. The loss shows benefits for robustness to natural corruptions and is more stable to hyperparameter settings such as optimizers and data augmentations. Our loss function is simple to implement, and reference TensorFlow code is released at https://t.ly/supcon.}
-      \field{eprintclass}{cs}
-      \field{eprinttype}{arXiv}
-      \field{month}{3}
-      \field{number}{arXiv:2004.11362}
-      \field{title}{Supervised {{Contrastive Learning}}}
-      \field{urlday}{2}
-      \field{urlmonth}{10}
-      \field{urlyear}{2025}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2004.11362
-      \endverb
-      \verb{eprint}
-      \verb 2004.11362
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/V9PYN5KF/Khosla et al. - 2021 - Supervised Contrastive Learning.pdf;/home/peter/snap/zotero-snap/common/Zotero/storage/VRQLE8VH/2004.html
-      \endverb
-      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{korzekwaWeaklysupervisedWordlevelPronunciation2021}{misc}{}
       \name{author}{5}{}{%
@@ -2700,12 +2678,12 @@
     \endentry
     \entry{liMispronunciationDetectionDiagnosis2017}{article}{}
       \name{author}{3}{}{%
-        {{un=1,uniquepart=given,hash=7112bd5b38def4a55168243f6bc5e41b}{%
+        {{un=0,uniquepart=base,hash=7112bd5b38def4a55168243f6bc5e41b}{%
            family={Li},
            familyi={L\bibinitperiod},
            given={Kun},
            giveni={K\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=8ae5c7d5f0553c19ea134c04ab784e22}{%
            family={Qian},
            familyi={Q\bibinitperiod},
@@ -2751,71 +2729,6 @@
       \endverb
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/C4PALEVG/Li et al. - 2017 - Mispronunciation Detection and Diagnosis in L2 English Speech Using Multidistribution Deep Neural Ne.pdf
-      \endverb
-    \endentry
-    \entry{liuEndtoEndUnsupervisedSpeech2023}{inproceedings}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=f6dd48342cba0f6385fb3e4ac6d66b33}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Alexander\bibnamedelima H.},
-           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=caee6b3fa31c9aa140f1d90048cd989f}{%
-           family={Hsu},
-           familyi={H\bibinitperiod},
-           given={Wei-Ning},
-           giveni={W\bibinithyphendelim N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d3ff0eff0a1d1258618c88f2ec57095f}{%
-           family={Auli},
-           familyi={A\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e478046d4abc39e9814f6e364a736511}{%
-           family={Baevski},
-           familyi={B\bibinitperiod},
-           given={Alexei},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Doha, Qatar}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{fc540f72dcefc288dabdb01697a71a7d}
-      \strng{fullhash}{f1a6737a3b74eee4763172b2d6c3d2d6}
-      \strng{bibnamehash}{f1a6737a3b74eee4763172b2d6c3d2d6}
-      \strng{authorbibnamehash}{f1a6737a3b74eee4763172b2d6c3d2d6}
-      \strng{authornamehash}{fc540f72dcefc288dabdb01697a71a7d}
-      \strng{authorfullhash}{f1a6737a3b74eee4763172b2d6c3d2d6}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Unsupervised speech recognition has shown great potential to make Automatic Speech Recognition (ASR) systems accessible to every language. However, existing methods still heavily rely on hand-crafted pre-processing. Similar to the trend of making supervised speech recognition end-to-end, we introduce wav2vec-U 2.0 which does away with all audio-side preprocessing and improves accuracy through better architecture. In addition, we introduce an auxiliary self-supervised objective that ties model predictions back to the input. Experiments show that wav2vec-U 2.0 improves unsupervised recognition results across different languages while being conceptually simpler.}
-      \field{booktitle}{2022 {{IEEE Spoken Language Technology Workshop}} ({{SLT}})}
-      \field{isbn}{979-8-3503-9690-4}
-      \field{langid}{english}
-      \field{month}{1}
-      \field{title}{Towards {{End-to-End Unsupervised Speech Recognition}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \field{pages}{221\bibrangedash 228}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/SLT54892.2023.10023187
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/L94ZBXD8/Liu et al. - 2023 - Towards End-to-End Unsupervised Speech Recognition.pdf
       \endverb
     \endentry
     \entry{loEffectiveEndtoEndModeling2020}{misc}{}
@@ -2881,77 +2794,6 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/WDQ3H9TX/Lo et al. - 2020 - An Effective End-to-End Modeling Approach for Mispronunciation Detection.pdf;/home/peter/snap/zotero-snap/common/Zotero/storage/9DIA6Y8K/2005.html
       \endverb
       \keyw{Computer Science - Computation and Language,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
-    \endentry
-    \entry{lonerganLowresourceSpeechRecognition2024}{misc}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=9db4af13432a594613e8efe0ea532287}{%
-           family={Lonergan},
-           familyi={L\bibinitperiod},
-           given={Liam},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9c58381cb863012cd1df917bb20d39ee}{%
-           family={Qian},
-           familyi={Q\bibinitperiod},
-           given={Mengjie},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f0032cd1cf7c14995537d7ee5b8edc21}{%
-           family={Chiaráin},
-           familyi={C\bibinitperiod},
-           given={Neasa\bibnamedelima Ní},
-           giveni={N\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f08b34b12657a55637cced651ec89cc3}{%
-           family={Gobl},
-           familyi={G\bibinitperiod},
-           given={Christer},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f2c38cf0d08aca358e56773170a2fe9d}{%
-           family={Chasaide},
-           familyi={C\bibinitperiod},
-           given={Ailbhe\bibnamedelima Ní},
-           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
-      \strng{namehash}{4d34d0315f0b2cb31a08817721dbcd48}
-      \strng{fullhash}{1e12ac34c1c167c26b012a569832ae68}
-      \strng{bibnamehash}{1e12ac34c1c167c26b012a569832ae68}
-      \strng{authorbibnamehash}{1e12ac34c1c167c26b012a569832ae68}
-      \strng{authornamehash}{4d34d0315f0b2cb31a08817721dbcd48}
-      \strng{authorfullhash}{1e12ac34c1c167c26b012a569832ae68}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This paper explores the use of Hybrid CTC/Attention encoderdecoder models trained with Intermediate CTC (InterCTC) for Irish (Gaelic) low-resource speech recognition (ASR) and dialect identification (DID). Results are compared to the current best performing models trained for ASR (TDNN-HMM) and DID (ECAPA-TDNN). An optimal InterCTC setting is initially established using a Conformer encoder. This setting is then used to train a model with an E-branchformer encoder and the performance of both architectures are compared. A multi-task fine-tuning approach is adopted for language model (LM) shallow fusion. The experiments yielded an improvement in DID accuracy of 10.8\% relative to a baseline ECAPA-TDNN, and WER performance approaching the TDNN-HMM model. This multi-task approach emerges as a promising strategy for Irish low-resource ASR and DID.}
-      \field{eprintclass}{cs}
-      \field{eprinttype}{arXiv}
-      \field{langid}{english}
-      \field{month}{5}
-      \field{number}{arXiv:2405.01293}
-      \field{title}{Low-Resource Speech Recognition and Dialect Identification of {{Irish}} in a Multi-Task Framework}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2405.01293
-      \endverb
-      \verb{eprint}
-      \verb 2405.01293
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/7DGRSRXD/Lonergan et al. - 2024 - Low-resource speech recognition and dialect identification of Irish in a multi-task framework.pdf
-      \endverb
-      \keyw{Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
     \endentry
     \entry{maclinEmpiricalEvaluationBagging1997}{article}{}
       \name{author}{2}{}{%
@@ -3186,66 +3028,6 @@
       \range{pages}{11}
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/DXM3Z5PA/needleman-wunsch-orig-dyn-prog-paper.pdf
-      \endverb
-    \endentry
-    \entry{neriEffectivenessComputerAssisted2008}{article}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=b195770cf95016dea6d62eb2e6481271}{%
-           family={Neri},
-           familyi={N\bibinitperiod},
-           given={Ambra},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c714d19c66ed5817bbb3624e884c2701}{%
-           family={Mich},
-           familyi={M\bibinitperiod},
-           given={Ornella},
-           giveni={O\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4ae276102dfc13c2ba79c60718c9d364}{%
-           family={Gerosa},
-           familyi={G\bibinitperiod},
-           given={Matteo},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1771e6958f569e27cb59e5495c44fe4c}{%
-           family={Giuliani},
-           familyi={G\bibinitperiod},
-           given={Diego},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{d31cc3a690039757180cbfba76f9a356}
-      \strng{fullhash}{3a9763a127841339468336a93ab5f4f6}
-      \strng{bibnamehash}{3a9763a127841339468336a93ab5f4f6}
-      \strng{authorbibnamehash}{3a9763a127841339468336a93ab5f4f6}
-      \strng{authornamehash}{d31cc3a690039757180cbfba76f9a356}
-      \strng{authorfullhash}{3a9763a127841339468336a93ab5f4f6}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0958-8221, 1744-3210}
-      \field{journaltitle}{Computer Assisted Language Learning}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{number}{5}
-      \field{title}{The Effectiveness of Computer Assisted Pronunciation Training for Foreign Language Learning by Children}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{21}
-      \field{year}{2008}
-      \field{urldateera}{ce}
-      \field{pages}{393\bibrangedash 408}
-      \range{pages}{16}
-      \verb{doi}
-      \verb 10.1080/09588220802447651
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/6QN6VKGQ/Neri et al. - 2008 - The effectiveness of computer assisted pronunciation training for foreign language learning by child.pdf
       \endverb
     \endentry
     \entry{nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015}{article}{}
@@ -3764,72 +3546,93 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/IVX7WQNM/Paszke et al. - 2019 - PyTorch An Imperative Style, High-Performance Deep Learning Library.pdf
       \endverb
     \endentry
-    \entry{pengEndtoEndMispronunciationDetection2023}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=f737eec8f3f2fb0e9d3b00c5f5aab5ba}{%
-           family={Peng},
+    \entry{phanMispronunciationDetectionL22025}{misc}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=f697aa053a42315640eb88de24c6eaff}{%
+           family={Phan},
            familyi={P\bibinitperiod},
-           given={Linkai},
-           giveni={L\bibinitperiod},
+           given={Nhan},
+           giveni={N\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a535a6e206309a4dfa99e76d4fa57128}{%
-           family={Gao},
-           familyi={G\bibinitperiod},
-           given={Yingming},
-           giveni={Y\bibinitperiod},
+        {{un=0,uniquepart=base,hash=73919068ed22391af98203b9919f04e3}{%
+           family={Kuronen},
+           familyi={K\bibinitperiod},
+           given={Mikko},
+           giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=1fb99a9f00d4bc94ba579e6709c254ec}{%
-           family={Bao},
-           familyi={B\bibinitperiod},
-           given={Rian},
+        {{un=0,uniquepart=base,hash=d2ac1e1b3e348372ba0d97ac4484b75d}{%
+           family={Kautonen},
+           familyi={K\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb7e5f5203d7b6283f030d9402d23d40}{%
+           family={Ullakonoja},
+           familyi={U\bibinitperiod},
+           given={Riikka},
            giveni={R\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=c15dca1dd47bb240c99f7cf6481272a5}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Ya},
+        {{un=0,uniquepart=base,hash=9a38cd6b8c8a47bb860749e162eb89e6}{%
+           family={{von Zansen}},
+           familyi={v\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17311277053ffbfcbe97d23716513cbb}{%
+           family={Getman},
+           familyi={G\bibinitperiod},
+           given={Yaroslav},
            giveni={Y\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=74f3067f20603e85bac325f904c6b552}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Jinsong},
-           giveni={J\bibinitperiod},
+        {{un=0,uniquepart=base,hash=820197af2672425857a8b1fb666d130c}{%
+           family={Voskoboinik},
+           familyi={V\bibinitperiod},
+           given={Ekaterina},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c106bb48ea868cb81dbd254304101a17}{%
+           family={Grósz},
+           familyi={G\bibinitperiod},
+           given={Tamás},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc41983fe6b59122bbe49c6f8d4eded8}{%
+           family={Kurimo},
+           familyi={K\bibinitperiod},
+           given={Mikko},
+           giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{342e9ade5815c9036dbd5d60ff7c8d22}
-      \strng{fullhash}{fef3b9b57845bde63efa428d7f936bad}
-      \strng{bibnamehash}{fef3b9b57845bde63efa428d7f936bad}
-      \strng{authorbibnamehash}{fef3b9b57845bde63efa428d7f936bad}
-      \strng{authornamehash}{342e9ade5815c9036dbd5d60ff7c8d22}
-      \strng{authorfullhash}{fef3b9b57845bde63efa428d7f936bad}
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{34a558538cd55661b47fee5aba5b4d03}
+      \strng{fullhash}{515b0f2f286aea8a91cc137a5bd97c3e}
+      \strng{bibnamehash}{515b0f2f286aea8a91cc137a5bd97c3e}
+      \strng{authorbibnamehash}{515b0f2f286aea8a91cc137a5bd97c3e}
+      \strng{authornamehash}{34a558538cd55661b47fee5aba5b4d03}
+      \strng{authorfullhash}{515b0f2f286aea8a91cc137a5bd97c3e}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{As an indispensable module of computer-aided pronunciation training (CAPT) systems, mispronunciation detection and diagnosis (MDD) techniques have attracted a lot of attention from academia and industry over the past decade. To train robust MDD models, this technique requires massive human-annotated speech recordings which are usually expensive and even hard to acquire. In this study, we propose to use transfer learning to tackle the problem of data scarcity from two aspects. First, from audio modality, we explore the use of the pretrained model wav2vec2.0 for MDD tasks by learning robust general acoustic representation. Second, from text modality, we explore transferring prior texts into MDD by learning associations between acoustic and textual modalities. We propose textual modulation gates that assign more importance to the relevant text information while suppressing irrelevant text information. Moreover, given the transcriptions, we propose an extra contrastive loss to reduce the difference of learning objectives between the phoneme recognition and MDD tasks. Conducting experiments on the L2-Arctic dataset showed that our wav2vec2.0 based models outperformed the conventional methods. The proposed textual modulation gate and contrastive loss further improved the F1-score by more than 2.88\% and our best model achieved an F1-score of 61.75\%.}
-      \field{issn}{2076-3417}
-      \field{journaltitle}{Applied Sciences}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{number}{11}
-      \field{title}{End-to-{{End Mispronunciation Detection}} and {{Diagnosis Using Transfer Learning}}}
-      \field{urlday}{16}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
-      \field{volume}{13}
-      \field{year}{2023}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Mispronunciation detection (MD) models are the cornerstones of many language learning applications. Unfortunately, most systems are built for English and other major languages, while low-resourced language varieties, such as Finland Swedish (FS), lack such tools. In this paper, we introduce our MD model for FS, trained on 89 hours of first language (L1) speakers' spontaneous speech and tested on 33 minutes of L2 transcribed read-aloud speech.}
+      \field{shorttitle}{Mispronunciation {{Detection Without L2 Pronunciation Dataset}} in {{Low-Resource Setting}}}
+      \field{title}{Mispronunciation {{Detection Without L2 Pronunciation Dataset}} in {{Low-Resource Setting}}: {{A Case Study}} in {{Finland Swedish}}}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
       \field{urldateera}{ce}
-      \field{pages}{6793}
-      \range{pages}{1}
       \verb{doi}
-      \verb 10.3390/app13116793
+      \verb 10.48550/ARXIV.2506.01156
       \endverb
       \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/D2YW35F7/Peng et al. - 2023 - End-to-End Mispronunciation Detection and Diagnosis Using Transfer Learning.pdf
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/JE5Y7J8M/Phan et al. - 2025 - Mispronunciation Detection Without L2 Pronunciation Dataset in Low-Resource Setting A Case Study in.pdf
       \endverb
+      \keyw{Audio and Speech Processing (eess.AS),Computation and Language (cs.CL),FOS: Computer and information sciences,FOS: Electrical engineering electronic engineering information engineering,Sound (cs.SD)}
     \endentry
     \entry{poveyKaldiSpeechRecognition}{article}{}
       \name{author}{13}{}{%
@@ -3931,89 +3734,6 @@
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/MAC6UCHS/Povey et al. - 2011 - The Kaldi Speech Recognition Toolkit.pdf
       \endverb
-    \endentry
-    \entry{prabhavalkarMinimumWordError2017}{misc}{}
-      \name{author}{7}{}{%
-        {{un=0,uniquepart=base,hash=93bb6027d9d5e18776d8d859c9da7e5e}{%
-           family={Prabhavalkar},
-           familyi={P\bibinitperiod},
-           given={Rohit},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=28a3d000e5cd60656250014708db8ec1}{%
-           family={Sainath},
-           familyi={S\bibinitperiod},
-           given={Tara\bibnamedelima N.},
-           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1fc7a40d6072b1bb1d4e56d14ef88e2f}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Yonghui},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=842040ccc784c0e00e9b177a7271883a}{%
-           family={Nguyen},
-           familyi={N\bibinitperiod},
-           given={Patrick},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c0d10aaf985cebf8d0497e1828f9313f}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Zhifeng},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a16597f6d78144232241757f5d6e401c}{%
-           family={Chiu},
-           familyi={C\bibinitperiod},
-           given={Chung-Cheng},
-           giveni={C\bibinithyphendelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e6e0baf52b06f58dfd24c76abe0b0495}{%
-           family={Kannan},
-           familyi={K\bibinitperiod},
-           given={Anjuli},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
-      \strng{namehash}{af7d5e642586b4bf247dee7652a2749d}
-      \strng{fullhash}{2a0d6dadc50a46a7c7a4f56ce2293245}
-      \strng{bibnamehash}{2a0d6dadc50a46a7c7a4f56ce2293245}
-      \strng{authorbibnamehash}{2a0d6dadc50a46a7c7a4f56ce2293245}
-      \strng{authornamehash}{af7d5e642586b4bf247dee7652a2749d}
-      \strng{authorfullhash}{2a0d6dadc50a46a7c7a4f56ce2293245}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Sequence-to-sequence models, such as attention-based models in automatic speech recognition (ASR), are typically trained to optimize the cross-entropy criterion which corresponds to improving the loglikelihood of the data. However, system performance is usually measured in terms of word error rate (WER), not log-likelihood. Traditional ASR systems benefit from discriminative sequence training which optimizes criteria such as the state-level minimum Bayes risk (sMBR) which are more closely related to WER.}
-      \field{eprintclass}{cs}
-      \field{eprinttype}{arXiv}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{number}{arXiv:1712.01818}
-      \field{title}{Minimum {{Word Error Rate Training}} for {{Attention-based Sequence-to-Sequence Models}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2017}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.1712.01818
-      \endverb
-      \verb{eprint}
-      \verb 1712.01818
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/56J9L4X6/Prabhavalkar et al. - 2017 - Minimum Word Error Rate Training for Attention-based Sequence-to-Sequence Models.pdf
-      \endverb
-      \keyw{Computer Science - Computation and Language,Electrical Engineering and Systems Science - Audio and Speech Processing,Statistics - Machine Learning}
     \endentry
     \entry{qianDiscriminativeAcousticModel2010}{inproceedings}{}
       \name{author}{3}{}{%
@@ -4273,138 +3993,58 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/EJLED84K/Rogerson-Revell - 2021 - Computer-Assisted Pronunciation Training (CAPT) Current Issues and Future Directions.pdf
       \endverb
     \endentry
-    \entry{rosenblumSpeechPerceptionMultimodal2008}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=6990b24deadc93e1bf527ae1841c8926}{%
-           family={Rosenblum},
-           familyi={R\bibinitperiod},
-           given={Lawrence\bibnamedelima D.},
-           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+    \entry{shahinPhonologicalLevelWav2vec2based2025}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0c7156b7d12b3f54bf73144e3f8df1cb}{%
+           family={Shahin},
+           familyi={S\bibinitperiod},
+           given={Mostafa},
+           giveni={M\bibinitperiod},
            givenun=0}}%
-      }
-      \strng{namehash}{6990b24deadc93e1bf527ae1841c8926}
-      \strng{fullhash}{6990b24deadc93e1bf527ae1841c8926}
-      \strng{bibnamehash}{6990b24deadc93e1bf527ae1841c8926}
-      \strng{authorbibnamehash}{6990b24deadc93e1bf527ae1841c8926}
-      \strng{authornamehash}{6990b24deadc93e1bf527ae1841c8926}
-      \strng{authorfullhash}{6990b24deadc93e1bf527ae1841c8926}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Speech perception is inherently multimodal. Visual speech (lip-reading) information is used by all perceivers and readily integrates with auditory speech. Imaging research suggests that the brain treats auditory and visual speech similarly. These findings have led some researchers to consider that speech perception works by extracting amodal information that takes the same form across modalities. From this perspective, speech integration is a property of the input information itself. Amodal speech information could explain the reported automaticity, immediacy, and completeness of audiovisual speech integration. However, recent findings suggest that speech integration can be influenced by higher cognitive properties such as lexical status and semantic context. Proponents of amodal accounts will need to explain these results.}
-      \field{issn}{0963-7214, 1467-8721}
-      \field{journaltitle}{Current Directions in Psychological Science}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{number}{6}
-      \field{title}{Speech {{Perception}} as a {{Multimodal Phenomenon}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{17}
-      \field{year}{2008}
-      \field{urldateera}{ce}
-      \field{pages}{405\bibrangedash 409}
-      \range{pages}{5}
-      \verb{doi}
-      \verb 10.1111/j.1467-8721.2008.00615.x
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/HA5WE24Z/Rosenblum - 2008 - Speech Perception as a Multimodal Phenomenon.pdf
-      \endverb
-    \endentry
-    \entry{rouditchenkoComparisonMultilingualSelfSupervised2023}{inproceedings}{}
-      \name{author}{9}{}{%
-        {{un=0,uniquepart=base,hash=4061fbecb11a224923e0caad26faf56d}{%
-           family={Rouditchenko},
-           familyi={R\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7ed1ec7bfbb89b56b1e64e1b48efdaa6}{%
-           family={Khurana},
-           familyi={K\bibinitperiod},
-           given={Sameer},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0a327007a0b097a2d8bfa1b4eb2086d1}{%
-           family={Thomas},
-           familyi={T\bibinitperiod},
-           given={Samuel},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b28550979e1f46d5c67bcd9212bab845}{%
-           family={Feris},
-           familyi={F\bibinitperiod},
-           given={Rogerio},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f946c74905bbd1310ba1609f93e47413}{%
-           family={Karlinsky},
-           familyi={K\bibinitperiod},
-           given={Leonid},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=abbb2b3478036776ebfd1dec522c0091}{%
-           family={Kuehne},
-           familyi={K\bibinitperiod},
-           given={Hilde},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0bd189af57105df4f4e2d749c815bf13}{%
-           family={Harwath},
-           familyi={H\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8f101126b3acf3a5a0f51d86f0fe89b8}{%
-           family={Kingsbury},
-           familyi={K\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=079738ec97fefceec5036d7c3657c667}{%
-           family={Glass},
-           familyi={G\bibinitperiod},
-           given={James},
+        {{un=0,uniquepart=base,hash=fbf8abc7f5ef411557e812a20c9f197d}{%
+           family={Epps},
+           familyi={E\bibinitperiod},
+           given={Julien},
            giveni={J\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=01669a796f1778a99974ace6951d8c8f}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Beena},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {ISCA}%
-      }
-      \strng{namehash}{b9405e31b90fba6482be163bac61d85d}
-      \strng{fullhash}{77888588c7a00e13891af165ac8c3e88}
-      \strng{bibnamehash}{77888588c7a00e13891af165ac8c3e88}
-      \strng{authorbibnamehash}{77888588c7a00e13891af165ac8c3e88}
-      \strng{authornamehash}{b9405e31b90fba6482be163bac61d85d}
-      \strng{authorfullhash}{77888588c7a00e13891af165ac8c3e88}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \strng{namehash}{929234dbf267a705c4c92c0a34c6b930}
+      \strng{fullhash}{a287e23791752130c2214ec520fe1887}
+      \strng{bibnamehash}{a287e23791752130c2214ec520fe1887}
+      \strng{authorbibnamehash}{a287e23791752130c2214ec520fe1887}
+      \strng{authornamehash}{929234dbf267a705c4c92c0a34c6b930}
+      \strng{authorfullhash}{a287e23791752130c2214ec520fe1887}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Recent models such as XLS-R and Whisper have made multilingual speech technologies more accessible by pre-training on audio from around 100 spoken languages each. However, there are thousands of spoken languages worldwide, and adapting to new languages is an important problem. In this work, we aim to understand which model adapts better to languages unseen during pre-training. We fine-tune both models on 13 unseen languages and 18 seen languages. Our results show that the number of hours seen per language and language family during pre-training is predictive of how the models compare, despite the significant differences in the pre-training methods.}
-      \field{booktitle}{{{INTERSPEECH}} 2023}
+      \field{abstract}{The automatic identification and analysis of pronunciation errors, known as Mispronunciation Detection and Diagnosis (MDD) plays a crucial role in Computer Aided Pronunciation Learning (CAPL) tools such as SecondLanguage (L2) learning or speech therapy applications. Existing MDD methods relying on analysing phonemes can only detect categorical errors of phonemes that have an adequate amount of training data to be modelled. Due to the unpredictable nature of pronunciation errors made by non-native or disordered speakers and the scarcity of training datasets, it is unfeasible to model all types of mispronunciations. Moreover, phonemelevel MDD approaches can provide only limited diagnostic information about the error made. To address this, in this paper, we propose a low-level MDD approach based on the detection of phonological features. Phonological features break down phoneme production into elementary components that are directly related to the articulatory system leading to more formative feedback for the learner. We further propose a multilabel variant of the Connectionist Temporal Classification (CTC) approach to jointly model the non-mutually exclusive phonological features using a single model. The pre-trained wav2vec2 model was employed as a core model for the phonological feature detector. The proposed method was applied to L2 speech corpora collected from English learners from different native languages. The proposed phonological level MDD method was further compared to the traditional phoneme-level MDD and achieved a significantly lower False Acceptance Rate (FAR), False Rejection Rate (FRR), and Diagnostic Error Rate (DER) over all phonological features compared to the phoneme-level equivalent.}
+      \field{issn}{01676393}
+      \field{journaltitle}{Speech Communication}
       \field{langid}{english}
-      \field{month}{8}
-      \field{title}{Comparison of {{Multilingual Self-Supervised}} and {{Weakly-Supervised Speech Pre-Training}} for {{Adaptation}} to {{Unseen Languages}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2023}
+      \field{month}{9}
+      \field{title}{Phonological Level Wav2vec2-Based {{Mispronunciation Detection}} and {{Diagnosis}} Method}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{173}
+      \field{year}{2025}
       \field{urldateera}{ce}
-      \field{pages}{2268\bibrangedash 2272}
-      \range{pages}{5}
+      \field{pages}{103249}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.21437/Interspeech.2023-1061
+      \verb 10.1016/j.specom.2025.103249
       \endverb
       \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/SYX7C589/Rouditchenko et al. - 2023 - Comparison of Multilingual Self-Supervised and Weakly-Supervised Speech Pre-Training for Adaptation.pdf
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/R6YF8DN9/Shahin et al. - 2025 - Phonological level wav2vec2-based Mispronunciation Detection and Diagnosis method.pdf
       \endverb
     \endentry
     \entry{snesarevaPalatalizationDublinIrish2016}{article}{}
@@ -4656,49 +4296,6 @@
       \endverb
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/SC7Q7HGB/Thai et al. - 2019 - Synthetic Data Augmentation for Improving Low-Resource ASR.pdf
-      \endverb
-    \endentry
-    \entry{thomsonEffectivenessL2Pronunciation2014}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=d2b8c613a1d43b06f88e81effebff62d}{%
-           family={Thomson},
-           familyi={T\bibinitperiod},
-           given={Ron},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=155f46df0a0e1e520536d4a9bbd38b10}{%
-           family={Derwing},
-           familyi={D\bibinitperiod},
-           given={Tracey},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5cfdea3ec7e834a8fffb766b8a109450}
-      \strng{fullhash}{5cfdea3ec7e834a8fffb766b8a109450}
-      \strng{bibnamehash}{5cfdea3ec7e834a8fffb766b8a109450}
-      \strng{authorbibnamehash}{5cfdea3ec7e834a8fffb766b8a109450}
-      \strng{authornamehash}{5cfdea3ec7e834a8fffb766b8a109450}
-      \strng{authorfullhash}{5cfdea3ec7e834a8fffb766b8a109450}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Research on the efficacy of second language (L2) pronunciation instruction has produced mixed results, despite reports of significant improvement in many studies. Possible explanations for divergent outcomes include learner individual differences, goals and foci of instruction, type and duration of instructional input, and assessment procedures. After identifying key concepts, we survey 75 L2 pronunciation studies, particularly their methods and results. Despite a move towards emphasizing speech intelligibility and comprehensibility, most research surveyed promoted native-like pronunciation as the target. Although most studies entailed classroom instruction, many featured Computer Assisted Pronunciation Teaching (CAPT). Segmentals were studied more often than suprasegmentals. The amount of instruction required to effect change was related to researchers' goals; interventions focusing on a single feature were generally shorter than those addressing more issues. Reading-aloud tasks were the most common form of assessment; very few studies measured spontaneous speech. The attribution of improvement as a result of instruction was compromised in some instances by lack of a control group. We summarize our findings, highlight limitations of current research, and offer suggestions for future directions.}
-      \field{journaltitle}{Applied Linguistics}
-      \field{month}{12}
-      \field{shorttitle}{The {{Effectiveness}} of {{L2 Pronunciation Instruction}}}
-      \field{title}{The {{Effectiveness}} of {{L2 Pronunciation Instruction}}: {{A Narrative Review}}}
-      \field{volume}{2014}
-      \field{year}{2014}
-      \field{pages}{1\bibrangedash 20}
-      \range{pages}{20}
-      \verb{doi}
-      \verb 10.1093/applin/amu076
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/WY9M4BSP/Thomson and Derwing - 2014 - The Effectiveness of L2 Pronunciation Instruction A Narrative Review.pdf
       \endverb
     \endentry
     \entry{oordWaveNetGenerativeModel2016}{misc}{}
@@ -5665,12 +5262,12 @@
     \endentry
     \entry{zhangL2GENNeuralPhoneme2022}{inproceedings}{}
       \name{author}{4}{}{%
-        {{un=1,uniquepart=given,hash=b48f4b3efffa9842e785d9b8414e08a1}{%
+        {{un=0,uniquepart=base,hash=b48f4b3efffa9842e785d9b8414e08a1}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
            given={Daniel},
            giveni={D\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=5549973af41d7b156b09a6f0257c6d38}{%
            family={Ganesan},
            familyi={G\bibinitperiod},
@@ -5725,180 +5322,71 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/WTAWKCMN/Zhang et al. - 2022 - L2-GEN A Neural Phoneme Paraphrasing Approach to L2 Speech Synthesis for Mispronunciation Diagnosis.pdf
       \endverb
     \endentry
-    \entry{zhangSpeechocean762OpenSourceNonnative2021}{misc}{}
-      \name{author}{9}{}{%
-        {{un=1,uniquepart=given,hash=00c840ad7096e9810dfa1c382608124b}{%
-           family={Zhang},
+    \entry{zongAdaptingMultipleDistributions2022}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=14f4b10d2a6d4469bde4526a689d911e}{%
+           family={Zong},
            familyi={Z\bibinitperiod},
-           given={Junbo},
-           giveni={J\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=13d224d3833718175fd79538c6aac650}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Zhiwen},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d99a74619b2dceb2e1ed1db25d90c50e}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Yongqing},
+           given={Yuan},
            giveni={Y\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=32989ee7d8e7a646576f194c804531af}{%
-           family={Yan},
-           familyi={Y\bibinitperiod},
-           given={Zhiyong},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ef915ab28d60d4cb634389aff136204d}{%
-           family={Song},
-           familyi={S\bibinitperiod},
-           given={Qiong},
-           giveni={Q\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=440327a7f8ff1aa438db8103b422624e}{%
-           family={Huang},
-           familyi={H\bibinitperiod},
-           given={Yukai},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=815a2cdb03036dc2884fcf0472f759cf}{%
-           family={Li},
+        {{un=0,uniquepart=base,hash=ede817a883729b686f9bc399c3bc52c2}{%
+           family={Lian},
            familyi={L\bibinitperiod},
-           given={Ke},
-           giveni={K\bibinitperiod},
+           given={Hailun},
+           giveni={H\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=e37bd3eba929f71a8a0351899f3870d5}{%
-           family={Povey},
-           familyi={P\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a44af477e42cc4d9bbc346304bdd8525}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Yujun},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
-      \strng{namehash}{a90f922302ff3ab243ac14d96c978f22}
-      \strng{fullhash}{5b44fb2d2f7502bd90dbb55238f5b15e}
-      \strng{bibnamehash}{5b44fb2d2f7502bd90dbb55238f5b15e}
-      \strng{authorbibnamehash}{5b44fb2d2f7502bd90dbb55238f5b15e}
-      \strng{authornamehash}{a90f922302ff3ab243ac14d96c978f22}
-      \strng{authorfullhash}{5b44fb2d2f7502bd90dbb55238f5b15e}
-      \field{sortinit}{Z}
-      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{This paper introduces a new open-source speech corpus named ``speechocean762'' designed for pronunciation assessment use, consisting of 5000 English utterances from 250 non-native speakers, where half of the speakers are children. Five experts annotated each of the utterances at sentence-level, wordlevel and phoneme-level. A baseline system is released in open source to illustrate the phoneme-level pronunciation assessment workflow on this corpus. This corpus is allowed to be used freely for commercial and non-commercial purposes. It is available for free download from OpenSLR, and the corresponding baseline system is published in the Kaldi speech recognition toolkit.}
-      \field{eprintclass}{cs}
-      \field{eprinttype}{arXiv}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{number}{arXiv:2104.01378}
-      \field{shorttitle}{Speechocean762}
-      \field{title}{Speechocean762: {{An Open-Source Non-native English Speech Corpus For Pronunciation Assessment}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.2104.01378
-      \endverb
-      \verb{eprint}
-      \verb 2104.01378
-      \endverb
-      \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/8YRR74DH/Zhang et al. - 2021 - speechocean762 An Open-Source Non-native English Speech Corpus For Pronunciation Assessment.pdf
-      \endverb
-      \keyw{Computer Science - Computation and Language,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing}
-    \endentry
-    \entry{zhaoL2ARCTICNonnativeEnglish2018}{inproceedings}{}
-      \name{author}{7}{}{%
-        {{un=0,uniquepart=base,hash=7b514c29bb94ad3f6e0f8fa6d91ddc45}{%
-           family={Zhao},
-           familyi={Z\bibinitperiod},
-           given={Guanlong},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=62f5ee7c50b20b10748edcc6d6b2a75a}{%
-           family={Sonsaat},
-           familyi={S\bibinitperiod},
-           given={Sinem},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5f4d6b72078f3537a6490860e4e03440}{%
-           family={Silpachai},
-           familyi={S\bibinitperiod},
-           given={Alif},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=aaee64873c4e7ca415346cc6dc22739a}{%
-           family={Lucic},
-           familyi={L\bibinitperiod},
-           given={Ivana},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8437f7c06aa97452cc3eb069268ccdb7}{%
-           family={{Chukharev-Hudilainen}},
+        {{un=0,uniquepart=base,hash=0d2634ec0c7300d07fbcbbc93cfa23c5}{%
+           family={Chang},
            familyi={C\bibinitperiod},
-           given={Evgeny},
-           giveni={E\bibinitperiod},
+           given={Hongli},
+           giveni={H\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=224bb0e557cdfc275a192894f9c32603}{%
-           family={Levis},
+        {{un=0,uniquepart=base,hash=2b5af236604cd7fdc03927d41de24eaf}{%
+           family={Lu},
            familyi={L\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod},
+           given={Cheng},
+           giveni={C\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=0e7c2c39d97457715a7465a75cb42fca}{%
-           family={{Gutierrez-Osuna}},
-           familyi={G\bibinitperiod},
-           given={Ricardo},
-           giveni={R\bibinitperiod},
+        {{un=0,uniquepart=base,hash=39d9bc645ffa85a266a69badb2acf9d3}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Chuangao},
+           giveni={C\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {ISCA}%
-      }
-      \strng{namehash}{6a48e59200872b0f83fee47d6fd53544}
-      \strng{fullhash}{f90d2448d17a714a2ed9c6c12ff9c638}
-      \strng{bibnamehash}{f90d2448d17a714a2ed9c6c12ff9c638}
-      \strng{authorbibnamehash}{f90d2448d17a714a2ed9c6c12ff9c638}
-      \strng{authornamehash}{6a48e59200872b0f83fee47d6fd53544}
-      \strng{authorfullhash}{f90d2448d17a714a2ed9c6c12ff9c638}
+      \strng{namehash}{0e20c3e53d97460af692513d36e5f751}
+      \strng{fullhash}{0df868ccbf96c413ae1008773ee07d42}
+      \strng{bibnamehash}{0df868ccbf96c413ae1008773ee07d42}
+      \strng{authorbibnamehash}{0df868ccbf96c413ae1008773ee07d42}
+      \strng{authornamehash}{0e20c3e53d97460af692513d36e5f751}
+      \strng{authorfullhash}{0df868ccbf96c413ae1008773ee07d42}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{In this paper, we introduce L2-ARCTIC, a speech corpus of non-native English that is intended for research in voice conversion, accent conversion, and mispronunciation detection. This initial release includes recordings from ten non-native speakers of English whose first languages (L1s) are Hindi, Korean, Mandarin, Spanish, and Arabic, each L1 containing recordings from one male and one female speaker. Each speaker recorded approximately one hour of read speech from the Carnegie Mellon University ARCTIC prompts, from which we generated orthographic and forced-aligned phonetic transcriptions. In addition, we manually annotated 150 utterances per speaker to identify three types of mispronunciation errors: substitutions, deletions, and additions, making it a valuable resource not only for research in voice conversion and accent conversion but also in computer-assisted pronunciation training. The corpus is publicly accessible at https://psi.engr.tamu.edu/l2-arctic-corpus/.}
-      \field{booktitle}{Interspeech 2018}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we focus on a challenging, but interesting, task in speech emotion recognition (SER), i.e., cross-corpus SER. Unlike conventional SER, a feature distribution mismatch may exist between the labeled source (training) and target (testing) speech samples in cross-corpus SER because they come from different speech emotion corpora, which degrades the performance of most well-performing SER methods. To address this issue, we propose a novel transfer subspace learning method called multiple distribution-adapted regression (MDAR) to bridge the gap between speech samples from different corpora. Specifically, MDAR aims to learn a projection matrix to build the relationship between the source speech features and emotion labels. A novel regularization term called multiple distribution adaption (MDA), consisting of a marginal and two conditional distributionadapted operations, is designed to collaboratively enable such a discriminative projection matrix to be applicable to the target speech samples, regardless of speech corpus variance. Consequently, by resorting to the learned projection matrix, we are able to predict the emotion labels of target speech samples when only the source label information is given. To evaluate the proposed MDAR method, extensive cross-corpus SER tasks based on three different speech emotion corpora, i.e., EmoDB, eNTERFACE, and CASIA, were designed. Experimental results showed that the proposed MDAR outperformed most recent state-of-the-art transfer subspace learning methods and even performed better than several well-performing deep transfer learning methods in dealing with cross-corpus SER tasks.}
+      \field{issn}{1099-4300}
+      \field{journaltitle}{Entropy}
       \field{langid}{english}
       \field{month}{9}
-      \field{shorttitle}{L2-{{ARCTIC}}}
-      \field{title}{L2-{{ARCTIC}}: {{A Non-native English Speech Corpus}}}
-      \field{urlday}{4}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{year}{2018}
+      \field{number}{9}
+      \field{title}{Adapting {{Multiple Distributions}} for {{Bridging Emotions}} from {{Different Speech Corpora}}}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{24}
+      \field{year}{2022}
       \field{urldateera}{ce}
-      \field{pages}{2783\bibrangedash 2787}
-      \range{pages}{5}
+      \field{pages}{1250}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.21437/Interspeech.2018-1110
+      \verb 10.3390/e24091250
       \endverb
       \verb{file}
-      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/IFZLMRKT/Zhao et al. - 2018 - L2-ARCTIC A Non-native English Speech Corpus.pdf
+      \verb /home/peter/snap/zotero-snap/common/Zotero/storage/G3VXCDBN/Zong et al. - 2022 - Adapting Multiple Distributions for Bridging Emotions from Different Speech Corpora.pdf
       \endverb
     \endentry
   \enddatalist
