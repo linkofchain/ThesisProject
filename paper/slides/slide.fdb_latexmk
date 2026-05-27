@@ -1,0 +1,11 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "slide.xdv" "slide.pdf" "slide" 0
+  "slide.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "slide.pdf"
+["xelatex"] 0 "/home/peter/Desktop/thesis/ThesisProject/paper/slides/slide.tex" "slide.xdv" "slide" 0
+  "/home/peter/Desktop/thesis/ThesisProject/paper/slides/slide.tex" 0 -1 0 ""
+  "slide.aux" 1779843928 32 3985256e7290058c681f74d7a3565a19 ""
+  (generated)
+  "slide.log"
+  "slide.xdv"
