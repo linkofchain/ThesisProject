@@ -1,5 +1,14 @@
 # LIST OF FILES
 
+## Build dependencies
+Compiles with xelatex (required for fontspec/IPA fonts) + biber + makeglossaries.
+On Ubuntu/Debian, a fresh machine needs:
+```
+sudo apt-get install -y texlive-xetex texlive-fonts-extra texlive-bibtex-extra biber latexmk
+```
+(`texlive-latex-recommended`/`texlive-latex-extra` cover most other packages used, e.g. tikz, pgfplots, glossaries, hyperref.)
+Also requires the Doulos SIL font on the system (used for IPA transcriptions via `\ipa{}`), e.g. `fonts-sil-doulos` or equivalent.
+
 ## main.tex
 The start of a new thesis.
 

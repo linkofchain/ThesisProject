@@ -9,7 +9,7 @@ _PHONE_NORM = {
     'g':  'ɡ',    # ASCII g → IPA ɡ (U+0261)
     'ʤ':  'd͡ʒ',  # dʒ ligature → tie-bar form
     'ʧ':  't͡ʃ',  # tʃ ligature → tie-bar form
-    'ɚ':  'ə',    # r-colored schwa → plain schwa
+    'ɚ':  'ə',    # rhotic schwa → plain schwa
 }
 _dst = _pd.Distance()
 _pair_score_cache: dict[tuple[str, str], float] = {}
@@ -349,6 +349,29 @@ def get_canonical_labels(canonical: list[str], hypothesis: list[str]) -> list[bo
     ]
 
 
+def _classify_positions(canonical: list[str], gold: list[str], asr: list[str]) -> list[dict]:
+    """
+    Per-canonical-position outcome classification shared by
+    evaluate_mispronunciation_detection and mcnemar_mdd.
+
+    Returns one dict per canonical position (insertions excluded) with keys:
+      outcome           — 'TR', 'FA', 'FR', or 'TA'
+      correct_diagnosis — for 'TR' positions, True if asr phone == gold phone,
+                           else False; None for all other outcomes.
+    """
+    gt_alignment = align_phones(canonical, gold)
+    gt_labels = [OP_LABEL[ev['op']] for ev in gt_alignment if ev['op'] != 'insertion']
+    gt_phones = [ev['hypothesis']   for ev in gt_alignment if ev['op'] != 'insertion']
+    pred_labels = [c != a for c, a in zip(canonical, asr)]
+
+    positions = []
+    for gt, pred, gt_ph, pred_ph in zip(gt_labels, pred_labels, gt_phones, asr):
+        outcome = _outcome(gt, pred)
+        correct_diagnosis = (gt_ph == pred_ph) if outcome == 'TR' else None
+        positions.append({'outcome': outcome, 'correct_diagnosis': correct_diagnosis})
+    return positions
+
+
 def evaluate_mispronunciation_detection(
     canonical: list[str],
     gold: list[str],
@@ -377,7 +400,9 @@ def evaluate_mispronunciation_detection(
         CD  — Correct Diagnoses: TRs where ASR phone matches the gold phone,
         DE  — Diagnostic Errors: TRs where ASR phone differs from the gold phone,
         diagnostic_accuracy (CD / TR),
-        diagnostic_error_rate DER = DE / (CD + DE)
+        diagnostic_error_rate DER = DE / (CD + DE),
+        overall_error_rate — (FA + FR + DE) / (TR + FA + FR + TA); the
+          composite per-position error rate that mcnemar_mdd tests
     """
     if len(asr) != len(canonical):
         raise ValueError(
@@ -388,22 +413,19 @@ def evaluate_mispronunciation_detection(
     gt_alignment = align_phones(canonical, gold)
     gold_insertions = sum(1 for ev in gt_alignment if ev['op'] == 'insertion')
 
-    gt_labels   = [OP_LABEL[ev['op']] for ev in gt_alignment if ev['op'] != 'insertion']
-    gt_phones   = [ev['hypothesis']   for ev in gt_alignment if ev['op'] != 'insertion']
-    pred_labels = [c != a for c, a in zip(canonical, asr)]
-    pred_phones = list(asr)
-
     TR = FA = FR = TA = CD = 0
-    for gt, pred, gt_ph, pred_ph in zip(gt_labels, pred_labels, gt_phones, pred_phones):
-        if     gt and     pred:             # if ground truth and model pred detect mispronunciation, true rejection
+    for pos in _classify_positions(canonical, gold, asr):
+        outcome = pos['outcome']
+        if outcome == 'TR':
             TR += 1
-            if gt_ph == pred_ph:            # if gt phone and pred phone are same, correct diagnosis
+            if pos['correct_diagnosis']:
                 CD += 1
-        elif   gt and not pred: FA += 1     # if ground truth detects actual mispronunciation, but model does not, false acceptance
-        elif not gt and   pred: FR += 1     # if ground truth does not flag mispronunciation but model pred does, false rejection
-        else:                   TA += 1     # if neither ground truth nor model flag mispronunciation, true acceptance
+        elif outcome == 'FA': FA += 1
+        elif outcome == 'FR': FR += 1
+        else:                 TA += 1
 
     DE           = TR - CD
+    total        = TR + FA + FR + TA
     precision    = TR / (TR + FR)           if (TR + FR) > 0 else float('nan')
     recall       = TR / (TR + FA)           if (TR + FA) > 0 else float('nan')
     f1           = (2 * precision * recall / (precision + recall)
@@ -413,6 +435,7 @@ def evaluate_mispronunciation_detection(
     per          = phone_error_rate(canonical, asr)
     diag_acc     = CD / TR                  if TR > 0 else float('nan')
     der          = DE / (CD + DE)           if (CD + DE) > 0 else float('nan')
+    overall_err  = (FA + FR + DE) / total   if total > 0 else float('nan')
 
     return {
         'TR': TR, 'FA': FA, 'FR': FR, 'TA': TA,
@@ -428,56 +451,61 @@ def evaluate_mispronunciation_detection(
         'DE':                      DE,
         'diagnostic_accuracy':     diag_acc,
         'diagnostic_error_rate':   der,
+        'overall_error_rate':      overall_err,
     }
 
 
 def mcnemar_mdd(records_a, records_b):
     """
-    McNemar's test comparing two MDD systems on the same utterances.
+    McNemar's test comparing two MDD systems on the same utterances, using
+    the composite per-position error definition (FA, FR, or DE) that backs
+    overall_error_rate in evaluate_mispronunciation_detection.
 
-    At each canonical phone position, a system is "correct" when its
-    mispronunciation decision (True/False) matches the gold label.
-    The test asks: does system A fix more of system B's mistakes than
-    it introduces new ones?
+    At each canonical phone position, a system is "correct" only if it has
+    neither a detection error (FA, FR) nor a diagnostic error (TR with the
+    wrong predicted phone). The test asks: does system A fix more of system
+    B's errors than it introduces?
 
-    Uses the exact binomial form, which is appropriate for small disagreement
-    counts (b+c). Phone positions within an utterance are not strictly independent; 
-    treat p-values as approximate.
+    Uses the chi-squared statistic with continuity correction,
+    (|b-c| - 1)^2 / (b+c), as in Dietterich (1998); appropriate when b+c >= 25
+    (exact binomial is preferred below that). Phone positions within an
+    utterance are not strictly independent; treat p-values as approximate.
 
     Parameters
     ----------
     records_a, records_b : list of dicts
         Must be aligned (same audio_ids in the same order), each with
-        keys: canonical, gold, asr.
+        keys: audio_id, canonical, gold, asr.
 
     Returns
     -------
     dict with keys:
-        b      — positions where A correct, B wrong
-        c      — positions where A wrong, B correct
-        pvalue — two-sided exact binomial p-value
+        b      — positions where A correct (no FA/FR/DE), B in error
+        c      — positions where A in error, B correct
+        pvalue — p-value of the continuity-corrected chi-squared test
+        table  — full 2x2 mcnemar contingency table
     """
-    y_target, y_a, y_b = [], [], []
+    def _is_correct(canonical, gold, asr):
+        return [pos['outcome'] == 'TA' or pos['correct_diagnosis'] is True
+                for pos in _classify_positions(canonical, gold, asr)]
+
+    y_a, y_b = [], []
     for ra, rb in zip(records_a, records_b):
         if ra['audio_id'] != rb['audio_id']:
             raise ValueError(
                 f"Record mismatch: {ra['audio_id']} vs {rb['audio_id']}. "
                 "Both record lists must cover the same utterances in the same order."
             )
-        gt = get_canonical_labels(ra['canonical'], ra['gold'])
-        pa = [c != a for c, a in zip(ra['canonical'], ra['asr'])]
-        pb = [c != a for c, a in zip(rb['canonical'], rb['asr'])]
-        y_target.extend(gt)
-        y_a.extend(pa)
-        y_b.extend(pb)
+        y_a.extend(_is_correct(ra['canonical'], ra['gold'], ra['asr']))
+        y_b.extend(_is_correct(rb['canonical'], rb['gold'], rb['asr']))
 
-    y_target = _np.array(y_target)
+    y_target = _np.ones(len(y_a), dtype=bool)
     y_a      = _np.array(y_a)
     y_b      = _np.array(y_b)
 
     tb = _mcnemar_table(y_target, y_a, y_b)
-    b, c = int(tb[1, 0]), int(tb[0, 1])
+    b, c = int(tb[0, 1]), int(tb[1, 0])
     if b + c == 0:
         return {'b': 0, 'c': 0, 'pvalue': float('nan'), 'table': tb}
-    _, pvalue = _mcnemar(tb, exact=True, corrected=False)
+    _, pvalue = _mcnemar(tb, exact=False, corrected=True)
     return {'b': b, 'c': c, 'pvalue': pvalue, 'table': tb}

@@ -12,7 +12,15 @@
   langid = {english},
   file = {/home/peter/snap/zotero-snap/common/Zotero/storage/LCGXDWE2/Agrawal et al. - 2023 - Learning When to Trust Which Teacher for Weakly Supervised ASR.pdf}
 }
-
+@misc{speechbrain,
+  title={{SpeechBrain}: A General-Purpose Speech Toolkit},
+  author={Mirco Ravanelli and Titouan Parcollet and Peter Plantinga and Aku Rouhe and Samuele Cornell and Loren Lugosch and Cem Subakan and Nauman Dawalatabad and Abdelwahab Heba and Jianyuan Zhong and Ju-Chieh Chou and Sung-Lin Yeh and Szu-Wei Fu and Chien-Feng Liao and Elena Rastorgueva and François Grondin and William Aris and Hwidong Na and Yan Gao and Renato De Mori and Yoshua Bengio},
+  year={2021},
+  eprint={2106.04624},
+  archivePrefix={arXiv},
+  primaryClass={eess.AS},
+  note={arXiv:2106.04624}
+}
 @article{alrashoudiImprovingMispronunciationDetection2025,
   title = {Improving Mispronunciation Detection and Diagnosis for Non- Native Learners of the {{Arabic}} Language},
   author = {Alrashoudi, Norah and {Al-Khalifa}, Hend and Alotaibi, Yousef},
@@ -309,7 +317,7 @@
 
 @article{biewaldExperimentTrackingWeights2020,
   title = {Experiment Tracking with Weights and Biases},
-  author = {and others Biewald, Lukas},
+  author = {Biewald, Lukas},
   year = 2020
 }
 
@@ -564,12 +572,14 @@
   file = {/home/peter/snap/zotero-snap/common/Zotero/storage/44E9M6S7/Deng and Platt - 2014 - Ensemble Deep Learning for Speech Recognition.pdf}
 }
 
-@article{dengScalableStackingLearning2012,
+@inproceedings{dengScalableStackingLearning2012,
   title = {Scalable Stacking and Learning for Building Deep Architectures},
   author = {Deng, li and Yu, Dong and Platt, John},
-  year = 2012,
+  booktitle={2012 IEEE International conference on Acoustics, speech and signal processing (ICASSP)},
+  pages={2133--2136},
+  year={2012},
+  organization={IEEE},
   month = mar,
-  journal = {Acoustics, Speech, and Signal Processing, 1988. ICASSP-88., 1988 International Conference on},
   doi = {10.1109/ICASSP.2012.6288333},
   abstract = {Deep Neural Networks (DNNs) have shown remarkable success in pattern recognition tasks. However, parallelizing DNN training across computers has been dif?cult. We present the Deep Stack- ing Network (DSN), which overcomes the problem of paralleliz- ing learning algorithms for deep architectures. The DSN provides a method of stacking simple processing modules in buiding deep architectures, with a convex learning problem in each module. Ad- ditional ?ne tuning further improves the DSN, while introducing mi- nor non-convexity. Full learning in the DSN is batch-mode, making it amenable to parallel training over many machines and thus be scal- able over the potentially huge size of the training data. Experimental results on both the MNIST (image) and TIMIT (speech) classi?ca- tion tasks demonstrate that the DSN learning algorithm developed in this work is not only parallelizable in implementation but it also attains higher classi?cation accuracy than the DNN.},
   file = {/home/peter/snap/zotero-snap/common/Zotero/storage/WN97TG6Y/Deng et al. - 2012 - Scalable stacking and learning for building deep architectures.pdf}
@@ -836,7 +846,9 @@
 @article{gravesConnectionistTemporalClassification,
   title = {Connectionist {{Temporal Classification}}: {{Labelling Unsegmented Sequence Data}} with {{Recurrent Neural Networks}}},
   author = {Graves, Alex and Fernandez, Santiago and Gomez, Faustino and Schmidhuber, Jurgen},
-  year = 2012,
+  booktitle={Proceedings of the 23rd international conference on Machine learning},
+  pages={369--376},
+  year={2006},
   abstract = {Many real-world sequence learning tasks require the prediction of sequences of labels from noisy, unsegmented input data. In speech recognition, for example, an acoustic signal is transcribed into words or sub-word units. Recurrent neural networks (RNNs) are powerful sequence learners that would seem well suited to such tasks. However, because they require pre-segmented training data, and post-processing to transform their outputs into label sequences, their applicability has so far been limited. This paper presents a novel method for training RNNs to label unsegmented sequences directly, thereby solving both problems. An experiment on the TIMIT speech corpus demonstrates its advantages over both a baseline HMM and a hybrid HMM-RNN.},
   langid = {english},
   file = {/home/peter/snap/zotero-snap/common/Zotero/storage/KY7HCUCD/Graves et al. - 2012 - Connectionist Temporal Classiﬁcation Labelling Unsegmented Sequence Data with Recurrent Neural Netw.pdf}
@@ -1783,6 +1795,9 @@
 @article{mortensenPanPhonResourceMapping,
   title = {{{PanPhon}}: {{A Resource}} for {{Mapping IPA Segments}} to {{Articulatory Feature Vectors}}},
   author = {Mortensen, David R and Littell, Patrick and Bharadwaj, Akash and Goyal, Kartik and Dyer, Chris and Levin, Lori},
+  booktitle={Proceedings of COLING 2016, the 26th international conference on computational linguistics: Technical papers},
+  pages={3475--3484},
+  year={2016},
   abstract = {This paper contributes to a growing body of evidence that---when coupled with appropriate machine-learning techniques---linguistically motivated, information-rich representations can outperform one-hot encodings of linguistic data. In particular, we show that phonological features outperform character-based models using the PanPhon resource. PanPhon is a database relating over 5,000 IPA segments to 21 subsegmental articulatory features. We show that this database boosts performance in various NER-related tasks. Phonologically aware, neural CRF models built on PanPhon features are able to perform comparably to character-based models on monolingual Spanish and Turkish NER tasks. On transfer models (as between Uzbek and Turkish) they have been shown to perform better. Furthermore, PanPhon features also contribute measurably to Orthography-to-IPA conversion tasks.},
   langid = {english},
   file = {/home/peter/snap/zotero-snap/common/Zotero/storage/CZLCJ9BG/Mortensen et al. - PanPhon A Resource for Mapping IPA Segments to Articulatory Feature Vectors.pdf}
@@ -1840,7 +1855,6 @@
   year = 2019,
   pages = {177--181},
   publisher = {European Language Resources Association (ELRA)},
-  doi = {10.21437/SpeechProsody.2016-73},
   urldate = {2025-04-04},
   abstract = {Does speech/language technology represent a 'digital timebomb' - or an unprecedented opportunity - for minority and indigenous languages? For successful outcomes, technology development must address linguistic challenges, answer to the needs of the local language communities, enlisting them as a central partner in development. The Irish language ABAIR initiative is building (i) linguistic resources, (ii) core technologies, and (iii) applications for public, educational and access/disability use. The Government's Digital Plan for Irish Speech and Language Technology provides a model of the support needed by minority languages in the digital age, if the language is to feature in everyday community activities.},
   langid = {english},
@@ -1848,7 +1862,7 @@
 }
 
 @article{nichasaideSPEECHTECHNOLOGYDOCUMENTATION2015,
-  title = {{{SPEECH TECHNOLOGY AS DOCUMENTATION FOR ENDANGERED LANGUAGE PRESERVATION}}: {{THE CASE OF IRISH}}},
+  title = {Speech technology as documentation for endangered language preservation: The case of Irish},
   author = {N{\'i} Chasaide, Ailbhe and N{\'i} Chiar{\'a}in, Neasa and Berthelsen, Harald and Wendler, Christoph and Murphy, Andrew},
   year = 2015,
   abstract = {Developing speech technology such as text-tospeech (TTS), requiring as it does a raft of phonetic and linguistic resources, can provide a powerful way to document endangered languages. Drawing on the experience of the ABAIR initiative, developing such resources for Irish [1], we illustrate how both the technology and the underpinning resources can be exploited in a variety of ways that can contribute to the preservation and revitalisation of these languages. By enabling new avenues of application, they can further help address the particular challenges that face the language users and learners. To maximise the immediate and downstream impact, resource development should ideally involve linguistically transparent, rule-based approaches, rather than the machine learning approaches typical of the commercially driven TTS systems for major world languages.},

@@ -64,7 +64,7 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Automatic speech recognition (ASR) training can utilize multiple experts as teacher models, each trained on a specific domain or accent. Teacher models may be opaque in nature since their architecture may be not be known or their training cadence is different from that of the student ASR model. Still, the student models are updated incrementally using the pseudo-labels generated independently by the expert teachers. In this paper, we exploit supervision from multiple domain experts in training student ASR models. This training strategy is especially useful in scenarios where few or no human transcriptions are available. To that end, we propose a Smart-Weighter mechanism that selects an appropriate expert based on the input audio, and then trains the student model in an unsupervised setting. We show the efficacy of our approach using LibriSpeech and LibriLight benchmarks and find an improvement of 4 to 25\% over baselines that uniformly weight all the experts, use a single expert model, or combine experts using ROVER.}
@@ -125,7 +125,7 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Speech and {{Language Technology}} in {{Education}} ({{SLaTE}} 2011)}
@@ -145,32 +145,6 @@
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/2NR39XB8/ananthakrishnan11_slate.pdf
       \endverb
-    \endentry
-    \entry{biewaldExperimentTrackingWeights2020}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d7a56739f29d355ed21ceb9611380333}{%
-           family={Biewald},
-           familyi={B\bibinitperiod},
-           given={Lukas},
-           giveni={L\bibinitperiod},
-           givenun=0,
-           prefix={and\bibnamedelima others},
-           prefixi={a\bibinitperiod\bibinitdelim o\bibinitperiod}}}%
-      }
-      \strng{namehash}{d7a56739f29d355ed21ceb9611380333}
-      \strng{fullhash}{d7a56739f29d355ed21ceb9611380333}
-      \strng{bibnamehash}{d7a56739f29d355ed21ceb9611380333}
-      \strng{authorbibnamehash}{d7a56739f29d355ed21ceb9611380333}
-      \strng{authornamehash}{d7a56739f29d355ed21ceb9611380333}
-      \strng{authorfullhash}{d7a56739f29d355ed21ceb9611380333}
-      \field{sortinit}{a}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Experiment Tracking with Weights and Biases}
-      \field{year}{2020}
     \endentry
     \entry{artsteinInterannotatorAgreement2017}{incollection}{}
       \name{author}{1}{}{%
@@ -211,7 +185,7 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This chapter touches upon several issues in the calculation and assessment of interannotator agreement. It gives an introduction to the theory behind agreement coefficients and examples of their application to linguistic annotation tasks. Specific examples explore variation in annotator performance due to heterogeneous data, complex labels, item difficulty, and annotator differences, showing how global agreement coefficients may mask these sources of variation, and how detailed agreement studies can give insight into both the annotation process and the nature of the underlying data. The chapter also reviews recent work on using machine learning to exploit the variation among annotators and learn detailed models from which accurate labels can be inferred. I therefore advocate an approach where agreement studies are not used merely as a means to accept or reject a particular annotation scheme, but as a tool for exploring patterns in the data that are being annotated.}
@@ -263,7 +237,7 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Self-supervised learning (SSL) based models have been shown to generate powerful representations that can be used to improve the performance of downstream speech tasks. Several state-of-the-art SSL models are available, and each of these models optimizes a different loss which gives rise to the possibility of their features being complementary. This paper proposes using an ensemble of such SSL representations and models, which exploits the complementary nature of the features extracted by the various pretrained models. We hypothesize that this results in a richer feature representation and shows results for the ASR downstream task. To this end, we use three SSL models that have shown excellent results on ASR tasks, namely HuBERT, Wav2vec2.0, and WaveLM. We explore the ensemble of models fine-tuned for the ASR task and the ensemble of features using the embeddings obtained from the pre-trained models for a downstream ASR task. We get improved performance over individual models and pre-trained features using Librispeech(100h) and WSJ dataset for the downstream tasks.}
@@ -385,7 +359,7 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{This paper presents XLS-R, a large-scale model for cross-lingual speech representation learning based on wav2vec 2.0. We train models with up to 2B parameters on nearly half a million hours of publicly available speech audio in 128 languages, an order of magnitude more public data than the largest known prior work. Our evaluation covers a wide range of tasks, domains, data regimes and languages, both high and low-resource. On the CoVoST-2 speech translation benchmark, we improve the previous state of the art by an average of 7.4 BLEU over 21 translation directions into English. For speech recognition, XLS-R improves over the best known prior work on BABEL, MLS, CommonVoice as well as VoxPopuli, lowering error rates by 14-34\% relative on average. XLS-R also sets a new state of the art on VoxLingua107 language identification. Moreover, we show that with sufficient model size, cross-lingual pretraining can outperform English-only pretraining when translating English speech into other languages, a setting which favors monolingual pretraining. We hope XLS-R can help to improve speech processing tasks for many more languages of the world.}
@@ -444,7 +418,7 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We compare self-supervised representation learning algorithms which either explicitly quantize the audio data or learn representations without quantization. We find the former to be more accurate since it builds a good vocabulary of the data through vq-wav2vec [1] to enable learning of effective representations in subsequent BERT training. Different to previous work, we directly fine-tune the pre-trained BERT models on transcribed speech using a Connectionist Temporal Classification (CTC) loss instead of feeding the representations into a task-specific model. We also propose a BERT-style model learning directly from the continuous audio data and compare pre-training on raw audio to spectral features. Fine-tuning a BERT model on 10 hour of labeled Librispeech data with a vq-wav2vec vocabulary is almost as good as the best known reported system trained on 100 hours of labeled data on testclean, while achieving a 25\% WER reduction on test-other. When using only 10 minutes of labeled data, WER is 25.2 on test-other and 16.3 on test-clean. This demonstrates that self-supervision can enable speech recognition systems trained on a near-zero amount of transcribed data.}
@@ -509,7 +483,7 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We show for the first time that learning powerful representations from speech audio alone followed by fine-tuning on transcribed speech can outperform the best semi-supervised methods while being conceptually simpler. wav2vec 2.0 masks the speech input in the latent space and solves a contrastive task defined over a quantization of the latent representations which are jointly learned. Experiments using all labeled data of Librispeech achieve 1.8/3.3 WER on the clean/other test sets. When lowering the amount of labeled data to one hour, wav2vec 2.0 outperforms the previous state of the art on the 100 hour subset while using 100 times less labeled data. Using just ten minutes of labeled data and pre-training on 53k hours of unlabeled data still achieves 4.8/8.2 WER. This demonstrates the feasibility of speech recognition with limited amounts of labeled data.}
@@ -546,7 +520,7 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Issues and Trends in Educational Technology}
@@ -605,7 +579,7 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{The performance of automatic speech recognition (ASR) systems has advanced substantially in recent years, particularly for languages for which a large amount of transcribed speech is available. Unfortunately, for low-resource languages, such as minority languages, regional languages or dialects, ASR performance generally remains much lower. In this study, we investigate whether data augmentation techniques could help improve low-resource ASR performance, focusing on four typologically diverse minority languages or language variants (West Germanic: Gronings, West-Frisian; Malayo-Polynesian: Besemah, Nasal). For all four languages, we examine the use of self-training, where an ASR system trained with the available human-transcribed data is used to generate transcriptions, which are then combined with the original data to train a new ASR system. For Gronings, for which there was a pre-existing text-to-speech (TTS) system available, we also examined the use of TTS to generate ASR training data from text-only sources. We find that using a self-training approach consistently yields improved performance (a relative WER reduction up to 20.5\% compared to using an ASR system trained on 24 minutes of manually transcribed speech). The performance gain from TTS augmentation for Gronings was even stronger (up to 25.5\% relative reduction in WER compared to a system based on 24 minutes of manually transcribed speech). In sum, our results show the benefit of using self-training or (if possible) TTS-generated data as an efficient solution to overcome the limitations of data availability for resource-scarce languages in order to improve ASR performance.}
@@ -649,7 +623,7 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Language independence is commonly presented as one of the advantages of modern, machine-learning approaches to NLP, and it is an important type of scalability. In this position paper, I critically review the widespread approaches to achieving and evaluating language independence in the field of computational linguistics and argue that, on the one hand, we are not truly evaluating language independence with any systematicity and on the other hand, that truly language-independent technology requires more linguistic sophistication than is the norm.}
@@ -671,6 +645,30 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/US6RJ7YH/Bender - 2011 - On Achieving and Evaluating Language-Independence in NLP.pdf
       \endverb
     \endentry
+    \entry{biewaldExperimentTrackingWeights2020}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2f7509a68a3ddd301c6e7e0a1e979e51}{%
+           family={Biewald},
+           familyi={B\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2f7509a68a3ddd301c6e7e0a1e979e51}
+      \strng{fullhash}{2f7509a68a3ddd301c6e7e0a1e979e51}
+      \strng{bibnamehash}{2f7509a68a3ddd301c6e7e0a1e979e51}
+      \strng{authorbibnamehash}{2f7509a68a3ddd301c6e7e0a1e979e51}
+      \strng{authornamehash}{2f7509a68a3ddd301c6e7e0a1e979e51}
+      \strng{authorfullhash}{2f7509a68a3ddd301c6e7e0a1e979e51}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Experiment Tracking with Weights and Biases}
+      \field{year}{2020}
+    \endentry
     \entry{broinNewUrbanIrish2014}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d27b372d6738704d986062cd20f59d1f}{%
@@ -689,7 +687,7 @@
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This article compares the phonetics and morphology of Irish spoken in the Gaeltacht with that spoken in Irish cities. Informants were identified by randomly selecting newsreaders and chat show hosts on Gaeltacht and urban Irishlanguage radio stations. Recordings of the speakers were transcribed and then analysed for morphological and phonetic accuracy. City speakers demonstrated a move towards simplified morphology and phonology, making fewer than 50\% of expected changes, while Gaeltacht speakers retained the language's traditional forms, making more than 90\% of expected changes. It was discovered that the city speakers, while apparently speaking stable idiolects, each returned very different rates, suggesting that the cities do not yet have stable Irish dialects. The Gaeltacht speakers all returned very similar rates.}
@@ -733,7 +731,7 @@
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Determination of mispronunciations and ensuring feedback to users are maintained by computerassisted language learning (CALL) systems. In this work, we introduce an ensemble model that defines the mispronunciation of Arabic phonemes and assists learning of Arabic, effectively. To the best of our knowledge, this is the very first attempt to determine the mispronunciations of Arabic phonemes employing ensemble learning techniques and conventional machine learning models, comprehensively. In order to observe the effect of feature extraction techniques, melfrequency cepstrum coefficients (MFCC), and Mel spectrogram are blended with each learning algorithm. To show the success of proposed model, 29 letters in the Arabic phonemes, 8 of which are hafiz, are voiced by a total of 11 different person. The amount of data set has been enhanced employing the methods of adding noise, time shifting, time stretching, pitch shifting. Extensive experiment results demonstrate that the utilization of voting classifier as an ensemble algorithm with Mel spectrogram feature extraction technique exhibits remarkable classification result with 95.9\% of accuracy.}
@@ -795,7 +793,7 @@
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The {{Handbook}} of {{Educational Linguistics}}}
@@ -854,7 +852,7 @@
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{month}{8}
@@ -913,7 +911,7 @@
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{3rd {{International Conference}} on {{Spoken Language Processing}} ({{ICSLP}} 1994)}
@@ -980,7 +978,7 @@
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents XLSR which learns cross-lingual speech representations by pretraining a single model from the raw waveform of speech in multiple languages. We build on wav2vec 2.0 which is trained by solving a contrastive task over masked latent speech representations and jointly learns a quantization of the latents shared across languages. The resulting model is fine-tuned on labeled data and experiments show that cross-lingual pretraining significantly outperforms monolingual pretraining. On the CommonVoice benchmark, XLSR shows a relative phoneme error rate reduction of 72\% compared to the best known results. On BABEL, our approach improves word error rate by 16\% relative compared to a comparable system. Our approach enables a single multilingual speech recognition model which is competitive to strong individual models. Analysis shows that the latent discrete speech representations are shared across languages with increased sharing for related languages. We hope to catalyze research in low-resource speech understanding by releasing XLSR-53, a large model pretrained in 53 languages.}
@@ -1076,7 +1074,7 @@
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We introduce FLEURS, the Few-shot Learning Evaluation of Universal Representations of Speech benchmark. FLEURS is an n-way parallel speech dataset in 102 languages built on top of the machine translation FLoRes-101 benchmark, with approximately 12 hours of speech supervision per language. FLEURS can be used for a variety of speech tasks, including Automatic Speech Recognition (ASR), Speech Language Identification (Speech LangID), Translation and Retrieval. In this paper, we provide baselines for the tasks based on multilingual pre-trained models like mSLAM. The goal of FLEURS is to enable speech technology in more languages and catalyze research in low-resource speech understanding.}
@@ -1127,7 +1125,7 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Ensemble Deep Learning for Speech Recognition Li Deng and John C. Platt Microsoft Research, One Microsoft Way, Redmond, WA, USA deng@microsoft.com; jplatt@microsoft.com Abstract Deep learning systems have dramatically improved the accuracy of speech recognition, and various deep architecture...}
@@ -1143,7 +1141,7 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/44E9M6S7/Deng and Platt - 2014 - Ensemble Deep Learning for Speech Recognition.pdf
       \endverb
     \endentry
-    \entry{dengScalableStackingLearning2012}{article}{}
+    \entry{dengScalableStackingLearning2012}{inproceedings}{}
       \name{author}{3}{}{%
         {{un=1,uniquepart=given,hash=60f1cadf17dec9d3385a6e3d49ee96b3}{%
            family={Deng},
@@ -1164,6 +1162,9 @@
            giveni={J\bibinitperiod},
            givenun=0}}%
       }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
       \strng{namehash}{ea319b6cad7c0c25191588f66673a549}
       \strng{fullhash}{4bf7f7629df01edacc202b37e4193d27}
       \strng{bibnamehash}{4bf7f7629df01edacc202b37e4193d27}
@@ -1173,14 +1174,16 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Deep Neural Networks (DNNs) have shown remarkable success in pattern recognition tasks. However, parallelizing DNN training across computers has been dif?cult. We present the Deep Stack- ing Network (DSN), which overcomes the problem of paralleliz- ing learning algorithms for deep architectures. The DSN provides a method of stacking simple processing modules in buiding deep architectures, with a convex learning problem in each module. Ad- ditional ?ne tuning further improves the DSN, while introducing mi- nor non-convexity. Full learning in the DSN is batch-mode, making it amenable to parallel training over many machines and thus be scal- able over the potentially huge size of the training data. Experimental results on both the MNIST (image) and TIMIT (speech) classi?ca- tion tasks demonstrate that the DSN learning algorithm developed in this work is not only parallelizable in implementation but it also attains higher classi?cation accuracy than the DNN.}
-      \field{journaltitle}{Acoustics, Speech, and Signal Processing, 1988. ICASSP-88., 1988 International Conference on}
+      \field{booktitle}{2012 IEEE International conference on Acoustics, speech and signal processing (ICASSP)}
       \field{month}{3}
       \field{title}{Scalable Stacking and Learning for Building Deep Architectures}
       \field{year}{2012}
+      \field{pages}{2133\bibrangedash 2136}
+      \range{pages}{4}
       \verb{doi}
       \verb 10.1109/ICASSP.2012.6288333
       \endverb
@@ -1250,7 +1253,7 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5 (7.7 point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).}
@@ -1297,7 +1300,7 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Neural computation}
@@ -1332,7 +1335,7 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Workshop on Multiple Classifier Systems}
@@ -1387,7 +1390,7 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Cite the source of the dataset as: Dryer, Matthew S. \& Haspelmath, Martin (eds.) 2013. The World Atlas of Language Structures Online. Leipzig: Max Planck Institute for Evolutionary Anthropology. (Available online at https://wals.info)}
@@ -1427,7 +1430,7 @@
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-91-44-04238-1}
@@ -1461,7 +1464,7 @@
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Multilingual automatic speech recognition (ASR) systems mostly benefit low resource languages but suffer degradation in performance across several languages relative to their monolingual counterparts. Limited studies have focused on understanding the languages behaviour in the multilingual speech recognition setups. In this paper, a novel data-driven approach is proposed to investigate the cross-lingual acoustic-phonetic similarities. This technique measures the similarities between posterior distributions from various monolingual acoustic models against a target speech signal. Deep neural networks are trained as mapping networks to transform the distributions from different acoustic models into a directly comparable form. The analysis observes that the languages `closeness' can not be truly estimated by the volume of overlapping phonemes set. Entropy analysis of the proposed mapping networks exhibits that a language with lesser overlap can be more amenable to crosslingual transfer, and hence more beneficial in the multilingual setup. Finally, the proposed posterior transformation approach is leveraged to fuse monolingual models for a target language. A relative improvement of {$\sim$}8\% over monolingual counterpart is achieved.}
@@ -1540,7 +1543,7 @@
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{End-to-end (E2E) automatic speech recognition (ASR) models have recently demonstrated superior performance over the traditional hybrid ASR models. Training an E2E ASR model requires a large amount of data which is not only expensive but may also raise dependency on production data. At the same time, synthetic speech generated by the state-of-the-art text-to-speech (TTS) engines has advanced to near-human naturalness. In this work, we propose to utilize synthetic speech for ASR training (SynthASR) in applications where data is sparse or hard to get for ASR model training. In addition, we apply continual learning with a novel multi-stage training strategy to address catastrophic forgetting, achieved by a mix of weighted multi-style training, data augmentation, encoder freezing, and parameter regularization. In our experiments conducted on in-house datasets for a new application of recognizing medication names, training ASR RNN-T models with synthetic audio via the proposed multi-stage training improved the recognition performance on new application by more than 65\% relative, without degradation on existing general applications. Our observations show that SynthASR holds great promise in training the state-of-the-art large-scale E2E ASR models for new applications while reducing the costs and dependency on production data.}
@@ -1581,7 +1584,7 @@
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{FFmpeg}
@@ -1609,7 +1612,7 @@
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{1997 {{IEEE}} Workshop on Automatic Speech Recognition and Understanding Proceedings}
@@ -1639,7 +1642,7 @@
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1703,7 +1706,7 @@
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{langid}{english}
@@ -1761,7 +1764,7 @@
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The number of end-to-end speech recognition models grows every year. These models are often adapted to new domains or languages resulting in a proliferation of expert systems that achieve great results on target data, while generally showing inferior performance outside of their domain of expertise. We explore combination of such experts via confidence-based ensembles: ensembles of models where only the output of the most-confident model is used. We assume that models' target data is not available except for a small validation set. We demonstrate effectiveness of our approach with two applications. First, we show that a confidence-based ensemble of 5 monolingual models outperforms a system where model selection is performed via a dedicated language identification block. Second, we demonstrate that it is possible to combine base and adapted models to achieve strong results on both original and target data. We validate all our results on multiple datasets and model architectures.}
@@ -1831,7 +1834,7 @@
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Automatic pronunciation assessment is an important technology to help self-directed language learners. While pronunciation quality has multiple aspects including accuracy, fluency, completeness, and prosody, previous efforts typically only model one aspect (e.g., accuracy) at one granularity (e.g., at the phoneme-level). In this work, we explore modeling multi-aspect pronunciation assessment at multiple granularities. Specifically, we train a Goodness Of Pronunciation feature-based Transformer (GOPT) with multi-task learning. Experiments show that GOPT achieves the best results on speechocean762 with a public automatic speech recognition (ASR) acoustic model trained on Librispeech. Code at https://github.com/YuanGongND/gopt.}
@@ -1874,7 +1877,7 @@
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Text-to-Speech {{AI}}}
@@ -1916,13 +1919,16 @@
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Many real-world sequence learning tasks require the prediction of sequences of labels from noisy, unsegmented input data. In speech recognition, for example, an acoustic signal is transcribed into words or sub-word units. Recurrent neural networks (RNNs) are powerful sequence learners that would seem well suited to such tasks. However, because they require pre-segmented training data, and post-processing to transform their outputs into label sequences, their applicability has so far been limited. This paper presents a novel method for training RNNs to label unsegmented sequences directly, thereby solving both problems. An experiment on the TIMIT speech corpus demonstrates its advantages over both a baseline HMM and a hybrid HMM-RNN.}
+      \field{booktitle}{Proceedings of the 23rd international conference on Machine learning}
       \field{langid}{english}
       \field{title}{Connectionist {{Temporal Classification}}: {{Labelling Unsegmented Sequence Data}} with {{Recurrent Neural Networks}}}
-      \field{year}{2012}
+      \field{year}{2006}
+      \field{pages}{369\bibrangedash 376}
+      \range{pages}{8}
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/KY7HCUCD/Graves et al. - 2012 - Connectionist Temporal Classiﬁcation Labelling Unsegmented Sequence Data with Recurrent Neural Netw.pdf
       \endverb
@@ -1951,7 +1957,7 @@
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We propose several means for improving the performance and training of neural networks for classification. We use crossvalidation as a tool for optimizing network parameters and architecture. We show further that the remaining residual ``generalization'' error can be reduced by invoking ensembles of similar networks.}
@@ -2033,7 +2039,7 @@
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this paper we propose a novel data augmentation method for attention-based end-to-end automatic speech recognition (E2E-ASR), utilizing a large amount of text which is not paired with speech signals. Inspired by the back-translation technique proposed in the field of machine translation, we build a neural text-to-encoder model which predicts a sequence of hidden states extracted by a pre-trained E2E-ASR encoder from a sequence of characters. By using hidden states as a target instead of acoustic features, it is possible to achieve faster attention learning and reduce computational cost, thanks to sub-sampling in E2E-ASR encoder, also the use of the hidden states can avoid to model speaker dependencies unlike acoustic features. After training, the text-to-encoder model generates the hidden states from a large amount of unpaired text, then E2E-ASR decoder is retrained using the generated hidden states as additional training data. Experimental evaluation using LibriSpeech dataset demonstrates that our proposed method achieves improvement of ASR performance and reduces the number of unknown words without the need for paired data.}
@@ -2103,7 +2109,7 @@
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Deep neural networks and huge language models are becoming omnipresent in natural language applications. As they are known for requiring large amounts of training data, there is a growing body of work to improve the performance in low-resource settings. Motivated by the recent fundamental changes towards neural models and the popular pre-train and fine-tune paradigm, we survey promising approaches for low-resource natural language processing. After a discussion about the different dimensions of data availability, we give a structured overview of methods that enable learning when training data is sparse. This includes mechanisms to create additional labeled data like data augmentation and distant supervision as well as transfer learning settings that reduce the need for target supervision. A goal of our survey is to explain how these methods differ in their requirements as understanding them is essential for choosing a technique suited for a specific low-resource setting. Further key aspects of this work are to highlight open issues and to outline promising directions for future research.}
@@ -2159,7 +2165,7 @@
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This work aims to derive salient mispronunciations made by Chinese (L1 being Cantonese) learners of English (L2 being American English) in order to support the design of pedagogical and remedial instructions. Our approach is grounded on the theory of language transfer and involves systematic phonological comparison between two languages to predict possible phonetic confusions that may lead to mispronunciations. We collect a corpus of speech recordings from some 21 Cantonese learners of English. We develop an automatic speech recognizer by training cross-word triphone models based on the TIMIT corpus. We also develop an ``extended'' pronunciation lexicon that incorporates the predicted phonetic confusions to generate additional, erroneous pronunciation variants for each word. The extended pronunciation lexicon is used to produce a confusion network in recognition of the English speech recordings of Cantonese learners. We refer to the statistics of the erroneous recognition outputs to derive salient mispronunciations that stipulates the predictions based on phonological comparison.}
@@ -2226,7 +2232,7 @@
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Language technologies contribute to promoting multilingualism and linguistic diversity around the world. However, only a very small number of the over 7000 languages of the world are represented in the rapidly evolving language technologies and applications. In this paper we look at the relation between the types of languages, resources, and their representation in NLP conferences to understand the trajectory that different languages have followed over time. Our quantitative investigation underlines the disparity between languages, especially in terms of their resources, and calls into question the ``language agnostic'' status of current models and systems. Through this paper, we attempt to convince the ACL community to prioritise the resolution of the predicaments highlighted here, so that no language is left behind.}
@@ -2276,7 +2282,7 @@
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
@@ -2313,7 +2319,7 @@
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Spanish (L2) speakers have difficulty in perceiving the French vowel height contrast /e/-/ /. L2 perception models attribute this perceptual difficulty to native (L1) phonology. For example, the Spanish /e/ vowel, which is perceptually similar to both French vowels, is assumed to influence their perception through an assimilation process. This pattern of assimilation depends upon the degree of the similarity between the vowels. This research aims to shed light on the relevant aspects of L1 phonology and its relation to L2 phonology that can be operationalized to predict L2 perception. Traditionally, measures of perceptual similarity have involved comparing the acoustic or gestural properties of productions by groups of `referenced' native speakers of the two languages of interest. Here, we rather compute acoustic distances (based on F1 and F2 values) between the native productions by Spanish adolescents learning French (N=14) and a group of native French speakers. In addition to this distance measure, we also introduced a novel measure, the within-speaker variability or compactness in productions of a L1 vowel to predict L2 perception. The results revealed that individual productions of Spanish /e/ and their variability (or compactness) predicted L2 perception accuracy of the French /e/-/ / vowels.}
@@ -2369,7 +2375,7 @@
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Pronunciation assessment and its application in computer-aided pronunciation training (CAPT) have seen impressive progress in recent years. With the rapid growth in language processing and deep learning over the past few years, there is a need for an updated review. In this paper, we review methods employed in pronunciation assessment for both phonemic and prosodic. We categorize the main challenges observed in prominent research trends, and highlight existing limitations, and available resources. This is followed by a discussion of the remaining challenges and possible directions for future work.}
@@ -2441,7 +2447,7 @@
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We propose a weakly-supervised model for word-level mispronunciation detection in non-native (L2) English speech. To train this model, phonetically transcribed L2 speech is not required and we only need to mark mispronounced words. The lack of phonetic transcriptions for L2 speech means that the model has to learn only from a weak signal of word-level mispronunciations. Because of that and due to the limited amount of mispronounced L2 speech, the model is more likely to overfit. To limit this risk, we train it in a multi-task setup. In the first task, we estimate the probabilities of word-level mispronunciation. For the second task, we use a phoneme recognizer trained on phonetically transcribed L1 speech that is easily accessible and can be automatically annotated. Compared to state-of-the-art approaches, we improve the accuracy of detecting word-level pronunciation errors in AUC metric by 30\% on the GUT Isle Corpus of L2 Polish speakers, and by 21.5\% on the Isle Corpus of L2 German and Italian speakers.}
@@ -2506,7 +2512,7 @@
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0167-6393}
@@ -2553,7 +2559,7 @@
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Reprinted}
@@ -2590,7 +2596,7 @@
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents a class of new fast non-trainable entropy-based confidence estimation methods for automatic speech recognition. We show how per-frame entropy values can be normalized and aggregated to obtain a confidence measure per unit and per word for Connectionist Temporal Classification (CTC) and Recurrent Neural Network Transducer (RNN-T) models. Proposed methods have similar computational complexity to the traditional method based on the maximum per-frame probability, but they are more adjustable, have a wider effective threshold range, and better push apart the confidence distributions of correct and incorrect words. We evaluate the proposed confidence measures on LibriSpeech test sets, and show that they are up to 2 and 4 times better than confidence estimation based on the maximum per-frame probability at detecting incorrect words for Conformer-CTC and Conformer-RNN-T models, respectively.}
@@ -2653,7 +2659,7 @@
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper focuses on using Convolutional Neural Network (CNN), Recurrent Neural Network (RNN) and Connectionist Temporal Classification (CTC) to build an end-to-end speech recognition for Mispronunciation Detection and Diagnosis (MDD) task. Our approach is end-to-end models, while phonemic or graphemic information, or forced alignment between different linguistic units, are not required. We conduct experiments that compare the proposed CNN-RNNCTC approach with alternative mispronunciation detection and diagnoses (MDD) approaches. The F-measure of our approach is 74.65\%, which significantly outperforms the Extended Recognition Network (ERN) (S-AM) by 44.75\% and State-level Acoustic Model (S-AM) by 32.28\% relatively. The relative improvement in F-measure when over Acoustic-Phonemic Model (APM), Acoustic-Graphemic Model (AGM) and Acoustic-Phonemic-Graphemic Model (APGM) are 9.57\%, 5.04\% and 2.77\% respectively.}
@@ -2706,7 +2712,7 @@
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper investigates the use of multidistribution deep neural networks (DNNs) for mispronunciation detection and diagnosis (MDD), to circumvent the difficulties encountered in an existing approach based on extended recognition networks (ERNs). The ERNs leverage existing automatic speech recognition technology by constraining the search space via including the likely phonetic error patterns of the target words in addition to the canonical transcriptions. MDDs are achieved by comparing the recognized transcriptions with the canonical ones. Although this approach performs reasonably well, it has the following issues: 1) Learning the error patterns of the target words to generate the ERNs remains a challenging task. Phones or phone errors missing from the ERNs cannot be recognized even if we have well-trained acoustic models; and 2) acoustic models and phonological rules are trained independently, and hence, contextual information is lost. To address these issues, we propose an acoustic-graphemicphonemic model (AGPM) using a multidistribution DNN, whose input features include acoustic features, as well as corresponding graphemes and canonical transcriptions (encoded as binary vectors). The AGPM can implicitly model both grapheme-to-likelypronunciation and phoneme-to-likely-pronunciation conversions, which are integrated into acoustic modeling. With the AGPM, we develop a unified MDD framework, which works much like freephone recognition. Experiments show that our method achieves a phone error rate (PER) of 11.1\%. The false rejection rate (FRR), false acceptance rate (FAR), and diagnostic error rate (DER) for MDD are 4.6\%, 30.5\%, and 13.5\%, respectively. It outperforms the ERN approach using DNNs as acoustic models, whose PER, FRR, FAR, and DER are 16.8\%, 11.0\%, 43.6\%, and 32.3\%, respectively.}
@@ -2770,7 +2776,7 @@
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Recently, end-to-end (E2E) automatic speech recognition (ASR) systems have garnered tremendous attention because of their great success and unified modeling paradigms in comparison to conventional hybrid DNN-HMM ASR systems. Despite the widespread adoption of E2E modeling frameworks on ASR, there still is a dearth of work on investigating the E2E frameworks for use in computer-assisted pronunciation learning (CAPT), particularly for Mispronunciation detection (MD). In response, we first present a novel use of hybrid CTCAttention approach to the MD task, taking advantage of the strengths of both CTC and the attention-based model meanwhile getting around the need for phone-level forced alignment. Second, we perform input augmentation with text prompt information to make the resulting E2E model more tailored for the MD task. On the other hand, we adopt two MD decision methods so as to better cooperate with the proposed framework: 1) decision-making based on a recognition confidence measure or 2) simply based on speech recognition results. A series of Mandarin MD experiments demonstrate that our approach not only simplifies the processing pipeline of existing hybrid DNN-HMM systems but also brings about systematic and substantial performance improvements. Furthermore, input augmentation with text prompts seems to hold excellent promise for the E2E-based MD approach.}
@@ -2819,7 +2825,7 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{AAAI/IAAI}
@@ -2869,7 +2875,7 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{A current problem in NLP is massaging and processing low-resource languages which lack useful training attributes such as supervised data, number of native speakers or experts, etc. This review paper concisely summarizes previous groundbreaking achievements made towards resolving this problem, and analyzes potential improvements in the context of the overall future research direction.}
@@ -2943,12 +2949,17 @@
       \strng{authorfullhash}{854aa5eb043b3b7787dedb3334efbe3d}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper contributes to a growing body of evidence that---when coupled with appropriate machine-learning techniques---linguistically motivated, information-rich representations can outperform one-hot encodings of linguistic data. In particular, we show that phonological features outperform character-based models using the PanPhon resource. PanPhon is a database relating over 5,000 IPA segments to 21 subsegmental articulatory features. We show that this database boosts performance in various NER-related tasks. Phonologically aware, neural CRF models built on PanPhon features are able to perform comparably to character-based models on monolingual Spanish and Turkish NER tasks. On transfer models (as between Uzbek and Turkish) they have been shown to perform better. Furthermore, PanPhon features also contribute measurably to Orthography-to-IPA conversion tasks.}
+      \field{booktitle}{Proceedings of COLING 2016, the 26th international conference on computational linguistics: Technical papers}
       \field{langid}{english}
       \field{title}{{{PanPhon}}: {{A Resource}} for {{Mapping IPA Segments}} to {{Articulatory Feature Vectors}}}
+      \field{year}{2016}
+      \field{pages}{3475\bibrangedash 3484}
+      \range{pages}{10}
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/CZLCJ9BG/Mortensen et al. - PanPhon A Resource for Mapping IPA Segments to Articulatory Feature Vectors.pdf
       \endverb
@@ -2983,7 +2994,7 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. ed., entirely rev., enlarged and updated}
@@ -3016,7 +3027,7 @@
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of molecular biology}
@@ -3073,12 +3084,12 @@
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Developing speech technology such as text-tospeech (TTS), requiring as it does a raft of phonetic and linguistic resources, can provide a powerful way to document endangered languages. Drawing on the experience of the ABAIR initiative, developing such resources for Irish [1], we illustrate how both the technology and the underpinning resources can be exploited in a variety of ways that can contribute to the preservation and revitalisation of these languages. By enabling new avenues of application, they can further help address the particular challenges that face the language users and learners. To maximise the immediate and downstream impact, resource development should ideally involve linguistically transparent, rule-based approaches, rather than the machine learning approaches typical of the commercially driven TTS systems for major world languages.}
       \field{langid}{english}
-      \field{title}{{{SPEECH TECHNOLOGY AS DOCUMENTATION FOR ENDANGERED LANGUAGE PRESERVATION}}: {{THE CASE OF IRISH}}}
+      \field{title}{Speech technology as documentation for endangered language preservation: The case of Irish}
       \field{year}{2015}
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/FUC4REGR/Chasaide et al. - SPEECH TECHNOLOGY AS DOCUMENTATION FOR ENDANGERED LANGUAGE PRESERVATION THE CASE OF IRISH.pdf
@@ -3142,7 +3153,7 @@
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Does speech/language technology represent a 'digital timebomb' - or an unprecedented opportunity - for minority and indigenous languages? For successful outcomes, technology development must address linguistic challenges, answer to the needs of the local language communities, enlisting them as a central partner in development. The Irish language ABAIR initiative is building (i) linguistic resources, (ii) core technologies, and (iii) applications for public, educational and access/disability use. The Government's Digital Plan for Irish Speech and Language Technology provides a model of the support needed by minority languages in the digital age, if the language is to feature in everyday community activities.}
@@ -3156,9 +3167,6 @@
       \field{urldateera}{ce}
       \field{pages}{177\bibrangedash 181}
       \range{pages}{5}
-      \verb{doi}
-      \verb 10.21437/SpeechProsody.2016-73
-      \endverb
       \verb{file}
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/HEZYJ5BN/O'Reilly and Ní Chasaide - 2016 - Modelling the timing and scaling of nuclear pitch accents of Connaught and Ulster Irish with the Fuj.pdf
       \endverb
@@ -3224,7 +3232,7 @@
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{An Corpas Cliste (`Clever Corpus') is an Irish language learner corpus. The corpus data comes from a purpose-built intelligent Computer Assisted Language Learning (iCALL) platform called An Scéalaí (`the Storyteller') and comprises both audio and text, produced by second and third level learners of Irish. Metadata (e.g. L1, level of Irish, dialect preference, age) is saved with every learner account, along with data on platform engagement (e.g. speech/language technologies employed, time spent on task). This paper illustrates how An Corpas Cliste is structured and is being prepared for analysis and the methodologies and resources that are being used to exploit it with a view to enhancing the learning experience.}
@@ -3303,7 +3311,7 @@
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper describes how emerging linguistic resources and technologies can be used to build a language learning platform for Irish, an endangered language. This platform, An Scéalaí, harvests learner corpora -- a vital resource both to study the stages of learners' language acquisition and to guide future platform development. A technical description of the platform is provided, including details of how different speech technologies and linguistic resources are fused to provide a holistic learner experience. The active continuous participation of the community, and platform evaluations by learners and teachers, are discussed.}
@@ -3363,7 +3371,7 @@
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Pronunciation assessment relies on goodness of pronunciation (GOP) scores, traditionally derived from softmax-based posterior probabilities. However, posterior probabilities may suffer from overconfidence and poor phoneme separation, limiting their effectiveness. This study compares logit-based GOP scores with probability-based GOP scores for mispronunciation detection. We conducted our experiment on two L2 English speech datasets spoken by Dutch and Mandarin speakers, assessing classification performance and correlation with human ratings. Logit-based methods outperform probability-based GOP in classification, but their effectiveness depends on dataset characteristics. The maximum logit GOP shows the strongest alignment with human perception, while a combination of different GOP scores balances probability and logit features. The findings suggest that hybrid GOP methods incorporating uncertainty modeling and phoneme-specific weighting improve pronunciation assessment.}
@@ -3529,7 +3537,7 @@
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Deep learning frameworks have often focused on either usability or speed, but not both. PyTorch is a machine learning library that shows that these two goals are in fact compatible: it was designed from first principles to support an imperative and Pythonic programming style that supports code as a model, makes debugging easy and is consistent with other popular scientific computing libraries, while remaining efficient and supporting hardware accelerators such as GPUs. In this paper, we detail the principles that drove the implementation of PyTorch and how they are reflected in its architecture. We emphasize that every aspect of PyTorch is a regular Python program under the full control of its user. We also explain how the careful and pragmatic implementation of the key components of its runtime enables them to work together to achieve compelling performance. We demonstrate the efficiency of individual subsystems, as well as the overall speed of PyTorch on several commonly used benchmarks.}
@@ -3615,7 +3623,7 @@
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Mispronunciation detection (MD) models are the cornerstones of many language learning applications. Unfortunately, most systems are built for English and other major languages, while low-resourced language varieties, such as Finland Swedish (FS), lack such tools. In this paper, we introduce our MD model for FS, trained on 89 hours of first language (L1) speakers' spontaneous speech and tested on 33 minutes of L2 transcribed read-aloud speech.}
@@ -3724,7 +3732,7 @@
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We describe the design of Kaldi, a free, open-source toolkit for speech recognition research. Kaldi provides a speech recognition system based on finite-state transducers (using the freely available OpenFst), together with detailed documentation and scripts for building complete recognition systems. Kaldi is written is C++, and the core library supports modeling of arbitrary phonetic-context sizes, acoustic modeling with subspace Gaussian mixture models (SGMM) as well as standard Gaussian mixture models, together with all commonly used linear and affine transforms. Kaldi is released under the Apache License v2.0, which is highly nonrestrictive, making it suitable for a wide community of users.}
@@ -3768,7 +3776,7 @@
       \field{sortinit}{Q}
       \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this study, we propose a discriminative training algorithm to jointly minimize mispronunciation detection errors (i.e., false rejections and false acceptances) and diagnosis errors (i.e., correctly pinpointing mispronunciations but incorrectly stating how they are wrong). An optimization procedure, similar to Minimum Word Error (MWE) discriminative training, is developed to refine the ML-trained HMMs. The errors to be minimized are obtained by comparing transcribed training utterances (including mispronunciations) with Extended Recognition Networks [3] which contain both canonical pronunciations and explicitly modeled mispronunciations. The ERN is compiled by handcrafted rules, or data-driven rules. Several conclusions can be drawn from the experiments: (1) data-driven rules are more effective than hand-crafted ones in capturing mispronunciations; (2) compared with the ML training baseline, discriminative training can reduce false rejections and diagnostic errors, though false acceptances increase slightly due to a small number of false-acceptance samples in the training set.}
@@ -3841,7 +3849,7 @@
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Neural Machine Translation (NMT) has seen a tremendous spurt of growth in less than ten years, and has already entered a mature phase. While considered as the most widely used solution for Machine Translation, its performance on low-resource language pairs still remains sub-optimal compared to the high-resource counterparts, due to the unavailability of large parallel corpora. Therefore, the implementation of NMT techniques for low-resource language pairs has been receiving the spotlight in the recent NMT research arena, thus leading to a substantial amount of research reported on this topic. This paper presents a detailed survey of research advancements in low-resource language NMT (LRL-NMT), along with a quantitative analysis aimed at identifying the most popular solutions. Based on our findings from reviewing previous work, this survey paper provides a set of guidelines to select the possible NMT technique for a given LRL data setting. It also presents a holistic view of the LRL-NMT research landscape and provides a list of recommendations to further enhance the research efforts on LRL-NMT. CCS Concepts: {$\bullet$} Computing methodologies {$\rightarrow$} Natural language processing; Neural networks; Machine translation; Language resources; Machine learning.}
@@ -3886,7 +3894,7 @@
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{MLxtend is a library that implements a variety of core algorithms and utilities for machine learning and data mining. The primary goal of MLxtend is to make commonly used tools accessible to researchers in academia and data scientists in industries focussing on userfriendly and intuitive APIs and compatibility to existing machine learning libraries, such as scikit-learn, when appropriate. While MLxtend implements a large variety of functions, highlights include sequential feature selection algorithms (Pudil, Novovičová, and Kittler 1994), implementations of stacked generalization (Wolpert 1992) for classification and regression, and algorithms for frequent pattern mining (Agrawal and Ramakrishnan 1994). The sequential feature selection algorithms cover forward, backward, forward floating, and backward floating selection and leverage scikit-learn's cross-validation API (Pedregosa et al. 2011) to ensure satisfactory generalization performance upon constructing and selecting feature subsets. Besides, visualization functions are provided that allow users to inspect the estimated predictive performance, including performance intervals, for different feature subsets. The ensemble methods in MLxtend cover majority voting, stacking, and stacked generalization, all of which are compatible with scikit-learn estimators and other libraries as XGBoost (Chen and Guestrin 2016). In addition to feature selection, classification, and regression algorithms, MLxtend implements model evaluation techniques for comparing the performance of two different models via McNemar's test and multiple models via Cochran's Q test. An implementation of the 5x2 cross-validated paired t-test (Dietterich 1998) allows users to compare the performance of machine learning algorithms to each other. Furthermore, different flavors of the Bootstrap method (Efron and Tibshirani 1994), such as the .632 Bootstrap method (Efron 1983) are implemented to compute confidence intervals of performance estimates. All in all, MLxtend provides a large variety of different utilities that build upon and extend the capabilities of Python's scientific computing stack.}
@@ -3912,6 +3920,156 @@
       \verb /home/peter/snap/zotero-snap/common/Zotero/storage/S4EP5TEH/Raschka - 2018 - MLxtend Providing machine learning and data science utilities and extensions to Python’s scientific.pdf
       \endverb
     \endentry
+    \entry{speechbrain}{misc}{}
+      \name{author}{21}{}{%
+        {{un=0,uniquepart=base,hash=41fbfe7d2c6cfc4c8e8f0a9a5c5cb33f}{%
+           family={Ravanelli},
+           familyi={R\bibinitperiod},
+           given={Mirco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=349c6249e40230069088b98c40bdf16f}{%
+           family={Parcollet},
+           familyi={P\bibinitperiod},
+           given={Titouan},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aacc03fe766d90adf3cb7d70ef556ed5}{%
+           family={Plantinga},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6d3e1e0993fdfe08821e925cba2b437}{%
+           family={Rouhe},
+           familyi={R\bibinitperiod},
+           given={Aku},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58029d2373c2d82430340ae8dd0f6b69}{%
+           family={Cornell},
+           familyi={C\bibinitperiod},
+           given={Samuele},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b2708e050fa3ae46c5e15f345e258fe}{%
+           family={Lugosch},
+           familyi={L\bibinitperiod},
+           given={Loren},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7dae94535ed00c3f0a53f777bff59fe}{%
+           family={Subakan},
+           familyi={S\bibinitperiod},
+           given={Cem},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d8968b58ddefc6d1457261b20ef5c57}{%
+           family={Dawalatabad},
+           familyi={D\bibinitperiod},
+           given={Nauman},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99ece2201dcef6eef1bccb621cd3256d}{%
+           family={Heba},
+           familyi={H\bibinitperiod},
+           given={Abdelwahab},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1026ce1f95fd2bfa1b77bdfb801d0cca}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Jianyuan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f490ead1c0391975c6ee6f7fb30d58b}{%
+           family={Chou},
+           familyi={C\bibinitperiod},
+           given={Ju-Chieh},
+           giveni={J\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b3ef1a81a0a49e96f1305dd8f6fa0bf}{%
+           family={Yeh},
+           familyi={Y\bibinitperiod},
+           given={Sung-Lin},
+           giveni={S\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=642c53d0172fb196869492decdd8d3b4}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Szu-Wei},
+           giveni={S\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e61bc61b8ed1a9d62e5d28e9baee34e}{%
+           family={Liao},
+           familyi={L\bibinitperiod},
+           given={Chien-Feng},
+           giveni={C\bibinithyphendelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bff43d898aced3fe1ee19760ad0a509c}{%
+           family={Rastorgueva},
+           familyi={R\bibinitperiod},
+           given={Elena},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7277942d9129b3aaf322d924238e2170}{%
+           family={Grondin},
+           familyi={G\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86a0fbd90262dc2327bf747b60e40037}{%
+           family={Aris},
+           familyi={A\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc53ace6fc944204181be249636de5d4}{%
+           family={Na},
+           familyi={N\bibinitperiod},
+           given={Hwidong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5646e437c80bcf3ca39765bb227debe8}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0797ac38a8e591df5cdf2ccd6d42408}{%
+           family={Mori},
+           familyi={M\bibinitperiod},
+           given={Renato\bibnamedelima De},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{634a6f7d1809d1c85f36d0ccb1306821}
+      \strng{fullhash}{d2912633c11c7e1e705045f3f8d75d5e}
+      \strng{bibnamehash}{d2912633c11c7e1e705045f3f8d75d5e}
+      \strng{authorbibnamehash}{d2912633c11c7e1e705045f3f8d75d5e}
+      \strng{authornamehash}{634a6f7d1809d1c85f36d0ccb1306821}
+      \strng{authorfullhash}{d2912633c11c7e1e705045f3f8d75d5e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{eess.AS}
+      \field{eprinttype}{arXiv}
+      \field{note}{arXiv:2106.04624}
+      \field{title}{{SpeechBrain}: A General-Purpose Speech Toolkit}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2106.04624
+      \endverb
+    \endentry
     \entry{peoplescomputercompanyDrDobbsJournal1976}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=24210b48f95ad1556a23bfb37b8c19e0}{%
@@ -3933,7 +4091,7 @@
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Collected issues from Volume 1 (1976) of Dr. Dobb's Journal of COMPUTER Calisthenics \& Orthodontia also known as DDJ. "A Reference Journal for Users of Home Computers ... focusing on important advances, printing public domain software, and fostering vital reader interaction on technical matters." This document uploaded with permission from the 6502.org Documents Archive where~scans of all 15 volumes can be found.}
@@ -3967,7 +4125,7 @@
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{This viewpoint essay considers the current status of computer-assisted pronunciation training (CAPT) before examining some of the current issues and future directions in the field. The underlying premise is the pedagogic potential of CAPT systems and resources for teaching and learning, and the need for greater synergy between technological design and functionality on the one hand, and pedagogic purpose on the other. Some of the key issues examined include providing accurate and individualised automated feedback for pronunciation, for both learning and assessment, and evaluating the effectiveness of CAPT tools and systems. When considering future directions, the discussion focuses on what aspects of pedagogy are likely to be at the forefront of developments, including ubiquitous learning; intelligent tutoring and authentic interaction; and goal-oriented, task-based learning.}
@@ -4023,7 +4181,7 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The automatic identification and analysis of pronunciation errors, known as Mispronunciation Detection and Diagnosis (MDD) plays a crucial role in Computer Aided Pronunciation Learning (CAPL) tools such as SecondLanguage (L2) learning or speech therapy applications. Existing MDD methods relying on analysing phonemes can only detect categorical errors of phonemes that have an adequate amount of training data to be modelled. Due to the unpredictable nature of pronunciation errors made by non-native or disordered speakers and the scarcity of training datasets, it is unfeasible to model all types of mispronunciations. Moreover, phonemelevel MDD approaches can provide only limited diagnostic information about the error made. To address this, in this paper, we propose a low-level MDD approach based on the detection of phonological features. Phonological features break down phoneme production into elementary components that are directly related to the articulatory system leading to more formative feedback for the learner. We further propose a multilabel variant of the Connectionist Temporal Classification (CTC) approach to jointly model the non-mutually exclusive phonological features using a single model. The pre-trained wav2vec2 model was employed as a core model for the phonological feature detector. The proposed method was applied to L2 speech corpora collected from English learners from different native languages. The proposed phonological level MDD method was further compared to the traditional phoneme-level MDD and achieved a significantly lower False Acceptance Rate (FAR), False Rejection Rate (FRR), and Diagnostic Error Rate (DER) over all phonological features compared to the phoneme-level equivalent.}
@@ -4065,7 +4223,7 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{This paper focuses on palatalization in Irish spoken by Dublin-based bilinguals with English as their first language. It has already been pointed out that English phonetics affects Irish speakers even when Irish is their first language, especially in case of palatalization. The extent of English influence on palatalization in Dublin Irish and the possible reasons behind its inconsistent use acquire special prominence not only in terms of phonetics, but also because in Irish palatalization performs phonological functions.}
@@ -4165,7 +4323,7 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We introduce ESPnet-EZ, an extension of the open-source speech processing toolkit ESPnet, aimed at quick and easy development of speech models. ESPnet-EZ focuses on two major aspects: (i) easy fine-tuning and inference of existing ESPnet models on various tasks and (ii) easy integration with popular deep neural network frameworks such as PyTorch-Lightning, Hugging Face transformers and datasets, and Lhotse. By replacing ESPnet design choices inherited from Kaldi with a Python-only, Bash-free interface, we dramatically reduce the effort required to build, debug, and use a new model. For example, to fine-tune a speech foundation model, ESPnet-EZ, compared to ESPnet, reduces the number of newly written code by 2.7x and the amount of dependent code by 6.7x while dramatically reducing the Bash script dependencies. The codebase of ESPnet-EZ is publicly available.}
@@ -4216,7 +4374,7 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{"Modern Irish: A Comprehensive Grammar is a complete reference guide to modern Irish grammar, providing a thorough overview of the language. Key features include: - highly systematic coverage of all levels of structure: sound system, word formation, sentence construction and connection of sentences - authentic examples and English translations which provide an accessible insight into the mechanics of the language - an extensive index, numbered sections, cross-references and summary charts which provide readers with easy access to the information. Modern Irish: A Comprehensive Grammar is an essential reference source for the learner and user of Irish. It is ideal for use in schools, colleges, universities, and adult classes of all types"--}
@@ -4275,7 +4433,7 @@
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Although the application of deep learning to automatic speech recognition (ASR) has resulted in dramatic reductions in word error rate for languages with abundant training data, ASR for languages with few resources has yet to benefit from deep learning to the same extent. In this paper, we investigate various methods of acoustic modeling and data augmentation with the goal of improving the accuracy of a deep learning ASR framework for a low-resource language with a high baseline word error rate. We compare several methods of generating synthetic acoustic training data via voice transformation and signal distortion, and we explore several strategies for integrating this data into the acoustic training pipeline. We evaluate our methods on an indigenous language of North America with minimal training resources. We show that training initially via transfer learning from an existing high-resource language acoustic model, refining weights using a heavily concentrated synthetic dataset, and finally fine-tuning to the target language using limited synthetic data reduces WER by 15\% over just transfer learning using deep recurrent methods. Further, we show improvements over traditional frameworks by 19\% using a similar multistage training with deep convolutional approaches.}
@@ -4369,7 +4527,7 @@
       \field{sortinit}{v}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{This paper introduces WaveNet, a deep neural network for generating raw audio waveforms. The model is fully probabilistic and autoregressive, with the predictive distribution for each audio sample conditioned on all previous ones; nonetheless we show that it can be efficiently trained on data with tens of thousands of samples per second of audio. When applied to text-to-speech, it yields state-ofthe-art performance, with human listeners rating it as significantly more natural sounding than the best parametric and concatenative systems for both English and Mandarin. A single WaveNet can capture the characteristics of many different speakers with equal fidelity, and can switch between them by conditioning on the speaker identity. When trained to model music, we find that it generates novel and often highly realistic musical fragments. We also show that it can be employed as a discriminative model, returning promising results for phoneme recognition.}
@@ -4452,7 +4610,7 @@
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Neural sequence models are widely used to model time-series data. Equally ubiquitous is the usage of beam search (BS) as an approximate inference algorithm to decode output sequences from these models. BS explores the search space in a greedy left-right fashion retaining only the top-B candidates -- resulting in sequences that differ only slightly from each other. Producing lists of nearly identical sequences is not only computationally wasteful but also typically fails to capture the inherent ambiguity of complex AI tasks. To overcome this problem, we propose Diverse Beam Search (DBS), an alternative to BS that decodes a list of diverse outputs by optimizing for a diversity-augmented objective. We observe that our method finds better top-1 solutions by controlling for the exploration and exploitation of the search space -- implying that DBS is a better search algorithm. Moreover, these gains are achieved with minimal computational or memory overhead as compared to beam search. To demonstrate the broad applicability of our method, we present results on image captioning, machine translation and visual question generation using both standard quantitative metrics and qualitative human studies. Further, we study the role of diversity for image-grounded language generation tasks as the complexity of the image changes. We observe that our method consistently outperforms BS and previously proposed techniques for diverse decoding from neural sequence models.}
@@ -4565,7 +4723,7 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{This paper introduces a new open source platform for end-to-end speech processing named ESPnet. ESPnet mainly focuses on end-to-end automatic speech recognition (ASR), and adopts widely-used dynamic neural network toolkits, Chainer and PyTorch, as a main deep learning engine. ESPnet also follows the Kaldi ASR toolkit style for data processing, feature extraction/format, and recipes to provide a complete setup for speech recognition and other speech processing experiments. This paper explains a major architecture of this software platform, several important functionalities, which differentiate ESPnet from other open source ASR toolkits, and experimental results with major ASR benchmarks.}
@@ -4642,7 +4800,7 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Detecting out-of-distribution inputs is critical for the safe deployment of machine learning models in the real world. However, neural networks are known to suffer from the overconfidence issue, where they produce abnormally high confidence for both in- and out-of-distribution inputs. In this work, we show that this issue can be mitigated through Logit Normalization (LogitNorm)---a simple fix to the cross-entropy loss---by enforcing a constant vector norm on the logits in training. Our method is motivated by the analysis that the norm of the logit keeps increasing during training, leading to overconfident output. Our key idea behind LogitNorm is thus to decouple the influence of output's norm during network optimization. Trained with LogitNorm, neural networks produce highly distinguishable confidence scores between in- and out-of-distribution data. Extensive experiments demonstrate the superiority of LogitNorm, reducing the average FPR95 by up to 42.30\% on common benchmarks.}
@@ -4695,7 +4853,7 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Language Teaching and Language Technology}
@@ -4754,7 +4912,7 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Use of Speech Recognition in Computer-Assisted Language Learning.}
@@ -4929,7 +5087,7 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Recent progress in natural language processing has been driven by advances in both model architecture and model pretraining. Transformer architectures have facilitated building higher-capacity models and pretraining has made it possible to effectively utilize this capacity for a wide variety of tasks. Transformers is an open-source library with the goal of opening up these advances to the wider machine learning community. The library consists of carefully engineered state-of-the art Transformer architectures under a unified API. Backing this library is a curated collection of pretrained models made by and available for the community. Transformers is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments. The library is available at https://github.com/huggingface/transformers.}
@@ -4990,7 +5148,7 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper introduces two Transformer-based architectures for Mispronunciation Detection and Diagnosis (MDD). The first Transformer architecture (T-1) is a standard setup with an encoder, a decoder, a projection part and the Cross Entropy (CE) loss. T-1 takes in Mel-Frequency Cepstral Coefficients (MFCC) as input. The second architecture (T-2) is based on wav2vec 2.0, a pretraining framework. T-2 is composed of a CNN feature encoder, several Transformer blocks capturing contextual speech representations, a projection part and the Connectionist Temporal Classification (CTC) loss. Unlike T-1, T-2 takes in raw audio data as input. Both models are trained in an end-to-end manner. Experiments are conducted on the CU-CHLOE corpus, where T-1 achieves a Phone Error Rate (PER) of 8.69\% and F-measure of 77.23\%; and T-2 achieves a PER of 5.97\% and F-measure of 80.98\%. Both models significantly outperform the previously proposed AGPM and CNN-RNN-CTC models, with PERs at 11.1\% and 12.1\% respectively, and F-measures at 72.61\% and 74.65\% respectively.}
@@ -5063,7 +5221,7 @@
       \field{sortinit}{X}
       \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Interspeech 2020}
@@ -5129,7 +5287,7 @@
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Current leading mispronunciation detection and diagnosis (MDD) systems achieve promising performance via end-to-end phoneme recognition. One challenge of such end-to-end solutions is the scarcity of human-annotated phonemes on natural L2 speech. In this work, we leverage unlabeled L2 speech via a pseudo-labeling (PL) procedure and extend the fine-tuning approach based on pre-trained self-supervised learning (SSL) models. Specifically, we use Wav2vec 2.0 as our SSL model, and fine-tune it using original labeled L2 speech samples plus the created pseudo-labeled L2 speech samples. Our pseudo labels are dynamic and are produced by an ensemble of the online model on-the-fly, which ensures that our model is robust to pseudo label noise. We show that fine-tuning with pseudo labels achieves a 5.35\% phoneme error rate reduction and 2.48\% MDD F1 score improvement over a labeled-samples-only finetuning baseline. The proposed PL method is also shown to outperform conventional offline PL methods. Compared to the state-of-the-art MDD systems, our MDD solution produces a more accurate and consistent phonetic error diagnosis. In addition, we conduct an open test on a separate UTD-4Accents dataset, where our system recognition outputs show a strong correlation with human perception, based on accentedness and intelligibility.}
@@ -5181,7 +5339,7 @@
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{isbn}{978-1-4471-5778-6 978-1-4471-5779-3}
@@ -5234,7 +5392,7 @@
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The peaky behavior of CTC models is well known experimentally. However, an understanding about why peaky behavior occurs is missing, and whether this is a good property. We provide a formal analysis of the peaky behavior and gradient descent convergence properties of the CTC loss and related training criteria. Our analysis provides a deep understanding why peaky behavior occurs and when it is suboptimal. On a simple example which should be trivial to learn for any model, we prove that a feed-forward neural network trained with CTC from uniform initialization converges towards peaky behavior with a 100\% error rate. Our analysis further explains why CTC only works well together with the blank label. We further demonstrate that peaky behavior does not occur on other related losses including a label prior model, and that this improves convergence.}
@@ -5299,7 +5457,7 @@
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{In this paper, we study the problem of generating mispronounced speech mimicking non-native (L2) speakers learning English as a Second Language (ESL) for the mispronunciation detection and diagnosis (MDD) task. The paper is motivated by the widely observed yet not well addressed data sparsity issue in MDD research where both L2 speech audio and its finegrained phonetic annotations are difficult to obtain, leading to unsatisfactory mispronunciation feedback accuracy. We propose L2-GEN, a new data augmentation framework to generate L2 phoneme sequences that capture realistic mispronunciation patterns by devising an unique machine translation-based sequence paraphrasing model. A novel diversified and preferenceaware decoding algorithm is proposed to generalize L2-GEN to handle both unseen words and new learner population with very limited L2 training data. A contrastive augmentation technique is further designed to optimize MDD performance improvements with the generated synthetic L2 data. We evaluate L2-GEN on public L2-ARCTIC and SpeechOcean762 datasets. The results have shown that L2-GEN leads to up to 3.9\%, and 5.0\% MDD F1-score improvements in in-domain and out-ofdomain scenarios respectively.}
@@ -5364,7 +5522,7 @@
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this paper, we focus on a challenging, but interesting, task in speech emotion recognition (SER), i.e., cross-corpus SER. Unlike conventional SER, a feature distribution mismatch may exist between the labeled source (training) and target (testing) speech samples in cross-corpus SER because they come from different speech emotion corpora, which degrades the performance of most well-performing SER methods. To address this issue, we propose a novel transfer subspace learning method called multiple distribution-adapted regression (MDAR) to bridge the gap between speech samples from different corpora. Specifically, MDAR aims to learn a projection matrix to build the relationship between the source speech features and emotion labels. A novel regularization term called multiple distribution adaption (MDA), consisting of a marginal and two conditional distributionadapted operations, is designed to collaboratively enable such a discriminative projection matrix to be applicable to the target speech samples, regardless of speech corpus variance. Consequently, by resorting to the learned projection matrix, we are able to predict the emotion labels of target speech samples when only the source label information is given. To evaluate the proposed MDAR method, extensive cross-corpus SER tasks based on three different speech emotion corpora, i.e., EmoDB, eNTERFACE, and CASIA, were designed. Experimental results showed that the proposed MDAR outperformed most recent state-of-the-art transfer subspace learning methods and even performed better than several well-performing deep transfer learning methods in dealing with cross-corpus SER tasks.}
