@@ -1,29 +1,29 @@
 # Fdb version 4
-["biber main"] 1791723850.29367 "main.bcf" "main.bbl" "main" 1791725147.63855 0
+["biber main"] 1791723850.29367 "main.bcf" "main.bbl" "main" 1791826614.21618 0
   "ThesisProject.bib" 1790367328.78029 307758 4b54a07e0a6e96e6e913b6d0973a3aed ""
-  "main.bcf" 1791725147.0544 127788 1d74335542aaa354af35c006d0586abe "xelatex"
+  "main.bcf" 1791826613.63514 127788 1d74335542aaa354af35c006d0586abe "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["cusdep acn acr main"] 1791723851.40455 "main.acn" "main.acr" "main" 1791725147.63859 0
-  "main.acn" 1791725147.0554 25706 d703ba703ab9bb5f3cd9187510003fef "xelatex"
+["cusdep acn acr main"] 1791826609.66336 "main.acn" "main.acr" "main" 1791826614.21622 0
+  "main.acn" 1791826613.63614 26036 4f22c5d9010de97f7a6215d2b75dae11 "xelatex"
   (generated)
   "main.acr"
   (rewritten before read)
-["cusdep glo gls main"] 0 "main.glo" "main.gls" "main" 1791725147.63848 -1
-  "main.glo" 1791725144.72141 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["cusdep glo gls main"] 0 "main.glo" "main.gls" "main" 1791826614.21611 -1
+  "main.glo" 1791826611.29416 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "main.gls"
   (rewritten before read)
-["xdvipdfmx"] 1791725147.16489 "main.xdv" "main.pdf" "main" 1791725147.64134 0
-  "main.xdv" 1791725147.0554 1525408 b6d65037167e671af142289c667072aa "xelatex"
+["xdvipdfmx"] 1791826613.74249 "main.xdv" "main.pdf" "main" 1791826614.21898 0
+  "main.xdv" 1791826613.63614 1539460 2a4302438df445c896eb35b081ccbdbc "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1791725143.06055 "/home/peter/Desktop/Studies/Thesis/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" "main.xdv" "main" 1791725147.63861 0
+["xelatex"] 1791826609.70435 "/home/peter/Desktop/Studies/Thesis/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" "main.xdv" "main" 1791826614.21624 0
   "/etc/texmf/web2c/texmf.cnf" 1746989224.17483 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/peter/Desktop/Studies/Thesis/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" 1791725142.88741 123451 b02be5c9b7245479b01de85ecb94cb25 ""
+  "/home/peter/Desktop/Studies/Thesis/ThesisProject/paper/0000-CadyThesis-Draft/main.tex" 1791826605.4142 124795 79a9b76b02ae78d60b45d741a2df88dc ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -346,14 +346,14 @@
   "images/label_studio.png" 1782413378.27367 167555 a328603d01c9b38055d312b798cf8534 ""
   "images/russian_output.png" 1782413378.27367 28016 1c3dc4c352fc6df407e9c1b839d8f833 ""
   "images/wav2vec2.png" 1760361104.61037 130911 3c0401456ddff83f67dc98505a7cc16c ""
-  "main.acr" 1791723851.4379 9802 09e24c85b59eabed0fea680560fbaf4d "cusdep acn acr main"
-  "main.aux" 1791725147.0074 57482 c0ba1783dfae0004014caa0709f79f24 "xelatex"
+  "main.acr" 1791826609.69817 9982 1073dfa775b5b55cbcabe17fe86cae8f "cusdep acn acr main"
+  "main.aux" 1791826613.58714 57482 900eba58bb67eaf5454b37f04c059e34 "xelatex"
   "main.bbl" 1791723851.3859 287821 038e0004f72e6aaeccdf14b91340fac1 "biber main"
-  "main.gls" 1791723851.4389 6 9f404503043ec80c08484be9f659189e "cusdep glo gls main"
-  "main.out" 1791725144.86241 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "main.run.xml" 1791725147.0554 2449 2dd1fbd65cdddf330275c2c15a84093d "xelatex"
-  "main.tex" 1791725142.88741 123451 b02be5c9b7245479b01de85ecb94cb25 ""
-  "main.toc" 1791725147.0554 3329 7b3b002ef66661ba65fbe62a36473260 "xelatex"
+  "main.gls" 1791826609.67117 6 9f404503043ec80c08484be9f659189e "cusdep glo gls main"
+  "main.out" 1791826611.43616 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "main.run.xml" 1791826613.63614 2449 2dd1fbd65cdddf330275c2c15a84093d "xelatex"
+  "main.tex" 1791826605.4142 124795 79a9b76b02ae78d60b45d741a2df88dc ""
+  "main.toc" 1791826613.63614 3329 a98c7fc6675879a852e8ede3811af6a2 "xelatex"
   (generated)
   "main.acn"
   "main.aux"

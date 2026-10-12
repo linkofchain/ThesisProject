@@ -10,31 +10,31 @@
 \contentsline {chapter}{\numberline {3}Related Work}{18}{chapter.3}%
 \contentsline {section}{\numberline {3.1}\gls {asr} Ensembling Strategies}{18}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Data Generation with Synthetic Speech}{19}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Methods \& Materials}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}General Experiment Setup}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Experiment 1: Monolingual Model Ensembling}{22}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Data}{22}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline TIMIT}{22}{subsubsection*.6}%
-\contentsline {subsubsection}{\nonumberline Teanglann}{23}{subsubsection*.8}%
-\contentsline {subsubsection}{\nonumberline Preprocessing}{23}{subsubsection*.10}%
-\contentsline {subsection}{\numberline {4.2.2}Experimental Setup}{23}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Experiment 2: Synthetic Mispronunciation Data}{24}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Data}{24}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Evaluation}{25}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Data}{25}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Evaluation procedure}{26}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Metrics}{27}{subsection.4.4.3}%
-\contentsline {chapter}{\numberline {5}Results}{29}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Discussion}{32}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Experiment 1: Model Ensembling}{32}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Experiment 2: Synthetic Mispronunciation Data}{33}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Implementational Confounds}{34}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Structural Limitations}{35}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Annotation Reliability}{35}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Cross-corpus comparability}{36}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Final Thoughts}{37}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Conclusions}{38}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Future work}{39}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Ethical Considerations}{41}{chapter.9}%
-\contentsline {chapter}{\numberline {10}AI Tools}{42}{chapter.10}%
+\contentsline {chapter}{\numberline {4}Methods \& Materials}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}General Experiment Setup}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experiment 1: Monolingual Model Ensembling}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Data}{23}{subsection.4.2.1}%
+\contentsline {subsubsection}{\nonumberline TIMIT}{23}{subsubsection*.6}%
+\contentsline {subsubsection}{\nonumberline Teanglann}{24}{subsubsection*.8}%
+\contentsline {subsubsection}{\nonumberline Preprocessing}{24}{subsubsection*.10}%
+\contentsline {subsection}{\numberline {4.2.2}Experimental Setup}{25}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Experiment 2: Synthetic Mispronunciation Data}{25}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Data}{26}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Evaluation}{26}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Data}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Evaluation procedure}{27}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Metrics}{28}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Results}{31}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Discussion}{34}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Experiment 1: Model Ensembling}{34}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Experiment 2: Synthetic Mispronunciation Data}{35}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Implementational Confounds}{36}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Structural Limitations}{37}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Annotation Reliability}{37}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Cross-corpus comparability}{38}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Final Thoughts}{39}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Conclusions}{40}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Future work}{41}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Ethical Considerations}{43}{chapter.9}%
+\contentsline {chapter}{\numberline {10}AI Tools}{44}{chapter.10}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
